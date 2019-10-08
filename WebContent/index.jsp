@@ -5,7 +5,7 @@
 			<h1 align="center">Página en Construcción</h1>
 		<br>
 		<br>
-			<img style="display: block;margin-left: auto;margin-right: auto;width: 25%;" src="resources/imagenes/enConstruccion.jpg" alt="En Construccion">
+			<img style="display: block;margin-left: auto;margin-right: auto;width: 25%;" src="resources/imagenes/pageBuilding.jpg" alt="En Construccion">
 		<br>
 		<br>
 		<br>
