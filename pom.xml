@@ -134,5 +134,10 @@
   		<version>1.2.5</version>
   		<scope>test</scope>
   	</dependency>
+  	<dependency>
+  		<groupId>com.racodond.sonarqube.plugin.gherkin</groupId>
+  		<artifactId>sonar-gherkin-plugin</artifactId>
+  		<version>1.7</version>
+  	</dependency>
   </dependencies>
 </project>
