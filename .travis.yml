@@ -7,7 +7,7 @@ addons:
       secure: "s40fdf35a68ff4d3178bad0830c5f4ad549c42b3f"
       
 script:
-  - sonar-scanner
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=sergiopsinformatico_Aplicacion-Flashcards
 
 jdk:
   - oraclejdk8
