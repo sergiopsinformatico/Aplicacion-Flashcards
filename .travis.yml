@@ -1,5 +1,14 @@
 language: java
 
+addons:
+  sonarcloud:
+    organization: "sergiopsinformatico-github"
+    token:
+      secure: "s40fdf35a68ff4d3178bad0830c5f4ad549c42b3f"
+      
+script:
+  - sonar-scanner
+
 jdk:
   - oraclejdk8
 
@@ -13,12 +22,3 @@ deploy:
   on:
     repo: sergiopsinformatico/Aplicacion-Flashcards
     branch: ramaSprint2
-    
-addons:
-  sonarcloud:
-    organization: "sergiopsinformatico-github"
-    token:
-      secure: "s40fdf35a68ff4d3178bad0830c5f4ad549c42b3f"
-      
-script:
-  - sonar-scanner
