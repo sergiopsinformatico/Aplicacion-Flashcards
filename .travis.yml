@@ -4,7 +4,7 @@ addons:
   sonarcloud:
     organization: "sergiopsinformatico-github"
     token:
-      secure: "s40fdf35a68ff4d3178bad0830c5f4ad549c42b3f"
+      secure: "3a40f7ce79b62c41505d6d661028d0949358ea1c"
       
 script:
   - sonar-scanner
