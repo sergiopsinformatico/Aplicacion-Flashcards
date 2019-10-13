@@ -1,0 +1,26 @@
+.logoFlashcards{
+	width: 100px;
+	height: auto;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotoPerfil{
+	height:100px;
+	width:auto;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnPaginaPrincipal{
+	width:100%;
+	height:150px;
+}
