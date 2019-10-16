@@ -68,7 +68,11 @@
 	      </div>
 	    </nav>
 	</header>
-    <br><br>
+	<br><br>
+    <section>
+	    <h6 align="center">Desarrollo de la Wiki</h6>
+	</section>
+    <br>
     <section>
 	    <div class="copyright py-4 text-center text-white">
 	      <div class="container">

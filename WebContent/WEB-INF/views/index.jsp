@@ -70,6 +70,10 @@
 	</header>
     <br><br>
     <section>
+	    <h6 align="center">Desarrollo de la Wiki</h6>
+	</section>
+    <br>
+    <section>
 	    <div class="copyright py-4 text-center text-white">
 	      <div class="container">
 	        <small>Desarrollado por Sergio Pérez Sánchez. 2019</small>
