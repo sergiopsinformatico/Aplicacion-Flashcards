@@ -39,22 +39,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 1257333900,
+  "duration": 2699391700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_los_datos_correctamente()"
 });
 formatter.result({
-  "duration": 30035300,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existEmail(UsuariosMongoDB.java:162)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.introduce_los_datos_correctamente(Test01UsuarioCreaCuentaUsuario.java:26)\r\n\tat ✽.When Introduce los datos correctamente(01UsuarioCreaCuentaUsuario.feature:7)\r\n",
-  "status": "failed"
+  "duration": 1012407800,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.se_registra_correctamente()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 173799700,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -83,22 +83,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 1534600,
+  "duration": 5110900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_username_existente()"
 });
 formatter.result({
-  "duration": 282800,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existUsername(UsuariosMongoDB.java:169)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.introduce_un_username_existente(Test01UsuarioCreaCuentaUsuario.java:40)\r\n\tat ✽.When Introduce un username existente(01UsuarioCreaCuentaUsuario.feature:12)\r\n",
-  "status": "failed"
+  "duration": 653129600,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 38789600,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 15,
@@ -127,23 +127,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 2276400,
+  "duration": 3887900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.el_username_contiene_un_caracter_invalido()"
 });
 formatter.result({
-  "duration": 69900,
+  "duration": 33700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 304400,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existEmail(UsuariosMongoDB.java:162)\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.insertUsuario(UsuariosMongoDB.java:65)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.no_se_registra(Test01UsuarioCreaCuentaUsuario.java:45)\r\n\tat ✽.Then No se registra(01UsuarioCreaCuentaUsuario.feature:18)\r\n",
-  "status": "failed"
+  "duration": 658548400,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 20,
@@ -172,23 +171,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 1798900,
+  "duration": 3735600,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_del_username_es_incorrecta()"
 });
 formatter.result({
-  "duration": 44600,
+  "duration": 43300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 251700,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existEmail(UsuariosMongoDB.java:162)\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.insertUsuario(UsuariosMongoDB.java:65)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.no_se_registra(Test01UsuarioCreaCuentaUsuario.java:45)\r\n\tat ✽.Then No se registra(01UsuarioCreaCuentaUsuario.feature:23)\r\n",
-  "status": "failed"
+  "duration": 648003500,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 25,
@@ -217,23 +215,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 1605400,
+  "duration": 5215700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_clave_contiene_un_caracter_invalido()"
 });
 formatter.result({
-  "duration": 60400,
+  "duration": 74100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 275600,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existEmail(UsuariosMongoDB.java:162)\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.insertUsuario(UsuariosMongoDB.java:65)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.no_se_registra(Test01UsuarioCreaCuentaUsuario.java:45)\r\n\tat ✽.Then No se registra(01UsuarioCreaCuentaUsuario.feature:28)\r\n",
-  "status": "failed"
+  "duration": 644325600,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 30,
@@ -262,23 +259,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 4630600,
+  "duration": 2687100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_de_la_clave_es_incorrecta()"
 });
 formatter.result({
-  "duration": 39700,
+  "duration": 27900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 253600,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existEmail(UsuariosMongoDB.java:162)\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.insertUsuario(UsuariosMongoDB.java:65)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.no_se_registra(Test01UsuarioCreaCuentaUsuario.java:45)\r\n\tat ✽.Then No se registra(01UsuarioCreaCuentaUsuario.feature:33)\r\n",
-  "status": "failed"
+  "duration": 669671500,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 35,
@@ -307,22 +303,22 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 1896600,
+  "duration": 6737600,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_email_existente()"
 });
 formatter.result({
-  "duration": 264400,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.existEmail(UsuariosMongoDB.java:162)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test01UsuarioCreaCuentaUsuario.introduce_un_email_existente(Test01UsuarioCreaCuentaUsuario.java:75)\r\n\tat ✽.When Introduce un email existente(01UsuarioCreaCuentaUsuario.feature:37)\r\n",
-  "status": "failed"
+  "duration": 660543900,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 44611200,
+  "status": "passed"
 });
 formatter.uri("02UsuarioIniciaSesion.feature");
 formatter.feature({
@@ -365,22 +361,22 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 1530600,
+  "duration": 3411100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_email()"
 });
 formatter.result({
-  "duration": 348600,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test02UsuarioIniciaSesion.se_loguea_con_el_email(Test02UsuarioIniciaSesion.java:26)\r\n\tat ✽.When Se loguea con el email(02UsuarioIniciaSesion.feature:7)\r\n",
-  "status": "failed"
+  "duration": 708351700,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 23700,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -409,22 +405,22 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 1602200,
+  "duration": 2556000,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_username()"
 });
 formatter.result({
-  "duration": 274100,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test02UsuarioIniciaSesion.se_loguea_con_el_username(Test02UsuarioIniciaSesion.java:37)\r\n\tat ✽.When Se loguea con el username(02UsuarioIniciaSesion.feature:12)\r\n",
-  "status": "failed"
+  "duration": 654412800,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 21600,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 15,
@@ -453,22 +449,22 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 1825700,
+  "duration": 3109400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.el_email_es_erroneo()"
 });
 formatter.result({
-  "duration": 286600,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test02UsuarioIniciaSesion.el_email_es_erroneo(Test02UsuarioIniciaSesion.java:44)\r\n\tat ✽.When El email es erroneo(02UsuarioIniciaSesion.feature:17)\r\n",
-  "status": "failed"
+  "duration": 759071500,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 34300,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 20,
@@ -497,22 +493,22 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 1481200,
+  "duration": 3570700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.el_username_es_erroneo()"
 });
 formatter.result({
-  "duration": 273500,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test02UsuarioIniciaSesion.el_username_es_erroneo(Test02UsuarioIniciaSesion.java:56)\r\n\tat ✽.When El username es erroneo(02UsuarioIniciaSesion.feature:22)\r\n",
-  "status": "failed"
+  "duration": 709451300,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 16500,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 25,
@@ -541,22 +537,22 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 1517200,
+  "duration": 3363400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.la_clave_es_erronea()"
 });
 formatter.result({
-  "duration": 275600,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test02UsuarioIniciaSesion.la_clave_es_erronea(Test02UsuarioIniciaSesion.java:63)\r\n\tat ✽.When La clave es erronea(02UsuarioIniciaSesion.feature:27)\r\n",
-  "status": "failed"
+  "duration": 686516800,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 26700,
+  "status": "passed"
 });
 formatter.uri("03UsuarioVerPerfil.feature");
 formatter.feature({
@@ -599,22 +595,22 @@ formatter.match({
   "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
 formatter.result({
-  "duration": 2397600,
+  "duration": 3052100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.se_loguea_con_el_username()"
 });
 formatter.result({
-  "duration": 296400,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test03UsuarioVePerfil.se_loguea_con_el_username(Test03UsuarioVePerfil.java:25)\r\n\tat ✽.When Se ha logueado con el username(03UsuarioVerPerfil.feature:7)\r\n",
-  "status": "failed"
+  "duration": 753727800,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_username()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 120371700,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -643,22 +639,22 @@ formatter.match({
   "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
 formatter.result({
-  "duration": 1477200,
+  "duration": 4459400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.se_loguea_con_el_email()"
 });
 formatter.result({
-  "duration": 266600,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test03UsuarioVePerfil.se_loguea_con_el_email(Test03UsuarioVePerfil.java:36)\r\n\tat ✽.When Se ha logueado con el email(03UsuarioVerPerfil.feature:12)\r\n",
-  "status": "failed"
+  "duration": 716311900,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_email()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 129680400,
+  "status": "passed"
 });
 formatter.uri("04UsuarioActualizaPerfil.feature");
 formatter.feature({
@@ -701,21 +697,22 @@ formatter.match({
   "location": "Test04UsuarioActualizaPerfil.una_persona_quiere_actualizar_su_perfil()"
 });
 formatter.result({
-  "duration": 1783100,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test04UsuarioActualizaPerfil.una_persona_quiere_actualizar_su_perfil(Test04UsuarioActualizaPerfil.java:20)\r\n\tat ✽.Given Una persona quiere actualizar su perfil(04UsuarioActualizaPerfil.feature:6)\r\n",
-  "status": "failed"
+  "duration": 703709800,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test04UsuarioActualizaPerfil.cambia_los_datos()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 95300,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test04UsuarioActualizaPerfil.se_actualiza_el_perfil_correctamente()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 199448200,
+  "status": "passed"
 });
 formatter.uri("05UsuarioEliminaPerfil.feature");
 formatter.feature({
@@ -758,20 +755,21 @@ formatter.match({
   "location": "Test05UsuarioEliminaPerfil.una_persona_quiere_eliminar_su_perfil()"
 });
 formatter.result({
-  "duration": 2588700,
-  "error_message": "java.lang.NullPointerException\r\n\tat main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB.login(UsuariosMongoDB.java:208)\r\n\tat test.java.aplicacionFlashcards.stepDefinitions.Test05UsuarioEliminaPerfil.una_persona_quiere_eliminar_su_perfil(Test05UsuarioEliminaPerfil.java:21)\r\n\tat ✽.Given Una persona quiere eliminar su perfil(05UsuarioEliminaPerfil.feature:6)\r\n",
-  "status": "failed"
+  "duration": 708804000,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test05UsuarioEliminaPerfil.da_a_eliminar()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 40735900,
+  "status": "passed"
 });
 formatter.match({
   "location": "Test05UsuarioEliminaPerfil.elimina_su_perfil()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 79944700,
+  "status": "passed"
 });
 });
