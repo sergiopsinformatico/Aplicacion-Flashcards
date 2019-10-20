@@ -74,7 +74,7 @@
 			                <input type="password" class="form-control" id="inputClave" name="inputClave" placeholder="Clave" required>
 			                <br><br>
 			                <div class="middle">
-			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LfaZ4EUAAAAAFcqOxY0fsiDeh17WHqRhLdEQPZw" data-callback="enableBtn"></div>
+			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtn"></div>
 			                </div>
 			                <br><br>
 			                <button class="btn btn-lg btn-block btn-signin btnBlock" id="buttonIS" name="buttonIS" type="submit">Acceder</button>

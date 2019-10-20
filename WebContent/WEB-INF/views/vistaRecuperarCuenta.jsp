@@ -72,7 +72,7 @@
 			                <input type="text" class="form-control" id="inputUsernameEmail" name="inputUsernameEmail" placeholder="Username o Email" required autofocus>
 					        <br><br><br>
 			                <div class="middle">
-			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LfaZ4EUAAAAAFcqOxY0fsiDeh17WHqRhLdEQPZw" data-callback="enableBtnRec"></div>
+			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnRec"></div>
 			                </div>
 			                <br><br>
 					        <button class="btn btn-lg btn-block btn-signin btnBlock" id="buttonRec" name="buttonRec" type="submit">Recuperar Clave</button>
