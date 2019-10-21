@@ -39,21 +39,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 2699391700,
+  "duration": 3984490200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_los_datos_correctamente()"
 });
 formatter.result({
-  "duration": 1012407800,
+  "duration": 1089024100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.se_registra_correctamente()"
 });
 formatter.result({
-  "duration": 173799700,
+  "duration": 175052100,
   "status": "passed"
 });
 formatter.scenario({
@@ -83,21 +83,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 5110900,
+  "duration": 4621800,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_username_existente()"
 });
 formatter.result({
-  "duration": 653129600,
+  "duration": 747858300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 38789600,
+  "duration": 40082300,
   "status": "passed"
 });
 formatter.scenario({
@@ -127,21 +127,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 3887900,
+  "duration": 3855800,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.el_username_contiene_un_caracter_invalido()"
 });
 formatter.result({
-  "duration": 33700,
+  "duration": 49500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 658548400,
+  "duration": 664125000,
   "status": "passed"
 });
 formatter.scenario({
@@ -171,21 +171,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 3735600,
+  "duration": 3469400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_del_username_es_incorrecta()"
 });
 formatter.result({
-  "duration": 43300,
+  "duration": 42500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 648003500,
+  "duration": 654442100,
   "status": "passed"
 });
 formatter.scenario({
@@ -215,21 +215,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 5215700,
+  "duration": 3668200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_clave_contiene_un_caracter_invalido()"
 });
 formatter.result({
-  "duration": 74100,
+  "duration": 40200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 644325600,
+  "duration": 658374500,
   "status": "passed"
 });
 formatter.scenario({
@@ -259,21 +259,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 2687100,
+  "duration": 3901300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_de_la_clave_es_incorrecta()"
 });
 formatter.result({
-  "duration": 27900,
+  "duration": 48100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 669671500,
+  "duration": 654516600,
   "status": "passed"
 });
 formatter.scenario({
@@ -303,21 +303,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 6737600,
+  "duration": 3217900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_email_existente()"
 });
 formatter.result({
-  "duration": 660543900,
+  "duration": 668406400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 44611200,
+  "duration": 40291200,
   "status": "passed"
 });
 formatter.uri("02UsuarioIniciaSesion.feature");
@@ -361,21 +361,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3411100,
+  "duration": 3274700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_email()"
 });
 formatter.result({
-  "duration": 708351700,
+  "duration": 728028300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
 });
 formatter.result({
-  "duration": 23700,
+  "duration": 27300,
   "status": "passed"
 });
 formatter.scenario({
@@ -405,21 +405,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 2556000,
+  "duration": 3333600,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_username()"
 });
 formatter.result({
-  "duration": 654412800,
+  "duration": 660374900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
 });
 formatter.result({
-  "duration": 21600,
+  "duration": 51200,
   "status": "passed"
 });
 formatter.scenario({
@@ -449,21 +449,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3109400,
+  "duration": 12633500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.el_email_es_erroneo()"
 });
 formatter.result({
-  "duration": 759071500,
+  "duration": 716238600,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "duration": 34300,
+  "duration": 40200,
   "status": "passed"
 });
 formatter.scenario({
@@ -493,21 +493,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3570700,
+  "duration": 4423300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.el_username_es_erroneo()"
 });
 formatter.result({
-  "duration": 709451300,
+  "duration": 709636700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "duration": 16500,
+  "duration": 16000,
   "status": "passed"
 });
 formatter.scenario({
@@ -537,21 +537,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3363400,
+  "duration": 3332000,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.la_clave_es_erronea()"
 });
 formatter.result({
-  "duration": 686516800,
+  "duration": 705808400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "duration": 26700,
+  "duration": 17600,
   "status": "passed"
 });
 formatter.uri("03UsuarioVerPerfil.feature");
@@ -595,21 +595,21 @@ formatter.match({
   "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
 formatter.result({
-  "duration": 3052100,
+  "duration": 2987200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.se_loguea_con_el_username()"
 });
 formatter.result({
-  "duration": 753727800,
+  "duration": 688200900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_username()"
 });
 formatter.result({
-  "duration": 120371700,
+  "duration": 118036100,
   "status": "passed"
 });
 formatter.scenario({
@@ -639,21 +639,21 @@ formatter.match({
   "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
 formatter.result({
-  "duration": 4459400,
+  "duration": 4464300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.se_loguea_con_el_email()"
 });
 formatter.result({
-  "duration": 716311900,
+  "duration": 760932400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_email()"
 });
 formatter.result({
-  "duration": 129680400,
+  "duration": 118762400,
   "status": "passed"
 });
 formatter.uri("04UsuarioActualizaPerfil.feature");
@@ -697,21 +697,21 @@ formatter.match({
   "location": "Test04UsuarioActualizaPerfil.una_persona_quiere_actualizar_su_perfil()"
 });
 formatter.result({
-  "duration": 703709800,
+  "duration": 711320600,
   "status": "passed"
 });
 formatter.match({
   "location": "Test04UsuarioActualizaPerfil.cambia_los_datos()"
 });
 formatter.result({
-  "duration": 95300,
+  "duration": 98100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test04UsuarioActualizaPerfil.se_actualiza_el_perfil_correctamente()"
 });
 formatter.result({
-  "duration": 199448200,
+  "duration": 199370200,
   "status": "passed"
 });
 formatter.uri("05UsuarioEliminaPerfil.feature");
@@ -755,21 +755,21 @@ formatter.match({
   "location": "Test05UsuarioEliminaPerfil.una_persona_quiere_eliminar_su_perfil()"
 });
 formatter.result({
-  "duration": 708804000,
+  "duration": 694312100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test05UsuarioEliminaPerfil.da_a_eliminar()"
 });
 formatter.result({
-  "duration": 40735900,
+  "duration": 37085300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test05UsuarioEliminaPerfil.elimina_su_perfil()"
 });
 formatter.result({
-  "duration": 79944700,
+  "duration": 76221300,
   "status": "passed"
 });
 });
