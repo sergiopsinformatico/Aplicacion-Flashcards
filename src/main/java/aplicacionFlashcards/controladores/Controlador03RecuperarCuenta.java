@@ -90,7 +90,7 @@ public class Controlador03RecuperarCuenta {
 				vista.addObject("username", username);
 			}else if(Broker.getInstanciaRecuperarCuenta().existeSolicitudUsuario(username)) {
 				vista = new ModelAndView("vistaRecuperarCuenta");
-				vista.addObject("mensaje", "Solicitó un restablecimiento de la clave, pero el código no es válido");
+				vista.addObject("mensaje", "Solicito un restablecimiento de la clave, pero el codigo no es valido");
 			}else {
 				vista = new ModelAndView("vistaRecuperarCuenta");
 				vista.addObject("mensaje", "El enlace ha expirado. Por favor, vuelva a solicitar la recuperacion de la clave");
