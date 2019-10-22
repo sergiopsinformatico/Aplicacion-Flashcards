@@ -4,6 +4,10 @@
   <artifactId>Aplicacion-Flashcards</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<sonar.sources>pom.xml,src/main/java,src/main/resources,src/test/java/aplicacionFlashcards/features</sonar.sources>
+  </properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
