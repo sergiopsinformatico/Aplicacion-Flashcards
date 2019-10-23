@@ -9,16 +9,7 @@
 	<sonar.sources>pom.xml,src/main/java,src/main/resources,src/test/java/aplicacionFlashcards/features</sonar.sources>
   </properties>
   <build>
-  	<pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-    			<artifactId>sonar-maven-plugin</artifactId>
-    			<version>3.7.0.1746</version>
-            </plugin>
-        </plugins>
-    </pluginManagement>
-    <plugins>
+  	<plugins>
       <plugin>
       	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
