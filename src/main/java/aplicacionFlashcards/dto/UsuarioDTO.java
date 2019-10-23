@@ -97,5 +97,4 @@ public class UsuarioDTO {
 	public void setActivadaCuenta(boolean activadaCuenta) {
 		this.activadaCuenta = activadaCuenta;
 	}
-	
 }

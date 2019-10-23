@@ -333,5 +333,4 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 			
 			return listaUsersRelacion;
 		}
-	
 }

@@ -211,5 +211,4 @@ public class Controlador01RegistroUsuarios {
 			vista = new ModelAndView("redirect:/iniciarSesion.html");
 			return vista;
 		}	
-	
 }

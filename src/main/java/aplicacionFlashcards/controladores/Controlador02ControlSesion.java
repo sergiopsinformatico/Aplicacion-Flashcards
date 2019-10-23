@@ -126,5 +126,4 @@ public class Controlador02ControlSesion {
 		vista.addObject("usuario",null);
 		return vista;
 	}
-	
 }

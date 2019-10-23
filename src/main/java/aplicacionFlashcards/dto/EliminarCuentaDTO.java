@@ -27,5 +27,4 @@ public class EliminarCuentaDTO {
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
-
 }

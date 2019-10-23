@@ -117,5 +117,4 @@ public class Controlador03RecuperarCuenta {
 		public ModelAndView cambioClaveGet(HttpServletRequest request, HttpServletResponse response) {
 			return new ModelAndView("redirect:/inicio.html");
 		}
-	
 }

@@ -23,6 +23,5 @@ public class PropertiesConfig {
 			property = "";
 		}
 		return property;
-	}
-	
+	}	
 }

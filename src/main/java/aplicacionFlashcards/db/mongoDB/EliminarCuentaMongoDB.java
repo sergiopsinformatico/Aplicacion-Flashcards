@@ -120,6 +120,5 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
 					iterador = coleccionEliminados.find().iterator();
 				}
 			}
-		}
-	
+		}	
 }

@@ -27,5 +27,4 @@ public class Broker {
 	public static InterfaceDAORecuperarCuenta getInstanciaRecuperarCuenta() {
 		return new RecuperarCuentaMongoDB();
 	}
-	
 }

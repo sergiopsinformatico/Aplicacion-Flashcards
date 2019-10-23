@@ -52,5 +52,4 @@ public class Controlador04Perfil {
 			}
 			return vista;
 		}
-	
 }
