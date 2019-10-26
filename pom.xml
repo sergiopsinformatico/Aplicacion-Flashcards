@@ -7,6 +7,10 @@
   <properties>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<sonar.sources>pom.xml,src/main/java/aplicacionFlashcards,src/main/resources,src/test/java/aplicacionFlashcards</sonar.sources>
+	<sonar.core.serverBaseUrl>https://sonarcloud.io</sonar.core.serverBaseUrl>
+	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+	<sonar.organization>sergiopsinformatico-github</sonar.organization>
+	<sonar.login>3a40f7ce79b62c41505d6d661028d0949358ea1c</sonar.login>
   </properties>
   <build>
     <plugins>
