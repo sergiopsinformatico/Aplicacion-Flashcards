@@ -7,7 +7,7 @@ addons:
       secure: "3a40f7ce79b62c41505d6d661028d0949358ea1c"
       
 script:
-  - mvn clean verify -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c -Psonar
+  - mvn clean verify -Dsonar.core.serverBaseUrl=https://sonarcloud.io -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c -Psonar
   - sonar-scanner
 
 jdk:
