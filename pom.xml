@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <properties>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<sonar.sources>pom.xml,src/main/java/aplicacionFlashcards/auxiliares,pom.xml,src/main/java/aplicacionFlashcards/broker,pom.xml,src/main/java/aplicacionFlashcards/controladores,pom.xml,src/main/java/aplicacionFlashcards/db/dao, pom.xml,src/main/java/aplicacionFlashcards/db/mongoDB,pom.xml,src/main/java/aplicacionFlashcards/dto,src/main/resources,src/test/java/aplicacionFlashcards/features,src/test/java/aplicacionFlashcards/runner,src/test/java/aplicacionFlashcards/stepDefinitions</sonar.sources>
+	<sonar.sources>pom.xml,src/main/java/aplicacionFlashcards/auxiliares,src/main/java/aplicacionFlashcards/broker,src/main/java/aplicacionFlashcards/controladores,src/main/java/aplicacionFlashcards/db/dao,src/main/java/aplicacionFlashcards/db/mongoDB,src/main/java/aplicacionFlashcards/dto,src/main/resources,src/test/java/aplicacionFlashcards/features,src/test/java/aplicacionFlashcards/runner,src/test/java/aplicacionFlashcards/stepDefinitions</sonar.sources>
 	<sonar.core.serverBaseUrl>https://sonarcloud.io</sonar.core.serverBaseUrl>
 	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	<sonar.organization>sergiopsinformatico-github</sonar.organization>
