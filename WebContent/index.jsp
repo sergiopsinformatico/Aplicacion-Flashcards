@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Flashcards - Inicio</title>
+    <title>Flashcards - Página de Inicio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -68,7 +68,11 @@
 	      </div>
 	    </nav>
 	</header>
-    <br><br>
+	<br><br>
+    <section>
+	    <h6 align="center">Desarrollo de la Wiki</h6>
+	</section>
+    <br>
     <section>
 	    <div class="copyright py-4 text-center text-white">
 	      <div class="container">

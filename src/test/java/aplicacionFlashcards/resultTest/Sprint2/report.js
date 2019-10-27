@@ -35,17 +35,26 @@ formatter.step({
   "name": "Se registra correctamente",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3935708800,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.introduce_los_datos_correctamente()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 1084536300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.se_registra_correctamente()"
+});
+formatter.result({
+  "duration": 175892200,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -70,17 +79,26 @@ formatter.step({
   "name": "No se registra",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 4401900,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_username_existente()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 660726600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
+});
+formatter.result({
+  "duration": 40898800,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 15,
@@ -105,17 +123,26 @@ formatter.step({
   "name": "No se registra",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 2953600,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.el_username_contiene_un_caracter_invalido()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 30500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
+});
+formatter.result({
+  "duration": 664847200,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 20,
@@ -140,17 +167,26 @@ formatter.step({
   "name": "No se registra",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3143700,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_del_username_es_incorrecta()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 37200,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
+});
+formatter.result({
+  "duration": 666957600,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 25,
@@ -175,17 +211,26 @@ formatter.step({
   "name": "No se registra",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3127700,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.la_clave_contiene_un_caracter_invalido()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 31700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
+});
+formatter.result({
+  "duration": 635936100,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 30,
@@ -210,17 +255,26 @@ formatter.step({
   "name": "No se registra",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 2806900,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_de_la_clave_es_incorrecta()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 27600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
+});
+formatter.result({
+  "duration": 650011200,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 35,
@@ -245,17 +299,26 @@ formatter.step({
   "name": "No se registra",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3730600,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_email_existente()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 708681700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
+});
+formatter.result({
+  "duration": 41747300,
+  "status": "passed"
 });
 formatter.uri("02UsuarioIniciaSesion.feature");
 formatter.feature({
@@ -294,17 +357,26 @@ formatter.step({
   "name": "Se loguea correctamente",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3057800,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_email()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 717125500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
+});
+formatter.result({
+  "duration": 25200,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -329,17 +401,26 @@ formatter.step({
   "name": "Se loguea correctamente",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 2827400,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_username()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 661236100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
+});
+formatter.result({
+  "duration": 17300,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 15,
@@ -364,17 +445,26 @@ formatter.step({
   "name": "No se puede loguear",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 9264600,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.el_email_es_erroneo()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 670969500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
+});
+formatter.result({
+  "duration": 21900,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 20,
@@ -399,17 +489,26 @@ formatter.step({
   "name": "No se puede loguear",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 2918500,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.el_username_es_erroneo()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 688424100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
+});
+formatter.result({
+  "duration": 15000,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 25,
@@ -434,17 +533,26 @@ formatter.step({
   "name": "No se puede loguear",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 2747600,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.la_clave_es_erronea()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 764891900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
+});
+formatter.result({
+  "duration": 23900,
+  "status": "passed"
 });
 formatter.uri("03UsuarioVerPerfil.feature");
 formatter.feature({
@@ -483,17 +591,26 @@ formatter.step({
   "name": "Ve el perfil con el username",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 3645300,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test03UsuarioVePerfil.se_loguea_con_el_username()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 653562800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_username()"
+});
+formatter.result({
+  "duration": 123993800,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 10,
@@ -518,17 +635,26 @@ formatter.step({
   "name": "Ve el perfil con el email",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 4109700,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test03UsuarioVePerfil.se_loguea_con_el_email()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 723965100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_email()"
+});
+formatter.result({
+  "duration": 114536000,
+  "status": "passed"
 });
 formatter.uri("04UsuarioActualizaPerfil.feature");
 formatter.feature({
@@ -567,17 +693,26 @@ formatter.step({
   "name": "Se actualiza el perfil correctamente",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test04UsuarioActualizaPerfil.una_persona_quiere_actualizar_su_perfil()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 710008800,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test04UsuarioActualizaPerfil.cambia_los_datos()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 35400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test04UsuarioActualizaPerfil.se_actualiza_el_perfil_correctamente()"
+});
+formatter.result({
+  "duration": 237224000,
+  "status": "passed"
 });
 formatter.uri("05UsuarioEliminaPerfil.feature");
 formatter.feature({
@@ -616,16 +751,25 @@ formatter.step({
   "name": "Elimina su perfil",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "Test05UsuarioEliminaPerfil.una_persona_quiere_eliminar_su_perfil()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 705705600,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "Test05UsuarioEliminaPerfil.da_a_eliminar()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 39066700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Test05UsuarioEliminaPerfil.elimina_su_perfil()"
+});
+formatter.result({
+  "duration": 80066500,
+  "status": "passed"
 });
 });

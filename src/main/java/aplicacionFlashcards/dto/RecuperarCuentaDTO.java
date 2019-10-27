@@ -35,5 +35,4 @@ public class RecuperarCuentaDTO {
 	public void setFechaExpira(String fechaExpira) {
 		this.fechaExpira = fechaExpira;
 	}
-	
 }

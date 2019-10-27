@@ -4,17 +4,20 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import main.java.aplicacionFlashcards.broker.Broker;
+import main.java.aplicacionFlashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionFlashcards.dto.UsuarioDTO;
 
-public class Test05UsuarioEliminaPerfil {
+public class Test18UsuarioEliminaPerfil {
 	
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
+	InterfaceDAORelacionesUsuarios dBRelaciones;
 	
 	@Given("^Una persona quiere eliminar su perfil$")
 	public void una_persona_quiere_eliminar_su_perfil() throws Throwable {
 		dBUsuario = Broker.getInstanciaUsuario();
+		dBRelaciones = Broker.getInstanciaRelaciones();
 		user = new UsuarioDTO("usuario123", "usuario123@email.com", "usuario123");
 		user.setRol("Usuario");
 		user.setNombreApellidos("Pepito");
@@ -23,7 +26,7 @@ public class Test05UsuarioEliminaPerfil {
 
 	@When("^Da a eliminar$")
 	public void da_a_eliminar() throws Throwable {
-	    assert(dBUsuario.deleteUsuario(user));
+	    assert(dBUsuario.deleteUsuario(user) && dBRelaciones.eliminaRelaciones(user.getUsername()));
 	}
 
 	@Then("^Elimina su perfil$")

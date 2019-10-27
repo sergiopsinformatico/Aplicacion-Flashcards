@@ -72,18 +72,18 @@
       </li>
       
       <hr class="sidebar-divider">
-      <div class="sidebar-heading">
+      <!-- <div class="sidebar-heading">
         Flashcards
       </div>
       <li class="nav-item">
         <a class="nav-link" href="flashcards.html">
           <i class="fa fa-id-card-o" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
-      </li>
+      </li>-->
       
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider">-->
       
-      <!-- Heading -->
+      <!-- Heading
       <div class="sidebar-heading">
         Usuarios
       </div>
@@ -98,7 +98,7 @@
           <i class="fa fa-users" aria-hidden="true"></i>
           <span>Clubes</span>
         </a>
-      </li>
+      </li>-->
 
     </ul>
     <!-- End of Sidebar -->
@@ -165,7 +165,7 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
         	
         	<div class="row" id="divPanelAdministrador" style="display: none;">
         		<div class="col-md-12">
@@ -257,7 +257,7 @@
         			document.getElementById("adminSidebar").style.display="block";
         		}
         	</script>        	
-        </div>
+        </div>-->
         <!-- /.container-fluid -->
 
       </div>

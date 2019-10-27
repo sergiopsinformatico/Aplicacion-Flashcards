@@ -163,7 +163,7 @@ public class Controlador01RegistroUsuarios {
 				correo.confirmaCuentaCreada(user2);
 			}else if(Broker.getInstanciaActivaCuenta().existeActivacionUsuario(username)) {
 				vista = new ModelAndView("redirect:/inicio.html");
-				vista.addObject("mensaje", "Hay una activación pendiente para "+username+", pero ese codigo no es el correcto.");
+				vista.addObject("mensaje", "Hay una activacion pendiente para "+username+", pero ese codigo no es el correcto.");
 			}else {
 				user = Broker.getInstanciaUsuario().getUsuarioDTO(username);
 				if(user!=null && user.isActivadaCuenta()) {
@@ -211,5 +211,4 @@ public class Controlador01RegistroUsuarios {
 			vista = new ModelAndView("redirect:/iniciarSesion.html");
 			return vista;
 		}	
-	
 }

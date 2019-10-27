@@ -146,5 +146,4 @@ public class Email {
 	public String getEnvia() {
 		return PropertiesConfig.getProperties("emailDireccion");
 	}
-	
 }

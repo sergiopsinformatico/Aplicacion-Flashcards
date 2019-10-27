@@ -116,5 +116,4 @@ public class RecuperarCuentaMongoDB implements InterfaceDAORecuperarCuenta {
 				return false;
 			}
 		}
-	
 }
