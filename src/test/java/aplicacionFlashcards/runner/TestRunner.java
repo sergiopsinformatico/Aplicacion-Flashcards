@@ -6,6 +6,6 @@ import cucumber.api.junit.*;
 
 @RunWith(Cucumber.class)
 	@CucumberOptions(features="src/test/java/aplicacionFlashcards/features",glue="test/java/aplicacionFlashcards/stepDefinitions",
-					 format= {"pretty","html:src/test/java/aplicacionFlashcards/resultTest/Sprint2"})
+					 format= {"pretty","html:src/test/java/aplicacionFlashcards/resultTest/Sprint3"})
 
 	public class TestRunner {}
