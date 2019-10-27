@@ -60,7 +60,7 @@ public class Controlador07Gente {
 		public ModelAndView gente(HttpServletRequest request, HttpServletResponse response) {
 			if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 			   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-			   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!="") {
+			   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
 				
 				vista = new ModelAndView("vistaGente");
 			

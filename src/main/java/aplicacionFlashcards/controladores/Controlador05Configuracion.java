@@ -35,7 +35,7 @@ public class Controlador05Configuracion {
 	public ModelAndView modificarPerfil(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!="") {
+		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
 			
 			vista = new ModelAndView("vistaConfiguracion");
 		
@@ -60,7 +60,7 @@ public class Controlador05Configuracion {
 		userNuevo.setActivadaCuenta(userAntiguo.isActivadaCuenta());
 		
 		
-		if(userNuevo.getEmailFoto()=="") {
+		if(userNuevo.getEmailFoto().equals("")) {
 			userNuevo.setFoto("https://www.gravatar.com/avatar/inventado.jpg");
 		}else {
 			userNuevo.setFoto("https://www.gravatar.com/avatar/"+DigestUtils.md5Hex(userNuevo.getEmailFoto())+".jpg");
@@ -88,7 +88,7 @@ public class Controlador05Configuracion {
 	public ModelAndView eliminarCuenta(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 		  ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		  ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!="") {
+		  ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
 			
 			fecha = new Fecha();
 			elimina = new EliminarCuentaDTO(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), fecha.fechaEliminarCuenta());
