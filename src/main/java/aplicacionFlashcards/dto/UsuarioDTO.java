@@ -11,6 +11,7 @@ public class UsuarioDTO {
 	String emailFoto;
 	String rol;
 	boolean activadaCuenta;
+	String tipoRelacion;
 	
 	public UsuarioDTO(String username, String email, String clave) {
 		setUsername(username);
@@ -96,5 +97,13 @@ public class UsuarioDTO {
 
 	public void setActivadaCuenta(boolean activadaCuenta) {
 		this.activadaCuenta = activadaCuenta;
+	}
+	
+	public String getTipoRelacion() {
+		return this.tipoRelacion;
+	}
+	
+	public void setTipoRelacion(String tipoRelacion) {
+		this.tipoRelacion = tipoRelacion;
 	}
 }

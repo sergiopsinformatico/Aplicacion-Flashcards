@@ -7,7 +7,7 @@ import main.java.aplicacionFlashcards.broker.Broker;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionFlashcards.dto.UsuarioDTO;
 
-public class Test05UsuarioEliminaPerfil {
+public class Test18UsuarioEliminaPerfil {
 	
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
