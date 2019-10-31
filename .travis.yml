@@ -7,7 +7,7 @@ addons:
       secure: "3a40f7ce79b62c41505d6d661028d0949358ea1c"
       
 script:
-  - mvn clean verify -Psonar
+  - mvn clean
 
 jdk:
   - oraclejdk8
