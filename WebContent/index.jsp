@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Flashcards - Prueba de que se ha subido correctamente</title>
+    <title>Flashcards - Página de Inicio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -68,9 +68,12 @@
 	      </div>
 	    </nav>
 	</header>
-	<br><br>
-    <section>
-	    <h6 align="center">Desarrollo de la Wiki</h6>
+    <section style="background-color:grey">
+    	<br><br><br><br>
+	    <h6 align="center" href="www.google.es">Desarrollo de la Wiki</h6>
+	</section>
+	<section style="background-color:white">
+    	Sitio en Construcción
 	</section>
     <br>
     <section>
