@@ -1,9 +1,8 @@
-# Heres a comment
-*.psd
-*.pdf
-/test
-/spec
 **/.sonar/
 **/sonar/
 **/.sonarscanner/
 **/sonarscanner/
+**/.sonar
+**/sonar
+**/.sonarscanner
+**/sonarscanner
