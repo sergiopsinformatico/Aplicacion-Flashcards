@@ -7,7 +7,10 @@ addons:
       secure: "3a40f7ce79b62c41505d6d661028d0949358ea1c"
       
 script:
-  - mvn clean
+  - mvn clean verify
+  - heroku plugins:install heroku-repo
+  - heroku repo:gc --app aplicacion-flashcards
+  - heroku repo:purge_cache --app aplicacion-flashcards
 
 jdk:
   - oraclejdk8
@@ -22,7 +25,3 @@ deploy:
   on:
     repo: sergiopsinformatico/Aplicacion-Flashcards
     branch: ramaSprint4
-  run:
-    heroku plugins:install heroku-repo
-    heroku repo:gc --app aplicacion-flashcards
-    heroku repo:purge_cache --app aplicacion-flashcards
