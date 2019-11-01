@@ -1,10 +1,2 @@
-**/.sonar/
-**/sonar/
-**/.sonarscanner/
-**/sonarscanner/
-**/.sonar
-**/sonar
-**/.sonarscanner
-**/sonarscanner
-**/test
-**/test/
+**/target
+**/target/
