@@ -8,9 +8,6 @@ addons:
       
 script:
   - mvn clean verify
-  - heroku plugins:install heroku-repo
-  - heroku repo:gc --app aplicacion-flashcards
-  - heroku repo:purge_cache --app aplicacion-flashcards
 
 jdk:
   - oraclejdk8
