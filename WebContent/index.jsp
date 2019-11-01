@@ -70,10 +70,12 @@
 	</header>
     <section style="background-color:grey">
     	<br><br><br><br>
-	    <h6 align="center" href="www.google.es">Desarrollo de la Wiki</h6>
+	    <a align="center" href="www.google.es">Wiki sobre el Desarrollo del Proyecto</a>
 	</section>
 	<section style="background-color:white">
-    	Sitio en Construcción
+    	<h6 align="center">Sitio en Construcción</h6>
+    	<br><br>
+    	<img style="display:block;margin-left:auto;margin-right:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible" style="width:75%">
 	</section>
     <br>
     <section>
