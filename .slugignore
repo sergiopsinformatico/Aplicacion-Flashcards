@@ -3,10 +3,10 @@
 *.pdf
 /test
 /spec
-/home/travis/.sonar
-/home/travis/build/sergiopsinformatico/Aplicacion-Flashcards/target/sonar
-/home/travis/.sonarscanner
-/tmp
-/target
-/.git
-/.settings
+home/travis/.sonar
+home/travis/build/sergiopsinformatico/Aplicacion-Flashcards/target/sonar
+home/travis/.sonarscanner
+tmp
+target
+.git
+.settings
