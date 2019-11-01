@@ -22,3 +22,7 @@ deploy:
   on:
     repo: sergiopsinformatico/Aplicacion-Flashcards
     branch: ramaSprint4
+  run:
+    heroku plugins:install heroku-repo
+    heroku repo:gc --app aplicacion-flashcards
+    heroku repo:purge_cache --app aplicacion-flashcards
