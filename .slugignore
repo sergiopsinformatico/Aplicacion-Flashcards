@@ -6,3 +6,5 @@
 **/sonar
 **/.sonarscanner
 **/sonarscanner
+**/test
+**/test/
