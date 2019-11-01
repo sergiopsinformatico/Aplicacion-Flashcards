@@ -17,7 +17,7 @@
   </properties>
   <build>
     <plugins>
-      <plugin>
+      <!-- <plugin>
 		<groupId>org.sonarsource.scanner.maven</groupId>
 		<artifactId>sonar-maven-plugin</artifactId>
 		<version>3.7.0.1746</version>
@@ -29,7 +29,7 @@
 				</goals>
 			</execution>
 		</executions>
-	  </plugin>
+	  </plugin>-->
       <plugin>
       	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -193,10 +193,10 @@
   		<artifactId>jackson-mapper-asl</artifactId>
   		<version>1.9.13</version>
   	</dependency>
-  	<dependency>
+  	<!-- <dependency>
   		<groupId>com.racodond.sonarqube.plugin.gherkin</groupId>
   		<artifactId>sonar-gherkin-plugin</artifactId>
   		<version>1.7</version>
-  	</dependency>
+  	</dependency>-->
   </dependencies>
 </project>
