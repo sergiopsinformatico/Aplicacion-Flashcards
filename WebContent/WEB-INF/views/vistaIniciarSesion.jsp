@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Flashcards - Inicio de Sesión</title>
+    <title>Flashcards - Acceder a la Aplicación</title>
 
     <!-- Bootstrap core CSS -->
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,7 @@
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/acceder.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -55,12 +56,105 @@
 	      </div>
 	    </nav>
 	</header>
-	
 	<section>
 		<br><br><br><br>
+		<script type="text/javascript">			
+			var app = angular.module('AppAcceder', []);
+	        app.controller('AccederCtrl', function($scope, $http) {
+	        	
+	        	$scope.showSignIn = true;
+	        	$scope.showSignUp = false;
+	        	$scope.showRecovery = false;
+	        	
+	        	$scope.activateSignIn = function (){
+	        		$scope.showSignIn = true;
+		        	$scope.showSignUp = false;
+		        	$scope.showRecovery = false;
+	        	}
+	        	
+				$scope.activateSignUp = function (){
+					$scope.showSignIn = false;
+		        	$scope.showSignUp = true;
+		        	$scope.showRecovery = false;
+	        	}
+	        	
+				$scope.activateRecovery = function (){
+					$scope.showSignIn = false;
+		        	$scope.showSignUp = false;
+		        	$scope.showRecovery = true;
+				}
+				
+	        });
+		</script>
 		<div class="row">
 			<div class="col-md-4"></div>
-			<div class="col-md-4 formAccess textCenter container">
+			<div class="col-md-4" ng-app="AppAcceder" ng-controller="AccederCtrl">
+				<form ng-if="showSignIn == true" class="form-signin">
+		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesión</h1>
+		            <br>
+		            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+		            <br>
+		            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+		            <br><br>
+		            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+		            <hr style="border: 0.5px solid black;">
+		            <button class="btn btn-primary btn-block" style="background-color:red;border:red;" type="button" id="btn-signup" ng-click="activateSignUp()"><i class="fas fa-user-plus"></i> ¿Aún no tienes cuenta? Registrate</button>
+		            <button class="btn btn-primary btn-block" style="background-color:orange;border:orange;" type="button" id="btn-signup" ng-click="activateRecovery()"><i class="fas fa-key"></i> ¿Olvidaste tu clave? Recupérala</button>
+		        </form>
+		        <form ng-if="showSignUp == true" class="form-signin">
+		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Crear una Cuenta Nueva</h1>
+		            <br>
+		            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+		            <br>
+		            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+		            <br><br>
+		            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+		            <a href="#" id="forgot_pswd">Forgot password?</a>
+		            <hr>
+		            <!-- <p>Don't have an account!</p>  -->
+		            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+		        </form>
+		        <form ng-if="showRecovery == true" class="form-signin">
+		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Recuperar</h1>
+		            <br>
+		            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+		            <br>
+		            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+		            <br><br>
+		            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+		            <a href="#" id="forgot_pswd">Forgot password?</a>
+		            <hr>
+		            <!-- <p>Don't have an account!</p>  -->
+		            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
+		        </form>
+	
+	            <!-- <form action="/reset/password/" class="form-reset">
+	                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+	                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+	                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+	            </form>
+	            
+	            <form action="/signup/" class="form-signup">
+	                <div class="social-login">
+	                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+	                </div>
+	                <div class="social-login">
+	                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+	                </div>
+	                
+	                <p style="text-align:center">OR</p>
+	
+	                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+	                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+	                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+	                <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+	
+	                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+	                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+	            </form>
+	            <br>-->
+			</div>
+			<!--<div class="col-md-4 formAccess textCenter container">
 				<br>
 				<h4 class="title">Iniciar Sesión</h4>
 				<br>
@@ -91,7 +185,7 @@
 					</div>
 					<div class="col-md-2"></div>
 				</div>
-			</div>
+			</div>-->
 			<div class="col-md-4"></div>
 		</div>
 	</section>

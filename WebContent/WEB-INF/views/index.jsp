@@ -57,11 +57,14 @@
 	        </button>
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
-	          	<li class="nav-item mx-0 mx-lg-1">
+	          	<!--<li class="nav-item mx-0 mx-lg-1">
 	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html">Iniciar Sesión</a>
 	            </li>
 	            <li class="nav-item mx-0 mx-lg-1">
 	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
+	            </li>-->
+	            <li class="nav-item mx-0 mx-lg-1">
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Acceder a la Aplicación</a>
 	            </li>
 	          </ul>
 	        </div>
@@ -83,7 +86,7 @@
     <article>
 	    <div class="copyright py-4 text-center text-white">
 	      <div class="container">
-	       	<small>Desarrollador por Sergio Pérez Sanchez para el Trabajo Fin de Grado (TFG). Curso 2019/2020</small>
+	       	<small>Desarrollado por Sergio Pérez Sanchez para el Trabajo Fin de Grado (TFG). Curso 2019/2020</small>
 	      </div>
 	    </div>
 	</article>
