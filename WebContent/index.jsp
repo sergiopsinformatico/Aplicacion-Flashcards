@@ -75,7 +75,7 @@
 	<section style="background-color:white">
     	<h6 align="center">Sitio en Construcción</h6>
     	<br><br>
-    	<img style="display:block;margin-left:auto;margin-right:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible" style="width:150px;height:auto;">
+    	<img style="display:block;margin-left:auto;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
 	</section>
     <br>
     <section>
