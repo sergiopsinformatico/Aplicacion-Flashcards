@@ -68,13 +68,13 @@
 	      </div>
 	    </nav>
 	</header>
-	<article style="background-color:white">
+	<!-- <article style="background-color:white">
 		<br><br><br><br><br><br><br><br>
     	<img style="display:block;margin-left:auto;margin-right:auto;width:500px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
     	<br><br>
-	</article>
+	</article>-->
     <article style="background-color:#397600">
-    	<br><br>
+    	<br><br><br><br><br><br><br><br>
     	<h6 style="color:white" align="center">Si quieres saber cómo se ha desarrollado este proyecto, visita la Wiki del Desarrollo</h6>
     	<br>
     	<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:300px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
