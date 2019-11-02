@@ -68,22 +68,14 @@
 	      </div>
 	    </nav>
 	</header>
-    <section style="background-color:grey">
-    	<br><br><br><br>
-	    <h6 align="center"><a href="https://www.google.es">Wiki sobre el Desarrollo del Proyecto</a></h6>
-	</section>
 	<section style="background-color:white">
+		<br><br><br><br>
     	<h6 align="center">Sitio en Construcción</h6>
-    	<br><br>
-    	<img style="display:block;margin-left:auto;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
+    	<img style="display:block;margin-left:auto;margin-right:auto;width:500px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
 	</section>
-    <br>
-    <section>
-	    <div class="copyright py-4 text-center text-white">
-	      <div class="container">
-	        <small>Desarrollado por Sergio Pérez Sánchez. 2019</small>
-	      </div>
-	    </div>
+    <section style="background-color:grey">
+    	<h6 align="center">Si quieres saber cómo se ha desarrollado este proyecto, visita la Wiki del Desarrollo</h6>
+    	<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
 	</section>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
