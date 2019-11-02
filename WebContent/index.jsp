@@ -72,16 +72,15 @@
 		<br><br><br><br>
     	<img style="display:block;margin-left:auto;margin-right:auto;width:500px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
 	</section>
-    <section style="background-color:#7DE719">
-    	<h6 align="center">Si quieres saber cómo se ha desarrollado este proyecto, visita la Wiki del Desarrollo</h6>
+    <section style="background-color:#397600">
+    	<h6 style="color:white" align="center">Si quieres saber cómo se ha desarrollado este proyecto, visita la Wiki del Desarrollo</h6>
     	<br>
     	<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:300px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
 	</section>
-    <br>
     <section>
 	    <div class="copyright py-4 text-center text-white">
 	      <div class="container">
-	       
+	       	<small>Desarrollador por Sergio Pérez Sanchez para el Trabajo Fin de Grado (TFG). Curso 2019/2020</small>
 	      </div>
 	    </div>
 	</section>
