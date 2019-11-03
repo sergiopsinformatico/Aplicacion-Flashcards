@@ -128,7 +128,7 @@ public class Controlador01RegistroUsuarios {
 				correo = new Email();
 				correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
 				
-				vista = new ModelAndView("vistaIniciarSesion");
+				vista = new ModelAndView("vistaAcceder");
 				vista.addObject("mensaje", "Por favor, revise su email "+user.getEmail()+" para finalizar con su registro.");
 				
 			}else {

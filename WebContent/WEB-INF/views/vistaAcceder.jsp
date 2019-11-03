@@ -20,7 +20,7 @@
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
-    <link rel="stylesheet" type="text/css" href="resources/css/acceder.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="resources/css/acceder.css"/>-->
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -45,11 +45,14 @@
 	        </button>
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
-	          	<li class="nav-item mx-0 mx-lg-1">
+	          	<!--<li class="nav-item mx-0 mx-lg-1">
 	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html">Iniciar Sesión</a>
 	            </li>
 	            <li class="nav-item mx-0 mx-lg-1">
 	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
+	            </li>-->
+	            <li class="nav-item mx-0 mx-lg-1">
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="acceder.html">Acceder a la Aplicación</a>
 	            </li>
 	          </ul>
 	        </div>
@@ -70,6 +73,7 @@
 	        		$scope.showSignIn = true;
 		        	$scope.showSignUp = false;
 		        	$scope.showRecovery = false;
+		        	grecaptcha.reset();
 	        	}
 	        	
 				$scope.activateSignUp = function (){
@@ -85,49 +89,64 @@
 				}
 				
 	        });
+	        
+	        document.getElementById("btnSignIn").disabled = true;
+			
+        	function enableBtnSignIn(){
+        		document.getElementById("btnSignIn").style.background = "green";
+        		document.getElementById("btnSignIn").style.color = "white";
+        		document.getElementById("btnSignIn").disabled = false;
+        	}
 		</script>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4" ng-app="AppAcceder" ng-controller="AccederCtrl">
-				<form ng-if="showSignIn == true" class="form-signin">
-		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesión</h1>
-		            <br>
-		            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-		            <br>
-		            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-		            <br><br>
-		            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
-		            <hr style="border: 0.5px solid black;">
-		            <button class="btn btn-primary btn-block" style="background-color:red;border:red;" type="button" id="btn-signup" ng-click="activateSignUp()"><i class="fas fa-user-plus"></i> ¿Aún no tienes cuenta? Registrate</button>
-		            <button class="btn btn-primary btn-block" style="background-color:orange;border:orange;" type="button" id="btn-signup" ng-click="activateRecovery()"><i class="fas fa-key"></i> ¿Olvidaste tu clave? Recupérala</button>
-		        </form>
-		        <form ng-if="showSignUp == true" class="form-signin">
-		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Crear una Cuenta Nueva</h1>
-		            <br>
-		            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-		            <br>
-		            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-		            <br><br>
-		            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
-		            <a href="#" id="forgot_pswd">Forgot password?</a>
-		            <hr>
-		            <!-- <p>Don't have an account!</p>  -->
-		            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
-		        </form>
-		        <form ng-if="showRecovery == true" class="form-signin">
-		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Recuperar</h1>
-		            <br>
-		            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-		            <br>
-		            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-		            <br><br>
-		            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
-		            <a href="#" id="forgot_pswd">Forgot password?</a>
-		            <hr>
-		            <!-- <p>Don't have an account!</p>  -->
-		            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
-		        </form>
-	
+				<div ng-if="showSignIn == true" >
+					<form action="acceder.do" method="post" class="form-signin">
+			            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesión</h1>
+			            <br>
+			            <input type="text" id="inputEmail" class="form-control" placeholder="Email o usuario" required="" autofocus="">
+			            <br>
+			            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
+			            <br>
+			            <div class="middle">
+		                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnSignIn"></div>
+		                </div>
+			            <button class="btn btn-block btnBlock" type="submit" id="btnSignIn" disabled><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+			        </form>
+			        <br><br>
+			    	<hr style="border: 0.5px solid black;">
+		            <button class="btn btn-primary btn-block" style="background-color:red;border:red;" type="button" ng-click="activateSignUp()"><i class="fas fa-user-plus"></i> ¿Aún no tienes cuenta? Crear una cuenta nueva</button>
+		            <button class="btn btn-primary btn-block" style="background-color:orange;border:orange;" type="button" ng-click="activateRecovery()"><i class="fas fa-key"></i> ¿Olvidaste tu clave? Recupera tu clave</button>
+			    </div>
+			    <div ng-if="showSignUp == true">
+			        <form class="form-signin">
+			            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Crear una Cuenta Nueva</h1>
+			            <br>
+			            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+			            <br>
+			            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+			            <br><br>
+			            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+			            <hr style="border: 0.5px solid black;">
+			            <button class="btn btn-primary btn-block" style="background-color:blue;border:blue;" type="button" id="btn-signup" ng-click="activateSignIn()"><i class="fas fa-arrow-right"></i> ¿Ya tienes cuenta? Acceder a la Aplicación</button>
+			            <button class="btn btn-primary btn-block" style="background-color:orange;border:orange;" type="button" id="btn-signup" ng-click="activateRecovery()"><i class="fas fa-key"></i> ¿Olvidaste tu clave? Recupera tu clave</button>
+			        </form>
+			    </div>
+			    <div ng-if="showRecovery == true">
+			        <form class="form-signin">
+			            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Recuperar</h1>
+			            <br>
+			            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+			            <br>
+			            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+			            <br><br>
+			            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+			            <hr style="border: 0.5px solid black;">
+			            <button class="btn btn-primary btn-block" style="background-color:blue;border:blue;" type="button" id="btn-signup" ng-click="activateSignIn()"><i class="fas fa-arrow-right"></i> ¿Ya tienes cuenta? Acceder a la Aplicación</button>
+			            <button class="btn btn-primary btn-block" style="background-color:red;border:red;" type="button" id="btn-signup" ng-click="activateSignUp()"><i class="fas fa-user-plus"></i> ¿Aún no tienes cuenta? Crear una cuenta nueva</button>
+			        </form>
+				</div>
 	            <!-- <form action="/reset/password/" class="form-reset">
 	                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
 	                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
@@ -167,9 +186,7 @@
 			                <br>
 			                <input type="password" class="form-control" id="inputClave" name="inputClave" placeholder="Clave" required>
 			                <br><br>
-			                <div class="middle">
-			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtn"></div>
-			                </div>
+			                
 			                <br><br>
 			                <button class="btn btn-lg btn-block btn-signin btnBlock" id="buttonIS" name="buttonIS" type="submit">Acceder</button>
 			                <br>
