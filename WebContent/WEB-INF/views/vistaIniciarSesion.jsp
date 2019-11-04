@@ -73,9 +73,9 @@
 				<form action="iniciarSesion.do" method="post" class="form-signin">
 		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesión</h1>
 		            <br>
-		            <input type="text" id="inputEmail" class="form-control" placeholder="Email o usuario" required="" autofocus="">
+		            <input type="text" id="inputUsernameEmail" name="inputUsernameEmail" class="form-control" placeholder="Email o usuario" required="" autofocus="">
 		            <br>
-		            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
+		            <input type="password" id="inputClave" name="inputClave" class="form-control" placeholder="Contraseña" required="">
 		            <br>
 		            <div class="middle">
 	                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnSignIn"></div>
