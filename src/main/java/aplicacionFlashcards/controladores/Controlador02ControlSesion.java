@@ -44,27 +44,8 @@ public class Controlador02ControlSesion {
 		return vista;
 	}
 	
-	//Index o pagina principal logueado
-	@RequestMapping(value = "/acceder", method = RequestMethod.GET)
-	public ModelAndView acceder(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()=="") {
-			vista = new ModelAndView("vistaAcceder");
-			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
-				vista.addObject("mensaje", request.getParameter("mensaje"));
-			}
-		}else {
-			vista =  new ModelAndView("vistaPrincipal");
-			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
-				vista.addObject("mensaje", request.getParameter("mensaje"));
-			}
-		}
-		return vista;
-	}
-	
 	//Iniciar Sesion
-	@RequestMapping(value = "/iniciarSesion", method = RequestMethod.GET)
+	@RequestMapping(value = "/acceder", method = RequestMethod.GET)
 	public ModelAndView iniciarSesion(HttpServletRequest request, HttpServletResponse response) {
 		
 		//Comprobaciones
@@ -84,7 +65,7 @@ public class Controlador02ControlSesion {
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()=="") {
 			
-			vista =  new ModelAndView("vistaAcceder");
+			vista =  new ModelAndView("vistaIniciarSesion");
 			
 			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
 				vista.addObject("mensaje", request.getParameter("mensaje"));
@@ -99,7 +80,7 @@ public class Controlador02ControlSesion {
 	}
 	
 	//Acceder
-	@RequestMapping(value = "/acceder", method = RequestMethod.POST)
+	@RequestMapping(value = "/iniciarSesion", method = RequestMethod.POST)
 	public ModelAndView loguearPost(HttpServletRequest request, HttpServletResponse response) {
 		dBUsuario = Broker.getInstanciaUsuario();
 		if(dBUsuario.login(request.getParameter("inputUsernameEmail"), request.getParameter("inputClave"))) {
@@ -116,15 +97,34 @@ public class Controlador02ControlSesion {
 				}
 				vista.addObject("usuario", user);
 			}else {
-				vista = new ModelAndView("vistaAcceder");
+				vista = new ModelAndView("vistaIniciarSesion");
 				vista.addObject("mensaje", "Su cuenta aun no ha sido activada. Por favor, revise su email para activar la cuenta.");
 			}
 		}else {
-			vista = new ModelAndView("vistaAcceder");
+			vista = new ModelAndView("vistaIniciarSesion");
 			vista.addObject("mensaje", "El usuario y/o la clave son incorrectos.");
 		}
 		return vista;
 	}
+	
+	/*Index o pagina principal logueado
+	@RequestMapping(value = "/acceder", method = RequestMethod.GET)
+	public ModelAndView acceder(HttpServletRequest request, HttpServletResponse response) {
+		if(request.getSession().getAttribute("usuario")==null || 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()=="") {
+			vista = new ModelAndView("vistaIniciarSesion");
+			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
+				vista.addObject("mensaje", request.getParameter("mensaje"));
+			}
+		}else {
+			vista =  new ModelAndView("vistaPrincipal");
+			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
+				vista.addObject("mensaje", request.getParameter("mensaje"));
+			}
+		}
+		return vista;
+	}*/
 	
 	/*@RequestMapping(value = "/acceder", method = RequestMethod.GET)
 	public ModelAndView loguearGet(HttpServletRequest request, HttpServletResponse response) {
