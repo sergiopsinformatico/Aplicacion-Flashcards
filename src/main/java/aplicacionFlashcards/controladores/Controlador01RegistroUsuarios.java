@@ -1,5 +1,6 @@
 package main.java.aplicacionFlashcards.controladores;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,7 @@ import main.java.aplicacionFlashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionFlashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionFlashcards.broker.Broker;
 import main.java.aplicacionFlashcards.dto.ActivaCuentaDTO;
+import main.java.aplicacionFlashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionFlashcards.dto.UsuarioDTO;
 
 @RestController
@@ -35,6 +37,7 @@ public class Controlador01RegistroUsuarios {
 		ModelAndView vista;
 		UsuarioDTO user;
 		UsuarioDTO user2;
+		RelacionesUsuariosDTO relacion;
 		Fecha fecha;
 		String codigoActivacion;
 		Email correo;
@@ -120,11 +123,15 @@ public class Controlador01RegistroUsuarios {
 			user.setRol("Usuario");
 			user.setActivadaCuenta(false);
 			
+			relacion = new RelacionesUsuariosDTO(user.getUsername(), new LinkedList<String>(),  new LinkedList<String>(),
+					new LinkedList<String>(),  new LinkedList<String>(),  new LinkedList<String>());
+			
 			fecha = new Fecha();
 			codigoActivacion = GeneratorStrings.randomString(15);
 			
 			if(Broker.getInstanciaUsuario().insertUsuario(user) &&
-			   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta()))) {
+			   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
+			   Broker.getInstanciaRelaciones().creaRelaciones(relacion)) {
 				correo = new Email();
 				correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
 				

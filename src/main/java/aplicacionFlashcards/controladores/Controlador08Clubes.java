@@ -23,6 +23,7 @@ import main.java.aplicacionFlashcards.broker.Broker;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionFlashcards.dto.ClubDTO;
+import main.java.aplicacionFlashcards.dto.FlashcardsDTO;
 import main.java.aplicacionFlashcards.dto.UsuarioDTO;
 
 @Controller
@@ -209,10 +210,10 @@ public class Controlador08Clubes {
 		return vista;
 	}
 	
-	/*@RequestMapping(value = "/getColeccionesClub", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/getColeccionesClub", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> getColeccionesClub(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		return Broker.getInstanciaFlashcards().coleccionesClub(id);
-	}*/
+	}
 }

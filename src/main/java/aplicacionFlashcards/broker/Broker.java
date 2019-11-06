@@ -3,12 +3,14 @@ package main.java.aplicacionFlashcards.broker;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOActivaCuenta;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOEliminarCuenta;
+import main.java.aplicacionFlashcards.db.dao.InterfaceDAOFlashcards;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAORecuperarCuenta;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionFlashcards.db.mongoDB.ActivarCuentaMongoDB;
 import main.java.aplicacionFlashcards.db.mongoDB.ClubMongoDB;
 import main.java.aplicacionFlashcards.db.mongoDB.EliminarCuentaMongoDB;
+import main.java.aplicacionFlashcards.db.mongoDB.FlashcardsMongoDB;
 import main.java.aplicacionFlashcards.db.mongoDB.RecuperarCuentaMongoDB;
 import main.java.aplicacionFlashcards.db.mongoDB.RelacionesUsuariosMongoDB;
 import main.java.aplicacionFlashcards.db.mongoDB.UsuariosMongoDB;
@@ -36,5 +38,8 @@ public class Broker {
 	}
 	public static InterfaceDAORelacionesUsuarios getInstanciaRelaciones() {
 		return new RelacionesUsuariosMongoDB();
+	}
+	public static InterfaceDAOFlashcards getInstanciaFlashcards() {
+		return new FlashcardsMongoDB();
 	}
 }
