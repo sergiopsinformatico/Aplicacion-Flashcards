@@ -8,7 +8,7 @@ import main.java.aplicacionFlashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionFlashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionFlashcards.dto.UsuarioDTO;
 
-public class Test18UsuarioEliminaPerfil {
+public class Test26UsuarioEliminaPerfil {
 	
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
