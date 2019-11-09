@@ -1,0 +1,45 @@
+package main.java.aplicacionflashcards.broker;
+
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOActivaCuenta;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOEliminarCuenta;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOFlashcards;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAORecuperarCuenta;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
+import main.java.aplicacionflashcards.db.mongoDB.ActivarCuentaMongoDB;
+import main.java.aplicacionflashcards.db.mongoDB.ClubMongoDB;
+import main.java.aplicacionflashcards.db.mongoDB.EliminarCuentaMongoDB;
+import main.java.aplicacionflashcards.db.mongoDB.FlashcardsMongoDB;
+import main.java.aplicacionflashcards.db.mongoDB.RecuperarCuentaMongoDB;
+import main.java.aplicacionflashcards.db.mongoDB.RelacionesUsuariosMongoDB;
+import main.java.aplicacionflashcards.db.mongoDB.UsuariosMongoDB;
+
+public class Broker {
+	
+	private Broker() {
+		throw new IllegalStateException("Broker no se instancia");
+	}
+	
+	public static InterfaceDAOUsuario getInstanciaUsuario() {
+		return new UsuariosMongoDB();
+	}
+	public static InterfaceDAOActivaCuenta getInstanciaActivaCuenta() {
+		return new ActivarCuentaMongoDB();
+	}
+	public static InterfaceDAOEliminarCuenta getInstanciaEliminarCuenta() {
+		return new EliminarCuentaMongoDB();
+	}
+	public static InterfaceDAORecuperarCuenta getInstanciaRecuperarCuenta() {
+		return new RecuperarCuentaMongoDB();
+	}
+	public static InterfaceDAOClub getInstanciaClub() {
+		return new ClubMongoDB();
+	}
+	public static InterfaceDAORelacionesUsuarios getInstanciaRelaciones() {
+		return new RelacionesUsuariosMongoDB();
+	}
+	public static InterfaceDAOFlashcards getInstanciaFlashcards() {
+		return new FlashcardsMongoDB();
+	}
+}
