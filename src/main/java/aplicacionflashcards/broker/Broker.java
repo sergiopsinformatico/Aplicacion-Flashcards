@@ -7,13 +7,13 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOFlashcards;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORecuperarCuenta;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
-import main.java.aplicacionflashcards.db.mongoDB.ActivarCuentaMongoDB;
-import main.java.aplicacionflashcards.db.mongoDB.ClubMongoDB;
-import main.java.aplicacionflashcards.db.mongoDB.EliminarCuentaMongoDB;
-import main.java.aplicacionflashcards.db.mongoDB.FlashcardsMongoDB;
-import main.java.aplicacionflashcards.db.mongoDB.RecuperarCuentaMongoDB;
-import main.java.aplicacionflashcards.db.mongoDB.RelacionesUsuariosMongoDB;
-import main.java.aplicacionflashcards.db.mongoDB.UsuariosMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.ActivarCuentaMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.ClubMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.EliminarCuentaMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.FlashcardsMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.RecuperarCuentaMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.RelacionesUsuariosMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.UsuariosMongoDB;
 
 public class Broker {
 	

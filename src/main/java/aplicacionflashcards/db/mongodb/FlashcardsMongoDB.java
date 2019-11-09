@@ -1,4 +1,4 @@
-package main.java.aplicacionflashcards.db.mongoDB;
+package main.java.aplicacionflashcards.db.mongodb;
 
 import java.util.LinkedList;
 import java.util.List;
