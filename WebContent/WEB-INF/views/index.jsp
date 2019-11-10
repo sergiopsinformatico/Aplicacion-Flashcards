@@ -36,7 +36,7 @@
 
   <body id="page-top">
   
-  	<%@ page import="main.java.aplicacionFlashcards.dto.UsuarioDTO" %>
+  	<%@ page import="main.java.aplicacionflashcards.dto.UsuarioDTO" %>
 	<% 
 		UsuarioDTO user = ((UsuarioDTO)(session.getAttribute("usuario")));
 		if(user!=null && user.getUsername()!=null && (!(user.getUsername().equals("")))){
@@ -58,7 +58,7 @@
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
 	          	<li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html">Iniciar Sesión</a>
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="acceder.html">Acceder a la Aplicación</a>
 	            </li>
 	            <li class="nav-item mx-0 mx-lg-1">
 	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
@@ -68,18 +68,25 @@
 	      </div>
 	    </nav>
 	</header>
-    <br><br>
-    <section>
-	    <h6 align="center">Desarrollo de la Wiki</h6>
-	</section>
-    <br>
-    <section>
+	<!-- <article style="background-color:white">
+		<br><br><br><br><br><br><br><br>
+    	<img style="display:block;margin-left:auto;margin-right:auto;width:500px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
+    	<br><br>
+	</article>-->
+    <article style="background-color:#397600">
+    	<br><br><br><br><br><br><br><br>
+    	<h6 style="color:white" align="center">Si quieres saber cómo se ha desarrollado este proyecto, visita la Wiki del Desarrollo</h6>
+    	<br>
+    	<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:300px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
+    	<br><br>
+	</article>
+    <article>
 	    <div class="copyright py-4 text-center text-white">
 	      <div class="container">
-	        <small>Desarrollado por Sergio Pérez Sánchez. 2019</small>
+	       	<small>Desarrollado por Sergio Pérez Sanchez para el Trabajo Fin de Grado (TFG). Curso 2019/2020</small>
 	      </div>
 	    </div>
-	</section>
+	</article>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
