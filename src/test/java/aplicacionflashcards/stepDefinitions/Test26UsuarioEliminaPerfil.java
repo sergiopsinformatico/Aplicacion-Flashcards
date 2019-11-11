@@ -10,6 +10,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test26UsuarioEliminaPerfil {
 	
+	
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelaciones;

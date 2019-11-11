@@ -11,6 +11,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test12UsuarioRecibePeticionAmistad {
+	
 	InterfaceDAOUsuario dBUsuario;
 	UsuarioDTO user1;
 	UsuarioDTO user2;

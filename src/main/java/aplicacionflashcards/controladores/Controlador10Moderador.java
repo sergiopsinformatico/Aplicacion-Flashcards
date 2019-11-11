@@ -22,6 +22,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador10Moderador {
 	
 	//Variables
+	
 	ModelAndView vista;
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;

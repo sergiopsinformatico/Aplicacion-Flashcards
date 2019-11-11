@@ -20,7 +20,6 @@ public class Broker {
 	private Broker() {
 		throw new IllegalStateException("Broker no se instancia");
 	}
-	
 	public static InterfaceDAOUsuario getInstanciaUsuario() {
 		return new UsuariosMongoDB();
 	}

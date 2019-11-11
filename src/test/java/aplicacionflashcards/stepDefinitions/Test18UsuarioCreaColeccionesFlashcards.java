@@ -16,6 +16,7 @@ public class Test18UsuarioCreaColeccionesFlashcards{
 	List<TarjetaDTO> tarjetas;
 	TarjetaDTO tarjeta;
 	
+	
 	@Given("^Un usuario va a crear una coleccion$")
 	public void un_usuario_va_a_crear_una_coleccion() throws Throwable {
 	    assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));

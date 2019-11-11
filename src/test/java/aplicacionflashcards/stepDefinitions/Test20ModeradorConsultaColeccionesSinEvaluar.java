@@ -18,7 +18,8 @@ public class Test20ModeradorConsultaColeccionesSinEvaluar {
 	List<FlashcardsDTO> listaFlashcards;
 	boolean encontrado;
 	int indice;
-		
+	
+	
 	@Given("^Un moderador consulta las colecciones$")
 	public void un_moderador_consulta_las_colecciones() throws Throwable {
 	    assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderador").getRol().equals("Moderador"));

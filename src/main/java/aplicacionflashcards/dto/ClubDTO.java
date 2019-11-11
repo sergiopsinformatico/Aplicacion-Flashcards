@@ -3,7 +3,6 @@ package main.java.aplicacionflashcards.dto;
 import java.util.List;
 
 public class ClubDTO {
-	
 	String idClub;
 	String nombreClub;
 	String temaClub;

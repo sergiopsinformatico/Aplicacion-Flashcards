@@ -8,6 +8,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public class Test10AdministradorEliminaClub {
+	
 	InterfaceDAOClub dBClub;
 	ClubDTO club;
 	

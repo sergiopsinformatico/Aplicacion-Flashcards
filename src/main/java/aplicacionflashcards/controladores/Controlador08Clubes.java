@@ -29,6 +29,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @Controller
 @SessionAttributes("usuario")
 public class Controlador08Clubes {
+	
 	ModelAndView vista;
 	ClubDTO club;
 	InterfaceDAOClub dBClub;

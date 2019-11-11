@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Un usuario se une a un club
 
 Scenario: Un usuario se une a un club

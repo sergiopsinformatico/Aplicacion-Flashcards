@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Usuario acepta peticion de amistad
 
 Scenario: Usuario acepta peticion de amistad

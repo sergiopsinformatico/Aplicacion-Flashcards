@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Usuario deja club
 
 Scenario: Un usuario deja un club

@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Moderador elimina colecciones
 
 Scenario: Moderador elimina colecciones

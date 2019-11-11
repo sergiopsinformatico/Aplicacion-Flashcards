@@ -18,7 +18,6 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @Controller
 @SessionAttributes("usuario")
 public class Controlador02ControlSesion {
-	
 	ModelAndView vista;
 	InterfaceDAOUsuario dBUsuario;
 	UsuarioDTO user;

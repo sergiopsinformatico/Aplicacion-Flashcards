@@ -25,6 +25,7 @@ import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
 public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
 	
 	//Variables
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;

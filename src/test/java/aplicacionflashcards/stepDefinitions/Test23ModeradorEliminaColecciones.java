@@ -18,6 +18,7 @@ public class Test23ModeradorEliminaColecciones {
 	List<FlashcardsDTO> listaFlashcards;
 	FlashcardsDTO coleccion;
 	
+	
 	@Given("^Un moderador lista las colecciones$")
 	public void un_moderador_lista_las_colecciones() throws Throwable {
 		tarjeta = new TarjetaDTO("anverso", "reverso");

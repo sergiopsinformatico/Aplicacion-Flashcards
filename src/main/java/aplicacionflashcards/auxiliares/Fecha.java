@@ -30,7 +30,6 @@ public class Fecha {
 			LOGGER.log(Level.INFO, ex.getMessage());
 			return null;
 		}
-		
 	}
 	
 	public String fechaHoy() {

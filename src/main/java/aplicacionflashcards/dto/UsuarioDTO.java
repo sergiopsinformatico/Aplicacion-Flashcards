@@ -1,6 +1,7 @@
 package main.java.aplicacionflashcards.dto;
 
 public class UsuarioDTO {
+	
 	String username;
 	String clave;
 	String email;

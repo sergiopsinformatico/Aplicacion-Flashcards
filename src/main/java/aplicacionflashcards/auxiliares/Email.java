@@ -17,7 +17,6 @@ public class Email {
 	private String recibe;
 	private String asunto;
 	private String mensaje;
-	
 	boolean enviado;
 	
 	static final String CONST_SALUDO = "Hola ";

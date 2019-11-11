@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Usuario rechaza peticion de amistad
 
 Scenario: Usuario rechaza peticion de amistad

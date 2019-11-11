@@ -3,7 +3,6 @@ package main.java.aplicacionflashcards.dto;
 import java.util.List;
 
 public class FlashcardsDTO {
-	
 	String idColeccion;
 	String nombreColeccion;
 	String temaColeccion;

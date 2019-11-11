@@ -25,6 +25,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @Controller
 @SessionAttributes("usuario")
 public class Controlador06Administrador {
+	
 	ModelAndView vista;
 	List<UsuarioDTO> listaUsuarios;
 	List<ClubDTO> listaClubes;
