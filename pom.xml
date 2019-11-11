@@ -12,7 +12,8 @@
 	<!-- -->
 	<sonar.sources>pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions</sonar.sources>
 	<sonar.tests>src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/stepDefinitions</sonar.tests>
-	<sonar.inclusions>src/test/**</sonar.inclusions>
+	<sonar.inclusions>src/test/java/aplicacionflashcards/features</sonar.inclusions>
+	<sonar.exclusions></sonar.exclusions>
 	<sonar.core.serverBaseUrl>https://sonarcloud.io</sonar.core.serverBaseUrl>
 	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	<sonar.organization>sergiopsinformatico-github</sonar.organization>
