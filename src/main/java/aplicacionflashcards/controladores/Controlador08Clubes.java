@@ -30,6 +30,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador08Clubes {
 	
+	//Variables
 	ModelAndView vista;
 	ClubDTO club;
 	InterfaceDAOClub dBClub;

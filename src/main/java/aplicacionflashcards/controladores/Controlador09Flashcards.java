@@ -34,7 +34,6 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador09Flashcards {
 	
 	//Variables
-	
 	ModelAndView vista;
 	InterfaceDAOClub dBClub;
 	InterfaceDAORelacionesUsuarios dBRelaciones;

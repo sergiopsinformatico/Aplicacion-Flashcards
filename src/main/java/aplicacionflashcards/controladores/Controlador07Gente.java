@@ -25,23 +25,19 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @Controller
 @SessionAttributes("usuario")
 public class Controlador07Gente {
+	
 	//Variables
 	ModelAndView vista;
-	
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
-	
 	RelacionesUsuariosDTO relaciones;
-	
 	List<UsuarioDTO> lista;
 	List<UsuarioDTO> listaTodos;
-	
 	List<String> amigos;
 	List<String> bloqueadores;
 	List<String> bloqueados;
 	List<String> pdaEnv;
 	List<String> pdaRec;
-	
 	UsuarioDTO eUsuario;
 	String tipoRelacion;
 	
