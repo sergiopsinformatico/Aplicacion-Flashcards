@@ -32,30 +32,16 @@ public class Controlador02ControlSesion {
 	static final String CONST_VIEW_IS = "vistaIniciarSesion";
 	static final String CONST_REDIRECT = "redirect:/inicio.html";
 	
-	//Index o pagina principal logueado
-	@GetMapping(value = "/inicio")
-	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
-			vista = new ModelAndView("index");
-			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
-				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
-			}
-		}else {
-			vista =  new ModelAndView("vistaPrincipal");
-			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
-				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
-			}
-		}
-		return vista;
-	}
+	/*
+	 * 
+	 * INICIAR SESION
+	 * 
+	 */
 	
-	//Iniciar Sesion
+	//Obtener la vista de Inicio de Sesion
+	
 	@GetMapping(value = "/acceder")
 	public ModelAndView iniciarSesion(HttpServletRequest request, HttpServletResponse response) {
-		
-		//Comprobaciones
 		
 		//1-Comprobar activaciones caducadas
 		Broker.getInstanciaActivaCuenta().comprobarActivacionesCaducadas();
@@ -65,9 +51,7 @@ public class Controlador02ControlSesion {
 		
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
-		
-		//Vista Iniciar Sesion
-		
+				
 		if(request.getSession().getAttribute(CONST_USUARIO)==null || 
 		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()==null||
 		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
@@ -85,6 +69,48 @@ public class Controlador02ControlSesion {
 		
 		return vista;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//Index o pagina principal logueado
+	@GetMapping(value = "/inicio")
+	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
+		if(request.getSession().getAttribute(CONST_USUARIO)==null || 
+		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()==null||
+		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
+			vista = new ModelAndView("index");
+			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
+				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
+			}
+		}else {
+			vista =  new ModelAndView("vistaPrincipal");
+			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
+				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
+			}
+		}
+		return vista;
+	}	
 	
 	//Acceder
 	@PostMapping(value = "/iniciarSesion")

@@ -51,12 +51,17 @@ public class Controlador01RegistroUsuarios {
 	static final String CONST_INPUT_CIUDAD = "inputCiudad";
 	static final String CONST_INPUT_PAIS = "inputPais";
 	
-	//Registro	
+	/*
+	 * 
+	 * REGISTRO DE UN USUARIO
+	 * 
+	 */
+	
+	//Obtener la vista de registro
+	
 	@GetMapping(value = "/registro")
 	public ModelAndView registroGet(HttpServletRequest request, HttpServletResponse response) {
-		
-		//Comprobaciones
-		
+				
 		//1-Comprobar activaciones caducadas
 		Broker.getInstanciaActivaCuenta().comprobarActivacionesCaducadas();
 		
@@ -84,6 +89,68 @@ public class Controlador01RegistroUsuarios {
 		
 		return vista;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//Metodo auxiliar get usernames en vista registro
 	@GetMapping(value = "/getUsernames", produces = MediaType.APPLICATION_JSON_VALUE)
