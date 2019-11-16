@@ -40,7 +40,7 @@ public class Controlador02ControlSesion {
 	
 	//Obtener la vista de Inicio de Sesion
 	
-	@GetMapping(value = "/acceder")
+	@GetMapping(value = "/iniciarSesion")
 	public ModelAndView iniciarSesion(HttpServletRequest request, HttpServletResponse response) {
 		
 		//1-Comprobar activaciones caducadas
