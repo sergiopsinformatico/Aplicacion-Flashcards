@@ -38,7 +38,7 @@
 	    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
 	      <div class="container">
 	        <a class="navbar-brand js-scroll-trigger" href="inicio.html">
-	        	<img class="logoFlashcards" src="resources/img/logoFlashcards.JPG" alt=""/>
+	        	<img class="logoFlashcards" src="resources/imagenes/logoFlashcards.JPG" alt=""/>
 	        </a>
 	      </div>
 	    </nav>
