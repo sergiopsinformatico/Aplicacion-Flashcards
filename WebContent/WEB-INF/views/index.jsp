@@ -58,10 +58,10 @@
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
 	          	<li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html">Iniciar Sesión</a>
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</a>
 	            </li>
 	            <li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Registrate</a>
 	            </li>
 	          </ul>
 	        </div>
@@ -73,12 +73,20 @@
     	<img style="display:block;margin-left:auto;margin-right:auto;width:500px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
     	<br><br>
 	</article>-->
-    <article style="background-color:#397600">
+    <article style="background-color:#BFEA8B">
     	<br><br><br><br><br><br><br><br>
-    	<h6 style="color:white" align="center">Si quieres saber cómo se ha desarrollado este proyecto, visita la Wiki del Desarrollo</h6>
+    	<div class="row">
+    		<div class="col-md-3"></div>
+    		<div class="col-md-3">
+    		<br>
+    			<h5 style="color:white" align="center">Si quieres saber cómo se ha desarrollado este proyecto, pincha sobre la imagen</h5>
+    		</div>
+    		<div class="col-md-3">
+    			<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
+    		</div>
+    		<div class="col-md-3"></div>
+    	</div>
     	<br>
-    	<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:300px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
-    	<br><br>
 	</article>
     <article>
 	    <div class="copyright py-4 text-center text-white">

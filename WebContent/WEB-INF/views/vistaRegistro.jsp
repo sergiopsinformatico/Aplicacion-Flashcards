@@ -61,15 +61,15 @@
 		          <i class="fas fa-bars"></i>
 		        </button>
 		        <div class="collapse navbar-collapse" id="navbarResponsive">
-		          <ul class="navbar-nav ml-auto">
-		          	<li class="nav-item mx-0 mx-lg-1">
-		              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html">Iniciar Sesión</a>
-		            </li>
-		            <li class="nav-item mx-0 mx-lg-1">
-		              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
-		            </li>
-		          </ul>
-		        </div>
+	          <ul class="navbar-nav ml-auto">
+	          	<li class="nav-item mx-0 mx-lg-1">
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</a>
+	            </li>
+	            <li class="nav-item mx-0 mx-lg-1">
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html" style="color:#18bc9c;"><i class="fas fa-user-plus" style="padding-right:10px;color:#18bc9c;"></i>Registrate</a>
+	            </li>
+	          </ul>
+	        </div>
 		      </div>
 		    </nav>
 		</header>

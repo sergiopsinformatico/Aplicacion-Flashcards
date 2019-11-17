@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Flashcards - Recuperar Cuenta</title>
+    <title>Flashcards - Desarrollo del Proyecto</title>
 
     <!-- Bootstrap core CSS -->
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/desarrolloProyecto.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -27,11 +27,24 @@
     <!-- Angular JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     
+    <style>
+    	body {
+		  background: #F1F3FA;
+		}
+    </style>
   </head>
 
-  <body id="page-top">		
+  <body id="page-top">
   
-    <!-- Navigation -->
+  	<%@ page import="main.java.aplicacionflashcards.dto.UsuarioDTO" %>
+	<% 
+		UsuarioDTO user = ((UsuarioDTO)(session.getAttribute("usuario")));
+		if(user!=null && user.getUsername()!=null && (!(user.getUsername().equals("")))){
+			response.sendRedirect("inicio.html");
+		}
+	%>
+		
+	<!-- Navigation -->
     <header class="header">
 	    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
 	      <div class="container">
@@ -52,45 +65,56 @@
 	            </li>
 	          </ul>
 	        </div>
+	      </div>
 	    </nav>
 	</header>
-	
-	<section>
-		<br><br><br><br>
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4 formAccess textCenter container">
-				<br>
-   				<h4 align="center" class="title">Recuperar Cuenta</h4>
-   				<br>
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-8">
-		   				<form action="recuperaClave.html" method="post" id="Login" name="Login">
-		   					<span id="reauth-email" class="reauth-email"></span>
-			                <input type="text" class="form-control" id="inputUsernameEmail" name="inputUsernameEmail" placeholder="Username o Email" required autofocus>
-					        <br><br><br>
-			                <div class="middle">
-			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnRec"></div>
-			                </div>
-			                <br><br>
-					        <button class="btn btn-lg btn-block btn-signin btnBlock" id="buttonRec" name="buttonRec" type="submit">Recuperar Clave</button>
-					        <script>
-					        	document.getElementById("buttonRec").disabled = true;
-					        	function enableBtnRec(){
-					        		document.getElementById("buttonRec").style.background = "#457D8E";
-					        		document.getElementById("buttonRec").disabled = false;
-					        	}
-					        </script>
-					        <br><br>
-					    </form>
-					</div>
-					<div class="col-md-2"></div>
-				</div>
-			</div>
-			<div class="col-md-4"></div>
-		</div>
-	</section>
+
+    <article style="background-color:#397600">
+    	<br><br><br><br><br><br><br><br>
+    	<div class="row">
+    		<div class="col-md-3" style="border-right:0.5px solid black;">
+    			<div class="row">
+    				<div class="col-md-1"></div>
+    				<div class="col-md-10">
+    					<div>
+    						<button>Sprint 0</button>
+    					</div>
+    					<br>
+    					<div>
+    					
+    					</div>
+    					<br>
+    					<div>
+    					
+    					</div>
+    					<br>
+    					<div>
+    					
+    					</div>
+    					<br>
+    					<div>
+    					
+    					</div>
+    					<br>
+    					<div>
+    					
+    					</div>
+    				</div>
+    				<div class="col-md-1"></div>
+    			</div>
+    		</div>
+    		<div class="col-md-9">
+    		
+    		</div>
+    	</div>
+	</article>
+    <article>
+	    <div class="copyright py-4 text-center text-white">
+	      <div class="container">
+	       	<small>Desarrollado por Sergio Pérez Sanchez para el Trabajo Fin de Grado (TFG). Curso 2019/2020</small>
+	      </div>
+	    </div>
+	</article>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
@@ -114,9 +138,6 @@
     <!-- Custom scripts for this template -->
     <script src="resources/js/freelancer.min.js"></script>
     
-    <!--Re captcha google-->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    
     <!-- Alert de Bootbox -->
     <script src="resources/js/bootbox.min.js"></script>
 	
@@ -125,7 +146,7 @@
 			bootbox.alert("${mensaje}");
 		}
 	</script>
-
+		
   </body>
 
 </html>

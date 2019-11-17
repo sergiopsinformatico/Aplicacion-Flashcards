@@ -19,8 +19,7 @@
 
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="resources/css/acceder.css"/>-->
+    <link rel="stylesheet" type="text/css" href="resources/css/view_IniciarSesion.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -46,10 +45,10 @@
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
 	          	<li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="iniciarSesion.html">Iniciar Sesión</a>
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="iniciarSesion.html" style="color:#18bc9c;"><i class="fas fa-sign-in-alt" style="padding-right:10px;color:#18bc9c;"></i>Iniciar Sesión</a>
 	            </li>
 	            <li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Registrate</a>
 	            </li>
 	          </ul>
 	        </div>
@@ -84,7 +83,7 @@
 				            <div class="middle">
 			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnSignIn"></div>
 			                </div>
-				            <button class="btn btn-block btnBlock" type="submit" id="btnSignIn" disabled><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
+				            <button class="btn btn-block btnBlock" type="submit" id="btnSignIn" disabled><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i> Acceder a la Aplicación Flashcards</button>
 				            <br><br><br>
 				        </form>
 					</div>
@@ -96,12 +95,12 @@
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-10">
-						<form action="iniciarSesion.do" method="get" class="form-signin">
+						<form action="registro.html" method="get" class="form-signin">
 				    		<p style="text-align:center;"><strong>Si aún no tienes cuenta, puedes crearte una</strong></p>
 			            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
 			            </form>
 			            <br>
-			            <form action="iniciarSesion.do" method="get" class="form-signin">
+			            <form action="registro.html" method="get" class="form-signin">
 			            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
 			            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
 			            </form>
