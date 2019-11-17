@@ -19,7 +19,8 @@
 
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/view_Registro.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/view_All.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -75,6 +76,139 @@
 		</header>
 		<section ng-app="AppRegistro" ng-controller="RegistroCtrl">
 			<br><br><br><br>
+			<script type="text/javascript">				        
+		        document.getElementById("btnRegister").disabled = true;
+				
+	        	function enableBtnSignIn(){
+	        		document.getElementById("btnRegister").style.background = "green";
+	        		document.getElementById("btnRegister").style.color = "white";
+	        		document.getElementById("btnRegister").disabled = false;
+	        	}
+			</script>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<form action="iniciarSesion.do" method="post" class="form-signin">
+								<br>
+					            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Registro de Usuarios</h1>
+					            <br>
+					            <input type="text" class="form-control" id="inputUsername" ng-model="username" ng-change="validateUsername($event, username)" name="inputUsername" placeholder="Username" required />
+					            <br>
+		                        <small id="msgUsername" class="mensajesReg">{{messageUsername}}</small>
+		                        <br>
+		                        <input type="email" class="form-control" id="inputEmail" ng-model="email" ng-change="validateEmail($event, email)" name="inputEmail" placeholder="Email" required />
+		                        <br>
+		                        <small id="msgEmail" class="mensajesReg">{{messageEmail}}</small>
+		                        <br>
+		                        <input type="password" class="form-control" id="inputClave" ng-model="clave" ng-change="validateClave($event, clave, repClave)" name="inputClave" placeholder="Clave" required />
+		                        <br>
+		                        <small id="msgClave" class="mensajesReg">{{messageClave}}</small>
+		                        <br>
+		                        <input type="password" class="form-control"  id="inputRepiteClave" ng-model="repClave" ng-change="validateRepClave($event, clave, repClave)" name="inputRepiteClave" placeholder="Repetir Clave" required />
+		                        <br>
+		                        <small id="msgRepClave" class="mensajesReg">{{messageRepClave}}</small>
+		                        <br>
+		                        <small id="msgError" class="mensajesReg">{{messageError}}</small>
+		                        <br><br>
+		                        <button type="submit" class="btn btn-lg btn-block btn-signin btnBlock" ng-disabled="btnDisabled" id="buttonRegistro" name="buttonRegistro"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear usuario</button>
+		                        <br><br><br>
+					        </form>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+				<div class="col-md-4" style="border-left: 0.5px solid black;">
+					<br><br><br>
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<form action="registro.html" method="get" class="form-signin">
+					    		<p style="text-align:center;"><strong>Si aún no tienes cuenta, puedes crearte una</strong></p>
+				            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
+				            </form>
+				            <br>
+				            <form action="registro.html" method="get" class="form-signin">
+				            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
+				            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
+				            </form>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+				<!-- <form action="/reset/password/" class="form-reset">
+	                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+	                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+	                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+	            </form>
+	            
+	            <form action="/signup/" class="form-signup">
+	                <div class="social-login">
+	                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+	                </div>
+	                <div class="social-login">
+	                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+	                </div>
+	                
+	                <p style="text-align:center">OR</p>
+	
+	                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+	                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+	                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+	                <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+	
+	                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+	                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+	            </form>
+	            <br>-->
+				<!--<div class="col-md-4 formAccess textCenter container">
+					<br>
+					<h4 class="title">Iniciar Sesión</h4>
+					<br>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<form action="acceder.do" method="post" id="Login" name="Login" class="form-signin">
+				                <span id="reauth-email" class="reauth-email"></span>
+				                <input type="text" class="form-control" id="inputUsernameEmail" name="inputUsernameEmail" placeholder="Username o Email" required autofocus>
+				                <br>
+				                <input type="password" class="form-control" id="inputClave" name="inputClave" placeholder="Clave" required>
+				                <br><br>
+				                
+				                <br><br>
+				                <button class="btn btn-lg btn-block btn-signin btnBlock" id="buttonIS" name="buttonIS" type="submit">Acceder</button>
+				                <br>
+				                <p><a class="btnRecupera" href="recuperaCuenta.html">Ups.... ¿Olvidasta tu clave?</a></p>
+				                <script>
+				                	document.getElementById("buttonIS").disabled = true;
+						        	function enableBtn(){
+						        		document.getElementById("buttonIS").style.background = "#457D8E";
+						        		document.getElementById("buttonIS").disabled = false;
+						        	}
+						        </script>
+						     </form>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>-->
+				<div class="col-md-2"></div>
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- <section ng-app="AppRegistro" ng-controller="RegistroCtrl">
+			<br><br><br><br>
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4 formAccess textCenter container">
@@ -128,7 +262,7 @@
 				</div>
 				<div class="col-md-4"></div>
 			</div>
-		</section>
+		</section>-->
 		
 		<script>
 		    var app = angular.module('AppRegistro', []);

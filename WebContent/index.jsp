@@ -78,11 +78,11 @@
     	<div class="row">
     		<div class="col-md-3"></div>
     		<div class="col-md-3">
-    		<br>
-    			<h5 style="color:white" align="center">Si quieres saber cómo se ha desarrollado este proyecto, pincha sobre la imagen</h5>
+    			<br><br>
+    			<h6 style="color:black" align="center">Si quieres saber cómo se ha desarrollado este proyecto, pincha sobre la imagen</h6>
     		</div>
     		<div class="col-md-3">
-    			<a href="https://www.google.es"><img style="display:block;margin-left:auto;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
+    			<a href="https://www.google.es"><img style="display:block;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
     		</div>
     		<div class="col-md-3"></div>
     	</div>
