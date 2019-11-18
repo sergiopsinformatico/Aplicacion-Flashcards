@@ -152,7 +152,7 @@ public class Controlador01RegistroUsuarios {
 	
 	
 	
-	//Metodo auxiliar get usernames en vista registro
+	/*Metodo auxiliar get usernames en vista registro
 	@GetMapping(value = "/getUsernames", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
@@ -163,7 +163,7 @@ public class Controlador01RegistroUsuarios {
 		return listaUsernames;
 	}	
 	
-	//Metodo auxiliar get emails en vista registro
+	/Metodo auxiliar get emails en vista registro
 	@GetMapping(value = "/getEmails", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
@@ -174,7 +174,7 @@ public class Controlador01RegistroUsuarios {
 		return listaEmails;
 	}
 	
-	//Crear usuario - POST
+	/Crear usuario - POST
 	@PostMapping(value = "/crearCuenta")
 	public ModelAndView registrarUsuarioPost(HttpServletRequest request, HttpServletResponse response) {
 		
@@ -215,14 +215,14 @@ public class Controlador01RegistroUsuarios {
 		return vista;
 	}
 	
-	//Crear usuario - GET
+	/Crear usuario - GET
 	@GetMapping(value = "/crearCuenta")
 	public ModelAndView registrarUsuarioGet(HttpServletRequest request, HttpServletResponse response) {
 		vista = new ModelAndView("redirect:/registro.html");
 		return vista;
 	}
 	
-	//Activar Cuenta - GET
+	/Activar Cuenta - GET
 	@GetMapping(value = "/activaCuenta")
 	public ModelAndView activaCuenta(@RequestParam("username") String username, @RequestParam("codigo") String codigo){
 		if(Broker.getInstanciaActivaCuenta().activacionCuenta(new ActivaCuentaDTO(username, codigo))) {
@@ -284,5 +284,5 @@ public class Controlador01RegistroUsuarios {
 	public ModelAndView activarGet(HttpServletRequest request, HttpServletResponse response){
 		vista = new ModelAndView(CONST_REDIRECT_IS);
 		return vista;
-	}	
+	}	*/
 }

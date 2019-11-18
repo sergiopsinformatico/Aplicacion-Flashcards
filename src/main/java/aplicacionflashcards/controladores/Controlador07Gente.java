@@ -51,6 +51,7 @@ public class Controlador07Gente {
 	static final String CONST_REDIRECT_PERFIL = "redirect:/verPerfil.html?usuarioPerfil=";
 	static final String CONST_MENSAJE = "mensaje";
 	
+	/*
 	@GetMapping(value = "/verGente")
 	public ModelAndView gente(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -242,5 +243,5 @@ public class Controlador07Gente {
 		vista.addObject(CONST_MENSAJE, "Ha desbloqueado a " + username);
 		
 		return vista;
-	}
+	}*/
 }

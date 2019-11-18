@@ -24,9 +24,9 @@ body, html {
 	text-transform: uppercase;
 }
 
-.logoFlashcards{
-	width: 100px;
-	height: auto;
+.mensajesReg{
+	color: #000000;
+	font-weight:bold;
 }
 
 .textCenter{
