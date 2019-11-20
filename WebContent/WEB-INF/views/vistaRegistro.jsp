@@ -96,21 +96,17 @@
 					            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Registro de Usuarios</h1>
 					            <br>
 					            <input type="text" class="form-control" id="inputUsername" ng-model="username" ng-change="validateUsername($event, username)" name="inputUsername" placeholder="Username" required />
-					            <br>
 		                        <small id="msgUsername" class="mensajesReg">{{messageUsername}}</small>
-		                        <br>
+		                        <br><br>
 		                        <input type="email" class="form-control" id="inputEmail" ng-model="email" ng-change="validateEmail($event, email)" name="inputEmail" placeholder="Email" required />
-		                        <br>
 		                        <small id="msgEmail" class="mensajesReg">{{messageEmail}}</small>
-		                        <br>
+		                        <br><br>
 		                        <input type="password" class="form-control" id="inputClave" ng-model="clave" ng-change="validateClave($event, clave, repClave)" name="inputClave" placeholder="Clave" required />
-		                        <br>
 		                        <small id="msgClave" class="mensajesReg">{{messageClave}}</small>
-		                        <br>
+		                        <br><br>
 		                        <input type="password" class="form-control"  id="inputRepiteClave" ng-model="repClave" ng-change="validateRepClave($event, clave, repClave)" name="inputRepiteClave" placeholder="Repetir Clave" required />
-		                        <br>
 		                        <small id="msgRepClave" class="mensajesReg">{{messageRepClave}}</small>
-		                        <br>
+		                        <br><br>
 		                        <small id="msgError" class="mensajesReg">{{messageError}}</small>
 		                        <br><br>
 		                        <button type="submit" class="btn btn-lg btn-block btn-signin btnBlock" ng-disabled="btnDisabled" id="buttonRegistro" name="buttonRegistro"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear usuario</button>
@@ -331,7 +327,7 @@
 	        		if(checkUsername==true && checkEmail==true && checkClave==true && checkRepClave==true){
 	        			if($scope.username=="" || $scope.clave=="" || $scope.repClave=="" || $scope.email==""){
 	        				$scope.btnDisabled = true;
-	        				document.getElementById("msgError").style.color="#FFA720";
+	        				document.getElementById("msgError").style.color="red";
 	        				document.getElementById("buttonRegistro").style.background="##457D8E";
 	        				/*document.getElementById("buttonRegistro").style.color="#DDDDDC";*/
 	        				$scope.messageError="Existen campos vacíos o erróneos. Por favor, revísalos para continuar con el registro.";
@@ -343,7 +339,7 @@
 	        			}
 	        		}else{
 	        			$scope.btnDisabled = true;
-	        			document.getElementById("msgError").style.color="#FFA720"
+	        			document.getElementById("msgError").style.color="red"
 	        			document.getElementById("buttonRegistro").style.background="#457D8E";
 	        			/*document.getElementById("buttonRegistro").style.color="#DDDDDC";*/
 	        			$scope.messageError="Existen campos vacíos o erróneos. Por favor, revísalos para continuar con el registro.";
@@ -359,7 +355,7 @@
 	        		for(indice=0; indice<listaUsernames.length; indice++){
 	        			if(username == listaUsernames[indice]){
 	        				checkExistUsername = true;
-	        				document.getElementById("msgUsername").style.color="#FFA720"
+	        				document.getElementById("msgUsername").style.color="red"
 	        				$scope.messageUsername = "Error. El username "+username+" existe.";
 	        				break;
 	        			}
@@ -371,26 +367,26 @@
 		        			for(indice=0; indice<username.length; indice++){
 		        				if(username.charAt(indice)==' '){
 		        					checkCaracterUsername=false;
-		        					document.getElementById("msgUsername").style.color="#FFA720"
+		        					document.getElementById("msgUsername").style.color="red"
 		        					$scope.messageUsername = "El username no puede contener espacios.";
 		        					break;
 		        				}else if((!(username.charAt(indice)>='a' && username.charAt(indice)<='z')) &&
 		        				   (!(username.charAt(indice)>='A' && username.charAt(indice)<='Z')) &&
 		        				   (!(username.charAt(indice)>='0' && username.charAt(indice)<='9'))){
 		        					checkCaracterUsername=false;
-		        					document.getElementById("msgUsername").style.color="#FFA720"
+		        					document.getElementById("msgUsername").style.color="red"
 		        					$scope.messageUsername = "El caracter "+ username.charAt(indice) +" no se permite para este campo.";
 		        					break;
 		        				}
 		        			}
 		        			
 		        			if(checkCaracterUsername==true){
-		        				document.getElementById("msgUsername").style.color="#1E00A0"
+		        				document.getElementById("msgUsername").style.color="green"
 		        				$scope.messageUsername = "El username "+username+" está disponible.";
 		        			}
 		        			
 		        		}else{
-		        			document.getElementById("msgUsername").style.color="#FFA720"
+		        			document.getElementById("msgUsername").style.color="red"
 		        			$scope.messageUsername = "Error. La longitud del username debe de ser entre 5 y 15 caracteres.";
 		        		}
 	        			
@@ -413,7 +409,7 @@
 	        		for(indice=0; indice<listaEmails.length; indice++){
 	        			if(email == listaEmails[indice]){
 	        				existEmail = true;
-	        				document.getElementById("msgEmail").style.color="#FFA720"
+	        				document.getElementById("msgEmail").style.color="red"
 	        				$scope.messageEmail = "El email "+ email +" existe.";
 	        				break;
 	        			}
@@ -423,7 +419,7 @@
 		        		for(indice=0; indice<email.length; indice++){
 		        			if(email.charAt(indice)==' '){
 		        				checkCaracterEmail = false;
-		        				document.getElementById("msgEmail").style.color="#FFA720"
+		        				document.getElementById("msgEmail").style.color="red"
 		        				$scope.messageEmail = "La direccion de email no puede contener espacios.";
 		        				break;
 		        			}
@@ -431,7 +427,7 @@
 	        		}
 	        		
 	        		if(existEmail==false && checkCaracterEmail==true){
-	        			document.getElementById("msgEmail").style.color="#1E00A0"
+	        			document.getElementById("msgEmail").style.color="green"
 	        			$scope.messageEmail = "El email "+ email + " está disponible.";
 	        			checkEmail = true;
 	        		}
@@ -450,25 +446,25 @@
 	        			for(indice=0; indice<clave.length; indice++){
 	        				if(clave.charAt(indice)==' '){
 	        					checkCaracterClave=false;
-	        					document.getElementById("msgClave").style.color="#FFA720"
+	        					document.getElementById("msgClave").style.color="red"
 		    		        	$scope.messageClave = "Error. La clave no puede contener espacios.";
 	        					break;
 	        				}else if((!(clave.charAt(indice)>='a' && clave.charAt(indice)<='z')) &&
 	        				   (!(clave.charAt(indice)>='A' && clave.charAt(indice)<='Z')) &&
 	        				   (!(clave.charAt(indice)>='0' && clave.charAt(indice)<='9'))){
 	        					checkCaracterClave=false;
-	        					document.getElementById("msgClave").style.color="#FFA720"
+	        					document.getElementById("msgClave").style.color="red"
 	    		        		$scope.messageClave = "Error. El caracter "+clave.charAt(indice)+" no es valido.";
 	        					break;
 	        				}
 	        			}
 	        		}else{
-	        			document.getElementById("msgClave").style.color="#FFA720"
+	        			document.getElementById("msgClave").style.color="red"
 	        			$scope.messageClave = "Error. La longitud de la clave debe de ser entre 5 y 20 caracteres.";
 	        		}
 	        		
 	        		if(checkLongClave==true && checkCaracterClave==true){
-	        			document.getElementById("msgClave").style.color="#1E00A0"
+	        			document.getElementById("msgClave").style.color="green";
 		        		$scope.messageClave = "La clave es válida.";
 	        			checkClave = true;
 	        		}
@@ -480,10 +476,10 @@
 	        		checkRepClave = false;
 	        		if(clave==repClave){
 	        			checkRepClave = true;
-	        			document.getElementById("msgRepClave").style.color="#1E00A0"
+	        			document.getElementById("msgRepClave").style.color="green"
 			        	$scope.messageRepClave = "Los campos Clave y Repite Clave coinciden.";
 	        		}else{
-	        			document.getElementById("msgRepClave").style.color="#FFA720"
+	        			document.getElementById("msgRepClave").style.color="red"
 		        		$scope.messageRepClave = "Error. No coinciden los campos Clave y Repite Clave.";
 	        		}
 	        		enableBtnRegistro();
