@@ -125,7 +125,9 @@
 					    		<p style="text-align:center;"><strong>Si ya tienes cuenta, puedes loguearte</strong></p>
 				            	<button class="btn btn-primary btn-block" style="background-color:green;border:green;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
 				            </form>
+				            
 				            <br>
+				            
 				            <form action="registro.html" method="get" class="form-signin">
 				            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
 				            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
