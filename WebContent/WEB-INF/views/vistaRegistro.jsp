@@ -95,19 +95,25 @@
 								<br>
 					            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Registro de Usuarios</h1>
 					            <br>
+					            <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Introduzca el nombre de usuario</span>
 					            <input type="text" class="form-control" id="inputUsername" ng-model="username" ng-change="validateUsername($event, username)" name="inputUsername" placeholder="Username" required />
 		                        <small id="msgUsername" class="mensajesReg">{{messageUsername}}</small>
 		                        <br><br>
+		                        <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Introduzca el email</span>
 		                        <input type="email" class="form-control" id="inputEmail" ng-model="email" ng-change="validateEmail($event, email)" name="inputEmail" placeholder="Email" required />
 		                        <small id="msgEmail" class="mensajesReg">{{messageEmail}}</small>
 		                        <br><br>
+		                        <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Introduzca la clave</span>
 		                        <input type="password" class="form-control" id="inputClave" ng-model="clave" ng-change="validateClave($event, clave, repClave)" name="inputClave" placeholder="Clave" required />
 		                        <small id="msgClave" class="mensajesReg">{{messageClave}}</small>
 		                        <br><br>
+		                        <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Vuelva a introducir la clave</span>
 		                        <input type="password" class="form-control"  id="inputRepiteClave" ng-model="repClave" ng-change="validateRepClave($event, clave, repClave)" name="inputRepiteClave" placeholder="Repetir Clave" required />
 		                        <small id="msgRepClave" class="mensajesReg">{{messageRepClave}}</small>
 		                        <br><br>
 		                        <small id="msgError" class="mensajesReg">{{messageError}}</small>
+		                        <br><br>
+		                        <span style="color:orange;font-size:12px;"><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Todos los campos son obligatorios</span>
 		                        <br><br>
 		                        <button type="submit" class="btn btn-lg btn-block btn-signin btnBlock" ng-disabled="btnDisabled" id="buttonRegistro" name="buttonRegistro"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear usuario</button>
 		                        <br><br><br>
