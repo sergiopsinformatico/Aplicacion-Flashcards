@@ -51,11 +51,9 @@ public class Controlador01RegistroUsuarios {
 	static final String CONST_INPUT_CIUDAD = "inputCiudad";
 	static final String CONST_INPUT_PAIS = "inputPais";
 	
-	/*
-	 * 
-	 * REGISTRO DE UN USUARIO
-	 * 
-	 */
+	/* * * * * * * * * * * * * *
+	 *  REGISTRO DE USUARIOS   *
+	 * * * * * * * * * * * * * */
 	
 	//Obtener la vista de registro
 	
@@ -64,10 +62,8 @@ public class Controlador01RegistroUsuarios {
 				
 		//1-Comprobar activaciones caducadas
 		Broker.getInstanciaActivaCuenta().comprobarActivacionesCaducadas();
-		
 		//2-Eliminar cuentas pasados 14 dias
 		Broker.getInstanciaEliminarCuenta().comprobarCuentasAEliminar();
-		
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
 		
@@ -87,6 +83,77 @@ public class Controlador01RegistroUsuarios {
 			
 		}
 		
+		return vista;
+	}
+	
+	// Metodo auxiliar para obtener los usernames de los usuarios
+	@GetMapping(value = "/getUsernames", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	@ResponseStatus(HttpStatus.OK)
+	public List<String> listUsernames(){
+		listaUsernames = Broker.getInstanciaUsuario().getListUsername();
+		listaUsernames.add("usuario123");
+		listaUsernames.add("usuario456");
+		return listaUsernames;
+	}	
+	
+	//Metodo auxiliar para obtener los emails de los usuarios
+	@GetMapping(value = "/getEmails", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	@ResponseStatus(HttpStatus.OK)
+	public List<String> listEmails(){
+		listaEmails = Broker.getInstanciaUsuario().getListEmail();
+		listaEmails.add("usuario123@email.com");
+		listaEmails.add("usuario456@email.com");
+		return listaEmails;
+	}
+	
+	//Crear usuario - POST
+	@PostMapping(value = "/crearCuenta")
+	public ModelAndView registrarUsuarioPost(HttpServletRequest request, HttpServletResponse response) {
+		
+		user = new UsuarioDTO(request.getParameter("inputUsername"),
+							  request.getParameter("inputEmail"),
+							  request.getParameter("inputClave"));
+		
+		user.setNombreApellidos("");
+		user.setCiudad("");
+		user.setPais("");
+		user.setFoto("");
+		user.setEmailFoto("");
+		user.setRol("Usuario");
+		user.setActivadaCuenta(false);
+		
+		relacion = new RelacionesUsuariosDTO(user.getUsername(), new LinkedList<String>(),  new LinkedList<String>(),
+				new LinkedList<String>(),  new LinkedList<String>(),  new LinkedList<String>());
+		
+		fecha = new Fecha();
+		codigoActivacion = GeneratorStrings.randomString(15);
+		
+		if(Broker.getInstanciaUsuario().insertUsuario(user) &&
+		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
+		   Broker.getInstanciaRelaciones().creaRelaciones(relacion)) {
+			
+			correo = new Email();
+			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
+			
+			vista = new ModelAndView("vistaIniciarSesion");
+			vista.addObject(CONST_MENSAJE, "Para finalizar el registro, revise su email "+user.getEmail()+" y siga los pasos para activar la cuenta.");
+			
+		}else {
+			
+			vista = new ModelAndView("vistaRegistro");
+			vista.addObject(CONST_MENSAJE, "Hubo un fallo en el registro. Por favor, vuelva a intentar registrarse pasado unos minutos.");
+			
+		}
+		
+		return vista;
+	}
+	
+	//Crear usuario - GET
+	@GetMapping(value = "/crearCuenta")
+	public ModelAndView registrarUsuarioGet(HttpServletRequest request, HttpServletResponse response) {
+		vista = new ModelAndView("redirect:/registro.html");
 		return vista;
 	}
 	
@@ -152,77 +219,9 @@ public class Controlador01RegistroUsuarios {
 	
 	
 	
-	/*Metodo auxiliar get usernames en vista registro
-	@GetMapping(value = "/getUsernames", produces = MediaType.APPLICATION_JSON_VALUE)
-	@ResponseBody
-	@ResponseStatus(HttpStatus.OK)
-	public List<String> listUsernames(){
-		listaUsernames = Broker.getInstanciaUsuario().getListUsername();
-		listaUsernames.add("usuario123");
-		listaUsernames.add("usuario456");
-		return listaUsernames;
-	}	
-	
-	/Metodo auxiliar get emails en vista registro
-	@GetMapping(value = "/getEmails", produces = MediaType.APPLICATION_JSON_VALUE)
-	@ResponseBody
-	@ResponseStatus(HttpStatus.OK)
-	public List<String> listEmails(){
-		listaEmails = Broker.getInstanciaUsuario().getListEmail();
-		listaEmails.add("usuario123@email.com");
-		listaEmails.add("usuario456@email.com");
-		return listaEmails;
-	}
-	
-	/Crear usuario - POST
-	@PostMapping(value = "/crearCuenta")
-	public ModelAndView registrarUsuarioPost(HttpServletRequest request, HttpServletResponse response) {
+	/*
 		
-		user = new UsuarioDTO(request.getParameter("inputUsername"),
-							  request.getParameter("inputEmail"),
-							  request.getParameter("inputClave"));
-		
-		user.setNombreApellidos("");
-		user.setCiudad("");
-		user.setPais("");
-		user.setFoto("");
-		user.setEmailFoto("");
-		user.setRol("Usuario");
-		user.setActivadaCuenta(false);
-		
-		relacion = new RelacionesUsuariosDTO(user.getUsername(), new LinkedList<String>(),  new LinkedList<String>(),
-				new LinkedList<String>(),  new LinkedList<String>(),  new LinkedList<String>());
-		
-		fecha = new Fecha();
-		codigoActivacion = GeneratorStrings.randomString(15);
-		
-		if(Broker.getInstanciaUsuario().insertUsuario(user) &&
-		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
-		   Broker.getInstanciaRelaciones().creaRelaciones(relacion)) {
-			correo = new Email();
-			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
-			
-			vista = new ModelAndView("vistaIniciarSesion");
-			vista.addObject(CONST_MENSAJE, "Por favor, revise su email "+user.getEmail()+" para finalizar con su registro.");
-			
-		}else {
-			
-			vista = new ModelAndView("vistaRegistro");
-			vista.addObject(CONST_MENSAJE, "Hubo un fallo en el registro. Por favor, vuelva a intentar registrarse pasado unos minutos.");
-			
-		}
-		
-		return vista;
-	}
-	
-	/Crear usuario - GET
-	@GetMapping(value = "/crearCuenta")
-	public ModelAndView registrarUsuarioGet(HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("redirect:/registro.html");
-		return vista;
-	}
-	
-	/Activar Cuenta - GET
+	//Activar Cuenta - GET
 	@GetMapping(value = "/activaCuenta")
 	public ModelAndView activaCuenta(@RequestParam("username") String username, @RequestParam("codigo") String codigo){
 		if(Broker.getInstanciaActivaCuenta().activacionCuenta(new ActivaCuentaDTO(username, codigo))) {

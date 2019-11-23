@@ -113,7 +113,7 @@
 		                        <br><br>
 		                        <small id="msgError" class="mensajesReg">{{messageError}}</small>
 		                        <br><br>
-		                        <span style="color:orange;font-size:12px;"><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Todos los campos son obligatorios</span>
+		                        <span style="color:orange;font-size:12px;font-weight:bold;"><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Todos los campos son obligatorios</span>
 		                        <br><br>
 		                        <button type="submit" class="btn btn-lg btn-block btn-signin btnBlock" ng-disabled="btnDisabled" id="buttonRegistro" name="buttonRegistro"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear usuario</button>
 		                        <br><br><br>
@@ -129,14 +129,14 @@
 						<div class="col-md-10">
 							<form action="iniciarSesion.html" method="get" class="form-signin">
 					    		<p style="text-align:center;"><strong>Si ya tienes cuenta, puedes loguearte</strong></p>
-				            	<button class="btn btn-primary btn-block" style="background-color:green;border:green;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
+				            	<button class="btn btn-primary btn-block" style="background-color:green;border:1px solid green;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
 				            </form>
 				            
 				            <br>
 				            
 				            <form action="registro.html" method="get" class="form-signin">
 				            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
-				            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
+				            	<button class="btn btn-primary btn-block" style="background-color:#2BB18F;border:1px solid #2BB18F;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
 				            </form>
 						</div>
 						<div class="col-md-1"></div>
@@ -215,13 +215,12 @@
 	        				$scope.btnDisabled = true;
 	        				document.getElementById("msgError").style.color="red";
 	        				document.getElementById("buttonRegistro").style.background="##457D8E";
-	        				/*document.getElementById("buttonRegistro").style.color="#DDDDDC";*/
 	        				$scope.messageError="Existen campos vacíos o erróneos. Por favor, revísalos para continuar con el registro.";
 	        			}else{
 	        				$scope.messageError="";
 	        				$scope.btnDisabled = false;
-	        				document.getElementById("buttonRegistro").style.background="#A3AD1A";
-	        				document.getElementById("buttonRegistro").style.color="black";
+	        				document.getElementById("buttonRegistro").style.background="red";
+	        				document.getElementById("buttonRegistro").style.color="white";
 	        			}
 	        		}else{
 	        			$scope.btnDisabled = true;
