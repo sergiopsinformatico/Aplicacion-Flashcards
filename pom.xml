@@ -9,7 +9,7 @@
 	<!-- Para analisis SonarCloud -->
 	<!-- script:
   	- mvn clean verify-->	
-	<!----> 
+	<!--
 	<sonar.sources>pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions</sonar.sources>
 	<sonar.inclusions>src/test/java/aplicacionflashcards/features</sonar.inclusions>
 	<sonar.core.serverBaseUrl>https://sonarcloud.io</sonar.core.serverBaseUrl>
@@ -17,11 +17,11 @@
 	<sonar.organization>sergiopsinformatico-github</sonar.organization>
 	<sonar.login>3a40f7ce79b62c41505d6d661028d0949358ea1c</sonar.login>
 	<sonar.branch.name>ramaSprint5</sonar.branch.name>
-	<sonar.branch.target>master</sonar.branch.target>
+	<sonar.branch.target>master</sonar.branch.target>-->
   </properties>
   <build>
     <plugins>
-      <!-- Activate para Sonar Analysis-->
+      <!-- Activate para Sonar Analysis
       <plugin>
 		<groupId>org.sonarsource.scanner.maven</groupId>
 		<artifactId>sonar-maven-plugin</artifactId>
@@ -34,7 +34,7 @@
 				</goals>
 			</execution>
 		</executions>
-	  </plugin>
+	  </plugin>-->
       <plugin>
       	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -198,11 +198,11 @@
   		<artifactId>jackson-mapper-asl</artifactId>
   		<version>1.9.13</version>
   	</dependency>
-  	<!-- Activar para SonarCloud-->
+  	<!-- Activar para SonarCloud
   	<dependency>
   		<groupId>com.racodond.sonarqube.plugin.gherkin</groupId>
   		<artifactId>sonar-gherkin-plugin</artifactId>
   		<version>1.7</version>
-  	</dependency>
+  	</dependency>-->
   </dependencies>
 </project>
