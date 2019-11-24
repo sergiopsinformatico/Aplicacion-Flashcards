@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Administrador elimina club
 
 Scenario: El administrador elimina el club

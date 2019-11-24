@@ -10,6 +10,7 @@ public class Test25UsuarioVisualizaColeccionFlashcards {
 	
 	FlashcardsDTO flashcard;
 	
+	
 	@Given("^Un usuario localiza una coleccion$")
 	public void un_usuario_localiza_una_coleccion() throws Throwable {
 	    assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));

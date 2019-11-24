@@ -8,7 +8,6 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test02UsuarioIniciaSesion {
-	
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	boolean loguea;

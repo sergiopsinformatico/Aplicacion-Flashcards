@@ -12,7 +12,6 @@ import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test01UsuarioCreaCuentaUsuario {
-	
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelaciones;

@@ -25,6 +25,8 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @Controller
 @SessionAttributes("usuario")
 public class Controlador06Administrador {
+	
+	//Variables
 	ModelAndView vista;
 	List<UsuarioDTO> listaUsuarios;
 	List<ClubDTO> listaClubes;
@@ -38,7 +40,8 @@ public class Controlador06Administrador {
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_ADMIN = "Administrador";
 	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";
-		
+	
+	/*
 	@GetMapping(value = "/panelAdministrador")
 	public ModelAndView getPanelAdministrador(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -195,5 +198,5 @@ public class Controlador06Administrador {
 		
 		return vista;
 		
-	}
+	}*/
 }

@@ -17,7 +17,6 @@ public class Test24UsuarioBuscaColeccionesFlashcards {
 	TarjetaDTO tarjeta;
 	List<FlashcardsDTO> listaFlashcards;
 	boolean encontrado;
-	
 	int indice;
 	
 	@Given("^Un usuario quiere visualizar una coleccion$")

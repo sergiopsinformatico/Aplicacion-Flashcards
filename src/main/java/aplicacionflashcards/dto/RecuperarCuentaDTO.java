@@ -1,7 +1,6 @@
 package main.java.aplicacionflashcards.dto;
 
 public class RecuperarCuentaDTO {
-	
 	String username;
 	String key;
 	String fechaExpira;

@@ -10,6 +10,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public class Test08UsuarioSeUneAClub {
+	
 	ClubDTO club;
 	InterfaceDAOClub dBClub;
 	List<String> miembros;

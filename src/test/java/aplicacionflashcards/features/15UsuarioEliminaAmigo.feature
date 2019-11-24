@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Usuario elimina amigo
 
 Scenario: Usuario elimina amigo

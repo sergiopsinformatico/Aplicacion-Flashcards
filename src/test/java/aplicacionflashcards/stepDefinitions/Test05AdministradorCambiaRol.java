@@ -8,6 +8,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test05AdministradorCambiaRol {
+	
 	InterfaceDAOUsuario dBUsuario;
 	UsuarioDTO admin;
 	UsuarioDTO user;

@@ -7,6 +7,7 @@ public class PropertiesConfig {
 	
 	private PropertiesConfig() {}
 	
+	
 	public static String getProperties(String name) {
 		return getValue(name);
 	}

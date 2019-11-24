@@ -1,7 +1,6 @@
 package main.java.aplicacionflashcards.dto;
 
 public class EliminarCuentaDTO {
-	
 	private String username;
 	private String fecha;
 	

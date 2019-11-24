@@ -21,8 +21,7 @@ private GeneratorStrings() {}
 				numeroAleatorio = SecureRandom.getInstanceStrong().nextFloat();
 	            int index = (int)(caracteresValidos.length() * numeroAleatorio); 	  
 	            sb.append(caracteresValidos.charAt(index)); 
-	        } 
-	  
+	        }
 	        return sb.toString(); 
 		}catch(Exception ex) {
 			return "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

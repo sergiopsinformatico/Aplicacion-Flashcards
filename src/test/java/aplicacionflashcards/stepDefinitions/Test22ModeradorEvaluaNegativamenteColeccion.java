@@ -7,6 +7,7 @@ import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 
 public class Test22ModeradorEvaluaNegativamenteColeccion {
+	
 	FlashcardsDTO flashcard;
 	
 	@Given("^El moderador analiza la coleccion$")

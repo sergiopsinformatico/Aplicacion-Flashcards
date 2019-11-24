@@ -7,6 +7,7 @@ import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 
 public class Test19UsuarioEliminaColeccionFlashcards {
+	
 	FlashcardsDTO coleccion;
 	
 	@Given("^Un usuario quiere eliminar una coleccion de Flashcards$")

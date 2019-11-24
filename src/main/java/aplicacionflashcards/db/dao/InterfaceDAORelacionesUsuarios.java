@@ -5,6 +5,7 @@ import java.util.List;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 
 public interface InterfaceDAORelacionesUsuarios {
+	
 	public boolean creaRelaciones(RelacionesUsuariosDTO relaciones);
 	public RelacionesUsuariosDTO leerRelaciones(String username);
 	public boolean actualizaRelaciones(RelacionesUsuariosDTO relaciones);
@@ -21,4 +22,5 @@ public interface InterfaceDAORelacionesUsuarios {
 	public List<String> getBloqueados(String username);
 	public List<String> getBloqueadores(String username);
 	public String tipoRelacion(String usuarioPregunta, String otroUsuario);
+	
 }

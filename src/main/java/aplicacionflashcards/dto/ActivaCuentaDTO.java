@@ -1,7 +1,6 @@
 package main.java.aplicacionflashcards.dto;
 
 public class ActivaCuentaDTO {
-	
 	String username;
 	String codigoActivacion;
 	String fecha;

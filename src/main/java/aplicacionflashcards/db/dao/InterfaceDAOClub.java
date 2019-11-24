@@ -5,6 +5,7 @@ import java.util.List;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public interface InterfaceDAOClub {
+	
 	public boolean insertaClub(ClubDTO club);
 	public boolean existeIdClub(String idClub);
 	public ClubDTO leerClub(String idClub, String username);
@@ -16,4 +17,5 @@ public interface InterfaceDAOClub {
 	public List<ClubDTO> getMisClubes(String username);
 	public List<ClubDTO> getClubesPertenezco(String username);
 	public List<ClubDTO> todosClubesCreados();
+	
 }

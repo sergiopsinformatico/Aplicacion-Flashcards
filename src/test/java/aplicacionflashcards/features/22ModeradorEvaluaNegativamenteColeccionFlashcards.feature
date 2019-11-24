@@ -1,5 +1,6 @@
 #Author: Sergio Perez Sanchez
 
+
 Feature: Moderador evalua negativamente la coleccion
 
 Scenario: Moderador evalua negativamente la coleccion

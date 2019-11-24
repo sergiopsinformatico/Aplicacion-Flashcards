@@ -45,7 +45,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="inicio.html">
       	<div class="sidebar-brand-icon middle">
-        	<img class="logoFlashcards" src="resources/img/logoFlashcards.JPG" alt=""/>
+        	<img class="logoFlashcards" src="resources/imagenes/logoFlashcards.JPG" alt=""/>
         </div>
       </a>
       

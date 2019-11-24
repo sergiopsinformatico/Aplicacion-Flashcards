@@ -19,8 +19,8 @@
 
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="resources/css/acceder.css"/>-->
+    <link rel="stylesheet" type="text/css" href="resources/css/view_IniciarSesion.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/view_All.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 	    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
 	      <div class="container">
 	        <a class="navbar-brand js-scroll-trigger" href="inicio.html">
-	        	<img class="logoFlashcards" src="resources/img/logoFlashcards.JPG" alt=""/>
+	        	<img class="logoFlashcards" src="resources/imagenes/logoFlashcards.JPG" alt=""/>
 	        </a>
 	        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	          Menu
@@ -45,11 +45,11 @@
 	        </button>
 	        <div class="collapse navbar-collapse" id="navbarResponsive">
 	          <ul class="navbar-nav ml-auto">
-	            <li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html">Registrate</a>
+	          	<li class="nav-item mx-0 mx-lg-1">
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger active" href="iniciarSesion.html" style="color:#18bc9c;"><i class="fas fa-sign-in-alt" style="padding-right:10px;color:#18bc9c;"></i>Iniciar Sesión</a>
 	            </li>
 	            <li class="nav-item mx-0 mx-lg-1">
-	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="acceder.html">Acceder a la Aplicación</a>
+	              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="registro.html"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Registrate</a>
 	            </li>
 	          </ul>
 	        </div>
@@ -68,29 +68,46 @@
         	}
 		</script>
 		<div class="row">
-			<div class="col-md-4"></div>
+			<div class="col-md-2"></div>
 			<div class="col-md-4">
-				<form action="iniciarSesion.do" method="post" class="form-signin">
-		            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesión</h1>
-		            <br>
-		            <input type="text" id="inputUsernameEmail" name="inputUsernameEmail" class="form-control" placeholder="Email o usuario" required="" autofocus="">
-		            <br>
-		            <input type="password" id="inputClave" name="inputClave" class="form-control" placeholder="Contraseña" required="">
-		            <br>
-		            <div class="middle">
-	                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnSignIn"></div>
-	                </div>
-		            <button class="btn btn-block btnBlock" type="submit" id="btnSignIn" disabled><i class="fas fa-sign-in-alt"></i> Acceder a la Aplicación Flashcards</button>
-		        </form>
-		        <br><br>
-		    	<hr style="border: 0.5px solid black;">
-		    	<form action="iniciarSesion.do" method="get" class="form-signin">
-	            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;" type="submit"><i class="fas fa-user-plus"></i> ¿Aún no tienes cuenta? Crear una cuenta nueva</button>
-	            </form>
-	            <br>
-	            <form action="iniciarSesion.do" method="get" class="form-signin">
-	            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;" type="submit"><i class="fas fa-key"></i> ¿Olvidaste tu clave? Recupera tu clave</button>
-	            </form>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<form action="iniciarSesion.do" method="post" class="form-signin">
+							<br>
+				            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Iniciar Sesión</h1>
+				            <br>
+				            <input type="text" id="inputUsernameEmail" name="inputUsernameEmail" class="form-control" placeholder="Email o usuario" required="" autofocus="">
+				            <br>
+				            <input type="password" id="inputClave" name="inputClave" class="form-control" placeholder="Contraseña" required="">
+				            <br>
+				            <div class="middle">
+			                	<div class="g-recaptcha positionReCaptcha" data-theme="light" data-sitekey="6LeViL4UAAAAAI8LXCjiOO3iKtIRcwEkWLAYcdST" data-callback="enableBtnSignIn"></div>
+			                </div>
+				            <button class="btn btn-block btnBlock" type="submit" id="btnSignIn" disabled><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i> Acceder a la Aplicación Flashcards</button>
+				            <br><br><br>
+				        </form>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+			<div class="col-md-4" style="border-left: 0.5px solid black;">
+				<br><br><br>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<form action="registro.html" method="get" class="form-signin">
+				    		<p style="text-align:center;"><strong>Si aún no tienes cuenta, puedes crearte una</strong></p>
+			            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
+			            </form>
+			            <br>
+			            <form action="registro.html" method="get" class="form-signin">
+			            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
+			            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
+			            </form>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
 			</div>
 			<!-- <form action="/reset/password/" class="form-reset">
                 <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
@@ -147,7 +164,7 @@
 					<div class="col-md-2"></div>
 				</div>
 			</div>-->
-			<div class="col-md-4"></div>
+			<div class="col-md-2"></div>
 		</div>
 	</section>
 

@@ -13,6 +13,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public class Test07UsuarioCreaClub {
+	
 	ClubDTO club;
 	Fecha fecha;
 	List<String> miembros;

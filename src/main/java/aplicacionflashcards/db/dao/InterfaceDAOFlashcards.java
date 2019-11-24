@@ -5,7 +5,6 @@ import java.util.List;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 
 public interface InterfaceDAOFlashcards {
-	
 	public boolean crearFlashcards(FlashcardsDTO flashcards);
 	public FlashcardsDTO leerFlashcard(String idFlashcard);
 	public boolean eliminarFlashcard(String idFlashcard);
@@ -19,5 +18,4 @@ public interface InterfaceDAOFlashcards {
 	public List<FlashcardsDTO> coleccionesCreadasSinEvaluar (String username);
 	public List<FlashcardsDTO> coleccionesClub(String id);
 	public List<FlashcardsDTO> listarTodasColeccionesModerador();
-	
 }

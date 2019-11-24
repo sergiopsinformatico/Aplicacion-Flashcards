@@ -5,6 +5,7 @@ import java.util.List;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public interface InterfaceDAOUsuario {
+	
 	public boolean insertUsuario(UsuarioDTO user);
 	public boolean existEmail (String email);
 	public boolean existUsername (String username);
@@ -18,4 +19,5 @@ public interface InterfaceDAOUsuario {
 	public List<String> getListEmail();
 	public List<UsuarioDTO> getAllUsuarios(String username);
 	public List<UsuarioDTO> getUsuariosRelacion(String username);
+	
 }

@@ -20,6 +20,9 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @Controller
 @SessionAttributes("usuario")
 public class Controlador05Configuracion {
+	
+	//Variables
+	
 	ModelAndView vista;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
@@ -32,6 +35,7 @@ public class Controlador05Configuracion {
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_MENSAJE = "mensaje";
 	
+	/*
 	@GetMapping(value = "/configuracion")
 	public ModelAndView modificarPerfil(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -123,5 +127,5 @@ public class Controlador05Configuracion {
 		}catch(Exception ex) {
 			return "inventado";
 		}
-	}
+	}*/
 }
