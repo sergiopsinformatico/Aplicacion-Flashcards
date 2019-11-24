@@ -77,6 +77,7 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
 		}
     }
     
+    
     public boolean crearFlashcards(FlashcardsDTO flashcards) {
     	try {
     		
