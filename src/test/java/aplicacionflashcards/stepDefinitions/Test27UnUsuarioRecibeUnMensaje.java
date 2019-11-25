@@ -14,6 +14,7 @@ public class Test27UnUsuarioRecibeUnMensaje {
 	
 	@Given("^Un usuario que ha iniciado sesion$")
 	public void un_usuario_que_ha_iniciado_sesion() throws Throwable {
+		
 		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
 	}
 
