@@ -34,6 +34,7 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
     RelacionesUsuariosDTO user;
     List<String> listaUser;
     int indice;
+    
     boolean encontrado;
 	List<String> amigos;
 	List<String> bloqueadores;
