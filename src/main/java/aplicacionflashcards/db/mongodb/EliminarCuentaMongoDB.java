@@ -40,6 +40,7 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
     UsuarioDTO user;
     
     //Constante
+    
     static final String CONST_USERNAME = "username";
     static final String CONST_FECHA = "fecha";
     
