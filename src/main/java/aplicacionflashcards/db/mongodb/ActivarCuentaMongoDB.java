@@ -29,7 +29,6 @@ public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
     MongoClient client;
     MongoDatabase db;
     MongoCollection<Document> coleccionActivaCuenta;
-    
     Document doc;
     Bson criteriosBusqueda;
     FindIterable<Document> resultadosBusqueda;

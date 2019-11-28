@@ -33,11 +33,9 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     MongoClient client;
     MongoDatabase db;
     MongoCollection<Document> coleccionFlashcards;
-    
     Document doc;
     Document docTarjetas;
     Document docTransformado;
-    
     Bson criteriosBusqueda;
     FindIterable<Document> resultadosBusqueda;
     LinkedList<FlashcardsDTO> lista;

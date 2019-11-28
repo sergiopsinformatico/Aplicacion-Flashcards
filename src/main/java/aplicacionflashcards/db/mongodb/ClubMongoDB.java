@@ -21,6 +21,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public class ClubMongoDB implements InterfaceDAOClub{
+	
 	//Variables
 	MongoClientURI uri; 
     MongoClient client;
