@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>Restablecer Clave - Flashcards</title>
 
     <!-- Bootstrap core CSS -->

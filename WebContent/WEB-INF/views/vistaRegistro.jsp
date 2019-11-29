@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>Flashcards - Registro de Usuarios</title>
 
     <!-- Bootstrap core CSS -->
