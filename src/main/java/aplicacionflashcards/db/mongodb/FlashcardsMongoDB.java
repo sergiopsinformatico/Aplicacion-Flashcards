@@ -29,6 +29,7 @@ import main.java.aplicacionflashcards.dto.TarjetaDTO;
 public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
 	
 	//Variables
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;

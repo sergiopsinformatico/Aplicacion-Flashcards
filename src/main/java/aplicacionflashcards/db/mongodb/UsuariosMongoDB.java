@@ -24,6 +24,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class UsuariosMongoDB implements InterfaceDAOUsuario{
 
 	//Variables
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;

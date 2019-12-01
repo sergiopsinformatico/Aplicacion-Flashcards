@@ -23,6 +23,7 @@ import main.java.aplicacionflashcards.dto.RecuperarCuentaDTO;
 public class RecuperarCuentaMongoDB implements InterfaceDAORecuperarCuenta {
 	
 	//Variables
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
