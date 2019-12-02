@@ -3,6 +3,7 @@ package main.java.aplicacionflashcards.dto;
 import java.util.List;
 
 public class FlashcardsDTO {
+	
 	String idColeccion;
 	String nombreColeccion;
 	String temaColeccion;
@@ -11,7 +12,6 @@ public class FlashcardsDTO {
 	List<TarjetaDTO> tarjetas;
 	String tipoCompartir;
 	String compartirCon;
-	
 	boolean evaluada;
 	String evaluador;
 			
