@@ -40,11 +40,9 @@ public class Controlador07Gente {
 	List<String> pdaRec;
 	UsuarioDTO eUsuario;
 	String tipoRelacion;
-	
 	int indice;
 	int indiceTodos;
 	boolean encontrado;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";

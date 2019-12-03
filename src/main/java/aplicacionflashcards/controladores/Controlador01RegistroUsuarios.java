@@ -41,7 +41,6 @@ public class Controlador01RegistroUsuarios {
 	Fecha fecha;
 	String codigoActivacion;
 	Email correo;
-	
 	/*Constantes*/
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";

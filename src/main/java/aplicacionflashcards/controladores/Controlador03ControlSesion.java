@@ -25,7 +25,6 @@ public class Controlador03ControlSesion {
 	UsuarioDTO user;
 	EliminarCuentaDTO eliminado;
 	Email email;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";

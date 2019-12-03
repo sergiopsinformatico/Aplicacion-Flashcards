@@ -37,7 +37,6 @@ public class Controlador02RecuperarCuenta {
 	String compara;
 	String keySecure;
 	Email email;
-	
 	//Constantes
 	static final String CONST_VIEW_RECUPERA = "vistaRecuperarCuenta";
 	static final String CONST_MENSAJE = "mensaje";

@@ -26,7 +26,6 @@ public class Controlador10Moderador {
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;
 	FlashcardsDTO flashcard;
-		
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";

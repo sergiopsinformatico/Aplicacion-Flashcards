@@ -40,7 +40,6 @@ public class Controlador08Clubes {
 	List<String> miembros;
 	List<UsuarioDTO> usuariosMiembros;
 	int indice;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";

@@ -22,14 +22,12 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador05Configuracion {
 	
 	//Variables
-	
 	ModelAndView vista;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
 	Fecha fecha;
 	Email email;
 	EliminarCuentaDTO elimina;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";

@@ -34,7 +34,6 @@ public class Controlador06Administrador {
 	InterfaceDAOClub dBClubes;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
