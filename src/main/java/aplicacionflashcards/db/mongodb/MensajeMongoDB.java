@@ -24,8 +24,7 @@ import main.java.aplicacionflashcards.dto.MensajeDTO;
 
 public class MensajeMongoDB implements InterfaceDAOMensaje {
 	
-	//Variables
-	
+	//Variables	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
