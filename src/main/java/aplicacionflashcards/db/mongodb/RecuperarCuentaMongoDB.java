@@ -33,7 +33,6 @@ public class RecuperarCuentaMongoDB implements InterfaceDAORecuperarCuenta {
     MongoCursor<Document>iterador;
     Fecha fecha;
     String comparaFecha;
-    
     //Constantes
     static final String CONST_USERNAME = "username";
   	

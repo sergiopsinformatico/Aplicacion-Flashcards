@@ -47,7 +47,6 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     List<FlashcardsDTO> listaFlashcards;
     List<String> idsFlashcards;
     int indice;
-    
     InterfaceDAOClub dBClubes;
     List<ClubDTO> clubes;
     

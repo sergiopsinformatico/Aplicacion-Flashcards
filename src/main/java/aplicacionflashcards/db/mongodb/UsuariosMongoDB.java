@@ -38,7 +38,6 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	LinkedList<UsuarioDTO> listaUsers;
 	LinkedList<UsuarioDTO> listaUsersRelacion;
 	List<String> bloqueadores;
-	
 	//Constantes
 	static final String CONST_USERNAME = "username";
 	static final String CONST_EMAIL = "email";

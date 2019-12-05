@@ -41,7 +41,6 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
 	List<String> pdaEnv;
 	List<String> pdaRec;
 	String tipoRelacion;
-    
     //Logger
   	private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.RelacionesUsuariosMongoDB");
   	

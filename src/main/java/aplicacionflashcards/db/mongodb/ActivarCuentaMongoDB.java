@@ -34,7 +34,6 @@ public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
     FindIterable<Document> resultadosBusqueda;
     LinkedList<ActivaCuentaDTO> lista;
     MongoCursor<Document> iterador;
-    
     //Constante
     static final String CONST_USERNAME ="username";
     static final String CONST_CODIGO ="codigo";
