@@ -27,7 +27,7 @@ public class Controlador04Perfil {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";
 	
-	/*Ver Perfil
+	/*Ver Perfil*/
 	@GetMapping(value = "/verPerfil")
 	public ModelAndView verPerfil(@RequestParam("usuarioPerfil") String userPerfil, HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -57,5 +57,5 @@ public class Controlador04Perfil {
 			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
-	}*/
+	}
 }

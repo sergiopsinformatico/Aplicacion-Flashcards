@@ -44,7 +44,7 @@ public class Controlador08Clubes {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_REDIRECT_VER_CLUBES = "redirect:/verClubes.html";
-	/*
+	
 	@GetMapping(value = "/verClubes")
 	public ModelAndView getClubes(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -216,5 +216,5 @@ public class Controlador08Clubes {
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> getColeccionesClub(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		return Broker.getInstanciaFlashcards().coleccionesClub(id);
-	}*/
+	}
 }

@@ -52,7 +52,7 @@ public class Controlador09Flashcards {
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_TIPO_COMPARTIR = "tipoCompartir";
 	
-	/*
+	
 	@GetMapping(value = "/flashcards")
 	public ModelAndView flashcards(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -255,6 +255,6 @@ public class Controlador09Flashcards {
 			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
-	}*/
+	}
 		
 }

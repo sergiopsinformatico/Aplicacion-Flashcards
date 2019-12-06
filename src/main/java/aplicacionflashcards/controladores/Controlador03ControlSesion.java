@@ -69,30 +69,7 @@ public class Controlador03ControlSesion {
 		return vista;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*Index o pagina principal logueado
+	/*Index o pagina principal logueado*/
 	@GetMapping(value = "/inicio")
 	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)==null || 
@@ -146,5 +123,5 @@ public class Controlador03ControlSesion {
 		request.getSession().setAttribute(CONST_USUARIO, null);
 		vista.addObject(CONST_USUARIO,null);
 		return vista;
-	}*/
+	}
 }

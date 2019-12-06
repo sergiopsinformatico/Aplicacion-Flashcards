@@ -41,7 +41,7 @@ public class Controlador02RecuperarCuenta {
 	static final String CONST_VIEW_RECUPERA = "vistaRecuperarCuenta";
 	static final String CONST_MENSAJE = "mensaje";
 	static final String CONST_USERNAME = "username";
-	/*
+	
 	@GetMapping(value = "/recuperaCuenta")
 	public ModelAndView recuperaCuenta(HttpServletRequest request, HttpServletResponse response) {
 		
@@ -115,5 +115,5 @@ public class Controlador02RecuperarCuenta {
 	@GetMapping(value = "/cambioClave")
 	public ModelAndView cambioClaveGet(HttpServletRequest request, HttpServletResponse response) {
 		return new ModelAndView("redirect:/inicio.html");
-	}*/
+	}
 }
