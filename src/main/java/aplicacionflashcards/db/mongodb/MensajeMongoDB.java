@@ -35,6 +35,7 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
     LinkedList<ActivaCuentaDTO> lista;
     MongoCursor<Document> iterador;
     List<MensajeDTO> listaMensajes;
+    
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.MensajeMongoDB");
 	

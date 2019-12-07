@@ -50,6 +50,7 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     InterfaceDAOClub dBClubes;
     List<ClubDTO> clubes;
     
+
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.FlashcardsMongoDB");
     
