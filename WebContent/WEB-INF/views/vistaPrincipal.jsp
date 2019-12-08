@@ -18,7 +18,7 @@
 
   <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin-2.min.css" rel="stylesheet">
-  <link href="resources/css/comunes.css" rel="stylesheet">
+  <link href="resources/css/view_All.css" rel="stylesheet">
   
   <!-- Bootstrap core CSS -->
   <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

@@ -32,7 +32,7 @@ public class Controlador04Perfil {
 	public ModelAndView verPerfil(@RequestParam("usuarioPerfil") String userPerfil, HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 			((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-			((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
+			(!((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals(""))) {
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			user = dBUsuario.getUsuarioDTO(userPerfil);
