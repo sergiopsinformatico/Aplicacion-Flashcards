@@ -27,16 +27,15 @@ import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 import main.java.aplicacionflashcards.dto.TarjetaDTO;
 
 public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
+	
 	//Variables
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
     MongoCollection<Document> coleccionFlashcards;
-    
     Document doc;
     Document docTarjetas;
     Document docTransformado;
-    
     Bson criteriosBusqueda;
     FindIterable<Document> resultadosBusqueda;
     LinkedList<FlashcardsDTO> lista;
@@ -48,10 +47,10 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     List<FlashcardsDTO> listaFlashcards;
     List<String> idsFlashcards;
     int indice;
-    
     InterfaceDAOClub dBClubes;
     List<ClubDTO> clubes;
     
+
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.FlashcardsMongoDB");
     

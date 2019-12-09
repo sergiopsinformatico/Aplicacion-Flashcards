@@ -3,6 +3,7 @@ package main.java.aplicacionflashcards.dto;
 import java.util.List;
 
 public class RelacionesUsuariosDTO {
+	
 	String username;
 	List<String> peticionesAmistadEnviadas;
 	List<String> peticionesAmistadRecibidas;

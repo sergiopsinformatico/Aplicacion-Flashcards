@@ -41,7 +41,6 @@ public class Controlador01RegistroUsuarios {
 	Fecha fecha;
 	String codigoActivacion;
 	Email correo;
-	
 	/*Constantes*/
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";
@@ -219,7 +218,7 @@ public class Controlador01RegistroUsuarios {
 	
 	
 	
-	/*
+	
 		
 	//Activar Cuenta - GET
 	@GetMapping(value = "/activaCuenta")
@@ -283,5 +282,5 @@ public class Controlador01RegistroUsuarios {
 	public ModelAndView activarGet(HttpServletRequest request, HttpServletResponse response){
 		vista = new ModelAndView(CONST_REDIRECT_IS);
 		return vista;
-	}	*/
+	}
 }

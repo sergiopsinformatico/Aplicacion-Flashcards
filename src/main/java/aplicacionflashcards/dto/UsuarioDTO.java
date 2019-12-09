@@ -107,4 +107,5 @@ public class UsuarioDTO {
 	public void setTipoRelacion(String tipoRelacion) {
 		this.tipoRelacion = tipoRelacion;
 	}
+	
 }

@@ -34,14 +34,13 @@ public class Controlador06Administrador {
 	InterfaceDAOClub dBClubes;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_ADMIN = "Administrador";
 	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";
 	
-	/*
+	
 	@GetMapping(value = "/panelAdministrador")
 	public ModelAndView getPanelAdministrador(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
@@ -198,5 +197,5 @@ public class Controlador06Administrador {
 		
 		return vista;
 		
-	}*/
+	}
 }

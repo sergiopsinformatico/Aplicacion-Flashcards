@@ -22,28 +22,37 @@ public class Broker {
 	private Broker() {
 		throw new IllegalStateException("Broker no se instancia");
 	}
+	
 	public static InterfaceDAOUsuario getInstanciaUsuario() {
 		return new UsuariosMongoDB();
 	}
+	
 	public static InterfaceDAOActivaCuenta getInstanciaActivaCuenta() {
 		return new ActivarCuentaMongoDB();
 	}
+	
 	public static InterfaceDAOEliminarCuenta getInstanciaEliminarCuenta() {
 		return new EliminarCuentaMongoDB();
 	}
+	
 	public static InterfaceDAORecuperarCuenta getInstanciaRecuperarCuenta() {
 		return new RecuperarCuentaMongoDB();
 	}
+	
 	public static InterfaceDAOClub getInstanciaClub() {
 		return new ClubMongoDB();
 	}
+	
 	public static InterfaceDAORelacionesUsuarios getInstanciaRelaciones() {
 		return new RelacionesUsuariosMongoDB();
 	}
+	
 	public static InterfaceDAOFlashcards getInstanciaFlashcards() {
 		return new FlashcardsMongoDB();
 	}
+	
 	public static InterfaceDAOMensaje getInstanciaMensaje() {
 		return new MensajeMongoDB();
 	}
+	
 }

@@ -24,7 +24,7 @@ import main.java.aplicacionflashcards.dto.MensajeDTO;
 
 public class MensajeMongoDB implements InterfaceDAOMensaje {
 	
-	//Variables
+	//Variables	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -35,7 +35,7 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
     LinkedList<ActivaCuentaDTO> lista;
     MongoCursor<Document> iterador;
     List<MensajeDTO> listaMensajes;
-	
+    
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.MensajeMongoDB");
 	

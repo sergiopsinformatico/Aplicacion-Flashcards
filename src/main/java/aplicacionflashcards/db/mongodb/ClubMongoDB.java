@@ -21,6 +21,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public class ClubMongoDB implements InterfaceDAOClub{
+	
 	//Variables
 	MongoClientURI uri; 
     MongoClient client;
@@ -34,7 +35,6 @@ public class ClubMongoDB implements InterfaceDAOClub{
     List<ClubDTO> clubes;
     int indice;
     boolean encontrado;
-    
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.ClubMongoDB");
     

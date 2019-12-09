@@ -17,9 +17,11 @@ public class MensajeDTO {
 	public String getIdMensaje() {
 		return idMensaje;
 	}
+	
 	public void setIdMensaje(String idMensaje) {
 		this.idMensaje = idMensaje;
 	}
+	
 	public String getRemitente() {
 		return remitente;
 	}

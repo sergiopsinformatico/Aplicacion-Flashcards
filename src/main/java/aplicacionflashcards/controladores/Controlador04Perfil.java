@@ -23,17 +23,16 @@ public class Controlador04Perfil {
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelacion;
-	
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";
 	
-	/*Ver Perfil
+	/*Ver Perfil*/
 	@GetMapping(value = "/verPerfil")
 	public ModelAndView verPerfil(@RequestParam("usuarioPerfil") String userPerfil, HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 			((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-			((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
+			(!((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals(""))) {
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			user = dBUsuario.getUsuarioDTO(userPerfil);
@@ -58,5 +57,5 @@ public class Controlador04Perfil {
 			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
-	}*/
+	}
 }

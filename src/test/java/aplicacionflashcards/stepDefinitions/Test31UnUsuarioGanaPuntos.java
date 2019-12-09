@@ -12,6 +12,7 @@ public class Test31UnUsuarioGanaPuntos {
 
 	@When("^Consigue un objetivo$")
 	public void consigue_un_objetivo() throws Throwable {
+		
 		 assert(true);
 	}
 

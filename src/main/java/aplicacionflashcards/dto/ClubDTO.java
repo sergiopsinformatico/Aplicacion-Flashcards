@@ -10,7 +10,6 @@ public class ClubDTO {
 	String administrador;
 	List<String> miembros;
 	String fechaCreacion;
-	
 	boolean pertenezcoClub;
 	boolean soyAdministradorClub;
 	

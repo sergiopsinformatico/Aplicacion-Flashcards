@@ -26,14 +26,13 @@ public class Controlador10Moderador {
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;
 	FlashcardsDTO flashcard;
-		
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_FLASHCARD_EVALUA = "vistaFlashcardsEvaluar";
 	static final String CONST_MENSAJES = "mensajes";
 	
-	/*Moderador Evalua Coleccion
+	/*Moderador Evalua Coleccion*/
 	
 	@GetMapping(value = "/evaluarColecciones")
 	public ModelAndView evaluarColecciones(HttpServletRequest request, HttpServletResponse response) {
@@ -164,6 +163,6 @@ public class Controlador10Moderador {
 		}
 		
 		return vista;
-	}*/
+	}
 	
 }

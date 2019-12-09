@@ -18,6 +18,7 @@ public class Test28UnUsuarioVisualizaUnMensaje {
 	@When("^Abre el mensaje$")
 	public void abre_el_mensaje() throws Throwable {
 	    //mensaje = Broker.getInstanciaMensaje().verMensaje("mensaje-idMensaje");
+		
 	    assert(true);
 	}
 

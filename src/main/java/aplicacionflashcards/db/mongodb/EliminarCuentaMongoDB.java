@@ -26,6 +26,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
 	
+	//Variables
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;

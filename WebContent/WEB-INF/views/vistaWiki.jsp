@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
     <title>Flashcards - Desarrollo del Proyecto</title>
 
     <!-- Bootstrap core CSS -->

@@ -1,6 +1,7 @@
 package main.java.aplicacionflashcards.dto;
 
 public class TarjetaDTO {
+	
 	String anverso;
 	String reverso;
 	

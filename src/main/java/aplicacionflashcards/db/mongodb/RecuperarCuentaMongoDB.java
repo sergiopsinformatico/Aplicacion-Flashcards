@@ -23,38 +23,38 @@ import main.java.aplicacionflashcards.dto.RecuperarCuentaDTO;
 public class RecuperarCuentaMongoDB implements InterfaceDAORecuperarCuenta {
 	
 	//Variables
-		MongoClientURI uri; 
-	    MongoClient client;
-	    MongoDatabase db;
-	    MongoCollection<Document> coleccionRecuperarCuenta;
-	    Document doc;
-	    Bson criteriosBusqueda;
-	    FindIterable<Document> resultadosBusqueda;
-	    MongoCursor<Document>iterador;
-	    Fecha fecha;
-	    String comparaFecha;
-	    
-	    //Constantes
-	    static final String CONST_USERNAME = "username";
-	  	
-	    //Logger
-	    private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.RecuperarCuentaMongoDB");
-		
-		public RecuperarCuentaMongoDB() {
-			connection();
+	MongoClientURI uri; 
+    MongoClient client;
+    MongoDatabase db;
+    MongoCollection<Document> coleccionRecuperarCuenta;
+    Document doc;
+    Bson criteriosBusqueda;
+    FindIterable<Document> resultadosBusqueda;
+    MongoCursor<Document>iterador;
+    Fecha fecha;
+    String comparaFecha;
+    
+    //Constantes
+    static final String CONST_USERNAME = "username";
+  	
+    //Logger
+    private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.RecuperarCuentaMongoDB");
+	
+	public RecuperarCuentaMongoDB() {
+		connection();
+	}
+	
+	//Conexion con la BD
+    private void connection() {
+    	try {
+			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+	        client = new MongoClient(uri);
+	        db = client.getDatabase(uri.getDatabase());
+	        coleccionRecuperarCuenta = db.getCollection(PropertiesConfig.getProperties("colRecuperarCuenta"));
+		}catch(Exception ex) {
+			LOGGER.log(Level.INFO, ex.getMessage());
 		}
-		
-		//Conexion con la BD
-	    private void connection() {
-	    	try {
-				uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
-		        client = new MongoClient(uri);
-		        db = client.getDatabase(uri.getDatabase());
-		        coleccionRecuperarCuenta = db.getCollection(PropertiesConfig.getProperties("colRecuperarCuenta"));
-			}catch(Exception ex) {
-				LOGGER.log(Level.INFO, ex.getMessage());
-			}
-	    }
+    }
 	
 	public boolean insertaRC(RecuperarCuentaDTO recupera) {
 		
