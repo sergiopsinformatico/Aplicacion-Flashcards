@@ -95,5 +95,20 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 	public boolean eliminarMensaje(String idMensaje) {
 		return false;
 	}
+	
+	@Override
+	public MensajeDTO verMensaje(String idMensaje) {
+		criteriosBusqueda = new BsonDocument().append("idMensaje", new BsonString(idMensaje));
+		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
+		if(iterador.hasNext()) {
+			doc = iterador.next();
+			return new MensajeDTO(doc.getString("idMensaje"), 
+								  doc.getString("remitente"), 
+								  doc.getString("destinatario"),
+								  doc.getString("mensaje"));
+		}else {
+			return new MensajeDTO("","","","");
+		}
+	}
 
 }

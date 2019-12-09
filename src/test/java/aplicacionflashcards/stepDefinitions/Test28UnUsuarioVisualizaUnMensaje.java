@@ -17,13 +17,15 @@ public class Test28UnUsuarioVisualizaUnMensaje {
 
 	@When("^Abre el mensaje$")
 	public void abre_el_mensaje() throws Throwable {
-	    //mensaje = Broker.getInstanciaMensaje().verMensaje("mensaje-idMensaje");
-		
+	    mensaje = Broker.getInstanciaMensaje().verMensaje("mensaje-idMensaje");
 	    assert(true);
 	}
 
 	@Then("^Visualiza el mensaje$")
 	public void visualiza_el_mensaje() throws Throwable {
-	    assert(true);
+	    assert(mensaje.getIdMensaje().equals("mensaje-idMensaje") &&
+	    	   mensaje.getRemitente().equals("usuario456") &&
+	    	   mensaje.getDestinatario().equals("usuario123") &&
+	    	   mensaje.getMensaje().equals("Hola"));
 	}
 }
