@@ -93,7 +93,8 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 
 	@Override
 	public boolean eliminarMensaje(String idMensaje) {
-		return false;
+		criteriosBusqueda = new BsonDocument().append("idMensaje", new BsonString(idMensaje));
+		return coleccionMensajes.deleteOne(criteriosBusqueda).getDeletedCount()==1;
 	}
 	
 	@Override

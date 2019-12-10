@@ -5,6 +5,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOEliminarCuenta;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOFlashcards;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOMensaje;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOPuntos;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORecuperarCuenta;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
@@ -13,6 +14,7 @@ import main.java.aplicacionflashcards.db.mongodb.ClubMongoDB;
 import main.java.aplicacionflashcards.db.mongodb.EliminarCuentaMongoDB;
 import main.java.aplicacionflashcards.db.mongodb.FlashcardsMongoDB;
 import main.java.aplicacionflashcards.db.mongodb.MensajeMongoDB;
+import main.java.aplicacionflashcards.db.mongodb.PuntosMongoDB;
 import main.java.aplicacionflashcards.db.mongodb.RecuperarCuentaMongoDB;
 import main.java.aplicacionflashcards.db.mongodb.RelacionesUsuariosMongoDB;
 import main.java.aplicacionflashcards.db.mongodb.UsuariosMongoDB;
@@ -53,6 +55,10 @@ public class Broker {
 	
 	public static InterfaceDAOMensaje getInstanciaMensaje() {
 		return new MensajeMongoDB();
+	}
+	
+	public static InterfaceDAOPuntos getInstanciaPuntos() {
+		return new PuntosMongoDB();
 	}
 	
 }
