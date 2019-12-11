@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
 
-    <title>Flashcards - Desarrollo del Proyecto</title>
+    <title>Flashcards - Wiki del Desarrollo del Proyecto</title>
 
     <!-- Bootstrap core CSS -->
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,14 +37,6 @@
 
   <body id="page-top">
   
-  	<%@ page import="main.java.aplicacionflashcards.dto.UsuarioDTO" %>
-	<% 
-		UsuarioDTO user = ((UsuarioDTO)(session.getAttribute("usuario")));
-		if(user!=null && user.getUsername()!=null && (!(user.getUsername().equals("")))){
-			response.sendRedirect("inicio.html");
-		}
-	%>
-		
 	<!-- Navigation -->
     <header class="header">
 	    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
