@@ -76,16 +76,13 @@
     <article style="background-color:#BFEA8B">
     	<br><br><br><br><br><br><br><br>
     	<div class="row">
-    		<div class="col-md-3"></div>
-    		<div class="col-md-3">
+    		<div class="col-md-12">
     			<br><br>
-    			<h6 style="color:black" align="center">Si quieres saber cómo se ha desarrollado este proyecto, pincha sobre la imagen</h6>
+    			<h6 style="color:black" align="center">¿Quieres saber cómo se ha desarrollado el proyecto? Echa un vistazo a la Wiki</h6>
+    			<br>
+    			<a href="desarrolloProyecto.html"><i style="text-align:center;display:inline-block;width:100%;" class="fa fa-sitemap fa-5x" aria-hidden="true"></i></a>
     		</div>
-    		<div class="col-md-3">
-    			<a href="desarrolloProyecto.html"><img style="display:block;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
-    		</div>
-    		<div class="col-md-3"></div>
-    	</div>
+     	</div>
     	<br>
 	</article>
     <article>
