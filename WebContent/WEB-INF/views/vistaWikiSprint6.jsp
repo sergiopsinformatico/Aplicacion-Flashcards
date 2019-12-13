@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Flashcards - Wiki sobre el Desarrollo del Proyecto</title>
+  <title>Flashcards - Wiki sobre el Desarrollo del Proyecto (Sprint 6)</title>
 
   <!-- Custom fonts for this template-->
   <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -65,7 +65,7 @@
       <!-- Divider-->
       <hr class="sidebar-divider my-0">
 
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="desarrolloProyecto.html">
           <i class="fa fa-sitemap" aria-hidden="true"></i>
           <span>Wiki del Proyecto</span></a>
@@ -105,7 +105,7 @@
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 5</span></a>
       </li>
-      <li class="nav-item" id="sprint6">
+      <li class="nav-item active" id="sprint6">
         <a class="nav-link">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 6</span></a>

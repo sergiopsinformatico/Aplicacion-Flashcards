@@ -82,7 +82,7 @@
     			<h6 style="color:black" align="center">Si quieres saber cómo se ha desarrollado este proyecto, pincha sobre la imagen</h6>
     		</div>
     		<div class="col-md-3">
-    			<a href="verWikiProyecto.html"><img style="display:block;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
+    			<a href="desarrolloProyecto.html"><img style="display:block;margin-right:auto;width:150px;height:auto;" src="resources/imagenes/wikiDesarrollo.jpg" alt="Imagen no Disponible"></a>
     		</div>
     		<div class="col-md-3"></div>
     	</div>

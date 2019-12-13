@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @SessionAttributes("usuario")
 public class Controlador11Wiki {
 	
-	@GetMapping(value = "/verWikiProyecto")
+	@GetMapping(value = "/desarrolloProyecto")
 	public ModelAndView verWikiProyecto(HttpServletRequest request, HttpServletResponse response) {
 		return new ModelAndView("vistaWiki");
 	}
