@@ -7,7 +7,7 @@ addons:
       secure: "3a40f7ce79b62c41505d6d661028d0949358ea1c"
 
 script:
-  - mvn clean verify -P sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c -Dsonar.branch.name=master -Dsonar.sources=pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions
+  - mvn clean verify sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c -Dsonar.branch.name=master -Dsonar.sources=pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions
 
 jdk:
   - oraclejdk8
