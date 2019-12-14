@@ -8,7 +8,8 @@
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<!-- Para analisis SonarCloud -->
 	<!-- script:
-  	- mvn clean verify-->
+  	- mvn clean verify
+  	- mvn clean verify -P sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c-->
 	<sonar.sources>pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions</sonar.sources>
 	<sonar.inclusions>src/test/java/aplicacionflashcards/features</sonar.inclusions>
 	<sonar.core.serverBaseUrl>https://sonarcloud.io</sonar.core.serverBaseUrl>
