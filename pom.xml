@@ -9,14 +9,16 @@
 	<!-- Para analisis SonarCloud -->
 	<!-- script:
   	- mvn clean verify
-  	- mvn clean verify -P sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c-->
-	<sonar.sources>pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions</sonar.sources>
+  	- mvn clean verify -P sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=sergiopsinformatico-github -Dsonar.login=3a40f7ce79b62c41505d6d661028d0949358ea1c
+  	script:
+  	- mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io-->
+	<!--<sonar.sources>pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions</sonar.sources>
 	<sonar.inclusions>src/test/java/aplicacionflashcards/features</sonar.inclusions>
 	<sonar.core.serverBaseUrl>https://sonarcloud.io</sonar.core.serverBaseUrl>
 	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	<sonar.organization>sergiopsinformatico-github</sonar.organization>
 	<sonar.login>3a40f7ce79b62c41505d6d661028d0949358ea1c</sonar.login>
-	<sonar.branch.name>master</sonar.branch.name>
+	<sonar.branch.name>master</sonar.branch.name>-->
   </properties>
   <build>
     <plugins>
@@ -31,6 +33,34 @@
 				<goals>
 					<goal>sonar</goal>
 				</goals>
+				<configuration>
+					<properties>
+						<property>
+							<name>sonar.sources</name>
+							<value>pom.xml,src/main/java/aplicacionflashcards/auxiliares,src/main/java/aplicacionflashcards/broker,src/main/java/aplicacionflashcards/controladores,src/main/java/aplicacionflashcards/db/dao,src/main/java/aplicacionflashcards/db/mongodb,src/main/java/aplicacionflashcards/dto,src/main/resources,src/test/java/aplicacionflashcards/runner,src/test/java/aplicacionflashcards/features,src/test/java/aplicacionflashcards/stepDefinitions</value>
+						</property>
+						<property>
+							<name>sonar.core.serverBaseUrl</name>
+							<value>https://sonarcloud.io</value>
+						</property>
+						<property>
+							<name>sonar.host.url</name>
+							<value>https://sonarcloud.io</value>
+						</property>
+						<property>
+							<name>sonar.organization</name>
+							<value>sergiopsinformatico-github</value>
+						</property>
+						<property>
+							<name>sonar.login</name>
+							<value>3a40f7ce79b62c41505d6d661028d0949358ea1c</value>
+						</property>
+						<property>
+							<name>sonar.branch.name</name>
+							<value>master</value>
+						</property>
+					</properties>
+				</configuration>
 			</execution>
 		</executions>
 	  </plugin>
