@@ -133,7 +133,7 @@
         <div class="container-fluid" ng-app="AppPerfil" ng-controller="PerfilCtrl">
         	
         	<div class="row">
-        		<br><br>
+        		<br>Texto de Ejemplo<br>
         	</div>
         	<div class="row">
         	</div>
