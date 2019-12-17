@@ -123,25 +123,39 @@
 
       <!-- Main Content -->
       <div id="content">
-
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-          <!-- Topbar Navbar -->
-          <ul class="navbar-nav ml-auto"></ul>
-        </nav>
-        
-        <div class="container-fluid" ng-app="AppPerfil" ng-controller="PerfilCtrl">
-        	
-        	<div class="row">
-        		<br><br>
-        	</div>
-        	<div class="row">
-        	</div>
-        	<div class="row">
-        		<br><br><br>
-        	</div>     	
-        </div>
-
+      
+      	<div style="margin-left:12px;" class="row">
+      		<div class="col-md-12">
+      
+		      	<div class="row">
+		        	<br><br>
+		        </div>
+		        
+		        <div class="row">
+		        	<p><b>Metodología de Desarrollo:</b> BDD</p>
+		        </div>
+		        
+		        <div class="row">
+		        	<p><b>Metodología de Gestión:</b> SCRUM</p>
+		        </div>
+		        
+		        <div class="row">
+		        	<p><b>Metodo de Estimación:</b> Analogía (proyectos realizados durante la carrera)</p>
+		        </div>
+		        
+		        <div class="row">
+		        	<br><br>
+		        </div>
+		
+		        <div class="row">
+		        	<div class="col-md-12" style="text-align:center;">
+		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S0.JPG" alt="Sprint 0" height="300" width="auto">
+		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S1.JPG" alt="Sprint 1" height="300" width="auto">
+		        		<img src="resources/imagenes/wiki_S2.JPG" alt="Sprint 2" height="300" width="auto">
+		       		</div>
+		        </div>
+			</div>
+		 </div>
       </div>
       <!-- End of Main Content -->
 
