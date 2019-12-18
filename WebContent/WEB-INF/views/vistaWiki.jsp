@@ -78,8 +78,9 @@
       <li class="nav-item" id="sprint0">
         <a class="nav-link">
           <i class="fa fa-history" aria-hidden="true"></i>
-          <span>Sprint 0</span></a>
+          <span>Planificación (Sprint 0)</span></a>
       </li>
+      
       <li class="nav-item" id="sprint1">
         <a class="nav-link">
           <i class="fa fa-history" aria-hidden="true"></i>
@@ -132,15 +133,23 @@
 		        </div>
 		        
 		        <div class="row">
-		        	<p><b>Metodología de Desarrollo:</b> BDD</p>
+		        	<div style="font-weight:bold;">Metodología de Desarrollo: </div>BDD
 		        </div>
 		        
 		        <div class="row">
-		        	<p><b>Metodología de Gestión:</b> SCRUM</p>
+		        	<div style="font-weight:bold;">Metodología de Gestión: </div>SCRUM
 		        </div>
 		        
 		        <div class="row">
-		        	<p><b>Metodo de Estimación:</b> Analogía (proyectos realizados durante la carrera)</p>
+		        	<div style="font-weight:bold;">Metodo de Estimación: </div>Analogía (proyectos realizados durante la carrera)
+		        </div>
+		        
+		        <div class="row">
+		        	<br><br>
+		        </div>
+		        
+		        <div class="row">
+		        	<p><b>Sprints del Proyecto:</b></p>
 		        </div>
 		        
 		        <div class="row">
