@@ -81,6 +81,7 @@
           <span>Planificación (Sprint 0)</span></a>
       </li>
       
+      
       <li class="nav-item" id="sprint1">
         <a class="nav-link">
           <i class="fa fa-history" aria-hidden="true"></i>
