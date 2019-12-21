@@ -56,6 +56,7 @@
 	  <!-- Divider-->
       <hr class="sidebar-divider my-0">
 
+
       <li class="nav-item">
         <a class="nav-link" href="inicio.html">
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
