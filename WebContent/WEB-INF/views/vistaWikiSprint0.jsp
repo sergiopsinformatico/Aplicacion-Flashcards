@@ -49,7 +49,6 @@
         </div>
       </a>
       
-      
       <div class="row">
 	  	<br><br>
 	  </div>

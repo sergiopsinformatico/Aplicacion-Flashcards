@@ -62,7 +62,6 @@
           <span>Volver a la Aplicación</span></a>
       </li>
 
-
       <!-- Divider-->
       <hr class="sidebar-divider my-0">
 

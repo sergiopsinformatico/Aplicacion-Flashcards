@@ -53,8 +53,6 @@
 	  	<br><br>
 	  </div>
 	  
-	  
-	  
 	  <!-- Divider-->
       <hr class="sidebar-divider my-0">
 
