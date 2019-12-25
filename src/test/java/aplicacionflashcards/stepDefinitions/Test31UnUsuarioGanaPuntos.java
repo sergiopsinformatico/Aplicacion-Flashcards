@@ -10,7 +10,7 @@ public class Test31UnUsuarioGanaPuntos {
 	
 	PuntosDTO puntosUsuario;
 	
-	@Given("^Un usuario realiza una acci?n$")
+	@Given("^Un usuario realiza una accion$")
 	public void un_usuario_realiza_una_acci_n() throws Throwable {
 		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
 	}
