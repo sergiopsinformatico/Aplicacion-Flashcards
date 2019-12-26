@@ -6,7 +6,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import main.java.aplicacionflashcards.broker.Broker;
-import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
@@ -14,14 +13,14 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Test01UsuarioCreaCuentaUsuario {
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
-	InterfaceDAORelacionesUsuarios dBRelaciones;
+	//InterfaceDAORelacionesUsuarios dBRelaciones;
 	RelacionesUsuariosDTO relaciones;
 	boolean condicion;
 	
 	@Given("^Una persona quiere registrarse$")
 	public void una_persona_quiere_registrarse() throws Throwable {
 		dBUsuario = Broker.getInstanciaUsuario();
-		dBRelaciones = Broker.getInstanciaRelaciones();
+		//dBRelaciones = Broker.getInstanciaRelaciones();
 		user = new UsuarioDTO("usuario123", "usuario123@email.com", "usuario123");
 		user.setRol("Usuario");
 		relaciones = new RelacionesUsuariosDTO("usuario123", new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>());
@@ -38,7 +37,7 @@ public class Test01UsuarioCreaCuentaUsuario {
 
 	@Then("^Se registra correctamente$")
 	public void se_registra_correctamente() throws Throwable {
-		assert(dBUsuario.insertUsuario(user) && dBUsuario.existEmail(user.getEmail()) && dBRelaciones.creaRelaciones(relaciones));
+		assert(dBUsuario.insertUsuario(user) && dBUsuario.existEmail(user.getEmail()));
 	}
 
 	@When("^Introduce un username existente$")

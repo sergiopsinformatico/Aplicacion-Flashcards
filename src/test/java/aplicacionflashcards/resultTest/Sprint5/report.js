@@ -39,21 +39,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 2860660300,
+  "duration": 2961773000,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_los_datos_correctamente()"
 });
 formatter.result({
-  "duration": 1053828000,
+  "duration": 956340500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.se_registra_correctamente()"
 });
 formatter.result({
-  "duration": 539831100,
+  "duration": 174678000,
   "status": "passed"
 });
 formatter.scenario({
@@ -83,21 +83,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 8435200,
+  "duration": 4899500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_username_existente()"
 });
 formatter.result({
-  "duration": 699542300,
+  "duration": 672753700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 40092400,
+  "duration": 40075000,
   "status": "passed"
 });
 formatter.scenario({
@@ -127,21 +127,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 7572300,
+  "duration": 4990900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.el_username_contiene_un_caracter_invalido()"
 });
 formatter.result({
-  "duration": 38800,
+  "duration": 38300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 718056500,
+  "duration": 749979300,
   "status": "passed"
 });
 formatter.scenario({
@@ -171,21 +171,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 8632600,
+  "duration": 3785600,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_del_username_es_incorrecta()"
 });
 formatter.result({
-  "duration": 42200,
+  "duration": 51700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 687492900,
+  "duration": 703799300,
   "status": "passed"
 });
 formatter.scenario({
@@ -215,21 +215,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 6600700,
+  "duration": 4001100,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_clave_contiene_un_caracter_invalido()"
 });
 formatter.result({
-  "duration": 43300,
+  "duration": 43400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 722102200,
+  "duration": 675248300,
   "status": "passed"
 });
 formatter.scenario({
@@ -259,21 +259,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 6662300,
+  "duration": 3932500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.la_longitud_de_la_clave_es_incorrecta()"
 });
 formatter.result({
-  "duration": 39700,
+  "duration": 39900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 679587800,
+  "duration": 789214700,
   "status": "passed"
 });
 formatter.scenario({
@@ -303,21 +303,21 @@ formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.una_persona_quiere_registrarse()"
 });
 formatter.result({
-  "duration": 6130100,
+  "duration": 4507500,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.introduce_un_email_existente()"
 });
 formatter.result({
-  "duration": 645509900,
+  "duration": 660300300,
   "status": "passed"
 });
 formatter.match({
   "location": "Test01UsuarioCreaCuentaUsuario.no_se_registra()"
 });
 formatter.result({
-  "duration": 38871600,
+  "duration": 40523300,
   "status": "passed"
 });
 formatter.uri("02UsuarioIniciaSesion.feature");
@@ -361,21 +361,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3721800,
+  "duration": 5760800,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_email()"
 });
 formatter.result({
-  "duration": 731311700,
+  "duration": 771002400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
 });
 formatter.result({
-  "duration": 27700,
+  "duration": 35000,
   "status": "passed"
 });
 formatter.scenario({
@@ -405,21 +405,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 9135800,
+  "duration": 4642200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_con_el_username()"
 });
 formatter.result({
-  "duration": 665913000,
+  "duration": 661830800,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.se_loguea_correctamente()"
 });
 formatter.result({
-  "duration": 16300,
+  "duration": 17900,
   "status": "passed"
 });
 formatter.scenario({
@@ -449,21 +449,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 2884300,
+  "duration": 2997700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.el_email_es_erroneo()"
 });
 formatter.result({
-  "duration": 720355000,
+  "duration": 716181200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "duration": 30500,
+  "duration": 46800,
   "status": "passed"
 });
 formatter.scenario({
@@ -493,21 +493,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3986500,
+  "duration": 5468400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.el_username_es_erroneo()"
 });
 formatter.result({
-  "duration": 790041000,
+  "duration": 738523400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "duration": 17700,
+  "duration": 16600,
   "status": "passed"
 });
 formatter.scenario({
@@ -537,21 +537,21 @@ formatter.match({
   "location": "Test02UsuarioIniciaSesion.una_persona_quiere_loguearse()"
 });
 formatter.result({
-  "duration": 3341400,
+  "duration": 3991200,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.la_clave_es_erronea()"
 });
 formatter.result({
-  "duration": 796762300,
+  "duration": 703622800,
   "status": "passed"
 });
 formatter.match({
   "location": "Test02UsuarioIniciaSesion.no_se_puede_loguear()"
 });
 formatter.result({
-  "duration": 29200,
+  "duration": 21900,
   "status": "passed"
 });
 formatter.uri("03UsuarioVerPerfil.feature");
@@ -595,21 +595,21 @@ formatter.match({
   "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
 formatter.result({
-  "duration": 3037400,
+  "duration": 3427900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.se_loguea_con_el_username()"
 });
 formatter.result({
-  "duration": 672469000,
+  "duration": 731932400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_username()"
 });
 formatter.result({
-  "duration": 120272800,
+  "duration": 118968700,
   "status": "passed"
 });
 formatter.scenario({
@@ -639,21 +639,21 @@ formatter.match({
   "location": "Test03UsuarioVePerfil.una_persona_quiere_ver_su_perfil()"
 });
 formatter.result({
-  "duration": 2863400,
+  "duration": 3995400,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.se_loguea_con_el_email()"
 });
 formatter.result({
-  "duration": 729553300,
+  "duration": 783913700,
   "status": "passed"
 });
 formatter.match({
   "location": "Test03UsuarioVePerfil.ve_el_perfil_con_el_email()"
 });
 formatter.result({
-  "duration": 118994700,
+  "duration": 134950300,
   "status": "passed"
 });
 formatter.uri("04UsuarioModificaPerfil.feature");
@@ -697,1645 +697,21 @@ formatter.match({
   "location": "Test04UsuarioActualizaPerfil.una_persona_quiere_actualizar_su_perfil()"
 });
 formatter.result({
-  "duration": 782848000,
+  "duration": 746982900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test04UsuarioActualizaPerfil.cambia_los_datos()"
 });
 formatter.result({
-  "duration": 47900,
+  "duration": 70900,
   "status": "passed"
 });
 formatter.match({
   "location": "Test04UsuarioActualizaPerfil.se_actualiza_el_perfil_correctamente()"
 });
 formatter.result({
-  "duration": 220391600,
-  "status": "passed"
-});
-formatter.uri("05AdministradorCambiaRol.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Administrador cambia el rol a un usuario",
-  "description": "",
-  "id": "administrador-cambia-el-rol-a-un-usuario",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Administrador cambia el rol a un usuario",
-  "description": "",
-  "id": "administrador-cambia-el-rol-a-un-usuario;administrador-cambia-el-rol-a-un-usuario",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un administrador quiere cambiar el rol de un usuario",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Localiza a ese usuario",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Cambia su rol",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test05AdministradorCambiaRol.un_administrador_quiere_cambiar_el_rol_de_un_usuario()"
-});
-formatter.result({
-  "duration": 850027800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test05AdministradorCambiaRol.localiza_a_ese_usuario()"
-});
-formatter.result({
-  "duration": 79750700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test05AdministradorCambiaRol.cambia_su_rol()"
-});
-formatter.result({
-  "duration": 118552900,
-  "status": "passed"
-});
-formatter.uri("06AdministradorEliminaUsuario.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Administrador elimina a un usuario",
-  "description": "",
-  "id": "administrador-elimina-a-un-usuario",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Administrador elimina un usuario",
-  "description": "",
-  "id": "administrador-elimina-a-un-usuario;administrador-elimina-un-usuario",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un administrador quiere eliminar a un usuario",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Encuentra a ese usuario",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Le elimina del sistema",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test06AdministradorEliminaUsuario.un_administrador_quiere_eliminar_a_un_usuario()"
-});
-formatter.result({
-  "duration": 892581000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test06AdministradorEliminaUsuario.encuentra_a_ese_usuario()"
-});
-formatter.result({
-  "duration": 38898700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test06AdministradorEliminaUsuario.le_elimina_del_sistema()"
-});
-formatter.result({
-  "duration": 76049800,
-  "status": "passed"
-});
-formatter.uri("07UsuarioCreaClub.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario crea un club",
-  "description": "",
-  "id": "usuario-crea-un-club",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un usuario crea un club",
-  "description": "",
-  "id": "usuario-crea-un-club;un-usuario-crea-un-club",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario no encuentra club",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Crea un club",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Existe el club",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test07UsuarioCreaClub.un_usuario_no_encuentra_club()"
-});
-formatter.result({
-  "duration": 1210775300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test07UsuarioCreaClub.crea_un_club()"
-});
-formatter.result({
-  "duration": 81250000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test07UsuarioCreaClub.existe_el_club()"
-});
-formatter.result({
-  "duration": 38678600,
-  "status": "passed"
-});
-formatter.uri("08UsuarioSeUneClub.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un usuario se une a un club",
-  "description": "",
-  "id": "un-usuario-se-une-a-un-club",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un usuario se une a un club",
-  "description": "",
-  "id": "un-usuario-se-une-a-un-club;un-usuario-se-une-a-un-club",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario encuentra un club",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Solicita unirse",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Forma parte de este club",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test08UsuarioSeUneAClub.un_usuario_encuentra_un_club()"
-});
-formatter.result({
-  "duration": 639035400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test08UsuarioSeUneAClub.solicita_unirse()"
-});
-formatter.result({
-  "duration": 119897800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test08UsuarioSeUneAClub.forma_parte_de_este_club()"
-});
-formatter.result({
-  "duration": 37280400,
-  "status": "passed"
-});
-formatter.uri("09UsuarioDejaClub.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario deja club",
-  "description": "",
-  "id": "usuario-deja-club",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un usuario deja un club",
-  "description": "",
-  "id": "usuario-deja-club;un-usuario-deja-un-club",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario que pertenece a un club",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Deja el club",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "No pertenece al club",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test09UsuarioDejaClub.un_usuario_que_pertenece_a_un_club()"
-});
-formatter.result({
-  "duration": 694991000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test09UsuarioDejaClub.deja_el_club()"
-});
-formatter.result({
-  "duration": 128360000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test09UsuarioDejaClub.no_pertenece_al_club()"
-});
-formatter.result({
-  "duration": 42047800,
-  "status": "passed"
-});
-formatter.uri("10AdministradorEliminaClub.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Administrador elimina club",
-  "description": "",
-  "id": "administrador-elimina-club",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "El administrador elimina el club",
-  "description": "",
-  "id": "administrador-elimina-club;el-administrador-elimina-el-club",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un administrador quiere eliminar el club",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Elimina el club",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "El club ya no existe",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test10AdministradorEliminaClub.un_administrador_de_un_club_quiere_eliminar_el_club()"
-});
-formatter.result({
-  "duration": 654206400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test10AdministradorEliminaClub.elimina_el_club()"
-});
-formatter.result({
-  "duration": 39202900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test10AdministradorEliminaClub.el_club_ya_no_existe()"
-});
-formatter.result({
-  "duration": 40351400,
-  "status": "passed"
-});
-formatter.uri("11UsuarioEnviaPeticionDeAmistad.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario envia peticion de amistad",
-  "description": "",
-  "id": "usuario-envia-peticion-de-amistad",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario envia peticion de amistad",
-  "description": "",
-  "id": "usuario-envia-peticion-de-amistad;usuario-envia-peticion-de-amistad",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario conoce a otro",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Envia una peticion de amistad",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "El otro usuario recibe una peticion de amistad",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test11UsuarioEnviaPeticionAmistad.un_usuario_conoce_a_otro()"
-});
-formatter.result({
-  "duration": 856686100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test11UsuarioEnviaPeticionAmistad.envia_una_peticion_de_amistad()"
-});
-formatter.result({
-  "duration": 2347114700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test11UsuarioEnviaPeticionAmistad.el_otro_usuario_recibe_una_peticion_de_amistad()"
-});
-formatter.result({
-  "duration": 39647500,
-  "status": "passed"
-});
-formatter.uri("12UsuarioRecibePeticionDeAmistad.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario recibe peticion de amistad",
-  "description": "",
-  "id": "usuario-recibe-peticion-de-amistad",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario recibe peticion de amistad",
-  "description": "",
-  "id": "usuario-recibe-peticion-de-amistad;usuario-recibe-peticion-de-amistad",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario del sistema",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Otro usuario le haya enviado una peticion de amistad",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Este usuario la recibe",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test12UsuarioRecibePeticionAmistad.un_usuario_del_sistema()"
-});
-formatter.result({
-  "duration": 861244700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test12UsuarioRecibePeticionAmistad.otro_usuario_le_haya_enviado_una_peticion_de_amistad()"
-});
-formatter.result({
-  "duration": 664937100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test12UsuarioRecibePeticionAmistad.este_usuario_la_recibe()"
-});
-formatter.result({
-  "duration": 40639300,
-  "status": "passed"
-});
-formatter.uri("13UsuarioAceptaPeticionDeAmistad.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario acepta peticion de amistad",
-  "description": "",
-  "id": "usuario-acepta-peticion-de-amistad",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario acepta peticion de amistad",
-  "description": "",
-  "id": "usuario-acepta-peticion-de-amistad;usuario-acepta-peticion-de-amistad",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario recibe una peticion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Acepta la peticion",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Son amigos",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test13UsuarioAceptaPeticionAmistad.un_usuario_recibe_una_peticion()"
-});
-formatter.result({
-  "duration": 1140328600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test13UsuarioAceptaPeticionAmistad.acepta_la_peticion()"
-});
-formatter.result({
-  "duration": 1295185100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test13UsuarioAceptaPeticionAmistad.son_amigos()"
-});
-formatter.result({
-  "duration": 78308900,
-  "status": "passed"
-});
-formatter.uri("14UsuarioRechazaPeticionDeAmistad.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario rechaza peticion de amistad",
-  "description": "",
-  "id": "usuario-rechaza-peticion-de-amistad",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario rechaza peticion de amistad",
-  "description": "",
-  "id": "usuario-rechaza-peticion-de-amistad;usuario-rechaza-peticion-de-amistad",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario recibe una peticion de amistad",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Rechaza la peticion",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "No son amigos",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test14UsuarioRechazaPeticionAmistad.un_usuario_recibe_una_peticion_de_amistad()"
-});
-formatter.result({
-  "duration": 2970038400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test14UsuarioRechazaPeticionAmistad.rechaza_la_peticion()"
-});
-formatter.result({
-  "duration": 1509975100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test14UsuarioRechazaPeticionAmistad.no_son_amigos()"
-});
-formatter.result({
-  "duration": 86720200,
-  "status": "passed"
-});
-formatter.uri("15UsuarioEliminaAmigo.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario elimina amigo",
-  "description": "",
-  "id": "usuario-elimina-amigo",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario elimina amigo",
-  "description": "",
-  "id": "usuario-elimina-amigo;usuario-elimina-amigo",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario no quiere tener a un usuario de amigo",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Elimina al amigo",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Ya no son amigos",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test15UsuarioEliminaAmigo.un_usuario_no_quiere_tener_a_un_usuario_de_amigo()"
-});
-formatter.result({
-  "duration": 888012800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test15UsuarioEliminaAmigo.elimina_al_amigo()"
-});
-formatter.result({
-  "duration": 2020529300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test15UsuarioEliminaAmigo.ya_no_son_amigos()"
-});
-formatter.result({
-  "duration": 84286100,
-  "status": "passed"
-});
-formatter.uri("16UsuarioBloqueaUsuario.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario bloquea a otro usuario",
-  "description": "",
-  "id": "usuario-bloquea-a-otro-usuario",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario bloquea a otro usuario",
-  "description": "",
-  "id": "usuario-bloquea-a-otro-usuario;usuario-bloquea-a-otro-usuario",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario no quiere que otro usuario sea su amigo",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Bloquea",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "El usuario bloqueado no ve su perfil",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test16UsuarioBloqueaUsuario.un_usuario_no_quiere_que_otro_usuario_sea_su_amigo()"
-});
-formatter.result({
-  "duration": 835611500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test16UsuarioBloqueaUsuario.bloquea()"
-});
-formatter.result({
-  "duration": 2118376000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test16UsuarioBloqueaUsuario.el_usuario_bloqueado_no_ver_su_perfil()"
-});
-formatter.result({
-  "duration": 86843600,
-  "status": "passed"
-});
-formatter.uri("17UsuarioDesbloqueaUsuario.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario desbloquea a usuario bloqueado",
-  "description": "",
-  "id": "usuario-desbloquea-a-usuario-bloqueado",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario desbloquea a usuario bloqueado",
-  "description": "",
-  "id": "usuario-desbloquea-a-usuario-bloqueado;usuario-desbloquea-a-usuario-bloqueado",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario quiere desbloquear a uno bloqueado",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Lo desbloquea",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "El usuario queda desbloqueado",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test17UsuarioDesbloqueaUsuario.un_usuario_quiere_desbloquear_a_uno_bloqueado()"
-});
-formatter.result({
-  "duration": 851853900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test17UsuarioDesbloqueaUsuario.lo_desbloquea()"
-});
-formatter.result({
-  "duration": 1877865800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test17UsuarioDesbloqueaUsuario.el_usuario_queda_desbloqueado()"
-});
-formatter.result({
-  "duration": 85813200,
-  "status": "passed"
-});
-formatter.uri("18UsuarioCreaColeccionFlashcards.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario crea una coleccion de Flashcards",
-  "description": "",
-  "id": "usuario-crea-una-coleccion-de-flashcards",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario crea una coleccion de Flashcards",
-  "description": "",
-  "id": "usuario-crea-una-coleccion-de-flashcards;usuario-crea-una-coleccion-de-flashcards",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario va a crear una coleccion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Inserta las tarjetas e indica con quien compartirlo",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Se crea la coleccion",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test18UsuarioCreaColeccionesFlashcards.un_usuario_va_a_crear_una_coleccion()"
-});
-formatter.result({
-  "duration": 757236200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test18UsuarioCreaColeccionesFlashcards.inserta_las_tarjetas_e_indica_con_quien_compartirlo()"
-});
-formatter.result({
-  "duration": 668296800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test18UsuarioCreaColeccionesFlashcards.se_crea_la_coleccion()"
-});
-formatter.result({
-  "duration": 685343400,
-  "status": "passed"
-});
-formatter.uri("19UsuarioEliminaColeccionFlashcards.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario elimina coleccion de Flashcards",
-  "description": "",
-  "id": "usuario-elimina-coleccion-de-flashcards",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario elimina coleccion de Flashcards",
-  "description": "",
-  "id": "usuario-elimina-coleccion-de-flashcards;usuario-elimina-coleccion-de-flashcards",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario quiere eliminar una coleccion de Flashcards",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Encuentra la coleccion",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "La elimina",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test19UsuarioEliminaColeccionFlashcards.un_usuario_quiere_eliminar_una_coleccion_de_Flashcards()"
-});
-formatter.result({
-  "duration": 685000400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test19UsuarioEliminaColeccionFlashcards.encuentra_la_coleccion()"
-});
-formatter.result({
-  "duration": 663242600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test19UsuarioEliminaColeccionFlashcards.la_elimina()"
-});
-formatter.result({
-  "duration": 1362169400,
-  "status": "passed"
-});
-formatter.uri("20ModeradorConsultaColeccionesSinEvaluar.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Moderador consulta colecciones sin evaluar",
-  "description": "",
-  "id": "moderador-consulta-colecciones-sin-evaluar",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Moderador consulta colecciones sin evaluar",
-  "description": "",
-  "id": "moderador-consulta-colecciones-sin-evaluar;moderador-consulta-colecciones-sin-evaluar",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un moderador consulta las colecciones",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Busca",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Se lista todas sin evaluar",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test20ModeradorConsultaColeccionesSinEvaluar.un_moderador_consulta_las_colecciones()"
-});
-formatter.result({
-  "duration": 814487300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test20ModeradorConsultaColeccionesSinEvaluar.busca()"
-});
-formatter.result({
-  "duration": 1426157600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test20ModeradorConsultaColeccionesSinEvaluar.se_lista_todas_sin_evaluar()"
-});
-formatter.result({
-  "duration": 54900,
-  "status": "passed"
-});
-formatter.uri("21ModeradorEvaluaPositivamenteColeccionFlashcards.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Moderador evalua positivamente la coleccion",
-  "description": "",
-  "id": "moderador-evalua-positivamente-la-coleccion",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Moderador evalua positivamente la coleccion",
-  "description": "",
-  "id": "moderador-evalua-positivamente-la-coleccion;moderador-evalua-positivamente-la-coleccion",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "El moderador evalua la coleccion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Lo valora positivamente",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "La coleccion puede visualizarse",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test21ModeradorEvaluaPositivamenteColeccion.el_moderador_evalua_la_coleccion()"
-});
-formatter.result({
-  "duration": 768193100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test21ModeradorEvaluaPositivamenteColeccion.lo_valora_positivamente()"
-});
-formatter.result({
-  "duration": 848866800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test21ModeradorEvaluaPositivamenteColeccion.la_coleccion_puede_visualizarse()"
-});
-formatter.result({
-  "duration": 694596100,
-  "status": "passed"
-});
-formatter.uri("22ModeradorEvaluaNegativamenteColeccionFlashcards.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Moderador evalua negativamente la coleccion",
-  "description": "",
-  "id": "moderador-evalua-negativamente-la-coleccion",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Moderador evalua negativamente la coleccion",
-  "description": "",
-  "id": "moderador-evalua-negativamente-la-coleccion;moderador-evalua-negativamente-la-coleccion",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "El moderador analiza la coleccion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Lo valora negativamente",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "La coleccion se elimina por no cumplir los requisitos",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test22ModeradorEvaluaNegativamenteColeccion.el_moderador_analiza_la_coleccion()"
-});
-formatter.result({
-  "duration": 821905000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test22ModeradorEvaluaNegativamenteColeccion.lo_valora_negativamente()"
-});
-formatter.result({
-  "duration": 702915700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test22ModeradorEvaluaNegativamenteColeccion.la_coleccion_se_elimina_por_no_cumplir_los_requisitos()"
-});
-formatter.result({
-  "duration": 665549900,
-  "status": "passed"
-});
-formatter.uri("23ModeradorEliminaColecciones.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Moderador elimina colecciones",
-  "description": "",
-  "id": "moderador-elimina-colecciones",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Moderador elimina colecciones",
-  "description": "",
-  "id": "moderador-elimina-colecciones;moderador-elimina-colecciones",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un moderador lista las colecciones",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Considere oportuno eliminar una coleccion",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Elimina la coleccion",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test23ModeradorEliminaColecciones.un_moderador_lista_las_colecciones()"
-});
-formatter.result({
-  "duration": 2021996200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test23ModeradorEliminaColecciones.considere_oportuno_eliminar_una_coleccion()"
-});
-formatter.result({
-  "duration": 27500,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test23ModeradorEliminaColecciones.elimina_la_coleccion()"
-});
-formatter.result({
-  "duration": 1388594300,
-  "status": "passed"
-});
-formatter.uri("24UsuarioBuscaColeccionesFlashcards.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario busca colecciones Flashcards",
-  "description": "",
-  "id": "usuario-busca-colecciones-flashcards",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un usuario busca colecciones Flashcards",
-  "description": "",
-  "id": "usuario-busca-colecciones-flashcards;un-usuario-busca-colecciones-flashcards",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario quiere visualizar una coleccion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Lista las colecciones en el buscador",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Encuentra la coleccion buscada",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test24UsuarioBuscaColeccionesFlashcards.un_usuario_quiere_visualizar_una_coleccion()"
-});
-formatter.result({
-  "duration": 1441511600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test24UsuarioBuscaColeccionesFlashcards.lista_las_colecciones_en_el_buscador()"
-});
-formatter.result({
-  "duration": 1437639700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test24UsuarioBuscaColeccionesFlashcards.encuentra_la_coleccion_buscada()"
-});
-formatter.result({
-  "duration": 54800,
-  "status": "passed"
-});
-formatter.uri("25UsuarioVisualizaColecciónFlashcards.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Usuario visualiza una coleccion",
-  "description": "",
-  "id": "usuario-visualiza-una-coleccion",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Usuario visualiza una coleccion",
-  "description": "",
-  "id": "usuario-visualiza-una-coleccion;usuario-visualiza-una-coleccion",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario localiza una coleccion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "La abre",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Puede ver las tarjetas y los datos acerca de esta",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test25UsuarioVisualizaColeccionFlashcards.un_usuario_localiza_una_coleccion()"
-});
-formatter.result({
-  "duration": 655422200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test25UsuarioVisualizaColeccionFlashcards.la_abre()"
-});
-formatter.result({
-  "duration": 741017700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test25UsuarioVisualizaColeccionFlashcards.puede_ver_las_tarjetas_y_los_datos_acerca_de_esta()"
-});
-formatter.result({
-  "duration": 680027900,
-  "status": "passed"
-});
-formatter.uri("26UnUsuarioEnviaUnMensaje.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un usuario envia un mensaje",
-  "description": "",
-  "id": "un-usuario-envia-un-mensaje",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un usuario envia un mensaje",
-  "description": "",
-  "id": "un-usuario-envia-un-mensaje;un-usuario-envia-un-mensaje",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario crea un mensaje",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Escribe ese mensaje",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Envia el mensaje a otro usuario",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test26UnUsuarioEnviaUnMensaje.un_usuario_crea_un_mensaje()"
-});
-formatter.result({
-  "duration": 4577900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test26UnUsuarioEnviaUnMensaje.escribe_ese_mensaje()"
-});
-formatter.result({
-  "duration": 45800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test26UnUsuarioEnviaUnMensaje.envia_el_mensaje_a_otro_usuario()"
-});
-formatter.result({
-  "duration": 722227000,
-  "status": "passed"
-});
-formatter.uri("27UnUsuarioRecibeUnMensaje.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un usuario recibe un mensaje",
-  "description": "",
-  "id": "un-usuario-recibe-un-mensaje",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un Usuario recibe un mensaje",
-  "description": "",
-  "id": "un-usuario-recibe-un-mensaje;un-usuario-recibe-un-mensaje",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario que ha iniciado sesion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Recibe un mensaje",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Puede verlo",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test27UnUsuarioRecibeUnMensaje.un_usuario_que_ha_iniciado_sesion()"
-});
-formatter.result({
-  "duration": 660515400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test27UnUsuarioRecibeUnMensaje.recibe_un_mensaje()"
-});
-formatter.result({
-  "duration": 728739100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test27UnUsuarioRecibeUnMensaje.puede_verlo()"
-});
-formatter.result({
-  "duration": 36900,
-  "status": "passed"
-});
-formatter.uri("28UnUsuarioVisualizaUnMensaje.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un Usuario visualiza un mensaje",
-  "description": "",
-  "id": "un-usuario-visualiza-un-mensaje",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un Usuario visualiza un mensaje",
-  "description": "",
-  "id": "un-usuario-visualiza-un-mensaje;un-usuario-visualiza-un-mensaje",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario quiere ver un mensaje",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Abre el mensaje",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Visualiza el mensaje",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test28UnUsuarioVisualizaUnMensaje.un_usuario_quiere_ver_un_mensaje()"
-});
-formatter.result({
-  "duration": 895906300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test28UnUsuarioVisualizaUnMensaje.abre_el_mensaje()"
-});
-formatter.result({
-  "duration": 690789300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test28UnUsuarioVisualizaUnMensaje.visualiza_el_mensaje()"
-});
-formatter.result({
-  "duration": 46400,
-  "status": "passed"
-});
-formatter.uri("29UnUsuarioEliminaUnMensaje.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un Usuario elimina un mensaje",
-  "description": "",
-  "id": "un-usuario-elimina-un-mensaje",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un Usuario elimina un mensaje",
-  "description": "",
-  "id": "un-usuario-elimina-un-mensaje;un-usuario-elimina-un-mensaje",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario quiere eliminar un mensaje",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Borra el mensaje",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Mensaje borrado",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test29UnUsuarioEliminaUnMensaje.un_usuario_quiere_eliminar_un_mensaje()"
-});
-formatter.result({
-  "duration": 729416900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test29UnUsuarioEliminaUnMensaje.borra_el_mensaje()"
-});
-formatter.result({
-  "duration": 664975400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test29UnUsuarioEliminaUnMensaje.mensaje_borrado()"
-});
-formatter.result({
-  "duration": 765759000,
-  "status": "passed"
-});
-formatter.uri("30UnUsuarioVisualizaNotificacionesEnPanel.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un Usuario visualiza notificaciones en un panel",
-  "description": "",
-  "id": "un-usuario-visualiza-notificaciones-en-un-panel",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un Usuario visualiza notificaciones en un panel",
-  "description": "",
-  "id": "un-usuario-visualiza-notificaciones-en-un-panel;un-usuario-visualiza-notificaciones-en-un-panel",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario accede a la pantalla principal",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Abre el panel de notificaciones",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Visualiza las notificaciones",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test30UnUsuarioVisualizaNotificacionesEnPanel.un_usuario_accede_a_la_pantalla_principal()"
-});
-formatter.result({
-  "duration": 716120600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test30UnUsuarioVisualizaNotificacionesEnPanel.abre_el_panel_de_notificaciones()"
-});
-formatter.result({
-  "duration": 3231800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test30UnUsuarioVisualizaNotificacionesEnPanel.visualiza_las_notificaciones()"
-});
-formatter.result({
-  "duration": 42500,
-  "status": "passed"
-});
-formatter.uri("31UnUsuarioGanaPuntos.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un Usuario gana puntos",
-  "description": "",
-  "id": "un-usuario-gana-puntos",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un Usuario gana puntos",
-  "description": "",
-  "id": "un-usuario-gana-puntos;un-usuario-gana-puntos",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario realiza una accion",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Consigue un objetivo",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Gana puntos",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test31UnUsuarioGanaPuntos.un_usuario_realiza_una_acci_n()"
-});
-formatter.result({
-  "duration": 646076000,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test31UnUsuarioGanaPuntos.consigue_un_objetivo()"
-});
-formatter.result({
-  "duration": 790253100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test31UnUsuarioGanaPuntos.gana_puntos()"
-});
-formatter.result({
-  "duration": 711365500,
-  "status": "passed"
-});
-formatter.uri("32UnUsuarioVisualizaUnRankingConLosPuntosDeLosUsuarios.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#Author: Sergio Perez Sanchez"
-    }
-  ],
-  "line": 4,
-  "name": "Un Usuario visualiza un ranking con los puntos de los usuarios",
-  "description": "",
-  "id": "un-usuario-visualiza-un-ranking-con-los-puntos-de-los-usuarios",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 6,
-  "name": "Un Usuario visualiza un ranking",
-  "description": "",
-  "id": "un-usuario-visualiza-un-ranking-con-los-puntos-de-los-usuarios;un-usuario-visualiza-un-ranking",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 7,
-  "name": "Un usuario accede a un ranking",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "Visualiza el ranking",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 9,
-  "name": "Ve una lista con los usuarios con mayor puntuacion",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Test32UnUsuarioVisualizaUnRankingConLosPuntosDeLosUsuarios.un_usuario_accede_a_un_ranking()"
-});
-formatter.result({
-  "duration": 657883100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test32UnUsuarioVisualizaUnRankingConLosPuntosDeLosUsuarios.visualiza_el_ranking()"
-});
-formatter.result({
-  "duration": 2925600,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Test32UnUsuarioVisualizaUnRankingConLosPuntosDeLosUsuarios.ve_una_lista_con_los_usuarios_con_mayor_puntuacion()"
-});
-formatter.result({
-  "duration": 41700,
+  "duration": 199452500,
   "status": "passed"
 });
 formatter.uri("33UsuarioEliminaPerfil.feature");
@@ -2379,21 +755,21 @@ formatter.match({
   "location": "Test33UsuarioEliminaPerfil.una_persona_quiere_eliminar_su_perfil()"
 });
 formatter.result({
-  "duration": 697928300,
+  "duration": 718445000,
   "status": "passed"
 });
 formatter.match({
   "location": "Test33UsuarioEliminaPerfil.da_a_eliminar()"
 });
 formatter.result({
-  "duration": 935567100,
+  "duration": 40047800,
   "status": "passed"
 });
 formatter.match({
   "location": "Test33UsuarioEliminaPerfil.elimina_su_perfil()"
 });
 formatter.result({
-  "duration": 78905700,
+  "duration": 79742900,
   "status": "passed"
 });
 });
