@@ -165,6 +165,22 @@
 		        		<img src="resources/imagenes/wiki_S2.JPG" alt="Sprint 2" height="300" width="auto">
 		       		</div>
 		        </div>
+		        
+		        <div class="row">
+		        	<div class="col-md-12" style="text-align:center;">
+		        		<br>
+		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S3.JPG" alt="Sprint 3" height="300" width="auto">
+		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S4.JPG" alt="Sprint 4" height="300" width="auto">
+		        		<img src="resources/imagenes/wiki_S5.JPG" alt="Sprint 5" height="300" width="auto">
+		       		</div>
+		        </div>
+		        
+		        <div class="row">
+		        	<div class="col-md-12" style="text-align:center;">
+		        		<br>
+		        		<img src="resources/imagenes/wiki_S6.JPG" alt="Sprint 6" height="300" width="auto">
+		       		</div>
+		        </div>
 			</div>
 		 </div>
       </div>
