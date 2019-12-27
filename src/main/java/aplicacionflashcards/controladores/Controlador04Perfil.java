@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import main.java.aplicacionflashcards.broker.Broker;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
@@ -21,7 +22,7 @@ public class Controlador04Perfil {
 	ModelAndView vista;
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
-	//InterfaceDAORelacionesUsuarios dBRelacion;
+	InterfaceDAORelacionesUsuarios dBRelacion;
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";
@@ -40,8 +41,8 @@ public class Controlador04Perfil {
 				vista = new ModelAndView("vistaPerfil");
 				
 				if(!(user.getUsername().equals(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()))){
-					//dBRelacion = Broker.getInstanciaRelaciones();
-					//user.setTipoRelacion(dBRelacion.tipoRelacion(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), user.getUsername()));
+					dBRelacion = Broker.getInstanciaRelaciones();
+					user.setTipoRelacion(dBRelacion.tipoRelacion(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), user.getUsername()));
 				}
 				
 				vista.addObject("perfil", user);
