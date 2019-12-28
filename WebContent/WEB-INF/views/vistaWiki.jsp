@@ -160,25 +160,25 @@
 		
 		        <div class="row">
 		        	<div class="col-md-12" style="text-align:center;">
-		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S0.JPG" alt="Sprint 0" height="300" width="auto">
-		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S1.JPG" alt="Sprint 1" height="300" width="auto">
-		        		<img src="resources/imagenes/wiki_S2.JPG" alt="Sprint 2" height="300" width="auto">
+		        		<a href="desarrolloProyecto-s0.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S0.JPG" alt="Sprint 0" height="300" width="auto"></a>
+		        		<a href="desarrolloProyecto-s1.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S1.JPG" alt="Sprint 1" height="300" width="auto"></a>
+		        		<a href="desarrolloProyecto-s2.html"><img src="resources/imagenes/wiki_S2.JPG" alt="Sprint 2" height="300" width="auto"></a>
 		       		</div>
 		        </div>
 		        
 		        <div class="row">
 		        	<div class="col-md-12" style="text-align:center;">
 		        		<br>
-		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S3.JPG" alt="Sprint 3" height="300" width="auto">
-		        		<img style="margin-right:10px;" src="resources/imagenes/wiki_S4.JPG" alt="Sprint 4" height="300" width="auto">
-		        		<img src="resources/imagenes/wiki_S5.JPG" alt="Sprint 5" height="300" width="auto">
+		        		<a href="desarrolloProyecto-s3.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S3.JPG" alt="Sprint 3" height="300" width="auto"></a>
+		        		<a href="desarrolloProyecto-s4.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S4.JPG" alt="Sprint 4" height="300" width="auto"></a>
+		        		<a href="desarrolloProyecto-s5.html"><img src="resources/imagenes/wiki_S5.JPG" alt="Sprint 5" height="300" width="auto"></a>
 		       		</div>
 		        </div>
 		        
 		        <div class="row">
 		        	<div class="col-md-12" style="text-align:center;">
 		        		<br>
-		        		<img src="resources/imagenes/wiki_S6.JPG" alt="Sprint 6" height="300" width="auto">
+		        		<a href="desarrolloProyecto-s6.html"><img src="resources/imagenes/wiki_S6.JPG" alt="Sprint 6" height="300" width="auto"></a>
 		       		</div>
 		        </div>
 			</div>
