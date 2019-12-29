@@ -31,7 +31,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador08Clubes {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	ClubDTO club;
 	InterfaceDAOClub dBClub;
 	InterfaceDAOUsuario dBUsuario;
@@ -216,5 +216,5 @@ public class Controlador08Clubes {
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> getColeccionesClub(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		return Broker.getInstanciaFlashcards().coleccionesClub(id);
-	}
+	}*/
 }

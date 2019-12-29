@@ -34,7 +34,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador09Flashcards {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	InterfaceDAOClub dBClub;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
 	InterfaceDAOFlashcards dBFlashcards;
@@ -255,6 +255,6 @@ public class Controlador09Flashcards {
 			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
-	}
+	}*/
 		
 }

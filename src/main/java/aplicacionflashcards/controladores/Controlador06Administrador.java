@@ -27,7 +27,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador06Administrador {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	List<UsuarioDTO> listaUsuarios;
 	List<ClubDTO> listaClubes;
 	InterfaceDAOUsuario dBUsuario;
@@ -197,5 +197,5 @@ public class Controlador06Administrador {
 		
 		return vista;
 		
-	}
+	}*/
 }

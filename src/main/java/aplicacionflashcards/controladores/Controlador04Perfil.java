@@ -19,16 +19,16 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador04Perfil {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelacion;
 	//Constantes
 	static final String CONST_USUARIO = "usuario";
-	static final String CONST_MENSAJE = "mensaje";
+	static final String CONST_MENSAJE = "mensaje";*/
 	
 	/*Ver Perfil*/
-	@GetMapping(value = "/verPerfil")
+	/*@GetMapping(value = "/verPerfil")
 	public ModelAndView verPerfil(@RequestParam("usuarioPerfil") String userPerfil, HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 			((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
@@ -57,5 +57,5 @@ public class Controlador04Perfil {
 			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
-	}
+	}*/
 }

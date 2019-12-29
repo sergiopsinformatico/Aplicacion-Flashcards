@@ -22,7 +22,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador10Moderador {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;
 	FlashcardsDTO flashcard;
@@ -30,11 +30,11 @@ public class Controlador10Moderador {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_FLASHCARD_EVALUA = "vistaFlashcardsEvaluar";
-	static final String CONST_MENSAJES = "mensajes";
+	static final String CONST_MENSAJES = "mensajes";*/
 	
 	/*Moderador Evalua Coleccion*/
 	
-	@GetMapping(value = "/evaluarColecciones")
+	/*@GetMapping(value = "/evaluarColecciones")
 	public ModelAndView evaluarColecciones(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
@@ -163,6 +163,6 @@ public class Controlador10Moderador {
 		}
 		
 		return vista;
-	}
+	}*/
 	
 }

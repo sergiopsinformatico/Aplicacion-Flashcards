@@ -22,7 +22,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador05Configuracion {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
 	Fecha fecha;
@@ -125,5 +125,5 @@ public class Controlador05Configuracion {
 		}catch(Exception ex) {
 			return "inventado";
 		}
-	}
+	}*/
 }

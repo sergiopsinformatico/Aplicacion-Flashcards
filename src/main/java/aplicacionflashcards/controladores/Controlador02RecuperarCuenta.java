@@ -26,7 +26,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador02RecuperarCuenta {
 	
 	//Variables
-	Fecha fecha;
+	/*Fecha fecha;
 	ModelAndView vista;
 	UsuarioDTO user;
 	UsuarioDTO userAntiguo;
@@ -40,9 +40,9 @@ public class Controlador02RecuperarCuenta {
 	//Constantes
 	static final String CONST_VIEW_RECUPERA = "vistaRecuperarCuenta";
 	static final String CONST_MENSAJE = "mensaje";
-	static final String CONST_USERNAME = "username";
+	static final String CONST_USERNAME = "username";*/
 	
-	@GetMapping(value = "/recuperaCuenta")
+	/*@GetMapping(value = "/recuperaCuenta")
 	public ModelAndView recuperaCuenta(HttpServletRequest request, HttpServletResponse response) {
 		
 		//Comprobaciones
@@ -115,5 +115,5 @@ public class Controlador02RecuperarCuenta {
 	@GetMapping(value = "/cambioClave")
 	public ModelAndView cambioClaveGet(HttpServletRequest request, HttpServletResponse response) {
 		return new ModelAndView("redirect:/inicio.html");
-	}
+	}*/
 }

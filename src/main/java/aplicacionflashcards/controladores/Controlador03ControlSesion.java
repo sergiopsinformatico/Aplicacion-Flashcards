@@ -19,8 +19,51 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador03ControlSesion {
 	
-	//Variables
+	
+	/* * * * * * * 
+     * VARIABLES *
+	 * * * * * * */
+	
 	ModelAndView vista;
+	
+	
+	/* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
+	
+	
+	/* * * * * * * * * 
+     * CONTROLADORES *
+	 * * * * * * * * */	
+	
+	/*Control pagina principal de logueado y no logueado*/
+	@GetMapping(value = "/inicio")
+	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
+		if(request.getSession().getAttribute("usuario")==null || 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+			vista = new ModelAndView("index");
+			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
+				vista.addObject("mensaje", request.getParameter("mensaje"));
+			}
+		}else {
+			vista =  new ModelAndView("vistaPrincipal");
+			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
+				vista.addObject("mensaje", request.getParameter("mensaje"));
+			}
+		}
+		return vista;
+	}	
+	
+	
+	
+	
+	
+	
+	
+	//Variables
+	/*ModelAndView vista;
 	InterfaceDAOUsuario dBUsuario;
 	UsuarioDTO user;
 	EliminarCuentaDTO eliminado;
@@ -29,7 +72,7 @@ public class Controlador03ControlSesion {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";
 	static final String CONST_VIEW_IS = "vistaIniciarSesion";
-	static final String CONST_REDIRECT = "redirect:/inicio.html";
+	static final String CONST_REDIRECT = "redirect:/inicio.html";*/
 	
 	/*
 	 * 
@@ -39,7 +82,7 @@ public class Controlador03ControlSesion {
 	
 	//Obtener la vista de Inicio de Sesion
 	
-	@GetMapping(value = "/iniciarSesion")
+	/*@GetMapping(value = "/iniciarSesion")
 	public ModelAndView iniciarSesion(HttpServletRequest request, HttpServletResponse response) {
 		
 		//1-Comprobar activaciones caducadas
@@ -69,24 +112,7 @@ public class Controlador03ControlSesion {
 		return vista;
 	}
 	
-	/*Index o pagina principal logueado*/
-	@GetMapping(value = "/inicio")
-	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
-			vista = new ModelAndView("index");
-			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
-				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
-			}
-		}else {
-			vista =  new ModelAndView("vistaPrincipal");
-			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
-				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
-			}
-		}
-		return vista;
-	}	
+	
 	
 	//Acceder
 	@PostMapping(value = "/iniciarSesion")
@@ -123,5 +149,5 @@ public class Controlador03ControlSesion {
 		request.getSession().setAttribute(CONST_USUARIO, null);
 		vista.addObject(CONST_USUARIO,null);
 		return vista;
-	}
+	}*/
 }

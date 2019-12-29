@@ -27,7 +27,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador07Gente {
 	
 	//Variables
-	ModelAndView vista;
+	/*ModelAndView vista;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
 	RelacionesUsuariosDTO relaciones;
@@ -241,5 +241,5 @@ public class Controlador07Gente {
 		vista.addObject(CONST_MENSAJE, "Ha desbloqueado a " + username);
 		
 		return vista;
-	}
+	}*/
 }
