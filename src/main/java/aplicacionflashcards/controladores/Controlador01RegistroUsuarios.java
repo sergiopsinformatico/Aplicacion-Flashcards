@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
-import main.java.aplicacionflashcards.auxiliares.MD5Util;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
@@ -205,8 +204,7 @@ public class Controlador01RegistroUsuarios {
 		//Eleccion foto perfil
 		if(request.getParameter("inputEmailAvatar")!=null && (!request.getParameter("inputEmailAvatar").equals(""))) {
 			user2.setEmailFoto(request.getParameter("inputEmailAvatar"));
-			//DigestUtils.md5Hex(request.getParameter("inputEmailAvatar"))+".jpg");
-			user2.setFoto("https://www.gravatar.com/avatar/"+MD5Util.md5Hex(request.getParameter("inputEmailAvatar"))+".jpg");
+			user2.setFoto("https://www.gravatar.com/avatar/"+DigestUtils.md5Hex(request.getParameter("inputEmailAvatar"))+".jpg");
 		}else {
 			user2.setEmailFoto(request.getParameter(""));
 			user2.setFoto("https://www.gravatar.com/avatar/hashNoDisponible.jpg");
