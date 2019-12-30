@@ -196,6 +196,7 @@ public class Controlador01RegistroUsuarios {
 		return vista;
 	}
 	
+	/*Incluir datos personales: avatar, nombre y apellidos, ciudad y pais*/
 	@PostMapping(value = "/infoExtra")
 	public ModelAndView activar(HttpServletRequest request, HttpServletResponse response){
 		user = Broker.getInstanciaUsuario().getUsuarioDTO(request.getParameter("username"));
