@@ -266,7 +266,7 @@
         </script>
         
         <div class="container-fluid" ng-app="AppPerfil" ng-controller="PerfilCtrl">
-        	
+        	<!-- Cambio a: https://bootsnipp.com/snippets/M48pA -->
         	<div class="row">
         		<br><br>
         	</div>
