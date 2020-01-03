@@ -220,9 +220,12 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	
 	//Login Usuario
 	public boolean login(String usernameEmail, String clave) {
+		
+		caesar = new CifradoCaesar();
+		
 		criteriosBusqueda = new BsonDocument().
-				            append(CONST_USERNAME, new BsonString(usernameEmail)).
-				            append(CONST_CLAVE, new BsonString(clave));
+				            append(CONST_USERNAME, new BsonString(caesar.encryptText(usernameEmail))).
+				            append(CONST_CLAVE, new BsonString(caesar.encryptText(clave)));
 		resultadosBusqueda = coleccionUsuarios.find(criteriosBusqueda);
 		if(resultadosBusqueda.iterator().hasNext()) {
 			return true;

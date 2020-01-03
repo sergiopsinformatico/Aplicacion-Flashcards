@@ -92,7 +92,7 @@
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-10">
-							<form action="iniciarSesion.do" method="post" class="form-signin">
+							<form action="crearCuenta.do" method="post" class="form-signin">
 								<br>
 					            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Registro de Usuarios</h1>
 					            <br>

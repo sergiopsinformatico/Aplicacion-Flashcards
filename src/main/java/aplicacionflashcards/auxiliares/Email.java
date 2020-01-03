@@ -18,6 +18,7 @@ public class Email {
 	private String asunto;
 	private String mensaje;
 	boolean enviado;
+	CifradoCaesar caesar;
 	
 	static final String CONST_SALUDO = "Hola ";
 	static final String CONST_CIERRE = "\nAtentamente, Equipo de Flashcards.";
@@ -83,6 +84,7 @@ public class Email {
 	
 	private boolean enviarMensaje() {
 		enviado = false;
+		caesar = new CifradoCaesar();
 		try{
 			Properties properties = System.getProperties();
 			properties.put("mail.smtp.host", CONST_SMTP);
@@ -139,10 +141,10 @@ public class Email {
 	//Datos constantes para enviar un email
 	
 	private String getClave() {
-		return PropertiesConfig.getProperties("emailClave");
+		return caesar.decryptText(PropertiesConfig.getProperties("emailClave"));
 	}
 	
 	public String getEnvia() {
-		return PropertiesConfig.getProperties("emailDireccion");
+		return caesar.decryptText(PropertiesConfig.getProperties("emailDireccion"));
 	}
 }

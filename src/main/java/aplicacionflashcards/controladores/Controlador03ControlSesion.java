@@ -25,7 +25,10 @@ public class Controlador03ControlSesion {
 	 * * * * * * */
 	
 	ModelAndView vista;
-	
+	InterfaceDAOUsuario dBUsuario;
+	UsuarioDTO user;
+	EliminarCuentaDTO eliminado;
+	Email email;
 	
 	/* * * * * *  * 
      * CONSTANTES *
@@ -36,6 +39,10 @@ public class Controlador03ControlSesion {
 	/* * * * * * * * * 
      * CONTROLADORES *
 	 * * * * * * * * */	
+	
+	/* * * * * * * * * * * * * * * * * * * * * *
+	 * FUNCIONALIDAD 1: IR A PAGINA PRINCIPAL  *
+	 * * * * * * * * * * * * * * * * * * * * * */
 	
 	/*Control pagina principal de logueado y no logueado*/
 	@GetMapping(value = "/inicio")
@@ -56,8 +63,70 @@ public class Controlador03ControlSesion {
 		return vista;
 	}	
 	
+	/* * * * * * * * * * * * *  * * * * *
+	 * FUNCIONALIDAD 2: INICIAR SESION  *
+	 * * * * * * * * * * * * *  * * * * */
+	
+	//Obtener la vista de Inicio de Sesion
+	@GetMapping(value = "/iniciarSesion")
+	public ModelAndView iniciarSesion(HttpServletRequest request, HttpServletResponse response) {
+		
+		//1-Comprobar activaciones caducadas
+		Broker.getInstanciaActivaCuenta().comprobarActivacionesCaducadas();
+		
+		//2-Eliminar cuentas pasados 14 dias
+		Broker.getInstanciaEliminarCuenta().comprobarCuentasAEliminar();
+		
+		//3-Eliminar solicitudes de restablecimiento de Claves
+		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
+				
+		if(request.getSession().getAttribute("usuario")==null || 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+			
+			vista =  new ModelAndView("vistaIniciarSesion");
+			
+			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
+				vista.addObject("mensaje", request.getParameter("mensaje"));
+			}
+			
+		}else {
+			vista = new ModelAndView("redirect:/inicio.html");
+			
+		}
+		
+		return vista;
+	}
 	
 	
+	
+	//Acceder
+	@PostMapping(value = "/iniciarSesion")
+	public ModelAndView loguearPost(HttpServletRequest request, HttpServletResponse response) {
+		dBUsuario = Broker.getInstanciaUsuario();
+		if(dBUsuario.login(request.getParameter("inputUsernameEmail"), request.getParameter("inputClave"))) {
+			user = dBUsuario.getUsuarioDTO(request.getParameter("inputUsernameEmail"));
+			
+			if(user.isActivadaCuenta()) {
+				eliminado = new EliminarCuentaDTO(user.getUsername());
+				vista = new ModelAndView("redirect:/inicio.html");
+				if(Broker.getInstanciaEliminarCuenta().leerEliminado(eliminado)) {
+					Broker.getInstanciaEliminarCuenta().eliminarEliminado(eliminado);
+					vista.addObject("mensaje", "Su cuenta ha sido reactivada");
+					email = new Email();
+					email.reactivacionCuenta(user);
+				}
+				vista.addObject("usuario", user);
+			}else {
+				vista = new ModelAndView("vistaIniciarSesion");
+				vista.addObject("mensaje", "Su cuenta aun no ha sido activada. Por favor, revise su email para activar la cuenta.");
+			}
+		}else {
+			vista = new ModelAndView("vistaIniciarSesion");
+			vista.addObject("mensaje", "El usuario y/o la clave son incorrectos.");
+		}
+		return vista;
+	}
 	
 	
 	
