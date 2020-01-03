@@ -17,6 +17,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
@@ -38,6 +39,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	LinkedList<UsuarioDTO> listaUsers;
 	LinkedList<UsuarioDTO> listaUsersRelacion;
 	List<String> bloqueadores;
+	CifradoCaesar caesar;
 	
 	//Constantes
 	static final String CONST_USERNAME = "username";
@@ -79,16 +81,19 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	}
 	
 	private Document usuarioDTOToDocument(UsuarioDTO user) {
+		
+		caesar = new CifradoCaesar();
+		
 		doc = new Document().
-				append(CONST_USERNAME, user.getUsername()).
-				append(CONST_EMAIL, user.getEmail()).
-				append(CONST_CLAVE, user.getClave()).
-				append("rol", user.getRol()).
+				append(CONST_USERNAME, caesar.encryptText(user.getUsername())).
+				append(CONST_EMAIL, caesar.encryptText(user.getEmail())).
+				append(CONST_CLAVE, caesar.encryptText(user.getClave())).
+				append("rol", caesar.encryptText(user.getRol())).
 				append("cuentaActivada", user.isActivadaCuenta());
 		
 		try {
 			if(user.getNombreApellidos()!=null || !user.getNombreApellidos().equalsIgnoreCase("")) {
-				doc = doc.append(CONST_NyA, user.getNombreApellidos());
+				doc = doc.append(CONST_NyA, caesar.encryptText(user.getNombreApellidos()));
 			}
 		}catch(Exception ex) {
 			doc = doc.append(CONST_NyA, "");
@@ -96,7 +101,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(user.getCiudad()!=null || !user.getCiudad().equalsIgnoreCase("")) {
-				doc = doc.append(CONST_CIUDAD, user.getCiudad());
+				doc = doc.append(CONST_CIUDAD, caesar.encryptText(user.getCiudad()));
 			}
 		}catch(Exception ex) {
 			doc = doc.append(CONST_CIUDAD, "");
@@ -104,7 +109,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(user.getPais()!=null || !user.getPais().equalsIgnoreCase("")) {
-				doc = doc.append("pais", user.getPais());
+				doc = doc.append("pais", caesar.encryptText(user.getPais()));
 			}
 		}catch(Exception ex) {
 			doc = doc.append("pais", "");
@@ -112,8 +117,8 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(user.getFoto()!=null || !user.getFoto().equalsIgnoreCase("")) {
-				doc = doc.append("foto", user.getFoto());
-				doc = doc.append(CONST_EMAIL_FOTO, user.getEmailFoto());
+				doc = doc.append("foto", caesar.encryptText(user.getFoto()));
+				doc = doc.append(CONST_EMAIL_FOTO, caesar.encryptText(user.getEmailFoto()));
 			}
 		}catch(Exception ex) {
 			doc = doc.append("foto", "");
@@ -124,12 +129,17 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	}
 	
 	private UsuarioDTO documentToUsuarioDTO(Document doc) {
-		usuarioDB = new UsuarioDTO(doc.getString(CONST_USERNAME), doc.getString(CONST_EMAIL), doc.getString(CONST_CLAVE));
-		usuarioDB.setRol(doc.getString("rol"));
+		
+		caesar = new CifradoCaesar();
+		
+		usuarioDB = new UsuarioDTO(caesar.decryptText(doc.getString(CONST_USERNAME)), 
+								   caesar.decryptText(doc.getString(CONST_EMAIL)), 
+								   caesar.decryptText(doc.getString(CONST_CLAVE)));
+		usuarioDB.setRol(caesar.decryptText(doc.getString("rol")));
 		usuarioDB.setActivadaCuenta(doc.getBoolean("cuentaActivada"));
 		try {
 			if(doc.getString(CONST_NyA)!=null || (!doc.getString(CONST_NyA).equalsIgnoreCase(""))) {
-				usuarioDB.setNombreApellidos(doc.getString(CONST_NyA));
+				usuarioDB.setNombreApellidos(caesar.decryptText(doc.getString(CONST_NyA)));
 			}
 		}catch(Exception ex) {
 			usuarioDB.setNombreApellidos("");
@@ -137,7 +147,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(doc.getString(CONST_CIUDAD)!=null || (!doc.getString(CONST_CIUDAD).equalsIgnoreCase(""))) {
-				usuarioDB.setCiudad(doc.getString(CONST_CIUDAD));
+				usuarioDB.setCiudad(caesar.decryptText(doc.getString(CONST_CIUDAD)));
 			}
 		}catch(Exception ex) {
 			usuarioDB.setCiudad("");
@@ -145,7 +155,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(doc.getString("pais")!=null || (!doc.getString("pais").equalsIgnoreCase(""))) {
-				usuarioDB.setPais(doc.getString("pais"));
+				usuarioDB.setPais(caesar.decryptText(doc.getString("pais")));
 			}
 		}catch(Exception ex) {
 			usuarioDB.setPais("");
@@ -153,8 +163,8 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(doc.getString("foto")!=null || (!doc.getString("foto").equalsIgnoreCase(""))) {
-				usuarioDB.setFoto(doc.getString("foto"));
-				usuarioDB.setEmailFoto(doc.getString(CONST_EMAIL_FOTO));
+				usuarioDB.setFoto(caesar.decryptText(doc.getString("foto")));
+				usuarioDB.setEmailFoto(caesar.decryptText(doc.getString(CONST_EMAIL_FOTO)));
 			}
 		}catch(Exception ex) {
 			usuarioDB.setFoto("");
