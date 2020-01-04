@@ -23,23 +23,23 @@ public class Test15UsuarioEliminaAmigo {
 	@Given("^Un usuario no quiere tener a un usuario de amigo$")
 	public void un_usuario_no_quiere_tener_a_un_usuario_de_amigo() throws Throwable {
 	    dBUsuario = Broker.getInstanciaUsuario();
-	    user1 = dBUsuario.getUsuarioDTO("usuario123");
-	    user2 = dBUsuario.getUsuarioDTO("usuario456");
+	    user1 = dBUsuario.getUsuarioDTO("user1Test");
+	    user2 = dBUsuario.getUsuarioDTO("user3Test");
 	    dBRelaciones = Broker.getInstanciaRelaciones();
 	    assert(user1!=null && user2!=null);
 	}
 
 	@When("^Elimina al amigo$")
 	public void elimina_al_amigo() throws Throwable {
-	    assert(dBRelaciones.eliminarAmigo("usuario123", "usuario456"));
+	    assert(dBRelaciones.eliminarAmigo("user1Test", "user3Test"));
 	}
 
 	@Then("^Ya no son amigos$")
 	public void ya_no_son_amigos() throws Throwable {
-	    lista = dBRelaciones.getAmigos("usuario123");
+	    lista = dBRelaciones.getAmigos("user1Test");
 	    encontrado = false;
 	    for(indice=0; indice<lista.size(); indice++) {
-	    	if(lista.get(indice).equals("usuario456")) {
+	    	if(lista.get(indice).equals("user3Test")) {
 	    		encontrado = true;
 	    		indice = lista.size();
 	    	}
@@ -47,10 +47,10 @@ public class Test15UsuarioEliminaAmigo {
 	    if(encontrado) {
 	    	assert(false);
 	    }else {
-	    	lista = dBRelaciones.getAmigos("usuario456");
+	    	lista = dBRelaciones.getAmigos("user3Test");
 		    encontrado = false;
 		    for(indice=0; indice<lista.size(); indice++) {
-		    	if(lista.get(indice).equals("usuario123")) {
+		    	if(lista.get(indice).equals("user1Test")) {
 		    		encontrado = true;
 		    		indice = lista.size();
 		    	}

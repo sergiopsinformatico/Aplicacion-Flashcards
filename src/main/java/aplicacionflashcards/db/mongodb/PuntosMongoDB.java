@@ -80,6 +80,10 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 		return new LinkedList<>();
 	}
 	
+	public boolean eliminarPuntos(String usuario) {
+		return deletePuntos(usuario);
+	}
+	
 	private boolean deletePuntos(String usuario) {
 		criteriosBusqueda = new BsonDocument().append("usuario", new BsonString(usuario));
 		return coleccionPuntos.deleteOne(criteriosBusqueda).getDeletedCount()==1;

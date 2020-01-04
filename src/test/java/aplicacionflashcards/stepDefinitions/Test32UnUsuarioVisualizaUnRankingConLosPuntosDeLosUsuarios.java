@@ -14,7 +14,7 @@ public class Test32UnUsuarioVisualizaUnRankingConLosPuntosDeLosUsuarios {
 	
 	@Given("^Un usuario accede a un ranking$")
 	public void un_usuario_accede_a_un_ranking() throws Throwable {
-		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+		assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Visualiza el ranking$")

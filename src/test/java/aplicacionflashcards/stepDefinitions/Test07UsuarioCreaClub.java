@@ -28,19 +28,17 @@ public class Test07UsuarioCreaClub {
 		
 		fecha =new Fecha();
 		miembros = new LinkedList<String>();
-		miembros.add("usuario123");
+		miembros.add("user1Test");
 	    
 		club = new ClubDTO ("idEjemploClub", "Club Pruebas", "Pruebas BDD", 
-				"usuario123", miembros, fecha.fechaHoy());
+				"user1Test", miembros, fecha.fechaHoy());
 	    
-	    assert(dBUsuario.existUsername("usuario123") && (!dBClub.existeIdClub(club.getIdClub())));	    
+	    assert(dBUsuario.existUsername("user1Test") && (!dBClub.existeIdClub(club.getIdClub())));	    
 	}
 
 	@When("^Crea un club$")
 	public void crea_un_club() throws Throwable {
-	    		
 		assert(dBClub.insertaClub(club));
-		
 	}
 
 	@Then("^Existe el club$")

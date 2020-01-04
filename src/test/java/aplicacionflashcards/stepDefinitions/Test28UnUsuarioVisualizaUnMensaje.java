@@ -12,7 +12,7 @@ public class Test28UnUsuarioVisualizaUnMensaje {
 	
 	@Given("^Un usuario quiere ver un mensaje$")
 	public void un_usuario_quiere_ver_un_mensaje() throws Throwable {
-		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+		assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Abre el mensaje$")
@@ -24,8 +24,8 @@ public class Test28UnUsuarioVisualizaUnMensaje {
 	@Then("^Visualiza el mensaje$")
 	public void visualiza_el_mensaje() throws Throwable {
 	    assert(mensaje.getIdMensaje().equals("mensaje-idMensaje") &&
-	    	   mensaje.getRemitente().equals("usuario456") &&
-	    	   mensaje.getDestinatario().equals("usuario123") &&
+	    	   mensaje.getRemitente().equals("user3Test") &&
+	    	   mensaje.getDestinatario().equals("user1Test") &&
 	    	   mensaje.getMensaje().equals("Hola"));
 	}
 }

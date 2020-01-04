@@ -12,19 +12,33 @@ import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test01UsuarioCreaCuentaUsuario {
+	
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	UsuarioDTO user;
+	RelacionesUsuariosDTO relaciones;
+	
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
-	RelacionesUsuariosDTO relaciones;
+	
 	boolean condicion;
+	
+	/* * * * *
+	 * TESTS *
+	 * * * * */
 	
 	@Given("^Una persona quiere registrarse$")
 	public void una_persona_quiere_registrarse() throws Throwable {
+		
 		dBUsuario = Broker.getInstanciaUsuario();
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		user = new UsuarioDTO("usuario123", "usuario123@email.com", "usuario123");
+		
+		user = new UsuarioDTO("user1Test", "user1Test@email.com", "user1Test");
 		user.setRol("Usuario");
-		relaciones = new RelacionesUsuariosDTO("usuario123", new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>());
+		relaciones = new RelacionesUsuariosDTO("user1Test", new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>(), new LinkedList<String>());
+		
 	    assert(true);
 	}
 
@@ -38,7 +52,9 @@ public class Test01UsuarioCreaCuentaUsuario {
 
 	@Then("^Se registra correctamente$")
 	public void se_registra_correctamente() throws Throwable {
-		assert(dBUsuario.insertUsuario(user) && dBUsuario.existEmail(user.getEmail()) && dBRelaciones.creaRelaciones(relaciones));
+		assert(dBUsuario.insertUsuario(user) && 
+			   dBUsuario.existEmail(user.getEmail()) && 
+			   dBRelaciones.creaRelaciones(relaciones));
 	}
 
 	@When("^Introduce un username existente$")
@@ -54,7 +70,7 @@ public class Test01UsuarioCreaCuentaUsuario {
 
 	@When("^El username contiene un caracter invalido$")
 	public void el_username_contiene_un_caracter_invalido() throws Throwable {
-		user.setUsername("usuario 123");
+		user.setUsername("user1 Test");
 	    assert(!dBUsuario.usernameIsCorrect(user.getUsername()));
 	}
 
@@ -66,7 +82,7 @@ public class Test01UsuarioCreaCuentaUsuario {
 
 	@When("^La clave contiene un caracter invalido$")
 	public void la_clave_contiene_un_caracter_invalido() throws Throwable {
-		user.setClave("usuario 123");
+		user.setClave("user1 Test");
 		assert(!dBUsuario.claveIsCorrect(user.getClave()));
 	}
 

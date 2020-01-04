@@ -40,6 +40,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	LinkedList<UsuarioDTO> listaUsersRelacion;
 	List<String> bloqueadores;
 	CifradoCaesar caesar;
+	boolean actualiza;
 	
 	//Constantes
 	static final String CONST_USERNAME = "username";
@@ -176,14 +177,16 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	
 	//Comprobar si existe el email
 	public boolean existEmail (String email) {
-		criteriosBusqueda = new BsonDocument().append(CONST_EMAIL, new BsonString(email));
+		caesar = new CifradoCaesar();
+		criteriosBusqueda = new BsonDocument().append(CONST_EMAIL, new BsonString(caesar.encryptText(email)));
 		resultadosBusqueda = coleccionUsuarios.find(criteriosBusqueda);
 		return resultadosBusqueda.iterator().hasNext();
 	}
 	
 	//Comprobar si existe el nombre de usuario
 	public boolean existUsername (String username) {
-		criteriosBusqueda = new BsonDocument().append(CONST_USERNAME, new BsonString(username));
+		caesar = new CifradoCaesar();
+		criteriosBusqueda = new BsonDocument().append(CONST_USERNAME, new BsonString(caesar.encryptText(username)));
 		resultadosBusqueda = coleccionUsuarios.find(criteriosBusqueda);
 		return resultadosBusqueda.iterator().hasNext();
 	}
@@ -231,8 +234,8 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 			return true;
 		}else {
 			criteriosBusqueda = new BsonDocument().
-		            append(CONST_EMAIL, new BsonString(usernameEmail)).
-		            append(CONST_CLAVE, new BsonString(clave));
+		            append(CONST_EMAIL, new BsonString(caesar.encryptText(usernameEmail))).
+		            append(CONST_CLAVE, new BsonString(caesar.encryptText(clave)));
 			resultadosBusqueda = coleccionUsuarios.find(criteriosBusqueda);
 			return resultadosBusqueda.iterator().hasNext();
 		}
@@ -241,13 +244,16 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	
 	//Get usuario
 	public UsuarioDTO getUsuarioDTO(String usernameEmail) {
+		
+		caesar = new CifradoCaesar();
+		
 		criteriosBusqueda = new BsonDocument().
-	            append(CONST_USERNAME, new BsonString(usernameEmail));
+	            append(CONST_USERNAME, new BsonString(caesar.encryptText(usernameEmail)));
 		resultadosBusqueda = coleccionUsuarios.find(criteriosBusqueda);
 		
 		if(!(resultadosBusqueda.iterator().hasNext())) {
 			criteriosBusqueda = new BsonDocument().
-		            append(CONST_EMAIL, new BsonString(usernameEmail));
+		            append(CONST_EMAIL, new BsonString(caesar.encryptText(usernameEmail)));
 			resultadosBusqueda = coleccionUsuarios.find(criteriosBusqueda);
 		}
 		
@@ -264,7 +270,8 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	
 	public boolean updateUsuario(UsuarioDTO userAntiguo, UsuarioDTO userNuevo) {
 		
-		boolean actualiza = false;
+		actualiza = false;
+		caesar = new CifradoCaesar();
 		
 		if((userAntiguo.getUsername().equals(userNuevo.getUsername()) && (userAntiguo.getEmail().equals(userNuevo.getEmail()) || (!existEmail(userNuevo.getEmail())))) ||
 		   (userAntiguo.getEmail().equals(userNuevo.getEmail()) && (!existUsername(userNuevo.getUsername()))) ||
@@ -274,7 +281,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		if(actualiza) {
 			try {
-				criteriosBusqueda = new BsonDocument().append(CONST_EMAIL, new BsonString(userAntiguo.getEmail()));
+				criteriosBusqueda = new BsonDocument().append(CONST_EMAIL, new BsonString(caesar.encryptText(userAntiguo.getEmail())));
 				coleccionUsuarios.deleteOne(criteriosBusqueda);
 				coleccionUsuarios.insertOne(usuarioDTOToDocument(userNuevo));
 				return true;
@@ -295,13 +302,14 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	}
 	
 	private List<String> getListByField(String field){
+		caesar = new CifradoCaesar();
 		iterator = coleccionUsuarios.find().iterator();
 		lista = new LinkedList<>();
 		
 		if(iterator!=null) {
 			while(iterator.hasNext()) {
 				doc = iterator.next();
-				lista.add(doc.getString(field));
+				lista.add(caesar.decryptText(doc.getString(field)));
 			}
 		}
 		
@@ -310,7 +318,8 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	
 	public boolean deleteUsuario(UsuarioDTO user) {
 		try {
-			criteriosBusqueda = new BsonDocument().append(CONST_EMAIL, new BsonString(user.getEmail()));
+			caesar = new CifradoCaesar();
+			criteriosBusqueda = new BsonDocument().append(CONST_EMAIL, new BsonString(caesar.encryptText(user.getEmail())));
 			coleccionUsuarios.deleteOne(criteriosBusqueda);
 			return true;
 		}catch(Exception ex) {
@@ -322,11 +331,12 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	public List<UsuarioDTO> getAllUsuarios(String username){
 		listaUsers = new LinkedList<>();
 		iterator = coleccionUsuarios.find().iterator();
+		caesar = new CifradoCaesar();
 		if(iterator!=null) {
 			while(iterator.hasNext()) {
 				doc = iterator.next();
-				if(!(doc.getString(CONST_USERNAME).equals(username))){
-					listaUsers.add(getUsuarioDTO(doc.getString(CONST_USERNAME)));
+				if(!(caesar.decryptText(doc.getString(CONST_USERNAME)).equals(username))){
+					listaUsers.add(getUsuarioDTO(caesar.decryptText(doc.getString(CONST_USERNAME))));
 				}
 			}
 		}

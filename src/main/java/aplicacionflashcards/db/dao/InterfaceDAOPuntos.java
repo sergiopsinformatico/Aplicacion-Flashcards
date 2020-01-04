@@ -8,4 +8,5 @@ public interface InterfaceDAOPuntos {
 	public PuntosDTO getPuntos(String usuario);
 	public boolean actualizaPuntos(PuntosDTO ptosUsuario);
 	public List<PuntosDTO> rankingPrimeros();
+	public boolean eliminarPuntos(String usuario);
 }

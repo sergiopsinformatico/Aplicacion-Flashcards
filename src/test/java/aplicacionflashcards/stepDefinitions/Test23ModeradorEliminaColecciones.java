@@ -26,7 +26,7 @@ public class Test23ModeradorEliminaColecciones {
 		tarjetas = new LinkedList<>();
 		tarjetas.add(tarjeta);
 		
-		flashcard = new FlashcardsDTO("flash12345", "flashEjemplo", "tema5", "usuario123", 
+		flashcard = new FlashcardsDTO("flash12345", "flashEjemplo", "tema5", "user1Test", 
 				tarjetas, "publico", "");
 		
 		flashcard.setFechaCreacion("2019/10/01");
@@ -37,7 +37,7 @@ public class Test23ModeradorEliminaColecciones {
 	    Broker.getInstanciaFlashcards().crearFlashcards(flashcard);
 	    
 	    listaFlashcards = Broker.getInstanciaFlashcards().listarTodasColecciones();
-	    assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderador").getRol().equals("Moderador"));
+	    assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderadorTest").getRol().equals("Moderador"));
 	}
 
 	@When("^Considere oportuno eliminar una coleccion$")

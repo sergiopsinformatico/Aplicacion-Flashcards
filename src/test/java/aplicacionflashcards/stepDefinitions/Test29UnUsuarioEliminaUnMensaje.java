@@ -12,7 +12,7 @@ public class Test29UnUsuarioEliminaUnMensaje {
 	
 	@Given("^Un usuario quiere eliminar un mensaje$")
 	public void un_usuario_quiere_eliminar_un_mensaje() throws Throwable {
-		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+		assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Borra el mensaje$")

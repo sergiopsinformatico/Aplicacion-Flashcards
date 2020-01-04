@@ -12,7 +12,7 @@ public class Test22ModeradorEvaluaNegativamenteColeccion {
 	
 	@Given("^El moderador analiza la coleccion$")
 	public void el_moderador_analiza_la_coleccion() throws Throwable {
-		assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderador").getRol().equals("Moderador"));
+		assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderadorTest").getRol().equals("Moderador"));
 	}
 
 	@When("^Lo valora negativamente$")

@@ -17,8 +17,8 @@ public class Test06AdministradorEliminaUsuario {
 	@Given("^Un administrador quiere eliminar a un usuario$")
 	public void un_administrador_quiere_eliminar_a_un_usuario() throws Throwable {
 		dBUsuario = Broker.getInstanciaUsuario();
-		user = dBUsuario.getUsuarioDTO("usuario4567");
-		admin = dBUsuario.getUsuarioDTO("admin");
+		user = dBUsuario.getUsuarioDTO("user2Test");
+		admin = dBUsuario.getUsuarioDTO("adminTest");
 	    assert(admin.getRol().equals("Administrador") && user!=null); 
 	}
 
@@ -29,7 +29,8 @@ public class Test06AdministradorEliminaUsuario {
 
 	@Then("^Le elimina del sistema$")
 	public void le_elimina_del_sistema() throws Throwable {
-		user = dBUsuario.getUsuarioDTO("usuario4567");
+		user = dBUsuario.getUsuarioDTO("user2Test");
+		dBUsuario.deleteUsuario(admin);
 		assert(user == null);
 	}
 }

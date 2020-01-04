@@ -14,7 +14,7 @@ public class Test30UnUsuarioVisualizaNotificacionesEnPanel {
 	
 	@Given("^Un usuario accede a la pantalla principal$")
 	public void un_usuario_accede_a_la_pantalla_principal() throws Throwable {
-		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+		assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Abre el panel de notificaciones$")

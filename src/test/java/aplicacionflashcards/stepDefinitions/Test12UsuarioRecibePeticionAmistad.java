@@ -23,8 +23,8 @@ public class Test12UsuarioRecibePeticionAmistad {
 	@Given("^Un usuario del sistema$")
 	public void un_usuario_del_sistema() throws Throwable {
 	    dBUsuario = Broker.getInstanciaUsuario();
-	    user1 = dBUsuario.getUsuarioDTO("usuario123");
-	    user2 = dBUsuario.getUsuarioDTO("usuario456");
+	    user1 = dBUsuario.getUsuarioDTO("user1Test");
+	    user2 = dBUsuario.getUsuarioDTO("user3Test");
 	    assert(user1!=null && user2!=null);
 	}
 

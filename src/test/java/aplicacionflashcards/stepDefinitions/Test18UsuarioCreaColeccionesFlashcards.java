@@ -19,7 +19,7 @@ public class Test18UsuarioCreaColeccionesFlashcards{
 	
 	@Given("^Un usuario va a crear una coleccion$")
 	public void un_usuario_va_a_crear_una_coleccion() throws Throwable {
-	    assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+	    assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Inserta las tarjetas e indica con quien compartirlo$")
@@ -30,7 +30,7 @@ public class Test18UsuarioCreaColeccionesFlashcards{
 		tarjetas = new LinkedList<>();
 		tarjetas.add(tarjeta);
 		
-		flashcard = new FlashcardsDTO("flash12345", "flashEjemplo", "tema5", "usuario123", tarjetas, "publico", "");
+		flashcard = new FlashcardsDTO("flash12345", "flashEjemplo", "tema5", "user1Test", tarjetas, "publico", "");
 		
 		flashcard.setFechaCreacion("2019/10/01");
 		flashcard.setEvaluada(false);

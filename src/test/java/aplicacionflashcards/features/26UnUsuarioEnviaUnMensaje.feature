@@ -1,9 +1,9 @@
 #Author: Sergio Perez Sanchez
 
 
-Feature: Un usuario envía un mensaje
+Feature: Un usuario envia un mensaje
 
-Scenario: Un usuario envía un mensaje
+Scenario: Un usuario envia un mensaje
 Given Un usuario crea un mensaje
 When Escribe ese mensaje
 Then Envia el mensaje a otro usuario

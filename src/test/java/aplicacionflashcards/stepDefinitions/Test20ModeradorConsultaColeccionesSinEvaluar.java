@@ -7,8 +7,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import main.java.aplicacionflashcards.broker.Broker;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 import main.java.aplicacionflashcards.dto.TarjetaDTO;
+import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Test20ModeradorConsultaColeccionesSinEvaluar {
 	
@@ -18,11 +20,17 @@ public class Test20ModeradorConsultaColeccionesSinEvaluar {
 	List<FlashcardsDTO> listaFlashcards;
 	boolean encontrado;
 	int indice;
-	
+	UsuarioDTO moderador;
+	InterfaceDAOUsuario dBUsuario;
+	FlashcardsDTO eFlashcard;
 	
 	@Given("^Un moderador consulta las colecciones$")
 	public void un_moderador_consulta_las_colecciones() throws Throwable {
-	    assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderador").getRol().equals("Moderador"));
+		dBUsuario = Broker.getInstanciaUsuario();
+		moderador = new UsuarioDTO("moderadorTest", "moderadorTest@email.com", "moderadorTest");
+		moderador.setRol("Moderador");
+	    assert(dBUsuario.insertUsuario(moderador) &&
+	    	   dBUsuario.getUsuarioDTO("moderadorTest").getRol().equals("Moderador"));
 	}
 
 	@When("^Busca$")
@@ -32,14 +40,14 @@ public class Test20ModeradorConsultaColeccionesSinEvaluar {
 		tarjetas = new LinkedList<>();
 		tarjetas.add(tarjeta);
 		
-		flashcard = new FlashcardsDTO("flash12345", "flashEjemplo", "tema5", "usuario123", tarjetas, "publico", "");
+		flashcard = new FlashcardsDTO("flash12345", "flashEjemplo", "tema5", "user1Test", tarjetas, "publico", "");
 		flashcard.setFechaCreacion("2019/10/01");
 		flashcard.setEvaluada(false);
 		flashcard.setEvaluador("");
 		
 	    Broker.getInstanciaFlashcards().crearFlashcards(flashcard);
 	    
-	    listaFlashcards = Broker.getInstanciaFlashcards().consultaSinEvaluar("moderador");
+	    listaFlashcards = Broker.getInstanciaFlashcards().consultaSinEvaluar("moderadorTest");
 	    
 	    assert(true);
 	}
@@ -48,7 +56,8 @@ public class Test20ModeradorConsultaColeccionesSinEvaluar {
 	public void se_lista_todas_sin_evaluar() throws Throwable {
 	    encontrado = false;
 	    for(indice=0; indice<listaFlashcards.size(); indice++) {
-	    	if(listaFlashcards.get(indice).isEvaluada()) {
+	    	eFlashcard = listaFlashcards.get(indice);
+	    	if((eFlashcard.isEvaluada() || eFlashcard.getAutorColeccion().equals("moderadorTest"))) {
 	    		encontrado = true;
 	    		indice = listaFlashcards.size();
 	    	}

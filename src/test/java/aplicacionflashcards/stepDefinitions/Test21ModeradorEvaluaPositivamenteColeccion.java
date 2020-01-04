@@ -12,12 +12,12 @@ public class Test21ModeradorEvaluaPositivamenteColeccion {
 	
 	@Given("^El moderador evalua la coleccion$")
 	public void el_moderador_evalua_la_coleccion() throws Throwable {
-		assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderador").getRol().equals("Moderador"));
+		assert(Broker.getInstanciaUsuario().getUsuarioDTO("moderadorTest").getRol().equals("Moderador"));
 	}
 
 	@When("^Lo valora positivamente$")
 	public void lo_valora_positivamente() throws Throwable {
-	    assert(Broker.getInstanciaFlashcards().valoraPositivamente("flash12345", "moderador"));
+	    assert(Broker.getInstanciaFlashcards().valoraPositivamente("flash12345", "moderadorTest"));
 	}
 
 	@Then("^La coleccion puede visualizarse$")

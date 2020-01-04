@@ -12,13 +12,13 @@ public class Test19UsuarioEliminaColeccionFlashcards {
 	
 	@Given("^Un usuario quiere eliminar una coleccion de Flashcards$")
 	public void un_usuario_quiere_eliminar_una_coleccion_de_Flashcards() throws Throwable {
-		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+		assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Encuentra la coleccion$")
 	public void encuentra_la_coleccion() throws Throwable {
 	    coleccion = Broker.getInstanciaFlashcards().leerFlashcard("flash12345");
-	    assert(coleccion.getAutorColeccion().equals("usuario123"));
+	    assert(coleccion.getAutorColeccion().equals("user1Test"));
 	}
 
 	@Then("^La elimina$")

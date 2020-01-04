@@ -21,8 +21,8 @@ public class Test26UnUsuarioEnviaUnMensaje {
 
 	@When("^Escribe ese mensaje$")
 	public void escribe_ese_mensaje() throws Throwable {
-	    mensaje.setRemitente("usuario456");
-	    mensaje.setDestinatario("usuario123");
+	    mensaje.setRemitente("user3Test");
+	    mensaje.setDestinatario("user1Test");
 	    mensaje.setMensaje("Hola");
 	    assert(true);
 	}

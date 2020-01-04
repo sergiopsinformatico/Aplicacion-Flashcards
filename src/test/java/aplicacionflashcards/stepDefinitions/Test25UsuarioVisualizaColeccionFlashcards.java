@@ -13,7 +13,7 @@ public class Test25UsuarioVisualizaColeccionFlashcards {
 	
 	@Given("^Un usuario localiza una coleccion$")
 	public void un_usuario_localiza_una_coleccion() throws Throwable {
-	    assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+	    assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^La abre$")
@@ -25,6 +25,7 @@ public class Test25UsuarioVisualizaColeccionFlashcards {
 	@Then("^Puede ver las tarjetas y los datos acerca de esta$")
 	public void puede_ver_las_tarjetas_y_los_datos_acerca_de_esta() throws Throwable {
 		Broker.getInstanciaFlashcards().eliminarFlashcard("flash12345");
+		Broker.getInstanciaUsuario().deleteUsuario(Broker.getInstanciaUsuario().getUsuarioDTO("moderadorTest"));
 	    assert(flashcard != null);
 	}
 	

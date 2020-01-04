@@ -15,12 +15,12 @@ public class Test27UnUsuarioRecibeUnMensaje {
 	@Given("^Un usuario que ha iniciado sesion$")
 	public void un_usuario_que_ha_iniciado_sesion() throws Throwable {
 		
-		assert(Broker.getInstanciaUsuario().login("usuario123", "usuario123"));
+		assert(Broker.getInstanciaUsuario().login("user1Test", "user1Test"));
 	}
 
 	@When("^Recibe un mensaje$")
 	public void recibe_un_mensaje() throws Throwable {
-	    listaMensajes = Broker.getInstanciaMensaje().mensajesRecibidos("usuario123");
+	    listaMensajes = Broker.getInstanciaMensaje().mensajesRecibidos("user1Test");
 	    assert(true);
 	}
 

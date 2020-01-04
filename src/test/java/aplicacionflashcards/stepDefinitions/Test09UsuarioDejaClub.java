@@ -21,12 +21,12 @@ public class Test09UsuarioDejaClub {
 	@Given("^Un usuario que pertenece a un club$")
 	public void un_usuario_que_pertenece_a_un_club() throws Throwable {
 	    dBClub = Broker.getInstanciaClub();
-	    club = dBClub.leerClub("idEjemploClub", "usuario456");
+	    club = dBClub.leerClub("idEjemploClub", "user3Test");
 	    if(club!=null) {
 	    	encontrado = false;
 	    	miembros = club.getMiembros();
 	    	for(indice=0; indice<miembros.size(); indice++) {
-	    		if(miembros.get(indice).equals("usuario456")) {
+	    		if(miembros.get(indice).equals("user3Test")) {
 	    			encontrado = true;
 	    			indiceEncontrado = indice;
 	    			indice = miembros.size();
@@ -47,12 +47,12 @@ public class Test09UsuarioDejaClub {
 
 	@Then("^No pertenece al club$")
 	public void no_pertenece_al_club() throws Throwable {
-		club = dBClub.leerClub("idEjemploClub", "usuario456");
+		club = dBClub.leerClub("idEjemploClub", "user3Test");
 	    if(club!=null) {
 	    	encontrado = false;
 	    	miembros = club.getMiembros();
 	    	for(indice=0; indice<miembros.size(); indice++) {
-	    		if(miembros.get(indice).equals("usuario456")) {
+	    		if(miembros.get(indice).equals("user3Test")) {
 	    			encontrado = true;
 	    			indiceEncontrado = indice;
 	    			indice = miembros.size();

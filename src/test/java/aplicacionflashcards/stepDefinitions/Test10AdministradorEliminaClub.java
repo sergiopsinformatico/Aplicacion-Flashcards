@@ -15,9 +15,9 @@ public class Test10AdministradorEliminaClub {
 	@Given("^Un administrador quiere eliminar el club$")
 	public void un_administrador_de_un_club_quiere_eliminar_el_club() throws Throwable {
 	    dBClub = Broker.getInstanciaClub();
-	    club = dBClub.leerClub("idEjemploClub", "usuario456");
+	    club = dBClub.leerClub("idEjemploClub", "user3Test");
 	    if(club!=null) {
-	    	assert(club.getAdministrador().equals("usuario123"));
+	    	assert(club.getAdministrador().equals("user1Test"));
 	    }else {
 	    	assert(false);
 	    }

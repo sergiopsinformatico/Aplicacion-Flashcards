@@ -23,32 +23,32 @@ public class Test16UsuarioBloqueaUsuario {
 	@Given("^Un usuario no quiere que otro usuario sea su amigo$")
 	public void un_usuario_no_quiere_que_otro_usuario_sea_su_amigo() throws Throwable {
 	    dBUsuario = Broker.getInstanciaUsuario();
-	    user1 = dBUsuario.getUsuarioDTO("usuario123");
-	    user2 = dBUsuario.getUsuarioDTO("usuario456");
+	    user1 = dBUsuario.getUsuarioDTO("user1Test");
+	    user2 = dBUsuario.getUsuarioDTO("user3Test");
 	    assert(user1!=null && user2!=null);
 	}
 
 	@When("^Bloquea$")
 	public void bloquea() throws Throwable {
 	    dBRelaciones = Broker.getInstanciaRelaciones();
-	    assert(dBRelaciones.bloquearUsuario("usuario123", "usuario456"));
+	    assert(dBRelaciones.bloquearUsuario("user1Test", "user3Test"));
 	}
 
 	@Then("^El usuario bloqueado no ve su perfil$")
 	public void el_usuario_bloqueado_no_ver_su_perfil() throws Throwable {
 		encontrado = false;
-	    lista = dBRelaciones.getBloqueadores("usuario456");
+	    lista = dBRelaciones.getBloqueadores("user3Test");
 	    for(indice=0; indice<lista.size(); indice++) {
-	    	if(lista.get(indice).equals("usuario123")) {
+	    	if(lista.get(indice).equals("user1Test")) {
 	    		encontrado = true;
 	    		indice= lista.size();
 	    	}
 	    }
 	    if(encontrado) {
 	    	encontrado = false;
-	    	lista = dBRelaciones.getBloqueados("usuario123");
+	    	lista = dBRelaciones.getBloqueados("user1Test");
 	    	for(indice=0; indice<lista.size(); indice++) {
-		    	if(lista.get(indice).equals("usuario456")) {
+		    	if(lista.get(indice).equals("user3Test")) {
 		    		encontrado = true;
 		    		indice= lista.size();
 		    	}
