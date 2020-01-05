@@ -101,8 +101,13 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
 	}
 	
 	public boolean actualizaRelaciones(RelacionesUsuariosDTO relaciones) {
-		return (eliminaRelaciones(relaciones.getUsername()) && 
-				creaRelaciones(relaciones));
+		try {
+			criteriosBusqueda = new BsonDocument().append(CONST_USUARIO, new BsonString(relaciones.getUsername()));
+			coleccionRelaciones.deleteOne(criteriosBusqueda);			
+			return creaRelaciones(relaciones);
+		}catch(Exception ex) {
+			return false;
+		}
 	}
 	
 	public boolean eliminaRelaciones (String username) {
@@ -127,7 +132,7 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
 				relacionesUser.setAmigos(amigos);
 				
 				bloqueados = relacionesUser.getBloqueados();
-				bloqueados.remove("username");
+				bloqueados.remove(username);
 				relacionesUser.setBloqueados(bloqueados);
 				
 				bloqueadores = relacionesUser.getBloqueadores();
