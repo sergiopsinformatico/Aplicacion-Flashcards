@@ -97,8 +97,12 @@ public class Controlador01RegistroUsuarios {
 	@ResponseStatus(HttpStatus.OK)
 	public List<String> listUsernames(){
 		listaUsernames = Broker.getInstanciaUsuario().getListUsername();
-		listaUsernames.add("usuario123");
-		listaUsernames.add("usuario456");
+		listaUsernames.add("user1Test");
+		listaUsernames.add("user2Test");
+		listaUsernames.add("user3Test");
+		listaUsernames.add("user4Test");
+		listaUsernames.add("adminTest");
+		listaUsernames.add("moderadorTest");
 		return listaUsernames;
 	}	
 	
@@ -108,8 +112,12 @@ public class Controlador01RegistroUsuarios {
 	@ResponseStatus(HttpStatus.OK)
 	public List<String> listEmails(){
 		listaEmails = Broker.getInstanciaUsuario().getListEmail();
-		listaEmails.add("usuario123@email.com");
-		listaEmails.add("usuario456@email.com");
+		listaEmails.add("user1Test@email.com");
+		listaEmails.add("user2Test@email.com");
+		listaEmails.add("user3Test@email.com");
+		listaEmails.add("user4Test@email.com");
+		listaEmails.add("adminTest@email.com");
+		listaEmails.add("moderadorTest@email.com");
 		return listaEmails;
 	}
 	
@@ -139,8 +147,8 @@ public class Controlador01RegistroUsuarios {
 		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
 		   Broker.getInstanciaRelaciones().creaRelaciones(relacion)) {
 			
-			correo = new Email();
-			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
+			/*correo = new Email();
+			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);*/
 			
 			vista = new ModelAndView("vistaIniciarSesion");
 			vista.addObject("mensaje", "Para finalizar el registro, revise su email "+user.getEmail()+" y siga los pasos para activar la cuenta.");
