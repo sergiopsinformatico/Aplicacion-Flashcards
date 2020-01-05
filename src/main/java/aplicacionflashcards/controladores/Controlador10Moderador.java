@@ -22,11 +22,12 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador10Moderador {
 	
 	//Variables
-	/*ModelAndView vista;
+	ModelAndView vista;
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;
 	FlashcardsDTO flashcard;
-	//Constantes
+	
+	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_FLASHCARD_EVALUA = "vistaFlashcardsEvaluar";
@@ -34,18 +35,18 @@ public class Controlador10Moderador {
 	
 	/*Moderador Evalua Coleccion*/
 	
-	/*@GetMapping(value = "/evaluarColecciones")
+	@GetMapping(value = "/evaluarColecciones")
 	public ModelAndView evaluarColecciones(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-		   ((((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals("Administrador")) ||
-			(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals("Moderador")))) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("") &&
+		   ((((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) ||
+			(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Moderador")))) {
 			
-			vista = new ModelAndView(CONST_FLASHCARD_EVALUA);
+			vista = new ModelAndView("vistaFlashcardsEvaluar");
 		
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
 	}
@@ -55,7 +56,7 @@ public class Controlador10Moderador {
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> coleccionesSinEvaluar(HttpServletRequest request, HttpServletResponse response){
 		try {
-			listaColecciones = Broker.getInstanciaFlashcards().consultaSinEvaluar(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
+			listaColecciones = Broker.getInstanciaFlashcards().consultaSinEvaluar(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
 		}catch(Exception ex) {
 			listaColecciones = new LinkedList<>();
 		}
@@ -65,37 +66,37 @@ public class Controlador10Moderador {
 	
 	@GetMapping(value = "/evaluarColeccion")
 	public ModelAndView evaluarColeccion(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
 			
 			vista = new ModelAndView("vistaFlashcardsAnalizarColeccion");
 			flashcard = Broker.getInstanciaFlashcards().leerFlashcard(id);
 			
 			if(flashcard.getTipoCompartir().equals("club")) {
-				flashcard.setCompartirCon(Broker.getInstanciaClub().leerClub(flashcard.getCompartirCon(), ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()).getNombreClub());
+				flashcard.setCompartirCon(Broker.getInstanciaClub().leerClub(flashcard.getCompartirCon(), ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()).getNombreClub());
 			}
 			vista.addObject("flashcard", flashcard);
 		
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
 	}
 	
 	@GetMapping(value = "/evaluacionPositiva")
 	public ModelAndView evaluacionPositiva(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView(CONST_FLASHCARD_EVALUA);
-		Broker.getInstanciaFlashcards().valoraPositivamente(id, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
-		vista.addObject(CONST_MENSAJES, "La coleccion se ha evaluado positivamente");
+		vista = new ModelAndView("vistaFlashcardsEvaluar");
+		Broker.getInstanciaFlashcards().valoraPositivamente(id, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		vista.addObject("mensajes", "La coleccion se ha evaluado positivamente");
 		return vista;
 	}
 	
 	@GetMapping(value = "/evaluacionNegativa")
 	public ModelAndView evaluacionNegativa(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView(CONST_FLASHCARD_EVALUA);
+		vista = new ModelAndView("vistaFlashcardsEvaluar");
 		Broker.getInstanciaFlashcards().valoraNegativamente(id);
-		vista.addObject(CONST_MENSAJES, "La coleccion se ha evaluado negativamente y por tanto ha sido eliminada");
+		vista.addObject("mensajes", "La coleccion se ha evaluado negativamente y por tanto ha sido eliminada");
 		return vista;
 	}
 	
@@ -112,17 +113,17 @@ public class Controlador10Moderador {
 	
 	@GetMapping(value = "/gestionarFlashcards")
 	public ModelAndView gestionarFlashcards(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-		   ((((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals("Administrador")) ||
-			(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals("Moderador")))) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("") &&
+		   ((((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) ||
+			(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Moderador")))) {
 			
 			vista = new ModelAndView("vistaGestionFlashcards");
 			
 		
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		
 		return vista;
@@ -153,16 +154,16 @@ public class Controlador10Moderador {
 			nombreColeccion = Broker.getInstanciaFlashcards().leerFlashcard(id).getNombreColeccion();
 			
 			if(Broker.getInstanciaFlashcards().eliminarFlashcard(id)) {
-				vista.addObject(CONST_MENSAJES, "Se ha eliminado la coleccion "+nombreColeccion);
+				vista.addObject("mensajes", "Se ha eliminado la coleccion "+nombreColeccion);
 			}else {
-				vista.addObject(CONST_MENSAJES, "No se pudo eliminar la coleccion "+nombreColeccion);
+				vista.addObject("mensajes", "No se pudo eliminar la coleccion "+nombreColeccion);
 			}
 			
 		}catch(Exception ex) {
-			vista.addObject(CONST_MENSAJES, "Hubo un problema con la conexion");
+			vista.addObject("mensajes", "Hubo un problema con la conexion");
 		}
 		
 		return vista;
-	}*/
+	}
 	
 }
