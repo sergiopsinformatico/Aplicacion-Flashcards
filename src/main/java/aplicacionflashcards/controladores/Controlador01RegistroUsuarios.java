@@ -21,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
-import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;

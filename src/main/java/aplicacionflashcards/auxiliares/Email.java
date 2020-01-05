@@ -88,7 +88,7 @@ public class Email {
 		try{
 			Properties properties = System.getProperties();
 			properties.put("mail.smtp.host", CONST_SMTP);
-			properties.put("mail.smtp.port", "465");//465 o 587
+			properties.put("mail.smtp.port", "587");//465 o 587
 			properties.put("mail.smtp.auth", "true");
 			properties.put("mail.smtp.starttls.enable", "true");
 			properties.put("mail.smtp.ssl.trust", CONST_SMTP);

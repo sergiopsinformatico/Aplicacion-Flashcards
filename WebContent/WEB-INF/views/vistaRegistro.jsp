@@ -92,9 +92,6 @@
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-10">
-							Usernames: {{showListaUsernames}}
-							<br>
-							Emails: {{showListaEmails}}
 							<form action="crearCuenta.do" method="post" class="form-signin">
 								<br>
 					            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Registro de Usuarios</h1>
@@ -164,11 +161,10 @@
 	        	$scope.messageRepClave = "";
 	        	$scope.messageError = "";
 	        	
-	        	$scope.showListaUsernames = [];
-	        	$scope.showListaEmails = [];
 	        	
 	        	var listaUsernames = [];
 	        	var listaEmails = [];
+	        	
 	        	var indice = 0;
 	        	
 	        	var checkUsername = false;
@@ -190,19 +186,19 @@
 	       	        method: 'GET',
 	       	        url: 'getUsernames.do',
 	                   headers : {
-	                   	'Accept': 'application/json'
-	                   }
+		                   	'Accept': 'application/json'
+		                   }
 	       	    }).then(function mySuccess(response) {
+	       	    		       	    	
 	       	    	for(indice=0; indice<response.data.length; indice++){
 	       	    		listaUsernames.push(response.data[indice]);
 	       	    	}
 	       	    	
-	       	    	$scope.showListaUsernames = listaUsernames;
+	       	    	
 	       	    	
 	       	    }, function myError(response) {
 	       	    	listaUsernames = [];
 	       	    });
-	        	
 						        	
 	        	$http({
 	       	        method: 'GET',
@@ -211,17 +207,17 @@
 	                   	'Accept': 'application/json'
 	                   }
 	       	    }).then(function mySuccess(response) {
+	       	    		       	    	
 	       	    	for(indice=0; indice<response.data.length; indice++){
 	       	    		listaEmails.push(response.data[indice]);
 	       	    	}
 	       	    	
-	       	    	$scope.showListaEmails = listaEmails;
+	       	    	
 	       	    	
 	       	    }, function myError(response) {
 	       	    	listaEmails = [];
 	       	    });
-	        	
-	        	
+		       		        	
 	        	function enableBtnRegistro(){
 	        		if(checkUsername==true && checkEmail==true && checkClave==true && checkRepClave==true){
 	        			if($scope.username=="" || $scope.clave=="" || $scope.repClave=="" || $scope.email==""){
