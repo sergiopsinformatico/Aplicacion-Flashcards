@@ -21,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
+import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
@@ -146,8 +147,8 @@ public class Controlador01RegistroUsuarios {
 		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
 		   Broker.getInstanciaRelaciones().creaRelaciones(relacion)) {
 			
-			/*correo = new Email();
-			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);*/
+			correo = new Email();
+			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
 			
 			vista = new ModelAndView("vistaIniciarSesion");
 			vista.addObject("mensaje", "Para finalizar el registro, revise su email "+user.getEmail()+" y siga los pasos para activar la cuenta.");

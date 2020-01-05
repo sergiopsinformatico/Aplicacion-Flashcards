@@ -19,7 +19,7 @@
 
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="resources/css/accesoFlashcards.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/view_All.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -47,8 +47,8 @@
     <section class="background">
    		<br><br><br><br>
     	<div class="row">
-    		<div class="col-md-4"></div>
-    		<div class="col-md-4 formAccess textCenter container">
+    		<div class="col-md-3"></div>
+    		<div class="col-md-6 formAccess textCenter container">
     			<br>
     			<h4 class="title">Activar Cuenta</h4>
 	    		<br>
@@ -93,7 +93,7 @@
 	    			<div class="col-md-2"></div>
 	    		</div>
     		</div>
-    		<div class="col-md-4"></div>
+    		<div class="col-md-3"></div>
 		</div>
     </section>
 
