@@ -26,7 +26,7 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador02RecuperarCuenta {
 	
 	//Variables
-	/*Fecha fecha;
+	Fecha fecha;
 	ModelAndView vista;
 	UsuarioDTO user;
 	UsuarioDTO userAntiguo;
@@ -37,12 +37,12 @@ public class Controlador02RecuperarCuenta {
 	String compara;
 	String keySecure;
 	Email email;
-	//Constantes
+	/*Constantes
 	static final String CONST_VIEW_RECUPERA = "vistaRecuperarCuenta";
 	static final String CONST_MENSAJE = "mensaje";
 	static final String CONST_USERNAME = "username";*/
 	
-	/*@GetMapping(value = "/recuperaCuenta")
+	@GetMapping(value = "/recuperaCuenta")
 	public ModelAndView recuperaCuenta(HttpServletRequest request, HttpServletResponse response) {
 		
 		//Comprobaciones
@@ -56,15 +56,15 @@ public class Controlador02RecuperarCuenta {
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
 				
-		return new ModelAndView(CONST_VIEW_RECUPERA);
+		return new ModelAndView("vistaRecuperarCuenta");
 	}
 	
 	@PostMapping(value = "/recuperaClave")
 	public ModelAndView recuperaClave(HttpServletRequest request, HttpServletResponse response) {
 		user = Broker.getInstanciaUsuario().getUsuarioDTO(request.getParameter("inputUsernameEmail"));
-		vista = new ModelAndView(CONST_VIEW_RECUPERA);
+		vista = new ModelAndView("vistaRecuperarCuenta");
 		if(user==null || user.getUsername()==null || user.getUsername().equals("")) {
-			vista.addObject(CONST_MENSAJE, "No existe ninguna cuenta cuyo username o email sea "+request.getParameter("inputUsernameEmail"));
+			vista.addObject("mensaje", "No existe ninguna cuenta cuyo username o email sea "+request.getParameter("inputUsernameEmail"));
 			return vista;
 		}else {
 			email = new Email();
@@ -72,7 +72,7 @@ public class Controlador02RecuperarCuenta {
 			keySecure = GeneratorStrings.randomString(10);
 			Broker.getInstanciaRecuperarCuenta().insertaRC(new RecuperarCuentaDTO(user.getUsername(), keySecure, fecha.fechaRecuperarCuenta()));
 			email.recuperarClave(user,keySecure);
-			vista.addObject(CONST_MENSAJE, "Se ha enviado un email a " + user.getEmail() +" con la clave");
+			vista.addObject("mensaje", "Se ha enviado un email a " + user.getEmail() +" con la clave");
 			return vista;
 		}
 	}
@@ -83,16 +83,16 @@ public class Controlador02RecuperarCuenta {
 	}
 	
 	@GetMapping(value = "/restableceClave")
-	public ModelAndView restableceClave(@RequestParam(CONST_USERNAME) String username, @RequestParam("keySecurity") String keySecurity) {
+	public ModelAndView restableceClave(@RequestParam("username") String username, @RequestParam("keySecurity") String keySecurity) {
 		if(Broker.getInstanciaRecuperarCuenta().leerRC(username, keySecurity)) {
 			vista = new ModelAndView("vistaRestablecimientoClave");
-			vista.addObject(CONST_USERNAME, username);
+			vista.addObject("username", username);
 		}else if(Broker.getInstanciaRecuperarCuenta().existeSolicitudUsuario(username)) {
-			vista = new ModelAndView(CONST_VIEW_RECUPERA);
-			vista.addObject(CONST_MENSAJE, "Solicito un restablecimiento de la clave, pero el codigo no es valido");
+			vista = new ModelAndView("vistaRecuperarCuenta");
+			vista.addObject("mensaje", "Solicito un restablecimiento de la clave, pero el codigo no es valido");
 		}else {
-			vista = new ModelAndView(CONST_VIEW_RECUPERA);
-			vista.addObject(CONST_MENSAJE, "El enlace ha expirado. Por favor, vuelva a solicitar la recuperacion de la clave");
+			vista = new ModelAndView("vistaRecuperarCuenta");
+			vista.addObject("mensaje", "El enlace ha expirado. Por favor, vuelva a solicitar la recuperacion de la clave");
 		}
 		return vista;
 	}
@@ -100,14 +100,14 @@ public class Controlador02RecuperarCuenta {
 	@PostMapping(value = "/cambioClave")
 	public ModelAndView cambioClave(HttpServletRequest request, HttpServletResponse response) {
 		vista = new ModelAndView("redirect:/inicio.html");
-		userAntiguo = Broker.getInstanciaUsuario().getUsuarioDTO(request.getParameter(CONST_USERNAME));
+		userAntiguo = Broker.getInstanciaUsuario().getUsuarioDTO(request.getParameter("username"));
 		userNuevo = userAntiguo;
 		userNuevo.setClave(request.getParameter("inputNuevaClave"));
 		if(Broker.getInstanciaUsuario().updateUsuario(userAntiguo, userNuevo)) {
-			Broker.getInstanciaRecuperarCuenta().eliminarRC(request.getParameter(CONST_USERNAME));
-			vista.addObject(CONST_MENSAJE, "Se ha actualizado su clave correctamente");
+			Broker.getInstanciaRecuperarCuenta().eliminarRC(request.getParameter("username"));
+			vista.addObject("mensaje", "Se ha actualizado su clave correctamente");
 		}else {
-			vista.addObject(CONST_MENSAJE, "Error. No se pudo actualizar su clave");
+			vista.addObject("mensaje", "Error. No se pudo actualizar su clave");
 		}
 		return vista;
 	}
@@ -115,5 +115,5 @@ public class Controlador02RecuperarCuenta {
 	@GetMapping(value = "/cambioClave")
 	public ModelAndView cambioClaveGet(HttpServletRequest request, HttpServletResponse response) {
 		return new ModelAndView("redirect:/inicio.html");
-	}*/
+	}
 }

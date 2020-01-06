@@ -128,7 +128,17 @@ public class Controlador03ControlSesion {
 		return vista;
 	}
 	
+	/* * * * * * * * * * * * *  * * * * *
+	 * FUNCIONALIDAD 3: CERRAR SESION   *
+	 * * * * * * * * * * * * *  * * * * */
 	
+	@GetMapping(value = "/cerrarSesion")
+	public ModelAndView cerrarSesion(HttpServletRequest request, HttpServletResponse response) {	
+		vista = new ModelAndView("redirect:/inicio.html");
+		request.getSession().setAttribute("usuario", null);
+		vista.addObject("usuario",null);
+		return vista;
+	}
 	
 	
 	//Variables
