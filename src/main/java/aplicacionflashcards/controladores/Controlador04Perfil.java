@@ -19,20 +19,20 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador04Perfil {
 	
 	//Variables
-	/*ModelAndView vista;
+	ModelAndView vista;
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelacion;
-	//Constantes
+	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";*/
 	
 	/*Ver Perfil*/
-	/*@GetMapping(value = "/verPerfil")
+	@GetMapping(value = "/verPerfil")
 	public ModelAndView verPerfil(@RequestParam("usuarioPerfil") String userPerfil, HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-			((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-			(!((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals(""))) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+			((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+			(!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			user = dBUsuario.getUsuarioDTO(userPerfil);
@@ -40,14 +40,14 @@ public class Controlador04Perfil {
 			if(user != null) {
 				vista = new ModelAndView("vistaPerfil");
 				
-				if(!(user.getUsername().equals(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()))){
+				if(!(user.getUsername().equals(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()))){
 					dBRelacion = Broker.getInstanciaRelaciones();
-					user.setTipoRelacion(dBRelacion.tipoRelacion(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), user.getUsername()));
+					user.setTipoRelacion(dBRelacion.tipoRelacion(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), user.getUsername()));
 				}
 				
 				vista.addObject("perfil", user);
-				if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
-					vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
+				if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
+					vista.addObject("mensaje", request.getParameter("mensaje"));
 				}
 			}else {
 				vista = new ModelAndView("redirect:/inicio.html");
@@ -57,5 +57,5 @@ public class Controlador04Perfil {
 			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
-	}*/
+	}
 }
