@@ -27,14 +27,14 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 public class Controlador06Administrador {
 	
 	//Variables
-	/*ModelAndView vista;
+	ModelAndView vista;
 	List<UsuarioDTO> listaUsuarios;
 	List<ClubDTO> listaClubes;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAOClub dBClubes;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
-	//Constantes
+	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_ADMIN = "Administrador";
