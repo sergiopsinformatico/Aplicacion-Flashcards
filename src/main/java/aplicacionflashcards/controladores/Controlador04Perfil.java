@@ -46,6 +46,7 @@ public class Controlador04Perfil {
 				}
 				
 				vista.addObject("perfil", user);
+				
 				if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
 					vista.addObject("mensaje", request.getParameter("mensaje"));
 				}

@@ -18,7 +18,6 @@
   <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="resources/css/view_All.css" rel="stylesheet">
-  <link href="resources/css/perfil.css" rel="stylesheet">
   <link href="resources/css/view_Perfil.css" rel="stylesheet">
   
   <!-- Bootstrap core CSS -->
@@ -278,11 +277,13 @@
 							<!-- END SIDEBAR USERPIC -->
 							<!-- SIDEBAR USER TITLE -->
 							<div class="profile-usertitle">
+								<img src="${perfil.getFoto()}" alt="Foto" class="fotoPerfil">
 								<div class="profile-usertitle-name">
-									Marcus Doe
+									${perfil.getUsername()}
+									${perfil.getFoto()}
 								</div>
 								<div class="profile-usertitle-job">
-									Developer
+									${perfil.getRol()}
 								</div>
 							</div>
 							<!-- END SIDEBAR USER TITLE -->
@@ -327,8 +328,6 @@
 					</div>
 				</div>
 			</div>
-
-
 
         	<!-- Cambio a: https://bootsnipp.com/snippets/M48pA
         	<div class="row">
