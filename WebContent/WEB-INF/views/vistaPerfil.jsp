@@ -12,7 +12,7 @@
   <title>Flashcards - Perfil de ${perfil.getUsername()}</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -290,6 +290,16 @@
 							<div ng-if="(${usuario.getUsername()}).localeCompare(${perfil.getUsername()}) == 0" class="profile-userbuttons">
 								<button type="button" class="btn btn-success btn-sm">Follow</button>
 								<button type="button" class="btn btn-danger btn-sm">Message</button>
+							</div>
+							<div class="profile-usermenu" style="text-align:center;" align="center">
+								<ul class="nav">
+									<li class="active">
+										<a href="verClubes.html">
+								          <i class="fa fa-user" aria-hidden="true"></i>
+								          <span>Ver Perfil</span>
+								        </a>
+									</li>
+								</ul>
 							</div>
 							<!-- END SIDEBAR BUTTONS -->
 							<!-- SIDEBAR MENU -->
