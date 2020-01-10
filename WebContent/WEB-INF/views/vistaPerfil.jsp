@@ -280,7 +280,6 @@
 								<img src="${perfil.getFoto()}" alt="Foto" class="fotoPerfil">
 								<div class="profile-usertitle-name">
 									${perfil.getUsername()}
-									${perfil.getFoto()}
 								</div>
 								<div class="profile-usertitle-job">
 									${perfil.getRol()}
@@ -288,12 +287,13 @@
 							</div>
 							<!-- END SIDEBAR USER TITLE -->
 							<!-- SIDEBAR BUTTONS -->
-							<div class="profile-userbuttons">
+							<div ng-if="(${usuario.getUsername()}).localeCompare(${perfil.getUsername()}) == 0" class="profile-userbuttons">
 								<button type="button" class="btn btn-success btn-sm">Follow</button>
 								<button type="button" class="btn btn-danger btn-sm">Message</button>
 							</div>
 							<!-- END SIDEBAR BUTTONS -->
 							<!-- SIDEBAR MENU -->
+							<!-- 
 							<div class="profile-usermenu">
 								<ul class="nav">
 									<li class="active">
@@ -317,7 +317,7 @@
 										Help </a>
 									</li>
 								</ul>
-							</div>
+							</div>-->
 							<!-- END MENU -->
 						</div>
 					</div>
