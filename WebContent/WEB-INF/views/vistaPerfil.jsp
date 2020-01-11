@@ -61,7 +61,7 @@
           <i class="fa fa-home" aria-hidden="true"></i>
           <span>Pagina Principal</span></a>
       </li>      
-      
+      <!-- 
       <hr class="sidebar-divider" id="adminSidebarDivider" style="display: none;">
       <div class="sidebar-heading" id="adminSidebarTitle" style="display: none;">
         Administrador
@@ -84,7 +84,7 @@
       
       <hr class="sidebar-divider">
       
-      <!-- Heading -->
+      <!-- Heading 
       <div class="sidebar-heading">
         Usuarios
       </div>
@@ -99,7 +99,7 @@
           <i class="fa fa-users" aria-hidden="true"></i>
           <span>Clubes</span>
         </a>
-      </li>
+      </li>-->
 
     </ul>
     <!-- End of Sidebar -->
@@ -261,6 +261,10 @@
 					}
 				}
 				
+				$scope.showPanelRelaciones = function(){
+					return ("${usuario.getUsername()}").localeCompare("${perfil.getUsername()}") != 0;
+				}
+				
 	        	
 	        });
         </script>
@@ -285,55 +289,31 @@
 									${perfil.getRol()}
 								</div>
 							</div>
-							<!-- END SIDEBAR USER TITLE -->
-							<!-- SIDEBAR BUTTONS -->
-							<div ng-if="(${usuario.getUsername()}).localeCompare(${perfil.getUsername()}) == 0" class="profile-userbuttons">
+							<div ng-if="showPanelRelaciones()" class="profile-userbuttons">
 								<button type="button" class="btn btn-success btn-sm">Follow</button>
 								<button type="button" class="btn btn-danger btn-sm">Message</button>
 							</div>
-							<div class="profile-usermenu" style="text-align:center;" align="center">
-								<ul class="nav">
-									<li class="active">
-										<a href="verClubes.html">
-								          <i class="fa fa-user" aria-hidden="true"></i>
-								          <span>Ver Perfil</span>
-								        </a>
-									</li>
-								</ul>
-							</div>
-							<!-- END SIDEBAR BUTTONS -->
-							<!-- SIDEBAR MENU -->
-							<!-- 
-							<div class="profile-usermenu">
-								<ul class="nav">
-									<li class="active">
-										<a href="#">
-										<i class="glyphicon glyphicon-home"></i>
-										Overview </a>
-									</li>
-									<li>
-										<a href="#">
-										<i class="glyphicon glyphicon-user"></i>
-										Account Settings </a>
-									</li>
-									<li>
-										<a href="#" target="_blank">
-										<i class="glyphicon glyphicon-ok"></i>
-										Tasks </a>
-									</li>
-									<li>
-										<a href="#">
-										<i class="glyphicon glyphicon-flag"></i>
-										Help </a>
-									</li>
-								</ul>
-							</div>-->
-							<!-- END MENU -->
+							<br><br>
 						</div>
 					</div>
 					<div class="col-md-9">
 			            <div class="profile-content">
-						   Some user related content goes here...
+			            	<div>
+			            		<i style="color:#CDBC46;" class="fa fa-user" aria-hidden="true"></i>
+			            		<span style="font-weight:bold;color:#CDBC46">Datos del Usuario</span>
+			            		<br><br>
+			            		<div>
+			            			<span>Nombre de Usuario: ${perfil.getUsername()}</span>
+			            		</div>
+			            		<div>
+			            			<span>Email: ${perfil.getEmail()}</span>
+			            		</div>
+			            		<div>
+			            			<span>Nombre y Apellidos: ${perfil.getNombreApellidos()}</span>
+			            		</div>
+			            	</div>
+						   <br>
+						   
 			            </div>
 					</div>
 				</div>
