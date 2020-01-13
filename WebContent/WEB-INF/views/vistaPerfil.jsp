@@ -266,7 +266,17 @@
 					return ("${usuario.getUsername()}").localeCompare("${perfil.getUsername()}") != 0;
 				}
 				
+				$scope.tieneNombre = function(){
+					return ("${usuario.getUsername()}" != null) && (("${usuario.getUsername()}").localeCompare("") != 0);
+				}
+				
+				$scope.tieneCiudad = function(){
+					return ("${usuario.getCiudad()}" != null) && (("${usuario.getCiudad()}").localeCompare("") != 0);
+				}
 	        	
+				$scope.tienePais = function(){
+					return ("${usuario.getPais()}" != null) && (("${usuario.getPais()}").localeCompare("") != 0);
+				}
 	        });
         </script>
         
@@ -304,17 +314,40 @@
 			            		<span style="font-weight:bold;color:#CDBC46">Datos del Usuario</span>
 			            		<br><br>
 			            		<div>
-			            			<span>Nombre de Usuario: ${perfil.getUsername()}</span>
+			            			<span style="font-weight:bold;">Nombre de Usuario:</span>
+			            			<span> ${perfil.getUsername()}</span>
 			            		</div>
 			            		<div>
-			            			<span>Email: ${perfil.getEmail()}</span>
+			            			<span style="font-weight:bold;">Email:</span>
+			            			<span>${perfil.getEmail()}</span>
 			            		</div>
-			            		<div>
-			            			<span>Nombre y Apellidos: ${perfil.getNombreApellidos()}</span>
+			            		<div ng-if="tieneNombre()">
+			            			<span style="font-weight:bold;">Nombre y Apellidos:</span>
+			            			<span>${perfil.getNombreApellidos()}</span>
+			            		</div>
+			            		<div ng-if="tieneCiudad()">
+			            			<span style="font-weight:bold;">Ciudad:</span>
+			            			<span>${perfil.getCiudad()}</span>
+			            		</div>
+			            		<div ng-if="tienePais()">
+			            			<span style="font-weight:bold;">Pais:</span>
+			            			<span>${perfil.getPais()}</span>
 			            		</div>
 			            	</div>
-						   <br>
-						   
+			            	<br><br><br>
+						   <div class="row">
+						   	<div class="col-md-4" style="text-align:center;" align="center">
+						   		<i style="color:#FFE63B;" class="fa fa-trophy fa-3x" aria-hidden="true"></i>
+						   		<br>
+						   		<span>0 puntos</span>
+						   	</div>
+						   	<div class="col-md-4" style="text-align:center;" align="center">
+						   	
+						   	</div>
+						   	<div class="col-md-4" style="text-align:center;" align="center">
+						   	
+						   	</div>
+						   </div>
 			            </div>
 					</div>
 				</div>
