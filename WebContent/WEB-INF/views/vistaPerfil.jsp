@@ -339,17 +339,17 @@
 						   	<div class="col-md-4" style="text-align:center;" align="center">
 						   		<i style="color:#FFE63B;" class="fa fa-trophy fa-3x" aria-hidden="true"></i>
 						   		<br>
-						   		<span>0 puntos</span>
+						   		<span>${userPuntos} puntos</span>
 						   	</div>
 						   	<div class="col-md-4" style="text-align:center;" align="center">
 						   		<i style="color:#58E887;" class="fa fa-user fa-3x" aria-hidden="true"></i>
 						   		<br>
-						   		<span>0 amigos</span>
+						   		<span>${userAmigos} amigos</span>
 						   	</div>
 						   	<div class="col-md-4" style="text-align:center;" align="center">
 						   		<i style="color:#D0D0BB;" class="fa fa-clone fa-3x" aria-hidden="true"></i>
 						   		<br>
-						   		<span>0 colecciones creadas</span>
+						   		<span>${userColecciones} colecciones creadas</span>
 						   	</div>
 						   </div>
 			            </div>
