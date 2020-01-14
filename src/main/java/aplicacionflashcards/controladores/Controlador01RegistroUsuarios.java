@@ -24,6 +24,7 @@ import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
+import main.java.aplicacionflashcards.dto.PuntosDTO;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
@@ -145,7 +146,7 @@ public class Controlador01RegistroUsuarios {
 		
 		if(Broker.getInstanciaUsuario().insertUsuario(user) &&
 		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
-		   Broker.getInstanciaRelaciones().creaRelaciones(relacion)) {
+		   Broker.getInstanciaRelaciones().creaRelaciones(relacion) && Broker.getInstanciaPuntos().actualizaPuntos(new PuntosDTO(request.getParameter("username"), 0))) {
 			
 			correo = new Email();
 			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);

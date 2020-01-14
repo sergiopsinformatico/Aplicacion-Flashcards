@@ -3,9 +3,9 @@ package main.java.aplicacionflashcards.dto;
 public class PuntosDTO {
 	
 	String usuario;
-	long puntos;
+	int puntos;
 	
-	public PuntosDTO (String usuario, long puntos) {
+	public PuntosDTO (String usuario, int puntos) {
 		setUsuario(usuario);
 		setPuntos(puntos);
 	}
@@ -18,11 +18,11 @@ public class PuntosDTO {
 		this.usuario = usuario;
 	}
 	
-	public long getPuntos() {
+	public int getPuntos() {
 		return puntos;
 	}
 	
-	public void setPuntos(long puntos) {
+	public void setPuntos(int puntos) {
 		this.puntos = puntos;
 	}
 	

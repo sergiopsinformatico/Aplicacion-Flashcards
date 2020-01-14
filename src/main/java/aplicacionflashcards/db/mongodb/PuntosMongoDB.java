@@ -59,7 +59,7 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
     	iterador = coleccionPuntos.find(criteriosBusqueda).iterator();
     	if(iterador.hasNext()) {
     		doc = iterador.next();
-    		return new PuntosDTO(doc.getString("usuario"), doc.getLong("puntos"));
+    		return new PuntosDTO(doc.getString("usuario"), doc.getInteger("puntos"));
     	}else {
     		return new PuntosDTO("",0);
     	}

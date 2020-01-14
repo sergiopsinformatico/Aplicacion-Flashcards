@@ -61,6 +61,7 @@ public class Controlador04Perfil {
 				
 				//Numero Colecciones Creadas
 				dBFlashcards = Broker.getInstanciaFlashcards();
+				vista.addObject("userColecciones", dBFlashcards.coleccionesCreadasVisibles(user.getUsername()).size());
 				
 				if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
 					vista.addObject("mensaje", request.getParameter("mensaje"));

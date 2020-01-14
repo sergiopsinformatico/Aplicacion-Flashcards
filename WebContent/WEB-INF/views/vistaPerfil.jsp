@@ -342,7 +342,7 @@
 						   		<span>${userPuntos} puntos</span>
 						   	</div>
 						   	<div class="col-md-4" style="text-align:center;" align="center">
-						   		<i style="color:#58E887;" class="fa fa-user fa-3x" aria-hidden="true"></i>
+						   		<i style="color:#58E887;" class="fa fa-users fa-3x" aria-hidden="true"></i>
 						   		<br>
 						   		<span>${userAmigos} amigos</span>
 						   	</div>
