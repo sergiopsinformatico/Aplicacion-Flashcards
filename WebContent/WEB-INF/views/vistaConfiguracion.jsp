@@ -173,8 +173,8 @@
         	</div>
         	<div class="row">
         		<div class="col-md-2"></div>
-        		<div class="col-md-8" style="background-color:white;">
-        			<div class="row">
+        		<div class="col-md-8">
+        			<div class="row" style="background-color:white;">
         				<div class="col-md-12" align="center" style="text-align:center;">
         					<br>
 			    			<h4 class="title" align="center">Eliminar Cuenta</h4>
@@ -207,9 +207,76 @@
 		      				<br>
         				</div>
         			</div>
-        			<div class="row">
-        			
+        			<br><br>
+        			<div class="row" style="background-color:white;">
+        				<div class="col-md-12">
+        					<br>
+			    				<h4 class="title" align="center">Modificar Mi Perfil</h4>
+			    			<br>
+	        				<form action="modificaUsuario.do" method="post" id="Registro" name="Registro">            
+				           		<br>
+				           		<!-- <div class="form-group">
+						            <input type="text" class="form-control" id="inputUsername" ng-model="username" ng-change="validateUsername($event, username)" name="inputUsername" placeholder="Username" required>
+						        </div>
+						        <small id="msgUsername">{{messageUsername}}</small>	
+						        <h6 style="font-size:10px; color:#808080">El campo Username solo puede contener números y letras, y tiene que tener una longitud de entre 5 y 15 caracteres.</h6>			        
+						        <br>-->
+						        
+						        <h6 style="color:#808080">Username: ${usuario.getUsername()}</h6>
+						        <input type="hidden" class="form-control" id="inputUsername" ng-model="username" name="inputUsername" value="${usuario.getUsername()}">
+						  		<br>
+						        <div class="form-group">
+						            <input type="email" class="form-control" id="inputEmail" ng-model="email" ng-change="validateEmail($event, email)" name="inputEmail" placeholder="Email" required>
+						        </div>
+						        <small id="msgEmail">{{messageEmail}}</small>
+						        <h6 style="font-size:10px; color:#808080">Dirección de email peteneciente al usuario.</h6>			        
+						        <br>
+						        <div class="form-group">
+						            <input type="password" class="form-control" id="inputClave" ng-model="clave" ng-change="validateClave($event, clave, repClave)" name="inputClave" placeholder="Clave" required>
+						        </div>
+						        <small id="msgClave">{{messageClave}}</small>
+						        <h6 style="font-size:10px; color:#808080">Solo puede contener números y letras, y tiene que tener una longitud de entre 5 y 20 caracteres.</h6>
+						        <br>
+						        <div class="form-group">
+						            <input type="password" class="form-control" id="inputRepiteClave" ng-model="repClave" ng-change="validateRepClave($event, clave, repClave)" name="inputRepiteClave" placeholder="Repetir Clave" required>
+						        </div>
+						        <small id="msgRepClave">{{messageRepClave}}</small>
+						        <h6 style="font-size:10px; color:#808080">Deben coincidir los campos Clave y Repetir Clave.</h6>
+						        <br>
+						        <div class="form-group">
+						            <input type="text" class="form-control" id="inputNyA" name="inputNyA" ng-model="nombreApellidos" placeholder="Nombre y Apellidos">
+						        </div>
+						        <div class="form-group">
+						            <input type="text" class="form-control" id="inputCiudad" name="inputCiudad" ng-model="ciudad" placeholder="Ciudad">
+						        </div>
+						        <div class="form-group">
+						            <input type="text" class="form-control" id="inputPais" name="inputPais" ng-model="pais" placeholder="Pais">
+						        </div>
+						        <div class="form-group">
+						        	<p class="infoFotoPerfil"><strong>Foto de Perfil (con GRAVATAR)</strong></p>
+						        	<label style="text-align:justify;"><strong>GRAVATAR </strong>es un servicio que ofrece un avatar único globalmente a través de tu email. Si no estás registrado, accede <a href="https://es.gravatar.com/" target="_blank">aquí</a> para registrarte y elige que foto de perfil. Indica en el siguiente campo, el email con el que te has registrado.</label>
+									<br>
+									<input type="text" class="form-control" id="inputEmailAvatar" name="inputEmailAvatar" ng-model="fotoPerfil" value="" placeholder="">
+									<br>
+									<label style="text-align:justify;">Si no deseas incluir una foto de perfil, se te asignará una foto de perfil por defecto.</label>
+								</div>
+						        <small id="msgError">{{messageError}}</small>
+						        <div class="row">
+						        	<div class="col-md-3"></div>
+						        	<div class="col-md-6">
+						        		<br>
+						        		<button type="submit" class="btn btn-success" id="btnGuardaCambios" name="btnGuardaCambios">
+						        			<i class="fa fa-pencil" aria-hidden="true"></i>
+						        			Guardar Cambios
+						        		</button>
+						        	</div>
+						        	<div class="col-md-3"></div>
+						        </div>	
+						        <br><br>
+							</form>
+						</div>
         			</div>
+        			<br><br><br>
         		</div>
         		<div class="col-md-2"></div>
         		<!-- 
