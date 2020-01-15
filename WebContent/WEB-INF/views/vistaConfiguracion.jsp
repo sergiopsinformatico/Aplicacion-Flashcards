@@ -172,9 +172,49 @@
         		<br>
         	</div>
         	<div class="row">
+        		<div class="col-md-2"></div>
+        		<div class="col-md-8" style="background-color:white;">
+        			<div class="row">
+        				<div class="col-md-12" align="center" style="text-align:center;">
+        					<br>
+			    			<h4 class="title" align="center">Eliminar Cuenta</h4>
+			    			<br>
+			    			<div class="middle">
+			    				<button type="submit" class="btn btn-danger" onclick="eliminarCuenta()">
+			    					<i class="fa fa-trash" aria-hidden="true"></i>
+			    					Eliminar Cuenta
+			    				</button>
+			    				<script>
+				    				function eliminarCuenta(){
+				    			    	bootbox.confirm({ 
+				    		    		  size: "small",
+				    		    		  message: "¿Quiere eliminar su cuenta?", 
+				    		    		  callback: function(result){ 
+				    		    			if(result){
+				    		    				window.location.href = "eliminarCuenta.do";
+				    		    			}  
+				    		    		  }
+				    		    		})
+				    			    }
+			    				</script>
+		      				</div>
+		      				<br>
+		      				<small>
+		      					<strong>Nota:</strong> Dispondrá de 14 días para volver a activar su cuenta, iniciando sesión de nuevo.
+		      				</small>
+		      				<br>
+		      				<br>
+		      				<br>
+        				</div>
+        			</div>
+        			<div class="row">
+        			
+        			</div>
+        		</div>
+        		<div class="col-md-2"></div>
+        		<!-- 
         		<div class="col-md-1"></div>
 	        	<div class="col-md-5 cuadro">
-	        		<!-- <div class="row cuadro">-->
 	        			<br>
 		    			<h4 class="title" align="center">Modificar Mi Perfil</h4>
 		    			<br> 
@@ -188,7 +228,7 @@
 							        </div>
 							        <small id="msgUsername">{{messageUsername}}</small>	
 							        <h6 style="font-size:10px; color:#808080">El campo Username solo puede contener números y letras, y tiene que tener una longitud de entre 5 y 15 caracteres.</h6>			        
-							        <br>-->
+							        <br>
 							        
 							        <h6 style="color:#808080">Username: ${usuario.getUsername()}</h6>
 							        <input type="hidden" class="form-control" id="inputUsername" ng-model="username" name="inputUsername" value="${usuario.getUsername()}">
@@ -245,7 +285,6 @@
 							</div>
 							<div class="col-md-1"></div>
 						</div>
-	        		<!-- </div>-->
 	        	</div>
 	        	<div class="col-md-1"></div>
 	        	<div class="col-md-4 cuadro" style="height:320px;">
@@ -277,7 +316,7 @@
       				</small>
       				<br>
 	        	</div>
-	        	<div class="col-md-1"></div>
+	        	<div class="col-md-1"></div>-->
         	</div>
         </div>
         <!-- /.container-fluid -->
