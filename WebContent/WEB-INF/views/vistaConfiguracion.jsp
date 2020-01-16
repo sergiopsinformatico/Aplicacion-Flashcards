@@ -260,6 +260,7 @@
 									<br>
 									<label style="text-align:justify;">Si no deseas incluir una foto de perfil, se te asignará una foto de perfil por defecto.</label>
 								</div>
+								
 						        <small id="msgError">{{messageError}}</small>
 						        <div class="row">
 						        	<div class="col-md-3"></div>
