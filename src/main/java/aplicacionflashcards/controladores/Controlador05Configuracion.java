@@ -99,8 +99,12 @@ public class Controlador05Configuracion {
 			
 			Broker.getInstanciaEliminarCuenta().insertaEliminado(elimina);
 			
-			email = new Email();
-			email.eliminarCuenta(elimina, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getEmail());
+			try {
+				email = new Email();
+				email.eliminarCuenta(elimina, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getEmail());
+			}catch(Exception ex) {
+				
+			}
 			
 			vista = new ModelAndView("redirect:/inicio.html");
 			vista.addObject("mensaje","Su cuenta se eliminara de forma definitiva en 14 dias.");

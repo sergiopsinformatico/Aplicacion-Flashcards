@@ -17,6 +17,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOPuntos;
 import main.java.aplicacionflashcards.dto.PuntosDTO;
@@ -33,6 +34,7 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
     FindIterable<Document> resultadosBusqueda;
     MongoCursor<Document> iterador;
     PuntosDTO usuario;
+    CifradoCaesar caesar;
 	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.PuntosMongoDB");
@@ -44,10 +46,11 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 	//Conexion con la BD
     private void connection() {
     	try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+    		caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionPuntos = db.getCollection(PropertiesConfig.getProperties("colPuntos"));
+	        coleccionPuntos = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colPuntos")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}

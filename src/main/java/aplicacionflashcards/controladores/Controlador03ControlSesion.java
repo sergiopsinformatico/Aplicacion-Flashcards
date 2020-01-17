@@ -113,8 +113,14 @@ public class Controlador03ControlSesion {
 				if(Broker.getInstanciaEliminarCuenta().leerEliminado(eliminado)) {
 					Broker.getInstanciaEliminarCuenta().eliminarEliminado(eliminado);
 					vista.addObject("mensaje", "Su cuenta ha sido reactivada");
-					email = new Email();
-					email.reactivacionCuenta(user);
+					
+					try {
+						email = new Email();
+						email.reactivacionCuenta(user);
+					}catch(Exception ex) {
+						
+					}
+					
 				}
 				vista.addObject("usuario", user);
 			}else {
@@ -206,8 +212,13 @@ public class Controlador03ControlSesion {
 				if(Broker.getInstanciaEliminarCuenta().leerEliminado(eliminado)) {
 					Broker.getInstanciaEliminarCuenta().eliminarEliminado(eliminado);
 					vista.addObject(CONST_MENSAJE, "Su cuenta ha sido reactivada");
-					email = new Email();
-					email.reactivacionCuenta(user);
+					try{
+						email = new Email();
+						email.reactivacionCuenta(user);
+					}catch(Exception ex){
+					
+					}
+					
 				}
 				vista.addObject(CONST_USUARIO, user);
 			}else {

@@ -62,10 +62,11 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
     //Conexion con la BD
     private void connection() {
     	try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+    		caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionUsuarios = db.getCollection(PropertiesConfig.getProperties("colUsuarios"));
+	        coleccionUsuarios = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colUsuarios")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}
@@ -224,8 +225,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	//Login Usuario
 	public boolean login(String usernameEmail, String clave) {
 		
-		caesar = new CifradoCaesar();
-		
+		caesar = new CifradoCaesar();		
 		criteriosBusqueda = new BsonDocument().
 				            append(CONST_USERNAME, new BsonString(caesar.encryptText(usernameEmail))).
 				            append(CONST_CLAVE, new BsonString(caesar.encryptText(clave)));

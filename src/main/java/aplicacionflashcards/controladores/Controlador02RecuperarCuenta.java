@@ -67,11 +67,16 @@ public class Controlador02RecuperarCuenta {
 			vista.addObject("mensaje", "No existe ninguna cuenta cuyo username o email sea "+request.getParameter("inputUsernameEmail"));
 			return vista;
 		}else {
-			email = new Email();
-			fecha = new Fecha();
-			keySecure = GeneratorStrings.randomString(10);
-			Broker.getInstanciaRecuperarCuenta().insertaRC(new RecuperarCuentaDTO(user.getUsername(), keySecure, fecha.fechaRecuperarCuenta()));
-			email.recuperarClave(user,keySecure);
+			try {
+				email = new Email();
+				fecha = new Fecha();
+				keySecure = GeneratorStrings.randomString(10);
+				Broker.getInstanciaRecuperarCuenta().insertaRC(new RecuperarCuentaDTO(user.getUsername(), keySecure, fecha.fechaRecuperarCuenta()));
+				email.recuperarClave(user,keySecure);
+			}catch(Exception ex) {
+				
+			}
+			
 			vista.addObject("mensaje", "Se ha enviado un email a " + user.getEmail() +" con la clave");
 			return vista;
 		}

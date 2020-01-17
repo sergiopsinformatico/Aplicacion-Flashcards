@@ -16,6 +16,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.dto.ClubDTO;
@@ -35,6 +36,8 @@ public class ClubMongoDB implements InterfaceDAOClub{
     List<ClubDTO> clubes;
     int indice;
     boolean encontrado;
+    CifradoCaesar caesar;
+    
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.ClubMongoDB");
     
@@ -52,10 +55,11 @@ public class ClubMongoDB implements InterfaceDAOClub{
 	//Conexion con la BD
     private void connection() {
     	try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+    		caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionClubes = db.getCollection(PropertiesConfig.getProperties("colClub"));
+	        coleccionClubes = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colClub")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}

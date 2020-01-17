@@ -148,8 +148,14 @@ public class Controlador01RegistroUsuarios {
 		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
 		   Broker.getInstanciaRelaciones().creaRelaciones(relacion) && Broker.getInstanciaPuntos().actualizaPuntos(new PuntosDTO(request.getParameter("username"), 0))) {
 			
-			correo = new Email();
-			correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
+			try {
+				
+				correo = new Email();
+				correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
+				
+			}catch(Exception ex) {
+				
+			}
 			
 			vista = new ModelAndView("vistaIniciarSesion");
 			vista.addObject("mensaje", "Para finalizar el registro, revise su email "+user.getEmail()+" y siga los pasos para activar la cuenta.");
@@ -187,8 +193,14 @@ public class Controlador01RegistroUsuarios {
 			Broker.getInstanciaActivaCuenta().eliminaAC(new ActivaCuentaDTO(username, codigo));
 			vista = new ModelAndView("vistaActivarCuenta");
 			vista.addObject("activa", user2);
-			correo = new Email();
-			correo.confirmaCuentaCreada(user2);
+			
+			try {
+				correo = new Email();
+				correo.confirmaCuentaCreada(user2);
+			}catch(Exception ex) {
+				
+			}
+			
 		}else if(Broker.getInstanciaActivaCuenta().existeActivacionUsuario(username)) {
 			vista = new ModelAndView("redirect:/inicio.html");
 			vista.addObject("mensaje", "Hay una activacion pendiente para "+username+", pero ese codigo no es el correcto.");

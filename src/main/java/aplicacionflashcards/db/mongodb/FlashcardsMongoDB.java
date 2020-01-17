@@ -18,6 +18,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
@@ -49,7 +50,7 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     int indice;
     InterfaceDAOClub dBClubes;
     List<ClubDTO> clubes;
-    
+    CifradoCaesar caesar;
 
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.FlashcardsMongoDB");
@@ -67,10 +68,11 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
 	//Conexion con la BD
     private void connection() {
     	try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+    		caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionFlashcards = db.getCollection(PropertiesConfig.getProperties("colFlashcards"));
+	        coleccionFlashcards = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colFlashcards")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}

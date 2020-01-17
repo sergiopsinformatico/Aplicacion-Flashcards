@@ -17,6 +17,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOActivaCuenta;
@@ -34,6 +35,8 @@ public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
     FindIterable<Document> resultadosBusqueda;
     LinkedList<ActivaCuentaDTO> lista;
     MongoCursor<Document> iterador;
+    CifradoCaesar caesar;
+    
     //Constante
     static final String CONST_USERNAME ="username";
     static final String CONST_CODIGO ="codigo";
@@ -49,10 +52,11 @@ public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
 	//Conexion con la BD
     private void connection() {
     	try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+    		caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionActivaCuenta = db.getCollection(PropertiesConfig.getProperties("colActivarCuenta"));
+	        coleccionActivaCuenta = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colActivarCuenta")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}

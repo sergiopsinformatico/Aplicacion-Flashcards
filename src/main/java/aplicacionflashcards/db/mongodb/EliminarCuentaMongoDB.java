@@ -17,6 +17,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
@@ -39,6 +40,7 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
     Fecha date;
     String compara;
     UsuarioDTO user;
+    CifradoCaesar caesar;
     
     //Constante
     static final String CONST_USERNAME = "username";
@@ -54,10 +56,11 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
 	//Conexion con la BD
     private void connection() {
     	try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+    		caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionEliminados = db.getCollection(PropertiesConfig.getProperties("colEliminarCuenta"));
+	        coleccionEliminados = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colEliminarCuenta")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}

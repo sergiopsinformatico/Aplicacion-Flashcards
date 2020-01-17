@@ -16,6 +16,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import main.java.aplicacionflashcards.auxiliares.CifradoCaesar;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
@@ -41,6 +42,7 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
 	List<String> pdaEnv;
 	List<String> pdaRec;
 	String tipoRelacion;
+	CifradoCaesar caesar;
 	
     //Logger
   	private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.RelacionesUsuariosMongoDB");
@@ -59,10 +61,11 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
 	
 	private void connection() {
 		try {
-			uri  = new MongoClientURI(PropertiesConfig.getProperties("conexionMongoDB")); 
+			caesar = new CifradoCaesar();
+			uri  = new MongoClientURI(caesar.decryptText(PropertiesConfig.getProperties("conexionMongoDB"))); 
 	        client = new MongoClient(uri);
 	        db = client.getDatabase(uri.getDatabase());
-	        coleccionRelaciones = db.getCollection(PropertiesConfig.getProperties("colRelaciones"));
+	        coleccionRelaciones = db.getCollection(caesar.decryptText(PropertiesConfig.getProperties("colRelacionesUsuarios")));
 		}catch(Exception ex) {
 			LOGGER.log(Level.INFO, ex.getMessage());
 		}
