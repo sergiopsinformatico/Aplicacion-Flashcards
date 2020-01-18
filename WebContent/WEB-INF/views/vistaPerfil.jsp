@@ -12,7 +12,6 @@
   <title>Flashcards - Perfil de ${perfil.getUsername()}</title>
 
   <!-- Custom fonts for this template-->
-  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -22,9 +21,9 @@
   
   <!-- Bootstrap core CSS -->
   <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
+    
   <!-- Font-Awesome -->
-  <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   
   <!-- Angular JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>

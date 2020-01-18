@@ -13,7 +13,6 @@
   <title>Flashcards - Página Principal</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -24,7 +23,7 @@
   <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Font-Awesome -->
-  <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   
   <!-- Angular JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -73,18 +72,18 @@
       </li>
       
       <hr class="sidebar-divider">
-      <!-- <div class="sidebar-heading">
+      <div class="sidebar-heading">
         Flashcards
       </div>
       <li class="nav-item">
         <a class="nav-link" href="flashcards.html">
           <i class="fa fa-id-card-o" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
-      </li>-->
+      </li>
       
-      <!-- <hr class="sidebar-divider">-->
+      <hr class="sidebar-divider">
       
-      <!-- Heading
+      <!-- Heading-->
       <div class="sidebar-heading">
         Usuarios
       </div>
@@ -99,9 +98,10 @@
           <i class="fa fa-users" aria-hidden="true"></i>
           <span>Clubes</span>
         </a>
-      </li>-->
+      </li>
 
     </ul>
+    
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -139,7 +139,6 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" data-toggle="modal" onclick="dialogCS()">
                   <i class="fa fa-power-off" aria-hidden="true"></i>
-                  <!-- <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>-->
                   Cerrar Sesión
                 </a>
               </div>
@@ -166,9 +165,8 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <!-- <div class="container-fluid">
-        	
-        	<div class="row" id="divPanelAdministrador" style="display: none;">
+        <div class="container-fluid">
+		    <div class="row" id="divPanelAdministrador" style="display: none;">
         		<div class="col-md-12">
 		        	<div class="row">
 		        		<div class="col-md-1"></div>
@@ -199,7 +197,7 @@
 		        		<div class="col-md-10 middle">
 		        			<form action="flashcards.html" class="btnPaginaPrincipal" method="get">
 			        			<button type="submit" class="btn btn-warning btnPaginaPrincipal" style="color:white">
-			        				<i class="fa fa-id-card-o fa-5x" aria-hidden="true"></i>
+			        				<i class="fa fa-clone fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Flashcards
 			       				</button>
@@ -258,7 +256,7 @@
         			document.getElementById("adminSidebar").style.display="block";
         		}
         	</script>        	
-        </div>-->
+        </div>
         <!-- /.container-fluid -->
 
       </div>
