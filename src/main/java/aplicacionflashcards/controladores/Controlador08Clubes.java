@@ -49,7 +49,7 @@ public class Controlador08Clubes {
 	public ModelAndView getClubes(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			vista = new ModelAndView("vistaClubes");
 		
@@ -88,7 +88,7 @@ public class Controlador08Clubes {
 	public ModelAndView crearClubes(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			dBClub = Broker.getInstanciaClub();
 			fecha = new Fecha();

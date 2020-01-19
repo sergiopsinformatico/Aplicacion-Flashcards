@@ -266,7 +266,7 @@
 				}
 				
 				$scope.tieneNombre = function(){
-					return ("${usuario.getUsername()}" != null) && (("${usuario.getUsername()}").localeCompare("") != 0);
+					return ("${usuario.getNombreApellidos()}" != null) && (("${usuario.getNombreApellidos()}").localeCompare("") != 0);
 				}
 				
 				$scope.tieneCiudad = function(){

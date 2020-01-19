@@ -116,7 +116,7 @@ public class Controlador03ControlSesion {
 					
 					try {
 						email = new Email();
-						email.reactivacionCuenta(user);
+						//email.reactivacionCuenta(user);
 					}catch(Exception ex) {
 						
 					}

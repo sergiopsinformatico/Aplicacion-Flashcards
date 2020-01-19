@@ -72,7 +72,7 @@ public class Controlador02RecuperarCuenta {
 				fecha = new Fecha();
 				keySecure = GeneratorStrings.randomString(10);
 				Broker.getInstanciaRecuperarCuenta().insertaRC(new RecuperarCuentaDTO(user.getUsername(), keySecure, fecha.fechaRecuperarCuenta()));
-				email.recuperarClave(user,keySecure);
+				//email.recuperarClave(user,keySecure);
 			}catch(Exception ex) {
 				
 			}

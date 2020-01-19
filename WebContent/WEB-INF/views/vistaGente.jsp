@@ -12,7 +12,7 @@
   <title>Flashcards - Gente</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -72,7 +72,7 @@
           <i class="fa fa-universal-access" aria-hidden="true"></i>
           <span>Panel Administrador</span></a>
       </li>
-      
+      <!-- 
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Flashcards
@@ -82,7 +82,7 @@
           <i class="fa fa-id-card-o" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
       </li>
-      
+      -->
       <hr class="sidebar-divider">
       
       <!-- Heading -->
@@ -91,13 +91,13 @@
       </div>
       <li class="nav-item active">
         <a class="nav-link" href="verGente.html">
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <i class="fa fa-users" aria-hidden="true"></i>
           <span>Gente</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="verClubes.html">
-          <i class="fa fa-users" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
           <span>Clubes</span>
         </a>
       </li>
@@ -494,11 +494,11 @@
 									                </div>
 									            </div>
 										        <a class="carousel-control-prev" href="#carouselUsuarios" role="button" data-slide="prev">
-											      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+											      <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:black;"></i>
 											      <span class="sr-only">Anterior</span>
 											    </a>
 											    <a class="carousel-control-next" href="#carouselUsuarios" role="button" data-slide="next">
-											      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+											      <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color:black;"></i>
 											      <span class="sr-only">Siguiente</span>
 											    </a>
 										    </div>

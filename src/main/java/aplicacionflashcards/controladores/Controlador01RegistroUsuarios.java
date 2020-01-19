@@ -1,5 +1,6 @@
 package main.java.aplicacionflashcards.controladores;
 
+import java.security.MessageDigest;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -146,13 +147,13 @@ public class Controlador01RegistroUsuarios {
 		
 		if(Broker.getInstanciaUsuario().insertUsuario(user) &&
 		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
-		   Broker.getInstanciaRelaciones().creaRelaciones(relacion) && Broker.getInstanciaPuntos().actualizaPuntos(new PuntosDTO(request.getParameter("username"), 0))) {
+		   Broker.getInstanciaRelaciones().creaRelaciones(relacion) && Broker.getInstanciaPuntos().actualizaPuntos(new PuntosDTO(user.getUsername(), 0))) {
 			
 			try {
-				
+				/*
 				correo = new Email();
 				correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
-				
+				*/
 			}catch(Exception ex) {
 				
 			}
@@ -195,8 +196,10 @@ public class Controlador01RegistroUsuarios {
 			vista.addObject("activa", user2);
 			
 			try {
+				/*
 				correo = new Email();
 				correo.confirmaCuentaCreada(user2);
+				*/
 			}catch(Exception ex) {
 				
 			}
@@ -226,9 +229,9 @@ public class Controlador01RegistroUsuarios {
 		//Eleccion foto perfil
 		if(request.getParameter("inputEmailAvatar")!=null && (!request.getParameter("inputEmailAvatar").equals(""))) {
 			user2.setEmailFoto(request.getParameter("inputEmailAvatar"));
-			user2.setFoto("https://www.gravatar.com/avatar/"+DigestUtils.md5Hex(request.getParameter("inputEmailAvatar"))+".jpg");
+			user2.setFoto("https://www.gravatar.com/avatar/"+getMD5Photo(user2.getEmailFoto())+".jpg");
 		}else {
-			user2.setEmailFoto(request.getParameter(""));
+			user2.setEmailFoto("");
 			user2.setFoto("https://www.gravatar.com/avatar/hashNoDisponible.jpg");
 		}
 		
@@ -251,6 +254,21 @@ public class Controlador01RegistroUsuarios {
 	public ModelAndView activarGet(HttpServletRequest request, HttpServletResponse response){
 		vista = new ModelAndView("redirect:/iniciarSesion.html");
 		return vista;
+	}
+	
+	private String getMD5Photo(String photoFile){
+		try {
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			md.update(photoFile.getBytes());
+			byte[] bytes = md.digest();
+			StringBuilder sb = new StringBuilder();
+			for(int i=0; i< bytes.length ;i++){
+	            sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+	        }
+			return sb.toString();
+		}catch(Exception ex) {
+			return "inventado";
+		}
 	}
 	
 }

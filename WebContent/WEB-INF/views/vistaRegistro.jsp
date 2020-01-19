@@ -99,6 +99,10 @@
 					            <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Introduzca el nombre de usuario</span>
 					            <input type="text" class="form-control" id="inputUsername" ng-model="username" ng-change="validateUsername($event, username)" name="inputUsername" placeholder="Username" required />
 		                        <small id="msgUsername" class="mensajesReg">{{messageUsername}}</small>
+		                        <br>
+		                        <small>El nombre de usuario debe cumplir los siguientes requisitos:</small>
+		                        <br><small>- Debe tener una longitud entre 5 y 15 caracteres</small>
+		                        <br><small>- Sólo puede contener mayúsculas, minúsculas y números</small>
 		                        <br><br>
 		                        <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Introduzca el email</span>
 		                        <input type="email" class="form-control" id="inputEmail" ng-model="email" ng-change="validateEmail($event, email)" name="inputEmail" placeholder="Email" required />
@@ -107,6 +111,10 @@
 		                        <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Introduzca la clave</span>
 		                        <input type="password" class="form-control" id="inputClave" ng-model="clave" ng-change="validateClave($event, clave, repClave)" name="inputClave" placeholder="Clave" required />
 		                        <small id="msgClave" class="mensajesReg">{{messageClave}}</small>
+		                        <br>
+		                        <small>La clave debe cumplir los siguientes requisitos:</small>
+		                        <br><small>- Debe tener una longitud entre 5 y 20 caracteres</small>
+		                        <br><small>- Sólo puede contener mayúsculas, minúsculas y números</small>
 		                        <br><br>
 		                        <span><sup><i class="fas fa-asterisk" style="color:orange;font-size:10px;margin-right:5px;"></i></sup>Vuelva a introducir la clave</span>
 		                        <input type="password" class="form-control"  id="inputRepiteClave" ng-model="repClave" ng-change="validateRepClave($event, clave, repClave)" name="inputRepiteClave" placeholder="Repetir Clave" required />

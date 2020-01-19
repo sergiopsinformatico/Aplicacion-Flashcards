@@ -100,8 +100,10 @@ public class Controlador05Configuracion {
 			Broker.getInstanciaEliminarCuenta().insertaEliminado(elimina);
 			
 			try {
+				/*
 				email = new Email();
 				email.eliminarCuenta(elimina, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getEmail());
+				*/
 			}catch(Exception ex) {
 				
 			}

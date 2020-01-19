@@ -12,7 +12,7 @@
   <title>Flashcards - Club ${club.getNombreClub()}</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -73,7 +73,7 @@
           <span>Panel Administrador</span></a>
       </li>
       
-      <hr class="sidebar-divider">
+      <!-- <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Flashcards
       </div>
@@ -82,7 +82,7 @@
           <i class="fa fa-id-card-o" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
       </li>
-      
+      -->
       <hr class="sidebar-divider">
       
       <!-- Heading -->
@@ -91,13 +91,13 @@
       </div>
       <li class="nav-item">
         <a class="nav-link" href="verGente.html">
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <i class="fa fa-users" aria-hidden="true"></i>
           <span>Gente</span>
         </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="verClubes.html">
-          <i class="fa fa-users" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
           <span>Clubes</span>
         </a>
       </li>
@@ -295,7 +295,7 @@
         		<div class="col-md-5">
         			<div class="cuadroInfo" align="center" style="width:100%">
         				<br>
-        				<i class="fa fa-star fa-5x" aria-hidden="true"></i>
+        				<i class="fa fa-star fa-5x" style="color:#F2F232;" aria-hidden="true"></i>
         				<br><br><strong>Nombre del Club:</strong> ${club.getNombreClub()}
 	        			<br><strong>Tema del Club:</strong> ${club.getTemaClub()}
 	        			<br><strong>Fecha de Creacion:</strong> ${club.getFechaCreacion()}
@@ -338,7 +338,7 @@
         	
         	<div class="row">
         		<div class="col-md-1"></div>
-        		<div class="col-md-5" align="center">
+        		<div class="col-md-10" align="center">
         			<br>
         			<h6>Miembros del Club</h6>
         			<br>
@@ -361,11 +361,11 @@
 					      	</div>
 			            </div>
 				        <a class="carousel-control-prev" href="#carouselMiembrosClub" role="button" data-slide="prev">
-					      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+					      <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:black;"></i>
 					      <span class="sr-only">Anterior</span>
 					    </a>
 					    <a class="carousel-control-next" href="#carouselMiembrosClub" role="button" data-slide="next">
-					      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+					      <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color:black;"></i>
 					      <span class="sr-only">Siguiente</span>
 					    </a>
 				    </div>
@@ -375,7 +375,7 @@
 				        </p>
 				    </div>
 				</div>
-				<div class="col-md-5" align="center">
+				<!--<div class="col-md-5" align="center">
 					<br>
 					<h6 align="center">Lista de Colecciones</h6>
 					<br>
@@ -431,7 +431,7 @@
 				        	No puede ver los miembros del club, ya que no forma parte del mismo
 				        </p>
 				    </div>
-        		</div>
+        		</div>-->
         		<div class="col-md-1"></div>
        		</div>        	        	
         	<script>
