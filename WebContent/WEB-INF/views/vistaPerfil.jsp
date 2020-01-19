@@ -293,10 +293,11 @@
 							<div class="profile-usertitle">
 								<img src="${perfil.getFoto()}" alt="Foto" class="fotoPerfil">
 								<div class="profile-usertitle-name">
-									${perfil.getUsername()}
+									<span>${perfil.getUsername()}</span>
 								</div>
 								<div class="profile-usertitle-job">
-									${perfil.getRol()}
+									<i class="fa fa-user-tag" aria-hidden="true"></i>
+									<span>${perfil.getRol()}</span>
 								</div>
 							</div>
 							<div ng-if="showPanelRelaciones()" class="profile-userbuttons">
@@ -313,22 +314,27 @@
 			            		<span style="font-weight:bold;color:#CDBC46">Datos del Usuario</span>
 			            		<br><br>
 			            		<div>
+			            			<i class="fa fa-user-circle" aria-hidden="true" style="color:#00FFD7"></i>
 			            			<span style="font-weight:bold;">Nombre de Usuario:</span>
 			            			<span> ${perfil.getUsername()}</span>
 			            		</div>
 			            		<div>
+			            			<i class="fa fa-envelope" aria-hidden="true" style="color:#00FFD7"></i>
 			            			<span style="font-weight:bold;">Email:</span>
 			            			<span>${perfil.getEmail()}</span>
 			            		</div>
 			            		<div ng-if="tieneNombre()">
+			            			<i class="fa fa-user-alt" aria-hidden="true" style="color:#00FFD7"></i>
 			            			<span style="font-weight:bold;">Nombre y Apellidos:</span>
 			            			<span>${perfil.getNombreApellidos()}</span>
 			            		</div>
 			            		<div ng-if="tieneCiudad()">
+			            			<i class="fa fa-city" aria-hidden="true" style="color:#00FFD7"></i>
 			            			<span style="font-weight:bold;">Ciudad:</span>
 			            			<span>${perfil.getCiudad()}</span>
 			            		</div>
 			            		<div ng-if="tienePais()">
+			            			<i class="fa fa-globe" aria-hidden="true" style="color:#00FFD7"></i>
 			            			<span style="font-weight:bold;">Pais:</span>
 			            			<span>${perfil.getPais()}</span>
 			            		</div>
