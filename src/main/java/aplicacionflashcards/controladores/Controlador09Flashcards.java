@@ -57,7 +57,7 @@ public class Controlador09Flashcards {
 	public ModelAndView flashcards(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			vista = new ModelAndView("vistaFlashcards");
 		
@@ -71,7 +71,7 @@ public class Controlador09Flashcards {
 	public ModelAndView crearColeccion(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			vista = new ModelAndView("vistaFlashcardsCrear");
 			tarjetas = new LinkedList<>();
@@ -173,7 +173,7 @@ public class Controlador09Flashcards {
 	public ModelAndView verColecciones(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			vista = new ModelAndView("vistaFlashcardsColecciones");
 		
