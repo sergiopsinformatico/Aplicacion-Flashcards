@@ -39,7 +39,7 @@ public class Controlador10Moderador {
 	public ModelAndView evaluarColecciones(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("") &&
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
 		   ((((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) ||
 			(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Moderador")))) {
 			
@@ -68,7 +68,7 @@ public class Controlador10Moderador {
 	public ModelAndView evaluarColeccion(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			vista = new ModelAndView("vistaFlashcardsAnalizarColeccion");
 			flashcard = Broker.getInstanciaFlashcards().leerFlashcard(id);
@@ -115,7 +115,7 @@ public class Controlador10Moderador {
 	public ModelAndView gestionarFlashcards(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("") &&
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
 		   ((((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) ||
 			(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Moderador")))) {
 			
