@@ -60,7 +60,13 @@
         <a class="nav-link" href="inicio.html">
           <i class="fa fa-home" aria-hidden="true"></i>
           <span>Pagina Principal</span></a>
-      </li>      
+      </li> 
+      
+      <li class="nav-item">
+        <a class="nav-link" href="desarrolloProyecto.html">
+          <i class="fa fa-sitemap" aria-hidden="true"></i>
+          <span>Wiki del Proyecto</span></a>
+      </li>     
       
       <!-- Nav Item - Dashboard--> 
       <hr class="sidebar-divider" id="adminSidebarDivider" style="display: none;">
@@ -79,25 +85,25 @@
       </div>
       <li class="nav-item">
         <a class="nav-link" href="flashcards.html">
-          <i class="fa fa-id-card-o" aria-hidden="true"></i>
+          <i class="fa fa-clone" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
       </li>
       
       <hr class="sidebar-divider">
       
-      <!-- Heading -->
+     <!-- Heading -->
       <div class="sidebar-heading">
         Usuarios
       </div>
       <li class="nav-item">
         <a class="nav-link" href="verGente.html">
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <i class="fa fa-users" aria-hidden="true"></i>
           <span>Gente</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="verClubes.html">
-          <i class="fa fa-users" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
           <span>Clubes</span>
         </a>
       </li>

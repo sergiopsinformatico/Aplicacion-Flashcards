@@ -61,7 +61,13 @@
         <a class="nav-link" href="inicio.html">
           <i class="fa fa-home" aria-hidden="true"></i>
           <span>Pagina Principal</span></a>
-      </li>      
+      </li> 
+      
+      <li class="nav-item">
+        <a class="nav-link" href="desarrolloProyecto.html">
+          <i class="fa fa-sitemap" aria-hidden="true"></i>
+          <span>Wiki del Proyecto</span></a>
+      </li>     
       
       <hr class="sidebar-divider" id="adminSidebarDivider" style="display: none;">
       <div class="sidebar-heading" id="adminSidebarTitle" style="display: none;">
@@ -72,17 +78,16 @@
           <i class="fa fa-universal-access" aria-hidden="true"></i>
           <span>Panel Administrador</span></a>
       </li>
-      <!-- 
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Flashcards
       </div>
       <li class="nav-item">
         <a class="nav-link" href="flashcards.html">
-          <i class="fa fa-id-card-o" aria-hidden="true"></i>
+          <i class="fa fa-clone" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
       </li>
-      -->
+      
       <hr class="sidebar-divider">
       
       <!-- Heading -->
