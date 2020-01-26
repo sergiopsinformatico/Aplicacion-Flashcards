@@ -172,6 +172,54 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-md-12">
+        			<div class="row">
+        				<div class="col-md-3"></div>
+        				<div class="col-md-6">
+        					<div style="height:50px;background-color:blue;">
+			        			<span style="color:white;text-align:center;" align="center">Notificaciones</span>
+			        		</div>
+			        		<div style="height:100px;overflow-y: auto;">
+			        			<table>
+			        				<tr>
+			        					<td>Not1</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not2</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not3</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not4</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not5</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not6</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not7</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not8</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not9</td>
+			        				</tr>
+			        				<tr>
+			        					<td>Not10</td>
+			        				</tr>
+			        			</table>
+			        		</div>
+        				</div>
+        				<div class="col-md-3"></div>
+        			</div>
+        		</div>
+        	</div>
+        	<br><br><br>
 		    <div class="row" id="divPanelAdministrador" style="display: none;">
         		<div class="col-md-12">
 		        	<div class="row">
