@@ -66,6 +66,7 @@
       <!-- Divider-->
       <hr class="sidebar-divider my-0">
 
+
       <li class="nav-item">
         <a class="nav-link" href="desarrolloProyecto.html">
           <i class="fa fa-sitemap" aria-hidden="true"></i>
@@ -77,44 +78,41 @@
         SPRINTS
       </div>
       <li class="nav-item" id="sprint0">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s0.html">
           <i class="fa fa-history" aria-hidden="true"></i>
-          <span>Sprint 0</span></a>
+          <span>Planificación (Sprint 0)</span></a>
       </li>
+      
+      
       <li class="nav-item" id="sprint1">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s1.html">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 1</span></a>
       </li>
       <li class="nav-item" id="sprint2">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s2.html">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 2</span></a>
       </li>
       <li class="nav-item active" id="sprint3">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s3.html">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 3</span></a>
       </li>
       <li class="nav-item" id="sprint4">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s4.html">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 4</span></a>
       </li>
       <li class="nav-item" id="sprint5">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s5.html">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 5</span></a>
       </li>
       <li class="nav-item" id="sprint6">
-        <a class="nav-link">
+        <a class="nav-link" href="desarrolloProyecto-s6.html">
           <i class="fa fa-history" aria-hidden="true"></i>
           <span>Sprint 6</span></a>
-      </li>
-      <li class="nav-item" id="sprint7">
-        <a class="nav-link">
-          <i class="fa fa-history" aria-hidden="true"></i>
-          <span>Sprint 7</span></a>
       </li>
     </ul>
     <!-- End of Sidebar -->
