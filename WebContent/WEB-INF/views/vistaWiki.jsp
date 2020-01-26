@@ -131,15 +131,18 @@
 		        </div>
 		        
 		        <div class="row">
-		        	<div style="font-weight:bold;">Metodología de Desarrollo: </div>BDD
+		        	<span style="font-weight:bold;">Metodología de Desarrollo: </span>
+		        	<span> BDD</span>
 		        </div>
 		        
 		        <div class="row">
-		        	<div style="font-weight:bold;">Metodología de Gestión: </div>SCRUM
+		        	<span style="font-weight:bold;">Metodología de Gestión: </span>
+		        	<span> SCRUM</span>
 		        </div>
 		        
 		        <div class="row">
-		        	<div style="font-weight:bold;">Metodo de Estimación: </div>Analogía (proyectos realizados durante la carrera)
+		        	<span style="font-weight:bold;">Metodo de Estimación: </span>
+		        	<span> Tamaño de Camisetas (Estimación por Analogía, a partir de los proyectos realizados durante la carrera)</span>
 		        </div>
 		        
 		        <div class="row">
