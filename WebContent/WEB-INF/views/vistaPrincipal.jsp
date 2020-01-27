@@ -175,51 +175,45 @@
         	<div class="row">
         		<div class="col-md-12">
         			<div class="row">
-        				<div class="col-md-3"></div>
-        				<div class="col-md-6">
-        					<div style="height:50px;background-color:blue;">
-			        			<span style="color:white;text-align:center;" align="center">Notificaciones</span>
+        				<div class="col-md-1"></div>
+        				<div class="col-md-5">
+        					<form action="panelMensajes.html" class="btnPaginaPrincipal" method="get">
+			        			<button type="submit" class="btn btn-secondary btnPaginaPrincipal" style="color:white">
+			        				<i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+			        				<br><br>
+			       					Panel Mensajes
+			       				</button>
+			       			</form>
+        				</div>
+        				<div class="col-md-5">
+        					<div style="height:50px;line-height:50px;background-color:#65E9FF;text-align:center;">
+			        			<span style="color:white;font-weight:bold;" align="center">Notificaciones</span>
 			        		</div>
-			        		<div style="height:100px;overflow-y: auto;">
+			        		<div style="height:100px;overflow-y: auto;border: 1px solid #65E9FF;">
 			        			<table>
 			        				<tr>
-			        					<td>Not1</td>
+			        					<td>
+			        						<span>
+			        							<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>
+			        						</span>
+			        						<span style="margin-left:5px;">Tiene mensajes nuevos</span>
+			        					</td>
 			        				</tr>
 			        				<tr>
-			        					<td>Not2</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not3</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not4</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not5</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not6</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not7</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not8</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not9</td>
-			        				</tr>
-			        				<tr>
-			        					<td>Not10</td>
+			        					<td>
+			        						<span>
+			        							<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>
+			        						</span>
+			        						<span style="margin-left:5px;">Tiene nuevas peticiones de amistad</span>
+			        					</td>
 			        				</tr>
 			        			</table>
 			        		</div>
         				</div>
-        				<div class="col-md-3"></div>
+        				<div class="col-md-1"></div>
         			</div>
         		</div>
         	</div>
-        	<br><br><br>
 		    <div class="row" id="divPanelAdministrador" style="display: none;">
         		<div class="col-md-12">
 		        	<div class="row">
