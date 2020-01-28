@@ -8,16 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 import main.java.aplicacionflashcards.dto.TarjetaDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
+
+@Controller
+@SessionAttributes("usuario")
 
 public class Controlador10Moderador {
 	

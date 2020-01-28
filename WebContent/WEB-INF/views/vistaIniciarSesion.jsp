@@ -101,7 +101,7 @@
 			            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
 			            </form>
 			            <br>
-			            <form action="registro.html" method="get" class="form-signin">
+			            <form action="recuperaCuenta.html" method="get" class="form-signin">
 			            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
 			            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
 			            </form>

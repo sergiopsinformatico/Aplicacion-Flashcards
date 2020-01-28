@@ -241,7 +241,7 @@ public class Controlador09Flashcards {
 	public ModelAndView verColeccion(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			vista = new ModelAndView("vistaFlashcardsVisualizar");
 			flashcard = Broker.getInstanciaFlashcards().leerFlashcard(id);

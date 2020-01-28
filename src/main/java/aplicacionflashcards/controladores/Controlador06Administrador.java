@@ -38,35 +38,35 @@ public class Controlador06Administrador {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_ADMIN = "Administrador";
-	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";
+	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";*/
 	
 	
 	@GetMapping(value = "/panelAdministrador")
 	public ModelAndView getPanelAdministrador(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
 			vista = new ModelAndView("vistaPanelAdministrador");
 		
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
 	}
 	
 	@GetMapping(value = "/gestionUsuariosAdmin")
 	public ModelAndView getGestionUsuariosAdmin(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
-			vista = new ModelAndView(CONST_GEST_USUARIO);
+			vista = new ModelAndView("vistaGestionUsuarios");
 		
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
 	}
@@ -76,10 +76,10 @@ public class Controlador06Administrador {
 	@ResponseStatus(HttpStatus.OK)
 	public List<UsuarioDTO> getUsuariosAdmin(@RequestParam("username") String username, HttpServletRequest request){
 		
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+				   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			listaUsuarios = dBUsuario.getAllUsuarios(username);
@@ -96,14 +96,14 @@ public class Controlador06Administrador {
 	public ModelAndView administradorCambiaRol(@RequestParam("username") String username, @RequestParam("rol") String rol,
 			HttpServletRequest request){
 		
-		vista = new ModelAndView(CONST_REDIRECT_INICIO);
+		vista = new ModelAndView("redirect:/inicio.html");
 		
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+				   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
-			vista = new ModelAndView(CONST_GEST_USUARIO);
+			vista = new ModelAndView("vistaGestionUsuarios");
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			userAntiguo = dBUsuario.getUsuarioDTO(username);
@@ -121,14 +121,14 @@ public class Controlador06Administrador {
 	@GetMapping(value = "/administradorEliminaUsuario")
 	public ModelAndView administradorEliminaUsuario(@RequestParam("username") String username, HttpServletRequest request){
 		
-		vista = new ModelAndView(CONST_REDIRECT_INICIO);
+		vista = new ModelAndView("redirect:/inicio.html");
 		
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+				   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
-			vista = new ModelAndView(CONST_GEST_USUARIO);
+			vista = new ModelAndView("vistaGestionUsuarios");
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			userAntiguo = dBUsuario.getUsuarioDTO(username);
@@ -145,15 +145,15 @@ public class Controlador06Administrador {
 	
 	@GetMapping(value = "/gestionClubesAdmin")
 	public ModelAndView gestionClubesAdmin(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
 			vista = new ModelAndView("vistaGestionClubes");
 		
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		return vista;
 	}
@@ -163,10 +163,10 @@ public class Controlador06Administrador {
 	@ResponseStatus(HttpStatus.OK)
 	public List<ClubDTO> getClubesAdmin(HttpServletRequest request){
 		
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+				   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
 			dBClubes = Broker.getInstanciaClub();
 			listaClubes = dBClubes.todosClubesCreados();
@@ -182,20 +182,20 @@ public class Controlador06Administrador {
 	@GetMapping(value = "/administradorEliminaClub")
 	public ModelAndView administradorEliminaClub(@RequestParam("idClub") String idClub, HttpServletRequest request){
 		
-		if(request.getSession().getAttribute(CONST_USUARIO)!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()!=null && 
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("") &&
-				   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getRol().equals(CONST_ADMIN)) {
+		if(request.getSession().getAttribute("usuario")!=null && 
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
+				   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) &&
+				   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador")) {
 			
 			dBClubes = Broker.getInstanciaClub();
 			dBClubes.eliminaClub(idClub);
 			vista = new ModelAndView("vistaGestionClubes");
 			
 		}else {
-			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista = new ModelAndView("redirect:/inicio.html");
 		}
 		
 		return vista;
 		
-	}*/
+	}
 }

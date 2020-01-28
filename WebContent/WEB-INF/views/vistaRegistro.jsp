@@ -143,7 +143,7 @@
 				            
 				            <br>
 				            
-				            <form action="registro.html" method="get" class="form-signin">
+				            <form action="recuperaCuenta.html" method="get" class="form-signin">
 				            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
 				            	<button class="btn btn-primary btn-block" style="background-color:#2BB18F;border:1px solid #2BB18F;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
 				            </form>

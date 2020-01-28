@@ -73,6 +73,12 @@
           <span>Wiki del Proyecto</span></a>
       </li>    
       
+      <li class="nav-item">
+        <a class="nav-link" href="manualProyecto.html">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <span>Manual del Proyecto</span></a>
+      </li> 
+      
       <hr class="sidebar-divider" id="adminSidebarDivider">
       <div class="sidebar-heading" id="adminSidebarTitle">
         SPRINTS
