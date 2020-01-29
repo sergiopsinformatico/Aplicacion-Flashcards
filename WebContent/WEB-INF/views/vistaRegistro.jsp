@@ -201,9 +201,7 @@
 	       	    	for(indice=0; indice<response.data.length; indice++){
 	       	    		listaUsernames.push(response.data[indice]);
 	       	    	}
-	       	    	
-	       	    	
-	       	    	
+	       	    		       	    	
 	       	    }, function myError(response) {
 	       	    	listaUsernames = [];
 	       	    });
@@ -219,8 +217,6 @@
 	       	    	for(indice=0; indice<response.data.length; indice++){
 	       	    		listaEmails.push(response.data[indice]);
 	       	    	}
-	       	    	
-	       	    	
 	       	    	
 	       	    }, function myError(response) {
 	       	    	listaEmails = [];

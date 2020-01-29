@@ -271,7 +271,54 @@
 					            	<input type="text" ng-model="filterUser.email" class="form-control" placeholder="Filtrar por email" />
 					            </div>
 					            <br>
-					            <table width="100%" border="1">  
+					            <div style="overflow-y:scroll;height:500px;">
+					   				<div ng-repeat = "eUsuario in listaUsuarios | filter:filterUser:strict" style="width:100%;border:1px solid black;">  
+					   					<div class="row">
+					   						<div class="col-md-12" style="text-align:left; margin-left:5px;font-size:12px;">
+					   							<br>
+					   							<div class="row">
+					   								<div class="col-md-4">
+					   									<span><strong>Username:</strong></span><span style="margin-left:5px;"><a href="verPerfil.html?usuarioPerfil={{ eUsuario.username }}">{{ eUsuario.username }}</a></span>
+												      	<br><span><strong>Email:</strong></span><span style="margin-left:5px;">{{ eUsuario.email }}</span>
+												      	<br><span><strong>Rol:</strong></span><span style="margin-left:5px;">{{ eUsuario.rol }}</span>
+					   								</div>
+					   								<div class="col-md-8">
+					   									<span>
+						   									<button type="submit" class="btn btn-primary" style="color:white">
+										        				<i class="fa fa-user" aria-hidden="true"></i>
+										        				<br>
+										       					Cambiar Rol
+										       				</button>
+						   								</span>
+						   								<span>
+						   									<button type="submit" class="btn btn-success" style="color:white">
+										        				<i class="fa fa-key" aria-hidden="true"></i>
+										        				<br>
+										       					Generar Clave
+										       				</button>
+						   								</span>
+						   								<span>
+						   									<button type="submit" class="btn btn-warning" style="color:white">
+										        				<i class="fa fa-pencil-alt" aria-hidden="true"></i>
+										        				<br>
+										       					Modificar Perfil
+										       				</button>
+						   								</span>
+						   								<span>
+						   									<button type="submit" class="btn btn-danger" style="color:white">
+										        				<i class="fa fa-trash" aria-hidden="true"></i>
+										        				<br>
+										       					Eliminar Usuario
+										       				</button>
+						   								</span>
+					   								</div>
+					   							</div>
+					   							<br>
+					   						</div>
+					   					</div>  
+								   </div>
+						   		</div>
+					            <!-- <table width="100%" border="1">  
 								   <tr>  
 								      <th align="center" style="text-align:center;">Usuarios</th>  
 								      <th align="center" style="width:150px; text-align:center;">Cambiar Rol</th>
@@ -301,7 +348,7 @@
 								   			</table>
 								   		</div>
 								   </tr>
-								</table> 
+								</table> -->
 							</div>
 		        		</div>
 		        		<div class="col-md-1"></div>

@@ -238,7 +238,33 @@
 					            	<input type="text" ng-model="filterClubes" class="form-control" placeholder="Filtrar por nombre de clubes" />
 					            </div>
 					            <br>
-					            <table width="100%" border="1">  
+					            <div style="overflow-y:scroll;height:500px;">
+					   				<div ng-repeat = "eClub in listaClubes | filter:filterClubes:strict" style="width:100%;border:1px solid black;">  
+					   					<div class="row">
+					   						<div class="col-md-12" style="text-align:left; margin-left:5px;font-size:12px;">
+					   							<br>
+					   							<div class="row">
+					   								<div class="col-md-4">
+					   									<span><strong>Nombre del Club:</strong></span><span style="margin-left:5px;"><a href="verClub.html?idClub={{ eClub.idClub }}">{{ eClub.nombreClub }}</a></span>
+												      	<br><span><strong>Id del Club:</strong></span><span style="margin-left:5px;">{{ eClub.idClub }}</span>
+												      	<br><span><strong>Administrador:</strong></span><span style="margin-left:5px;">{{ eClub.administrador }}</span>
+					   								</div>
+					   								<div class="col-md-8">
+						   								<span>
+						   									<button type="submit" class="btn btn-danger" style="color:white">
+										        				<i class="fa fa-trash" aria-hidden="true"></i>
+										        				<br>
+										       					Eliminar Club
+										       				</button>
+						   								</span>
+					   								</div>
+					   							</div>
+					   							<br>
+					   						</div>
+					   					</div>  
+								   </div>
+						   		</div>
+					            <!-- <table width="100%" border="1">  
 								   <tr>  
 								      <th align="center" style="text-align:center;">Club</th>  
 								      <th align="center" style="width:168px; text-align:center;">Eliminar Club</th>   
@@ -262,7 +288,7 @@
 								   			</table>
 								   		</div>
 								   </tr>
-								</table> 
+								</table>--> 
 							</div>
 		        		</div>
 		        		<div class="col-md-1"></div>
