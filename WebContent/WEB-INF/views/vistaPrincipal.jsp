@@ -214,6 +214,7 @@
         			</div>
         		</div>
         	</div>
+        	
         	<div class="row"></div>
 		    <div class="row" id="divPanelAdministrador" style="display: none;">
         		<div class="col-md-12">
