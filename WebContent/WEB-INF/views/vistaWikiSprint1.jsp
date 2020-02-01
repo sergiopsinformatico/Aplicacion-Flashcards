@@ -148,32 +148,115 @@
 	       						</span>
 	       					</div>
         					<br>
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Este Sprint dura del 16 al 29 de septiembre de 2019. Se procede a montar 
+        							la base tecnológica del proyecto, diseñar el logo de la aplicación, además de 
+        							formarse en las tecnologías que se van a usar para este proyecto, investigar sobre 
+        							varios tipos de encriptación de datos sensibles y cómo desarrollar una wiki. En la Wiki, 
+        							se detalla la evolución del desarrollo del proyecto en este Sprint.
+        						
+        						</span>
+        					</div>
         					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product Backlog 
+        							con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo preguntó 
+        							dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint Backlog
+        							 con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. 
+        							 El Product Owner dio su aprobación para abordarlas. Estas tareas que forman el Sprint Backlog 
+        							 (ordenadas por prioridad de mayor a menor) se organizaron en Historias de Usuario y son:
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s1-sprintBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Se procedió a montar el entorno y a poner en funcionamiento la aplicación que estará alojada en 
+        							el entorno de Heroku (como se muestra en la figura 4.3). Todos los pasos seguidos para montar la 
+        							base tecnológica, se explican detalladamente en el Anexo III: Base Tecnológica del Proyecto.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s1-appBT.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
+        					<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Se va a desarrollar una Wiki sobre el desarrollo del proyecto, que va a formar parte de la 
+        							aplicación. Se ha estudiado que para esta versión, sólo se encriptarán los datos personales de los
+        							usuarios con el Cifrado Cesar o Caesar [11], mediante la sustitución de caracteres por otros al desplazar
+        							 su posición. Se ha generado el logo de la aplicación con Hatchful (https://hatchful.shopify.com) como se
+        							 ve en la siguiente figura. Por último, el equipo se ha formado para el uso de las tecnologías en el 
+        							 desarrollo de la aplicación.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/logoFlashcards.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+        					<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se realizaba una reunión 
+        							(Daily Scrum) para analizar lo que se había realizado el día anterior, lo que se realiza ese día y si había 
+        							algún inconveniente o problema en el desarrollo del proyecto:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s1-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Finalizado el desarrollo del Sprint, se muestra al Producto Owner el 
+        							entorno donde se va a alojar la aplicación y el logo de la aplicación. 
+        							El Product Owner queda satisfecho con los avances obtenidos en este Sprint.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En la reunión de retrospectiva, se analizó que aunque ha habido desviaciones en el 
+        							Sprint, se ha trabajado correctamente manteniendo la planificación inicial. Como se 
+        							indica en el gráfico Burndown (figura 4.5), se puede comprobar que la estimación inicial, 
+        							coincide aproximadamente con la evolución real del desarrollo del Sprint (hay que tener en 
+        							cuenta, que durante los fines de semana se han ido completando tareas, a pesar que el gráfico 
+        							proporcionado por la herramienta Zenhub, no cuenta que en esos días se trabaje). Además, se ha 
+        							usado un tablero Scrum para llevar un seguimiento diario de esas tareas (véase la figura 4.6).
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s1-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
+       						<br><br>
+       							<img src="resources/imagenes/s1-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
+       						<br>
         				</div>
         				<div class="col-md-1"></div>
         			</div>
@@ -217,6 +300,9 @@
         			</div>
         		</div>
         		
+        	</div>
+        	<div class="row">
+        		<br><br>
         	</div>
         </div>
 

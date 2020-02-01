@@ -148,32 +148,140 @@
 	       						</span>
 	       					</div>
         					<br>
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Como se aplica en algunos proyectos que siguen Scrum como framework de gestión, 
+        							se realiza una Planificación o Sprint 0 donde se define el alcance inicial del
+        							proyecto, el estudio de viabilidad o la definición de objetivos. Según la guía oficial de Scrum,
+        							al finalizar un Sprint obtenemos un incremento del producto. En este caso, no se
+        							obtiene dicho incremento, pero de esta forma sabremos si el proyecto se puede o no llevar a
+        							cabo. Esta planificación tendrá lugar del 2 al 15 de septiembre de 2019. En la Wiki, se
+        							muestra la evolución del desarrollo del proyecto en este Sprint.
+        						
+        						</span>
+        					</div>
         					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
+									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
+									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
+									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
+									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
+									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s0-sprintBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
        						<br>
-        					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tuvieron lugar varias reuniones entre el Scrum Master y el Product Owner. La 
+        							finalidad de estas reuniones, es conocer los objetivos que se quieren conseguir 
+        							con el desarrollo del proyecto y saber el alcance que va a tener (de forma sintetizada, 
+        							ya que en posteriores Sprints se conocerá más sobre las funcionalidades que el sistema 
+        							debe tener).
+        						
+        						</span>
+        					</div>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En la primera entrevista con el Product Owner, se realizaron dos técnicas de elicitación. 
+        							Por un lado, se proporcionó un cuestionario para conocer el alcance del proyecto. Por otro 
+        							lado, se realizó la técnica conocida como Brainstorming (o Tormenta de Ideas), para tener una 
+        							visión de las funcionalidades que tendrá dicho proyecto. Toda esta información extraída a través 
+        							de la aplicación de estas técnicas de elicitación, se incluye en el Anexo I: Técnicas de Elicitación.
+        						
+        						</span>
+        					</div>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Posteriormente, se definió el alcance inicial del proyecto (a partir de la información obtenida de las 
+        							técnicas de elicitación) y se realizó un estudio de viabilidad (profundizando en las dimensiones económica, 
+        							temporal y técnica). Por otro lado, se  hizo una elección de objetivos que se pretenden alcanzar tras el 
+        							desarrollo del proyecto, una guía con reglas o pautas a seguir (cuando el proyecto pase a producción) para 
+        							cumplir con el Reglamento General de Protección de Datos (RGPD) y por último, un análisis de riesgos que pueden 
+        							producirse durante el desarrollo del proyecto, y cómo tratarlos. Todas estas actividades (excepto los objetivos 
+        							que están definidos en el Capítulo 2: Objetivos del Trabajo), se encuentran definidas en el Anexo II: Alcance y 
+        							Viabilidad del Proyecto.
+        						
+        						</span>
+        					</div>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se realizaba una reunión (Daily Scrum) 
+        							para analizar lo que se había realizado el día anterior, lo que se realiza ese día y si había algún inconveniente o 
+        							problema en el desarrollo del proyecto:
+        						
+        						</span>
+        					</div>
+       						<br><br>
+       							<img src="resources/imagenes/s0-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
-       						<br>
-        					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Finalizado el desarrollo del Sprint, se muestra al Producto 
+        							Owner los análisis y actividades realizados, descritos en el 
+        							anterior punto 4.1.2. El Product Owner acepta que le desarrollemos 
+        							la aplicación, durante los futuros Sprints.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para este desarrollo, se procede a usar la alternativa 3, la cual no 
+        							conlleva ningún coste económico y se usarán recursos gratuitos, a pesar 
+        							de que puedan presentarse ciertas restricciones o limitaciones.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Posteriormente, el equipo de desarrollo y el Scrum Master tuvieron la reunión 
+        							de retrospectiva. A pesar de haber desviaciones en el Sprint, se ha trabajado 
+        							correctamente manteniendo la planificación inicial, por lo que se mantiene este ritmo. 
+        							Así lo corrobora el gráfico Burndown (como se muestra en la figura 4.1) generado por la 
+        							herramienta Zenhub donde se puede comprobar que la estimación inicial, coincide aproximadamente 
+        							con la evolución real del desarrollo del Sprint (hay que tener en cuenta, que durante los fines 
+        							de semana se han ido completando tareas, a pesar que el gráfico proporcionado por la herramienta 
+        							Zenhub, no cuenta que en esos días se trabaje). Además, se ha usado un tablero Scrum para llevar 
+        							un seguimiento diario de esas tareas (véase la figura 4.2).
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s0-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
+       						<br><br>
+       							<img src="resources/imagenes/s0-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
+       						<br>
         				</div>
         				<div class="col-md-1"></div>
         			</div>
@@ -205,6 +313,9 @@
         			</div>
         		</div>
         		
+        	</div>
+        	<div class="row">
+        		<br><br>
         	</div>
         </div>
         
