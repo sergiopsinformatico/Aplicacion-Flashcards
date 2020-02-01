@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
 
-  <title>Flashcards - Wiki sobre el Desarrollo del Proyecto (Sprint 0)</title>
+  <title>Flashcards - Wiki sobre el Desarrollo del Proyecto (Planificación - Sprint 0)</title>
 
   <!-- Custom fonts for this template-->
   <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -73,6 +73,12 @@
           <span>Wiki del Proyecto</span></a>
       </li>    
       
+      <li class="nav-item">
+        <a class="nav-link" href="manualProyecto.html">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <span>Manual del Proyecto</span></a>
+      </li> 
+      
       <hr class="sidebar-divider" id="adminSidebarDivider">
       <div class="sidebar-heading" id="adminSidebarTitle">
         SPRINTS
@@ -129,17 +135,79 @@
           <ul class="navbar-nav ml-auto"></ul>
         </nav>
         
-        <div class="container-fluid" ng-app="AppPerfil" ng-controller="PerfilCtrl">
-        	
+        <div class="container-fluid">
         	<div class="row">
-        		<br>Texto de Ejemplo<br>
+        		<div class="col-md-12">
+        			<div class="row">
+        				<div class="col-md-1"></div>
+        				<div class="col-md-10">
+        					<br>
+        					<div style="text-align:center;">
+	       						<span style="font-weight:bold;font-style: italic;font-size:20px;">
+	       							Planificación (Sprint 0)
+	       						</span>
+	       					</div>
+        					<br>
+        					<br>
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							1. Planificación del Sprint
+       						</span>
+       						<br>
+       						<span style="text-align:left;font-weight:bold;font-size:12px;">
+       							Texto Planficacion
+       						</span>
+       						<br>
+        					<br>
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							2. Desarrollo del Sprint
+       						</span>
+       						<br>
+       						<span style="text-align:left;font-weight:bold;font-size:12px;">
+       							Texto Desarrollo
+       						</span>
+       						<br>
+        					<br>
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							3. Cierre del Sprint
+       						</span>
+       						<br>
+       						<span style="text-align:left;font-weight:bold;font-size:12px;">
+       							Texto Cierre
+       						</span>
+        				</div>
+        				<div class="col-md-1"></div>
+        			</div>
+        		</div>
         	</div>
         	<div class="row">
+        		<br><br>
         	</div>
         	<div class="row">
-        		<br><br><br>
-        	</div>     	
+        		<div class="col-md-12">
+        			<div class="row">
+        				<div class="col-md-4"></div>
+        				<div class="col-md-4">
+        					<form action="desarrolloProyecto-s1.html">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FFB742;color:white;">
+			        				Sprint 1 
+			        				<i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:5px;"></i>
+			        			</button>
+			        		</form>
+			        		<br>
+			        		<form action="desarrolloProyecto.html">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+			        				<i class="fa fa-sitemap" aria-hidden="true" style="margin-right:5px;"></i>
+			        				Wiki del Proyecto
+			        			</button>
+			        		</form>
+        				</div>
+        				<div class="col-md-4"></div>
+        			</div>
+        		</div>
+        		
+        	</div>
         </div>
+        
 
       </div>
       <!-- End of Main Content -->

@@ -73,6 +73,12 @@
           <span>Wiki del Proyecto</span></a>
       </li>    
       
+      <li class="nav-item">
+        <a class="nav-link" href="manualProyecto.html">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <span>Manual del Proyecto</span></a>
+      </li> 
+      
       <hr class="sidebar-divider" id="adminSidebarDivider">
       <div class="sidebar-heading" id="adminSidebarTitle">
         SPRINTS
@@ -129,16 +135,89 @@
           <ul class="navbar-nav ml-auto"></ul>
         </nav>
         
-        <div class="container-fluid" ng-app="AppPerfil" ng-controller="PerfilCtrl">
-        	
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-md-12">
+        			<div class="row">
+        				<div class="col-md-1"></div>
+        				<div class="col-md-10">
+        					<br>
+        					<div style="text-align:center;">
+	       						<span style="font-weight:bold;font-style: italic;font-size:20px;">
+	       							Sprint 3
+	       						</span>
+	       					</div>
+        					<br>
+        					<br>
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							1. Planificación del Sprint
+       						</span>
+       						<br>
+       						<span style="text-align:left;font-weight:bold;font-size:12px;">
+       							Texto Planficacion
+       						</span>
+       						<br>
+        					<br>
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							2. Desarrollo del Sprint
+       						</span>
+       						<br>
+       						<span style="text-align:left;font-weight:bold;font-size:12px;">
+       							Texto Desarrollo
+       						</span>
+       						<br>
+        					<br>
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							3. Cierre del Sprint
+       						</span>
+       						<br>
+       						<span style="text-align:left;font-weight:bold;font-size:12px;">
+       							Texto Cierre
+       						</span>
+        				</div>
+        				<div class="col-md-1"></div>
+        			</div>
+        		</div>
+        	</div>
         	<div class="row">
         		<br><br>
         	</div>
         	<div class="row">
+        		<div class="col-md-12">
+        			<div class="row">
+        				<div class="col-md-4"></div>
+        				<div class="col-md-4">
+        					<div class="row">
+        						<div class="col-md-6">
+        							<form action="desarrolloProyecto-s2.html">
+					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FF2828;color:white;">
+					        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+					        				Sprint 2 
+					        			</button>
+					        		</form>
+        						</div>
+        						<div class="col-md-6">
+        							<form action="desarrolloProyecto-s4.html">
+					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FFB742;color:white;">
+					        				Sprint 4 
+					        				<i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:5px;"></i>
+					        			</button>
+					        		</form>
+        						</div>
+        					</div>
+			        		<br>
+			        		<form action="desarrolloProyecto.html">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+			        				<i class="fa fa-sitemap" aria-hidden="true" style="margin-right:5px;"></i>
+			        				Wiki del Proyecto
+			        			</button>
+			        		</form>
+        				</div>
+        				<div class="col-md-4"></div>
+        			</div>
+        		</div>
+        		
         	</div>
-        	<div class="row">
-        		<br><br><br>
-        	</div>     	
         </div>
 
       </div>

@@ -80,7 +80,9 @@
     			<br><br>
     			<h6 style="color:black" align="center">¿Quieres saber cómo se ha desarrollado el proyecto? Echa un vistazo a la Wiki</h6>
     			<br>
-    			<a href="desarrolloProyecto.html"><i style="text-align:center;display:inline-block;width:100%;" class="fa fa-sitemap fa-5x" aria-hidden="true"></i></a>
+    			<a href="desarrolloProyecto.html">
+    				<img src="resources/imagenes/wikiDesarrollo.jpg" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Wiki del Proyecto">
+    			</a>
     		</div>
      	</div>
     	<br>
