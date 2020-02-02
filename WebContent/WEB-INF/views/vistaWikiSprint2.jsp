@@ -148,32 +148,139 @@
 	       						</span>
 	       					</div>
         					<br>
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Este Sprint dura del 30 de septiembre al 13 de octubre de 2019. Se desarrollan las 
+        							funcionalidades de registrarse en el sistema, recuperar el acceso a la cuenta, iniciar 
+        							sesión en la aplicación, ver perfil de usuario, modificar perfil, cerrar sesión, 
+        							eliminar cuenta y recuperar cuenta eliminada. En la Wiki , se detalla la evolución del 
+        							desarrollo del proyecto en este Sprint.
+        						
+        						</span>
+        					</div>
         					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product Backlog 
+        							con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo preguntó 
+        							dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint Backlog 
+        							con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. 
+        							El Product Owner dio su aprobación para abordarlas. Estas tareas que forman el Sprint Backlog se 
+        							organizaron en Historias de Usuario y son:
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s2-sprintBacklog-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br>
+       							<img src="resources/imagenes/s2-sprintBacklog-2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En primer lugar, se crearon las pruebas BDD, respecto a las funcionalidades que se van a desarrollar. 
+        							Al finalizar el Sprint, todas las pruebas pasaron exitosamente.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s2-bdd.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para poder desarrollar la aplicación, se diseñó el siguiente diagrama, identificando las funcionalidades:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s2-cdu.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Estas son algunas de las capturas de la aplicación:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s2-cap1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       							<img src="resources/imagenes/s2-cap2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       							<img src="resources/imagenes/s2-cap3.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       							<img src="resources/imagenes/s2-cap4.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Además, durante el desarrollo de la aplicación se ha realizado pruebas con la herramienta 
+        							de SonarCloud por cada integración que se enviaba al repositorio.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s2-sc.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se realizaba una 
+        							reunión (Daily Scrum) para analizar lo que se había realizado el día anterior, lo que se realiza 
+        							ese día y si había algún inconveniente o problema en el desarrollo del proyecto:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s2-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Acabado el desarrollo del Sprint, se muestra al Producto Owner las funcionalidades acordadas 
+        							que se iban a abordar durante este Sprint. El Product Owner queda satisfecho con los avances 
+        							obtenidos en este Sprint.
+        						
+        						</span>
+        					</div>
+        					<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En la reunión de retrospectiva, se comprobó que se había trabajado correctamente, aunque haya 
+        							habido algunas desviaciones en el Sprint. En el gráfico Burndown (como se ve en la figura 4.14) 
+        							se puede analizar que la estimación inicial, coincide aproximadamente con la evolución real 
+        							del desarrollo del Sprint. Por otro lado, se ha usado un tablero Scrum para llevar un 
+        							seguimiento diario de esas tareas (véase la figura 4.15).
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s2-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+        					<br><br>
+       							<img src="resources/imagenes/s2-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
         				</div>
         				<div class="col-md-1"></div>
         			</div>
@@ -217,6 +324,9 @@
         			</div>
         		</div>
         		
+        	</div>
+        	<div class="row">
+        		<br><br>
         	</div>
         </div>
 
