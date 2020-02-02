@@ -51,4 +51,10 @@ public class Controlador11Wiki {
 	public ModelAndView verWikiProyectoSprintSeis(HttpServletRequest request, HttpServletResponse response) {
 		return new ModelAndView("vistaWikiSprint6");
 	}
+	
+	@GetMapping(value = "/manualProyecto")
+	public ModelAndView verManualUsuario(HttpServletRequest request, HttpServletResponse response) {
+		return new ModelAndView("vistaManual");
+	}
+	
 }

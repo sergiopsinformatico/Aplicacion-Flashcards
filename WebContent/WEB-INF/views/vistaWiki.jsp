@@ -186,6 +186,30 @@
 		        		<a href="desarrolloProyecto-s6.html"><img src="resources/imagenes/wiki_S6.JPG" alt="Sprint 6" height="300" width="auto"></a>
 		       		</div>
 		        </div>
+		        
+		        <div class="row">
+	        		<br><br>
+	        	</div>
+	        	<div class="row">
+	        		<div class="col-md-12">
+	        			<div class="row">
+	        				<div class="col-md-4"></div>
+	        				<div class="col-md-4">
+	        					<form action="inicio.html">
+				        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+				        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+				        				Volver a la Aplicación
+				        			</button>
+				        		</form>
+	        				</div>
+	        				<div class="col-md-4"></div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        	<div class="row">
+	        		<br><br>
+	        	</div>
+		        
 			</div>
 		 </div>
       </div>
