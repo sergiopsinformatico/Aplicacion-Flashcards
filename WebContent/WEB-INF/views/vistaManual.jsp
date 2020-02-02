@@ -159,6 +159,7 @@
         					<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Registro del Usuario
        						</span>
+       						
        						<br><br>
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
