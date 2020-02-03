@@ -161,6 +161,7 @@
        						</span>
        						
        						<br><br>
+       						
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
@@ -173,10 +174,12 @@
         						
         						</span>
         					</div>
+        					
         					<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Iniciar Sesión
        						</span>
        						<br><br>
+       						
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
@@ -189,6 +192,7 @@
         						
         						</span>
         					</div>
+        					
         					<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Recuperar Cuenta
        						</span>
