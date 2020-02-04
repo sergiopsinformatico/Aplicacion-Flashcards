@@ -244,9 +244,8 @@
         						<span style="font-size:14px;">
         						
         							Finalizado el desarrollo del Sprint, se muestra al Producto 
-        							Owner los análisis y actividades realizados, descritos en el 
-        							anterior punto 4.1.2. El Product Owner acepta que le desarrollemos 
-        							la aplicación, durante los futuros Sprints.
+        							Owner los análisis y actividades realizados. El Product Owner 
+        							acepta que le desarrollemos la aplicación, durante los futuros Sprints.
         						
         						</span>
         					</div>
@@ -267,12 +266,12 @@
         							Posteriormente, el equipo de desarrollo y el Scrum Master tuvieron la reunión 
         							de retrospectiva. A pesar de haber desviaciones en el Sprint, se ha trabajado 
         							correctamente manteniendo la planificación inicial, por lo que se mantiene este ritmo. 
-        							Así lo corrobora el gráfico Burndown (como se muestra en la figura 4.1) generado por la 
+        							Así lo corrobora el gráfico Burndown generado por la 
         							herramienta Zenhub donde se puede comprobar que la estimación inicial, coincide aproximadamente 
         							con la evolución real del desarrollo del Sprint (hay que tener en cuenta, que durante los fines 
         							de semana se han ido completando tareas, a pesar que el gráfico proporcionado por la herramienta 
         							Zenhub, no cuenta que en esos días se trabaje). Además, se ha usado un tablero Scrum para llevar 
-        							un seguimiento diario de esas tareas (véase la figura 4.2).
+        							un seguimiento diario de esas tareas.
         						
         						</span>
         					</div>
