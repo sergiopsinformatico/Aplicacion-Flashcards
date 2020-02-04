@@ -148,6 +148,17 @@
 	       						</span>
 	       					</div>
         					<br>
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Este Sprint dura del 28 de octubre al 10 de noviembre  de 2019. Se desarrollan las funcionalidades de crear, 
+        							compartir, evaluar y visualizar colecciones de tarjetas (Flashcards), que un miembro de un club pueda invitar 
+        							a un usuario a que se una al club y que un administrador del club pueda dejar de serlo o que bloquee a un 
+        							usuario para que acceda al club. En la Wiki , se detalla la evolución del desarrollo del proyecto en 
+        							este Sprint.
+        						
+        						</span>
+        					</div>
         					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
