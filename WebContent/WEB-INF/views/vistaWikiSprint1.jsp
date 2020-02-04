@@ -177,7 +177,7 @@
         						</span>
         					</div>
        						<br>
-       							<img src="resources/imagenes/s1-sprintBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s1-sprintBacklog.JPG" style="height:700px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
@@ -193,7 +193,7 @@
         						</span>
         					</div>
         					<br><br>
-       							<img src="resources/imagenes/s1-appBT.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s1-appBT.JPG" style="height:100px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
         					<br><br>
        						<div style="text-align:justify;">

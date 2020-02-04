@@ -148,32 +148,134 @@
 	       						</span>
 	       					</div>
         					<br>
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Este Sprint dura del 14 al 27 de octubre de 2019. Se desarrollan las funcionalidades del administrador (generar una clave de usuario, 
+        							eliminar usuario, cambiar rol de usuario y modificar el perfil de usuario),  gestión de clubes (creación, eliminación, unirse a un club, 
+        							dejar el club y que el administrador elimine a un usuario) y gestión de amistades (enviar y recibir peticiones de amistad, pudiendo 
+        							aceptarlas o rechazarlas, eliminar a un amigo, bloquear y desbloquear un usuario). En la Wiki, se detalla la evolución del 
+        							desarrollo del proyecto en este Sprint.
+        						
+        						</span>
+        					</div>
         					<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog. Tras analizar dichas tareas, el equipo formó 
+        							el Sprint Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. Estas tareas son:
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s3-sprintBacklog-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br>
+       							<img src="resources/imagenes/s3-sprintBacklog-2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s3-sprintBacklog-3.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s3-sprintBacklog-4.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							En primer lugar, se crearon las pruebas BDD, respecto a las funcionalidades que se van a desarrollar. 
+        							Al finalizar el Sprint, todas las pruebas pasaron exitosamente.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s3-bdd.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para poder desarrollar la aplicación, se diseñó el siguiente diagrama, 
+        							identificando las funcionalidades:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s3-cdu.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Estas son algunos bocetos y capturas de la aplicación:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s3-cap1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s3-cap2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s3-cap3.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s3-cap4.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se realizaba una 
+        							reunión (Daily Scrum) para analizar lo que se había realizado el día anterior, lo que se realiza 
+        							ese día y si había algún inconveniente o problema en el desarrollo del proyecto:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s3-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tras el desarrollo del Sprint, se mostraron al Product Owner las funcionalidades realizadas en 
+        							el Sprint: funcionalidades de gestión de usuario y de clubes por parte del administrador, 
+        							creación y permanencia de clubes, y por último relaciones entre los usuarios. El Product Owner 
+        							nos da su aprobación, para que continuemos desarrollando la aplicación.
+        						
+        						</span>
+        					</div>
+        					<br>
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							A pesar de haber tenido alguna desviación, en la reunión de retrospectiva se concluye que se ha trabajado 
+        							bien durante el Sprint, siguiendo la planificación inicial. En el gráfico Burndown (figura 4.22), se aprecia 
+        							que la estimación inicial y la evolución real del proyecto en el Sprint, coinciden aproximadamente, teniendo 
+        							en cuenta que Zenhub cuenta que en los fines de semana no se trabaja, cuando realmente si se ha trabajado. 
+        							En el tablero Scrum, se ha realizad un seguimiento diario de las tareas que se han abordado (véase la 
+        							figura 4.23).
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s3-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
+       						<br>
+       							<img src="resources/imagenes/s3-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
         				</div>
         				<div class="col-md-1"></div>
         			</div>
