@@ -51,13 +51,13 @@ public class Controlador01RegistroUsuarios {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	static final String myUsuario = "usuario";
-	static final String myMensaje = "mensaje";
-	static final String myRedirectIS = "redirect:/iniciarSesion.html";
-	static final String myInputEmailAvatar= "inputEmailAvatar";
-	static final String myInputNyA= "inputNyA";
-	static final String myInputCiudad = "inputCiudad";
-	static final String myInputPais = "inputPais";
+	static final String USUARIO = "usuario";
+	static final String MENSAJE = "mensaje";
+	static final String REDIRECTIS = "redirect:/iniciarSesion.html";
+	static final String EMAILAVATAR= "inputEmailAvatar";
+	static final String NYA= "inputNyA";
+	static final String CIUDAD = "inputCiudad";
+	static final String PAIS = "inputPais";
 	
 	/* * * * * * * * * 
      * CONTROLADORES *
@@ -80,14 +80,14 @@ public class Controlador01RegistroUsuarios {
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
 		
-		if(request.getSession().getAttribute(myUsuario)==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute(myUsuario))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute(myUsuario))).getUsername().equals("")) {
+		if(request.getSession().getAttribute(USUARIO)==null || 
+		   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername()==null||
+		   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername().equals("")) {
 			
 			vista = new ModelAndView("vistaRegistro");
 			
-			if(request.getParameter(myMensaje)!= null && (!request.getParameter(myMensaje).equals(""))) {
-				vista.addObject(myMensaje, request.getParameter(myMensaje));
+			if(request.getParameter(MENSAJE)!= null && (!request.getParameter(MENSAJE).equals(""))) {
+				vista.addObject(MENSAJE, request.getParameter(MENSAJE));
 			}
 			
 		}else {
@@ -165,12 +165,12 @@ public class Controlador01RegistroUsuarios {
 			}
 			
 			vista = new ModelAndView("vistaIniciarSesion");
-			vista.addObject(myMensaje, "Para finalizar el registro, revise su email "+user.getEmail()+" y siga los pasos para activar la cuenta.");
+			vista.addObject(MENSAJE, "Para finalizar el registro, revise su email "+user.getEmail()+" y siga los pasos para activar la cuenta.");
 			
 		}else {
 			
 			vista = new ModelAndView("vistaRegistro");
-			vista.addObject(myMensaje, "Hubo un fallo en el registro. Por favor, vuelva a intentar registrarse pasado unos minutos.");
+			vista.addObject(MENSAJE, "Hubo un fallo en el registro. Por favor, vuelva a intentar registrarse pasado unos minutos.");
 			
 		}
 		
@@ -212,15 +212,15 @@ public class Controlador01RegistroUsuarios {
 			
 		}else if(Broker.getInstanciaActivaCuenta().existeActivacionUsuario(username)) {
 			vista = new ModelAndView("redirect:/inicio.html");
-			vista.addObject(myMensaje, "Hay una activacion pendiente para "+username+", pero ese codigo no es el correcto.");
+			vista.addObject(MENSAJE, "Hay una activacion pendiente para "+username+", pero ese codigo no es el correcto.");
 		}else {
 			user = Broker.getInstanciaUsuario().getUsuarioDTO(username);
 			if(user!=null && user.isActivadaCuenta()) {
-				vista = new ModelAndView(myRedirectIS);
-				vista.addObject(myMensaje, "Su cuenta ya fue activada");
+				vista = new ModelAndView(REDIRECTIS);
+				vista.addObject(MENSAJE, "Su cuenta ya fue activada");
 			}else {
 				vista = new ModelAndView("redirect:/registro.html");
-				vista.addObject(myMensaje, "Ha expirado la activacion de su cuenta. Es necesario que se vuelva a registrar.");
+				vista.addObject(MENSAJE, "Ha expirado la activacion de su cuenta. Es necesario que se vuelva a registrar.");
 			}
 		}
 		return vista;
@@ -234,32 +234,32 @@ public class Controlador01RegistroUsuarios {
 		md5 = new MD5Photo();
 
 		//Eleccion foto perfil
-		if(request.getParameter(myInputEmailAvatar)!=null && (!request.getParameter(myInputEmailAvatar).equals(""))) {
-			user2.setEmailFoto(request.getParameter(myInputEmailAvatar));
+		if(request.getParameter(EMAILAVATAR)!=null && (!request.getParameter(EMAILAVATAR).equals(""))) {
+			user2.setEmailFoto(request.getParameter(EMAILAVATAR));
 			user2.setFoto("https://www.gravatar.com/avatar/"+md5.getMD5Photo(user2.getEmailFoto())+".jpg");
 		}else {
 			user2.setEmailFoto("");
 			user2.setFoto("https://www.gravatar.com/avatar/hashNoDisponible.jpg");
 		}
 		
-		if(request.getParameter(myInputNyA)!=null && (!request.getParameter(myInputNyA).equals(""))) {
-			user2.setNombreApellidos(request.getParameter(myInputNyA));
+		if(request.getParameter(NYA)!=null && (!request.getParameter(NYA).equals(""))) {
+			user2.setNombreApellidos(request.getParameter(NYA));
 		}
-		if(request.getParameter(myInputCiudad)!=null && (!request.getParameter(myInputCiudad).equals(""))) {
-			user2.setCiudad(request.getParameter(myInputCiudad));
+		if(request.getParameter(CIUDAD)!=null && (!request.getParameter(CIUDAD).equals(""))) {
+			user2.setCiudad(request.getParameter(CIUDAD));
 		}
-		if(request.getParameter(myInputPais)!=null && (!request.getParameter(myInputPais).equals(""))) {
-			user2.setPais(request.getParameter(myInputPais));
+		if(request.getParameter(PAIS)!=null && (!request.getParameter(PAIS).equals(""))) {
+			user2.setPais(request.getParameter(PAIS));
 		}
 		Broker.getInstanciaUsuario().updateUsuario(user, user2);
-		vista = new ModelAndView(myRedirectIS);
-		vista.addObject(myMensaje, "Registro completado con exito.");
+		vista = new ModelAndView(REDIRECTIS);
+		vista.addObject(MENSAJE, "Registro completado con exito.");
 		return vista;
 	}
 	
 	@GetMapping(value = "/infoExtra")
 	public ModelAndView activarGet(HttpServletRequest request, HttpServletResponse response){
-		vista = new ModelAndView(myRedirectIS);
+		vista = new ModelAndView(REDIRECTIS);
 		return vista;
 	}
 	
