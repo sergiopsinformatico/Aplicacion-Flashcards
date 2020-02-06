@@ -20,13 +20,21 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador04Perfil {
 	
-	//Variables
+	/* * * * * * * 
+     * VARIABLES *
+	 * * * * * * */
+	
 	ModelAndView vista;
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelacion;
 	InterfaceDAOPuntos dBPuntos;
 	InterfaceDAOFlashcards dBFlashcards;
+	
+	/* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
 	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_MENSAJE = "mensaje";*/
