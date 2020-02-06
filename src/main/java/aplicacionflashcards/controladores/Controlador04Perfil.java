@@ -24,6 +24,7 @@ public class Controlador04Perfil {
      * VARIABLES *
 	 * * * * * * */
 	
+	
 	ModelAndView vista;
 	UsuarioDTO user;
 	InterfaceDAOUsuario dBUsuario;
