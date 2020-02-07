@@ -43,6 +43,11 @@ public class Controlador07Gente {
 	int indice;
 	int indiceTodos;
 	boolean encontrado;
+	
+	/* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
 	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";

@@ -29,6 +29,10 @@ public class Controlador05Configuracion {
 	Email email;
 	EliminarCuentaDTO elimina;
 	
+	/* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
 	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";

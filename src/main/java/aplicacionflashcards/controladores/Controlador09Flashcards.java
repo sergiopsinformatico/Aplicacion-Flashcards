@@ -47,6 +47,11 @@ public class Controlador09Flashcards {
 	List<ClubDTO> listaClubes;
 	List<String[]> tarjetasArray;
 	String[] tarjeta;
+	
+	/* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
 	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
