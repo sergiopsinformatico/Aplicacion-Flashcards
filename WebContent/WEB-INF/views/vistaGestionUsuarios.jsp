@@ -174,8 +174,8 @@
         <!-- Begin Page Content -->
         
         <script>
-        var app = angular.module('AppAdministrador', []);
-        app.controller('AdministradorCtrl', function($scope, $http) {
+        var app = angular.module('AppAdministradorUsuarios', []);
+        app.controller('AdministradorUsuariosCtrl', function($scope, $http) {
         	$scope.listaUsuarios = [];
         	$scope.checkGet = false;
         	var indice = 0;
@@ -223,6 +223,14 @@
         	        }
         	     });
            	};
+           	
+           	$scope.generaNuevaClave = function(usuario){
+           		window.location.href = "administradorCambiaRol.do?username="+usuario+"&rol="+result;
+           	};
+           	
+           	$scope.adminModificaPerfil = function(usuario){
+        	    window.location.href = "administradorCambiaRol.do?username="+usuario+"&rol="+result;
+           	};
         	
 			$scope.eliminaUsuario = function(usuario){
 				
@@ -250,7 +258,7 @@
         });
         </script>
         
-        <div class="container-fluid" ng-app="AppAdministrador" ng-controller="AdministradorCtrl">
+        <div class="container-fluid" ng-app="AppAdministradorUsuarios" ng-controller="AdministradorUsuariosCtrl">
         	<div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
@@ -284,28 +292,28 @@
 					   								</div>
 					   								<div class="col-md-8">
 					   									<span>
-						   									<button type="submit" class="btn btn-primary" style="color:white">
+						   									<button type="submit" class="btn btn-primary" style="color:white" onclick="cambioRol({{ eUsuario.username }})">
 										        				<i class="fa fa-user" aria-hidden="true"></i>
 										        				<br>
 										       					Cambiar Rol
 										       				</button>
 						   								</span>
 						   								<span>
-						   									<button type="submit" class="btn btn-success" style="color:white">
+						   									<button type="submit" class="btn btn-success" style="color:white" onclick="generaNuevaClave({{ eUsuario.username }})">
 										        				<i class="fa fa-key" aria-hidden="true"></i>
 										        				<br>
 										       					Generar Clave
 										       				</button>
 						   								</span>
 						   								<span>
-						   									<button type="submit" class="btn btn-warning" style="color:white">
+						   									<button type="submit" class="btn btn-warning" style="color:white" onclick="adminModificaPerfil({{ eUsuario.username }})">
 										        				<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 										        				<br>
 										       					Modificar Perfil
 										       				</button>
 						   								</span>
 						   								<span>
-						   									<button type="submit" class="btn btn-danger" style="color:white">
+						   									<button type="submit" class="btn btn-danger" style="color:white" onclick="eliminaUsuario({{ eUsuario.username }})">
 										        				<i class="fa fa-trash" aria-hidden="true"></i>
 										        				<br>
 										       					Eliminar Usuario
