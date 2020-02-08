@@ -1,7 +1,5 @@
 package main.java.aplicacionflashcards.controladores;
 
-import java.security.MessageDigest;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
+import main.java.aplicacionflashcards.auxiliares.MD5Photo;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.EliminarCuentaDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
@@ -28,6 +27,7 @@ public class Controlador05Configuracion {
 	Fecha fecha;
 	Email email;
 	EliminarCuentaDTO elimina;
+	MD5Photo md5Photo;
 	
 	/* * * * * *  * 
      * CONSTANTES *
@@ -71,7 +71,8 @@ public class Controlador05Configuracion {
 		if(userNuevo.getEmailFoto().equals("")) {
 			userNuevo.setFoto("https://www.gravatar.com/avatar/inventado.jpg");
 		}else {
-			userNuevo.setFoto("https://www.gravatar.com/avatar/"+getMD5Photo(userNuevo.getEmailFoto())+".jpg");
+			md5Photo = new MD5Photo();
+			userNuevo.setFoto("https://www.gravatar.com/avatar/"+md5Photo.getMD5Photo(userNuevo.getEmailFoto())+".jpg");
 		}
 		
 		if(Broker.getInstanciaUsuario().updateUsuario(userAntiguo, userNuevo)) {
@@ -123,18 +124,4 @@ public class Controlador05Configuracion {
 		return vista;
 	}
 	
-	private String getMD5Photo(String photoFile){
-		try {
-			MessageDigest md = MessageDigest.getInstance("MD5");
-			md.update(photoFile.getBytes());
-			byte[] bytes = md.digest();
-			StringBuilder sb = new StringBuilder();
-			for(int i=0; i< bytes.length ;i++){
-	            sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
-	        }
-			return sb.toString();
-		}catch(Exception ex) {
-			return "inventado";
-		}
-	}
 }
