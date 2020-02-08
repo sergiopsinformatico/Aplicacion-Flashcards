@@ -2,6 +2,8 @@ package main.java.aplicacionflashcards.controladores;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -46,6 +48,9 @@ public class Controlador01RegistroUsuarios {
 	String codigoActivacion;
 	Email correo;
 	MD5Photo md5;
+	
+	//Logger
+    private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador01RegistroUsuarios");
 	
 	/* * * * * *  * 
      * CONSTANTES *
@@ -161,7 +166,7 @@ public class Controlador01RegistroUsuarios {
 				correo.activarCuenta(user,PropertiesConfig.getProperties("baseURL")+"/activaCuenta.html?username="+user.getUsername()+"&codigo="+codigoActivacion);
 				
 			}catch(Exception ex) {
-				ex.printStackTrace();
+				LOGGER.log(Level.INFO, ex.getMessage());
 			}
 			
 			vista = new ModelAndView("vistaIniciarSesion");
@@ -207,7 +212,7 @@ public class Controlador01RegistroUsuarios {
 				correo.confirmaCuentaCreada(user2);
 				
 			}catch(Exception ex) {
-				ex.printStackTrace();
+				LOGGER.log(Level.INFO, ex.getMessage());
 			}
 			
 		}else if(Broker.getInstanciaActivaCuenta().existeActivacionUsuario(username)) {

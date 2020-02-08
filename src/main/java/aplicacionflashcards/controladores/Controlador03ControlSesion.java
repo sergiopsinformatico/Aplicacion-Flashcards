@@ -1,5 +1,8 @@
 package main.java.aplicacionflashcards.controladores;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -29,6 +32,9 @@ public class Controlador03ControlSesion {
 	UsuarioDTO user;
 	EliminarCuentaDTO eliminado;
 	Email email;
+	
+	//Logger
+    private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador03ControlSesion");
 	
 	/* * * * * *  * 
      * CONSTANTES *
@@ -116,9 +122,9 @@ public class Controlador03ControlSesion {
 					
 					try {
 						email = new Email();
-						//email.reactivacionCuenta(user);
+						email.reactivacionCuenta(user);
 					}catch(Exception ex) {
-						
+						LOGGER.log(Level.INFO, ex.getMessage());
 					}
 					
 				}
@@ -146,98 +152,4 @@ public class Controlador03ControlSesion {
 		return vista;
 	}
 	
-	
-	//Variables
-	/*ModelAndView vista;
-	InterfaceDAOUsuario dBUsuario;
-	UsuarioDTO user;
-	EliminarCuentaDTO eliminado;
-	Email email;
-	//Constantes
-	static final String CONST_USUARIO = "usuario";
-	static final String CONST_MENSAJE = "mensaje";
-	static final String CONST_VIEW_IS = "vistaIniciarSesion";
-	static final String CONST_REDIRECT = "redirect:/inicio.html";*/
-	
-	/*
-	 * 
-	 * INICIAR SESION
-	 * 
-	 */
-	
-	//Obtener la vista de Inicio de Sesion
-	
-	/*@GetMapping(value = "/iniciarSesion")
-	public ModelAndView iniciarSesion(HttpServletRequest request, HttpServletResponse response) {
-		
-		//1-Comprobar activaciones caducadas
-		Broker.getInstanciaActivaCuenta().comprobarActivacionesCaducadas();
-		
-		//2-Eliminar cuentas pasados 14 dias
-		Broker.getInstanciaEliminarCuenta().comprobarCuentasAEliminar();
-		
-		//3-Eliminar solicitudes de restablecimiento de Claves
-		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
-				
-		if(request.getSession().getAttribute(CONST_USUARIO)==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername().equals("")) {
-			
-			vista =  new ModelAndView(CONST_VIEW_IS);
-			
-			if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
-				vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
-			}
-			
-		}else {
-			vista = new ModelAndView(CONST_REDIRECT);
-			
-		}
-		
-		return vista;
-	}
-	
-	
-	
-	//Acceder
-	@PostMapping(value = "/iniciarSesion")
-	public ModelAndView loguearPost(HttpServletRequest request, HttpServletResponse response) {
-		dBUsuario = Broker.getInstanciaUsuario();
-		if(dBUsuario.login(request.getParameter("inputUsernameEmail"), request.getParameter("inputClave"))) {
-			user = dBUsuario.getUsuarioDTO(request.getParameter("inputUsernameEmail"));
-			
-			if(user.isActivadaCuenta()) {
-				eliminado = new EliminarCuentaDTO(user.getUsername());
-				vista = new ModelAndView(CONST_REDIRECT);
-				if(Broker.getInstanciaEliminarCuenta().leerEliminado(eliminado)) {
-					Broker.getInstanciaEliminarCuenta().eliminarEliminado(eliminado);
-					vista.addObject(CONST_MENSAJE, "Su cuenta ha sido reactivada");
-					try{
-						email = new Email();
-						email.reactivacionCuenta(user);
-					}catch(Exception ex){
-					
-					}
-					
-				}
-				vista.addObject(CONST_USUARIO, user);
-			}else {
-				vista = new ModelAndView(CONST_VIEW_IS);
-				vista.addObject(CONST_MENSAJE, "Su cuenta aun no ha sido activada. Por favor, revise su email para activar la cuenta.");
-			}
-		}else {
-			vista = new ModelAndView(CONST_VIEW_IS);
-			vista.addObject(CONST_MENSAJE, "El usuario y/o la clave son incorrectos.");
-		}
-		return vista;
-	}
-	
-	//Cerrar Sesion
-	@GetMapping(value = "/cerrarSesion")
-	public ModelAndView cerrarSesion(HttpServletRequest request, HttpServletResponse response) {	
-		vista = new ModelAndView(CONST_REDIRECT);
-		request.getSession().setAttribute(CONST_USUARIO, null);
-		vista.addObject(CONST_USUARIO,null);
-		return vista;
-	}*/
 }

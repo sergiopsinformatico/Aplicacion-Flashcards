@@ -1,6 +1,8 @@
 package main.java.aplicacionflashcards.controladores;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -49,6 +51,9 @@ public class Controlador02RecuperarCuenta {
 	static final String MENSAJE = "mensaje";
 	static final String USERNAME = "username";
 	
+	//Logger
+    private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador02RecuperarCuenta");
+	
 	@GetMapping(value = "/recuperaCuenta")
 	public ModelAndView recuperaCuenta(HttpServletRequest request, HttpServletResponse response) {
 		
@@ -81,7 +86,7 @@ public class Controlador02RecuperarCuenta {
 				Broker.getInstanciaRecuperarCuenta().insertaRC(new RecuperarCuentaDTO(user.getUsername(), keySecure, fecha.fechaRecuperarCuenta()));
 				email.recuperarClave(user,keySecure);
 			}catch(Exception ex) {
-				ex.printStackTrace();
+				LOGGER.log(Level.INFO, ex.getMessage());
 			}
 			
 			vista.addObject(MENSAJE, "Se ha enviado un email a " + user.getEmail() +" con los pasos para cambiar la clave.");

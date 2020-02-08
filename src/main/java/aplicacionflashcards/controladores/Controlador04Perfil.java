@@ -31,7 +31,7 @@ public class Controlador04Perfil {
 	InterfaceDAORelacionesUsuarios dBRelacion;
 	InterfaceDAOPuntos dBPuntos;
 	InterfaceDAOFlashcards dBFlashcards;
-	
+		
 	/* * * * * *  * 
      * CONSTANTES *
 	 * * * * * *  */
