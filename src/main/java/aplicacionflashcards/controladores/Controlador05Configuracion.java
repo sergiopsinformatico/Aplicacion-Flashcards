@@ -1,5 +1,8 @@
 package main.java.aplicacionflashcards.controladores;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -38,6 +41,9 @@ public class Controlador05Configuracion {
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_MENSAJE = "mensaje";
 	*/
+	
+	//Logger
+    private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador05Configuracion");
 	
 	@GetMapping(value = "/configuracion")
 	public ModelAndView modificarPerfil(HttpServletRequest request, HttpServletResponse response) {
@@ -97,7 +103,7 @@ public class Controlador05Configuracion {
 	public ModelAndView eliminarCuenta(HttpServletRequest request, HttpServletResponse response) {
 		if(request.getSession().getAttribute("usuario")!=null && 
 		  ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		  ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		  (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
 			
 			fecha = new Fecha();
 			elimina = new EliminarCuentaDTO(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), fecha.fechaEliminarCuenta());
@@ -105,12 +111,12 @@ public class Controlador05Configuracion {
 			Broker.getInstanciaEliminarCuenta().insertaEliminado(elimina);
 			
 			try {
-				/*
+				
 				email = new Email();
 				email.eliminarCuenta(elimina, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getEmail());
-				*/
-			}catch(Exception ex) {
 				
+			}catch(Exception ex) {
+				LOGGER.log(Level.INFO, ex.getMessage());
 			}
 			
 			vista = new ModelAndView("redirect:/inicio.html");

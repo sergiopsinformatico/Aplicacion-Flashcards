@@ -10,6 +10,7 @@ public interface InterfaceDAORelacionesUsuarios {
 	public RelacionesUsuariosDTO leerRelaciones(String username);
 	public boolean actualizaRelaciones(RelacionesUsuariosDTO relaciones);
 	public boolean eliminaRelaciones (String username);
+	public boolean eliminaObjetoRelaciones (String username);
 	public boolean enviarPeticionAmistad(String envia, String recibe);
 	public List<String> getPeticionesAmistadEnviadas(String username);
 	public List<String> getPeticionesRecibidas(String username);

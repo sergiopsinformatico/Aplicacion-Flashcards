@@ -159,6 +159,16 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
 			return false;
 		}
 	}
+	
+	public boolean eliminaObjetoRelaciones (String username) {
+		try {
+			criteriosBusqueda = new BsonDocument().append(CONST_USUARIO, new BsonString(username));
+			coleccionRelaciones.deleteOne(criteriosBusqueda);
+			return true;
+		}catch(Exception ex) {
+			return false;
+		}
+	}
 
 	public boolean enviarPeticionAmistad(String envia, String recibe) {
 		try {

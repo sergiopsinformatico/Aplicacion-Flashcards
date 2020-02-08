@@ -23,6 +23,8 @@ import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOEliminarCuenta;
 import main.java.aplicacionflashcards.dto.EliminarCuentaDTO;
+import main.java.aplicacionflashcards.dto.PuntosDTO;
+import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
@@ -40,6 +42,8 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
     Fecha date;
     String compara;
     UsuarioDTO user;
+    PuntosDTO puntos;
+    RelacionesUsuariosDTO relacion;
     CifradoCaesar caesar;
     
     //Constante
@@ -123,6 +127,14 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
 			compara = date.compararFechas(doc.getString(CONST_FECHA), date.fechaHoy());
 			if(compara!=null && Integer.parseInt(compara)<0) {
 				eliminarEliminado(new EliminarCuentaDTO(doc.getString(CONST_USERNAME)));
+				
+				//Eliminar Puntos
+				Broker.getInstanciaPuntos().eliminarPuntos(doc.getString(CONST_USERNAME));
+				
+				//Eliminar Relaciones
+				Broker.getInstanciaRelaciones().eliminaObjetoRelaciones(doc.getString(CONST_USERNAME));
+				
+				//Eliminar Usuario
 				user = Broker.getInstanciaUsuario().getUsuarioDTO(doc.getString(CONST_USERNAME));
 				Broker.getInstanciaUsuario().deleteUsuario(user);
 				iterador = coleccionEliminados.find().iterator();
