@@ -93,7 +93,7 @@
       <div class="sidebar-heading">
         Usuarios
       </div>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="verGente.html">
           <i class="fa fa-users" aria-hidden="true"></i>
           <span>Gente</span>

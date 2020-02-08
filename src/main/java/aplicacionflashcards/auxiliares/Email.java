@@ -66,7 +66,7 @@ public class Email {
 		setAsunto("[Flashcards] Recuperacion de la clave de "+user.getEmail());
 		setMensaje(CONST_SALUDO+user.getUsername()+"!!"+
 		"\nHa solicitado recuperacion de sus datos de su cuenta en Flashcards."+
-		"\nSiga el siguiente enlace: "+PropertiesConfig.getProperties("baseUrl")+"/restableceClave.html?username="+user.getUsername()+"&keySecurity="+key);
+		"\nSiga el siguiente enlace: "+PropertiesConfig.getProperties("baseURL")+"/restableceClave.html?username="+user.getUsername()+"&keySecurity="+key);
 		setRecibe(user.getEmail());
 		return enviarMensaje();
 	}

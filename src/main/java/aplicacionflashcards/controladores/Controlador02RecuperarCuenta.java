@@ -84,7 +84,7 @@ public class Controlador02RecuperarCuenta {
 				ex.printStackTrace();
 			}
 			
-			vista.addObject(MENSAJE, "Se ha enviado un email a " + user.getEmail() +" con la clave");
+			vista.addObject(MENSAJE, "Se ha enviado un email a " + user.getEmail() +" con los pasos para cambiar la clave.");
 			return vista;
 		}
 	}
