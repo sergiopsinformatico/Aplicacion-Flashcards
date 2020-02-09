@@ -179,6 +179,10 @@
 	        	
 	        	$scope.tipoRelacion = '';
 	        	
+	        	if(("${usuario.getUsername()}").localeCompare("${perfil.getUsername()}") != 0){
+					$scope.tipoRelacion = "${perfil.getTipoRelacion()}";
+				}
+	        	
 	        	$scope.eliminarAmigo = function(){
 	        		
 	        		bootbox.confirm({ 
@@ -258,29 +262,16 @@
 	  	    		})
 	        	}
 				
-				$scope.compruebaOtroUsuario = function(){
-					if(("${usuario.getUsername()}").localeCompare("${perfil.getUsername()}") != 0){
-						$scope.tipoRelacion = "${perfil.getTipoRelacion()}";
-						return true;
-					}else{
-						return false;
-					}
-				}
-				
-				$scope.showPanelRelaciones = function(){
-					return ("${usuario.getUsername()}").localeCompare("${perfil.getUsername()}") != 0;
-				}
-				
 				$scope.tieneNombre = function(){
-					return ("${usuario.getNombreApellidos()}" != null) && (("${usuario.getNombreApellidos()}").localeCompare("") != 0);
+					return ("${perfil.getNombreApellidos()}" != null) && (("${perfil.getNombreApellidos()}").localeCompare("") != 0);
 				}
 				
 				$scope.tieneCiudad = function(){
-					return ("${usuario.getCiudad()}" != null) && (("${usuario.getCiudad()}").localeCompare("") != 0);
+					return ("${perfil.getCiudad()}" != null) && (("${perfil.getCiudad()}").localeCompare("") != 0);
 				}
 	        	
 				$scope.tienePais = function(){
-					return ("${usuario.getPais()}" != null) && (("${usuario.getPais()}").localeCompare("") != 0);
+					return ("${perfil.getPais()}" != null) && (("${perfil.getPais()}").localeCompare("") != 0);
 				}
 	        });
         </script>
@@ -306,7 +297,7 @@
 									<span>${perfil.getRol()}</span>
 								</div>
 							</div>
-							<div ng-if="showPanelRelaciones()" class="profile-userbuttons">
+							<div ng-if="tipoRelacion.localeCompare('') != 0" class="profile-userbuttons">
 								<button type="button" class="btn btn-success btn-sm">Follow</button>
 								<button type="button" class="btn btn-danger btn-sm">Message</button>
 							</div>
@@ -367,130 +358,6 @@
 					</div>
 				</div>
 			</div>
-
-        	<!-- Cambio a: https://bootsnipp.com/snippets/M48pA
-        	<div class="row">
-        		<br><br>
-        	</div>
-        	<div class="row">
-        		<div class="col-md-2"></div>
-        		<div class="col-md-4">
-        			<div class="row cuadroInfoUser container">
-        				<div class="col-md-12">
-        					<br>
-	        				<h6 align="center" class="titleInfo">Información Personal</h6>
-	        				<br><br>
-	        				<div class="row middle">
-		        				<img src="${perfil.getFoto()}" alt="Foto" class="fotoPerfil">
-		        			</div>
-		        			<br><br>
-	        				<p id="username" align="center">
-	        					<strong>Username:</strong> ${perfil.getUsername()}
-	        				</p>
-	        				<p id="email" align="center">
-	        					<strong>Email:</strong> ${perfil.getEmail()}
-	        				</p>
-	        				<p id="nombreApellidos" style="display: none;" align="center">
-	        					<strong>Nombre y Apellidos:</strong> ${perfil.getNombreApellidos()}
-	        				</p>
-	        				<p id="ciudad" style="display: none;" align="center">
-	        					<strong>Ciudad:</strong> ${perfil.getCiudad()}
-	        				</p>
-	        				<p id="pais" style="display: none;" align="center">
-	        					<strong>País:</strong> ${perfil.getPais()}
-	        				</p>
-	        				<br><br>
-	        				<script>
-	        					if("${usuario.getNombreApellidos()}"!=null && "${usuario.getNombreApellidos()}"!=""){
-	        						document.getElementById("nombreApellidos").style.display = "block";
-	        					}
-	        					if("${usuario.getCiudad()}"!=null && "${usuario.getCiudad()}"!=""){
-	        						document.getElementById("ciudad").style.display = "block";
-	        					}
-	        					if("${usuario.getPais()}"!=null && "${usuario.getPais()}"!=""){
-	        						document.getElementById("pais").style.display = "block";
-	        					}
-	        				</script>
-		        		</div>
-        			</div>
-        		</div>
-        		<div class="col-md-4">
-        			<div class="row cuadroInfoUser container" style="height:100%">
-        				<div class="col-md-12">
-        					<br>
-	        				<br>
-	        				<div align="center" ng-if="compruebaOtroUsuario() == false">
-		        				<br><br><br><br>
-		        				<h6 align="center">Bienvenido a tu perfil ${usuario.getUsername()}</h6>
-		        				<br><br><br><br>
-	        				</div>
-	        				<div align="center" ng-if="compruebaOtroUsuario() == true">
-	        					<br><br><br><br><br>
-	        					<div ng-if="tipoRelacion == 'ninguna'">
-	        						<p style="color:black;"><strong>No sois amigos</strong></p>
-		                        	<button class="btn btn-info" ng-click="enviarPeticion()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Enviar Solicitud de Amistad
-		                        	</button>
-		                        	<br><br>
-		                        	<button class="btn btn-secondary" ng-click="bloquearUsuario()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Bloquear Usuario
-		                        	</button>
-		                        </div>
-		                        <div ng-if="tipoRelacion == 'amigo'">
-		                        	<p style="color:black;"><strong>Amigo</strong></p>
-		                        	<button class="btn btn-danger" ng-click="eliminar()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Eliminar Amistad
-		                        	</button>
-		                        	<br><br>
-		                        	<button class="btn btn-secondary" ng-click="bloquearUsuario()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Bloquear Usuario
-		                        	</button>
-		                        </div>
-		                        <div ng-if="tipoRelacion == 'solEnviada'">
-		                        	<p style="color:black;"><strong>Solicitud de Amistad Enviada</strong></p>
-		                        	<button class="btn btn-secondary" ng-click="bloquearUsuario()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Bloquear Usuario
-		                        	</button>
-		                        </div>
-		                        <div ng-if="tipoRelacion == 'solRecibida'">
-		                        	<p style="color:black;"><strong>Solicitud de Amistad Recibida</strong></p>
-		                        	<button class="btn btn-success" ng-click="aceptarAmistad()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Aceptar Peticion de Amistad
-		                        	</button>
-		                        	<br><br>
-		                        	<button class="btn btn-danger" ng-click="rechazarAmistad()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Rechazar Peticion de Amistad
-		                        	</button>
-		                        	<br><br>
-		                        	<button class="btn btn-secondary" ng-click="bloquearUsuario()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Bloquear Usuario
-		                        	</button>
-		                        </div>
-		                        <div ng-if="tipoRelacion == 'bloqueado'">
-		                        	<p style="color:black;"><strong>Usuario Bloqueado</strong></p>
-		                        	<button class="btn btn-warning" ng-click="desbloquearUsuario()">
-		                        		<i class="fa fa-user-o" aria-hidden="true"></i>
-		                        		Desloquear Usuario
-		                        	</button>
-		                        </div>
-	        				</div>
-	        				<br>
-		        		</div>
-        			</div>
-        		</div>
-        		<div class="col-md-2"></div>
-        	</div>
-        	<div class="row">
-        		<br><br><br>
-        	</div>-->
         	
         	<script>
         		if("${usuario.getRol()}" === 'Administrador'){

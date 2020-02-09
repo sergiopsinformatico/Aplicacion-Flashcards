@@ -225,11 +225,30 @@
            	};
            	
            	$scope.generaNuevaClave = function(usuario){
-           		window.location.href = "administradorCambiaRol.do?username="+usuario+"&rol="+result;
+           		
+           		bootbox.confirm({
+				    message: "¿Quiere generar una nueva clave para "+usuario+"?",
+				    buttons: {
+				        cancel: {
+				            label: '<i class="fa fa-times"></i> No'
+				        },
+				        confirm: {
+				            label: '<i class="fa fa-check"></i> Si'
+				        }
+				    },
+				    callback: function (result) {
+				    	if(result == true){
+					    	console.log('Generar nueva clave: ' + result);
+					    	window.location.href = "administradorGeneraNuevaClave.do?username="+usuario;
+				    	}
+				    }
+				});
+           		
+           		
            	};
            	
            	$scope.adminModificaPerfil = function(usuario){
-        	    window.location.href = "administradorCambiaRol.do?username="+usuario+"&rol="+result;
+        	    window.location.href = "administradorModificaPerfil.do?username="+usuario;
            	};
         	
 			$scope.eliminaUsuario = function(usuario){

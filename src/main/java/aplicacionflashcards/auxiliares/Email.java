@@ -82,6 +82,17 @@ public class Email {
 		return enviarMensaje();
 	}
 	
+	public boolean adminGeneraClave(UsuarioDTO user) {
+		setAsunto("[Flashcards] Generada clave nueva para "+user.getUsername());
+		setMensaje(CONST_SALUDO+user.getUsername()+"!!"+
+		"\nSe le ha generado una nueva clave:"+
+		CONST_USUARIO+user.getEmail()+" o "+user.getUsername()+
+		CONST_CLAVE+user.getClave()+
+		CONST_CIERRE);
+		setRecibe(user.getEmail());
+		return enviarMensaje();
+	}
+	
 	private boolean enviarMensaje() {
 		enviado = false;
 		caesar = new CifradoCaesar();

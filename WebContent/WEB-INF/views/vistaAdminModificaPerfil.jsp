@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Flashcards - Configuración</title>
+  <title>Flashcards - Administrador Modifica Perfil de ${usuarioModificar.getUsername()}</title>
 
   <!-- Custom fonts for this template-->
   <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -69,7 +69,7 @@
       <div class="sidebar-heading" id="adminSidebarTitle" style="display: none;">
         Administrador
       </div>
-      <li class="nav-item" id="adminSidebar" style="display: none;">
+      <li class="nav-item active" id="adminSidebar" style="display: none;">
         <a class="nav-link" href="panelAdministrador.html">
           <i class="fa fa-universal-access" aria-hidden="true"></i>
           <span>Panel Administrador</span></a>
@@ -170,7 +170,7 @@
         
         
         <!-- Begin Page Content -->
-        <div class="container-fluid" ng-app="AppConfiguracion" ng-controller="ConfiguracionCtrl">
+        <div class="container-fluid" ng-app="AppAdminModificaPerfil" ng-controller="AdminModificaPerfilCtrl">
         	<div class="row">
         		<br>
         	</div>
@@ -178,46 +178,12 @@
         		<div class="col-md-2"></div>
         		<div class="col-md-8">
         			<div class="row" style="background-color:white;">
-        				<div class="col-md-12" align="center" style="text-align:center;">
-        					<br>
-			    			<h4 class="title" align="center">Eliminar Cuenta</h4>
-			    			<br>
-			    			<div class="middle">
-			    				<button type="submit" class="btn btn-danger" onclick="eliminarCuenta()">
-			    					<i class="fa fa-trash" aria-hidden="true"></i>
-			    					Eliminar Cuenta
-			    				</button>
-			    				<script>
-				    				function eliminarCuenta(){
-				    			    	bootbox.confirm({ 
-				    		    		  size: "small",
-				    		    		  message: "¿Quiere eliminar su cuenta?", 
-				    		    		  callback: function(result){ 
-				    		    			if(result){
-				    		    				window.location.href = "eliminarCuenta.do";
-				    		    			}  
-				    		    		  }
-				    		    		})
-				    			    }
-			    				</script>
-		      				</div>
-		      				<br>
-		      				<small>
-		      					<strong>Nota:</strong> Dispondrá de 14 días para volver a activar su cuenta, iniciando sesión de nuevo.
-		      				</small>
-		      				<br>
-		      				<br>
-		      				<br>
-        				</div>
-        			</div>
-        			<br><br>
-        			<div class="row" style="background-color:white;">
         				<div class="col-md-1"></div>
         				<div class="col-md-10">
         					<br>
-			    				<h4 class="title" align="center">Modificar Mi Perfil</h4>
+			    				<h4 class="title" align="center">Modificar Perfil de ${usuarioModificar.getUsername()}</h4>
 			    			<br>
-	        				<form action="modificaUsuario.do" method="post" id="Registro" name="Registro">            
+	        				<form action="modificaUsuarioAdministrador.do" method="post" id="Registro" name="Registro">            
 				           		<br>
 				           		<!-- <div class="form-group">
 						            <input type="text" class="form-control" id="inputUsername" ng-model="username" ng-change="validateUsername($event, username)" name="inputUsername" placeholder="Username" required>
@@ -226,8 +192,8 @@
 						        <h6 style="font-size:10px; color:#808080">El campo Username solo puede contener números y letras, y tiene que tener una longitud de entre 5 y 15 caracteres.</h6>			        
 						        <br>-->
 						        
-						        <h6 style="color:#808080">Username: ${usuario.getUsername()}</h6>
-						        <input type="hidden" class="form-control" id="inputUsername" ng-model="username" name="inputUsername" value="${usuario.getUsername()}">
+						        <h6 style="color:#808080">Username: ${usuarioModificar.getUsername()}</h6>
+						        <input type="hidden" class="form-control" id="inputUsername" ng-model="username" name="inputUsername" value="${usuarioModificar.getUsername()}">
 						  		<br>
 						        <div class="form-group">
 						            <input type="email" class="form-control" id="inputEmail" ng-model="email" ng-change="validateEmail($event, email)" name="inputEmail" placeholder="Email" required>
@@ -290,8 +256,8 @@
         
         <script>
 			'use strict'
-		    var app = angular.module('AppConfiguracion', []);
-		    app.controller('ConfiguracionCtrl', function($scope, $http) {
+		    var app = angular.module('AppAdminModificaPerfil', []);
+		    app.controller('AdminModificaPerfilCtrl', function($scope, $http) {
 		    	$scope.messageUsername = "";
 	        	$scope.messageEmail = "";
 	        	$scope.messageClave = "";
@@ -363,7 +329,7 @@
 	        		}
 	        	}
 	        	
-	        		        	
+	        	
 	        	$scope.validateEmail = function(event, email){
 	        		checkEmail = false;
 	        		existEmail = false;
@@ -371,7 +337,7 @@
 		        	email = email.toLowerCase();
 	        		
 	        		for(indice=0; indice<listaEmails.length; indice++){
-	        			if((listaEmails[indice]!="${usuario.getEmail()}") && (email == listaEmails[indice])){
+	        			if((listaEmails[indice]!="${usuarioModificar.getEmail()}") && (email == listaEmails[indice])){
 	        				existEmail = true;
 	        				document.getElementById("msgEmail").style.color="#E33A3A"
 	        				$scope.messageEmail = "El email "+ email +" existe.";
@@ -449,14 +415,14 @@
 	        		enableBtnModificar();
 	        	}
 	        	
-	        	$scope.username = "${usuario.getUsername()}";
-				$scope.clave = "${usuario.getClave()}";
-				$scope.repClave = "${usuario.getClave()}";
-				$scope.email = "${usuario.getEmail()}";
-				$scope.nombreApellidos = "${usuario.getNombreApellidos()}";
-				$scope.ciudad = "${usuario.getCiudad()}";
-				$scope.pais= "${usuario.getPais()}";
-				$scope.fotoPerfil = "${usuario.getEmailFoto()}";
+	        	$scope.username = "${usuarioModificar.getUsername()}";
+				$scope.clave = "${usuarioModificar.getClave()}";
+				$scope.repClave = "${usuarioModificar.getClave()}";
+				$scope.email = "${usuarioModificar.getEmail()}";
+				$scope.nombreApellidos = "${usuarioModificar.getNombreApellidos()}";
+				$scope.ciudad = "${usuarioModificar.getCiudad()}";
+				$scope.pais= "${usuarioModificar.getPais()}";
+				$scope.fotoPerfil = "${usuarioModificar.getEmailFoto()}";
 	        	
 	        	enableBtnModificar();
 	        	
