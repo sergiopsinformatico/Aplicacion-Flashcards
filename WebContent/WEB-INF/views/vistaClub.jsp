@@ -289,6 +289,10 @@
 						});
 	        	}
 	        	
+	        	$scope.showDeleteUsuario = function(usuarioClub){
+	        		return "${club.getAdministrador()}".localeCompare("${usuario.getUsername()}")==0 && usuarioClub.localeCompare("${club.getAdministrador()}")!=0;
+	        	}
+	        	
 	        	$scope.verColecciones();
 	        });
         </script>
@@ -359,7 +363,7 @@
 							      		<br>
 							      		<p><strong><a ng-href="verPerfil.html?usuarioPerfil={{eMiembro.username}}" style="color:#244B36;">{{eMiembro.username}}</a></strong></p>
 							      		<br>
-							      		<br>
+							      		<p ng-if="showDeleteUsuario(eMiembro.username)"><strong><a ng-href="verPerfil.html?usuarioPerfil={{eMiembro.username}}" style="color:#244B36;">Eliminar usuario del Club</a></strong></p>
 							      		<br>
 							      		<br>
 							      	</div>
