@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.broker.Broker;
@@ -60,9 +61,7 @@ public class Controlador09Flashcards {
 	
 	@GetMapping(value = "/flashcards")
 	public ModelAndView flashcards(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaFlashcards");
 		
@@ -74,9 +73,7 @@ public class Controlador09Flashcards {
 	
 	@GetMapping(value = "/crearColeccion")
 	public ModelAndView crearColeccion(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaFlashcardsCrear");
 			tarjetas = new LinkedList<>();
@@ -176,9 +173,7 @@ public class Controlador09Flashcards {
 	
 	@GetMapping(value = "/verColecciones")
 	public ModelAndView verColecciones(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaFlashcardsColecciones");
 		
@@ -244,9 +239,7 @@ public class Controlador09Flashcards {
 	
 	@GetMapping(value = "/verColeccion")
 	public ModelAndView verColeccion(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaFlashcardsVisualizar");
 			flashcard = Broker.getInstanciaFlashcards().leerFlashcard(id);

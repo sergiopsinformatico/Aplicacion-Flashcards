@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
@@ -57,9 +58,7 @@ public class Controlador07Gente {
 	
 	@GetMapping(value = "/verGente")
 	public ModelAndView gente(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaGente");
 		

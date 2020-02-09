@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.MD5Photo;
@@ -47,9 +48,7 @@ public class Controlador05Configuracion {
 	
 	@GetMapping(value = "/configuracion")
 	public ModelAndView modificarPerfil(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaConfiguracion");
 		
@@ -101,9 +100,7 @@ public class Controlador05Configuracion {
 	//Eliminar Cuenta
 	@GetMapping(value = "/eliminarCuenta")
 	public ModelAndView eliminarCuenta(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		  ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		  (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			fecha = new Fecha();
 			elimina = new EliminarCuentaDTO(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), fecha.fechaEliminarCuenta());

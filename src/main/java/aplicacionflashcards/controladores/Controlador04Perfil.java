@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOFlashcards;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOPuntos;
@@ -43,9 +44,7 @@ public class Controlador04Perfil {
 	/*Ver Perfil*/
 	@GetMapping(value = "/verPerfil")
 	public ModelAndView verPerfil(@RequestParam("usuarioPerfil") String userPerfil, HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-			((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-			(!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			user = dBUsuario.getUsuarioDTO(userPerfil);

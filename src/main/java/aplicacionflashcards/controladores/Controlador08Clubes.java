@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.broker.Broker;
@@ -52,9 +53,7 @@ public class Controlador08Clubes {
 	
 	@GetMapping(value = "/verClubes")
 	public ModelAndView getClubes(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			vista = new ModelAndView("vistaClubes");
 		
@@ -91,9 +90,7 @@ public class Controlador08Clubes {
 	
 	@PostMapping(value = "/crearClub")
 	public ModelAndView crearClubes(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")!=null && 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-		   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""))) {
+		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			dBClub = Broker.getInstanciaClub();
 			fecha = new Fecha();

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
@@ -53,9 +54,7 @@ public class Controlador03ControlSesion {
 	/*Control pagina principal de logueado y no logueado*/
 	@GetMapping(value = "/inicio")
 	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
-		if(request.getSession().getAttribute("usuario")==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		if(CheckUsers.isUsuarioNoLogueado(request)) {
 			vista = new ModelAndView("index");
 			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
 				vista.addObject("mensaje", request.getParameter("mensaje"));
@@ -86,9 +85,7 @@ public class Controlador03ControlSesion {
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
 				
-		if(request.getSession().getAttribute("usuario")==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")) {
+		if(CheckUsers.isUsuarioNoLogueado(request)) {
 			
 			vista =  new ModelAndView("vistaIniciarSesion");
 			

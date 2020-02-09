@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
@@ -67,8 +68,20 @@ public class Controlador02RecuperarCuenta {
 		
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
+		
+		
+		if(CheckUsers.isUsuarioNoLogueado(request)) {
+			
+			vista = new ModelAndView(VISTARECUPERARCUENTA);
+			
+		}else {
+			
+			vista = new ModelAndView("redirect:/inicio.html");
+			
+		}
+		
+		return vista;
 				
-		return new ModelAndView(VISTARECUPERARCUENTA);
 	}
 	
 	@PostMapping(value = "/recuperaClave")

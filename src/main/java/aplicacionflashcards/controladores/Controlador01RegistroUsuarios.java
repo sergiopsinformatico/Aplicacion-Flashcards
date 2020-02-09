@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
@@ -85,9 +86,7 @@ public class Controlador01RegistroUsuarios {
 		//3-Eliminar solicitudes de restablecimiento de Claves
 		Broker.getInstanciaRecuperarCuenta().comprobarSolicitudesCaducadas();
 		
-		if(request.getSession().getAttribute(USUARIO)==null || 
-		   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername()==null||
-		   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername().equals("")) {
+		if(CheckUsers.isUsuarioNoLogueado(request)) {
 			
 			vista = new ModelAndView("vistaRegistro");
 			
