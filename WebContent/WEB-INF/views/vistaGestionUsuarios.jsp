@@ -277,16 +277,6 @@
         });
         </script>
         
-        <!-- 
-        	$scope.generaNuevaClave = function(usuario){
-           		window.location.href = "administradorCambiaRol.do?username="+usuario+"&rol="+result;
-           	};
-           	
-           	$scope.adminModificaPerfil = function(usuario){
-        	    window.location.href = "administradorCambiaRol.do?username="+usuario+"&rol="+result;
-           	};
-         -->
-        
         <div class="container-fluid" ng-app="AppAdministradorUsuarios" ng-controller="AdministradorUsuariosCtrl">
         	<div class="row">
         		<div class="col-md-12">

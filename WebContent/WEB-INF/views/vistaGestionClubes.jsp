@@ -251,7 +251,7 @@
 					   								</div>
 					   								<div class="col-md-8">
 						   								<span>
-						   									<button type="submit" class="btn btn-danger" style="color:white">
+						   									<button type="submit" class="btn btn-danger" style="color:white" ng-click="eliminaClub(eClub)">
 										        				<i class="fa fa-trash" aria-hidden="true"></i>
 										        				<br>
 										       					Eliminar Club
