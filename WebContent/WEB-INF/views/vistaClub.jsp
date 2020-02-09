@@ -289,7 +289,7 @@
 						});
 	        	}
 	        	
-	        	$scope.showDeleteUsuario = function(usuarioClub){
+	        	$scope.showOpcionesUsuario = function(usuarioClub){
 	        		return "${club.getAdministrador()}".localeCompare("${usuario.getUsername()}")==0 && usuarioClub.localeCompare("${club.getAdministrador()}")!=0;
 	        	}
 	        	
@@ -363,7 +363,10 @@
 							      		<br>
 							      		<p><strong><a ng-href="verPerfil.html?usuarioPerfil={{eMiembro.username}}" style="color:#244B36;">{{eMiembro.username}}</a></strong></p>
 							      		<br>
-							      		<p ng-if="showDeleteUsuario(eMiembro.username)"><strong><a ng-href="verPerfil.html?usuarioPerfil={{eMiembro.username}}" style="color:#244B36;">Eliminar usuario del Club</a></strong></p>
+							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-lock" aria-hidden="true"></i><a ng-href="adminAsignaAdminClub.html?usuario={{eMiembro.username}}" style="margin-left:2px;color:white;">Asignar Administrador del Club</a></p>
+							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-user-times" aria-hidden="true"></i><a ng-href="adminEliminaUserClub.html?usuario={{eMiembro.username}}" style="margin-left:2px;color:white;">Eliminar usuario del Club</a></p>
+							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-ban" aria-hidden="true"></i><a ng-href="adminBloqueaUserClub.html?usuario={{eMiembro.username}}" style="margin-left:2px;color:white;">Bloquear usuario del Club</a></p>
+							      		<br>
 							      		<br>
 							      		<br>
 							      	</div>
@@ -385,65 +388,13 @@
 				        </p>
 				    </div>
 				</div>
-				<!--<div class="col-md-5" align="center">
-					<br>
-					<h6 align="center">Lista de Colecciones</h6>
-					<br>
-        			<div ng-if="${club.isPertenezcoClub()} == true">
-        				<div ng-if="puedoVerColeccion == false">
-        					<h6 align="center">Cargando colecciones</h6>
-        				</div>
-        				<div ng-if="puedoVerColeccion == true && colecciones.length == 0" align="center">
-        					<h6 align="center">No se ha compartido ninguna coleccion todavia</h6>
-        				</div>
-        				<div ng-if="puedoVerColeccion == true && colecciones.length > 0" align="center">
-        					<div class="input-group">
-				            	<input type="text" ng-model="filterColecciones" ng-change="refreshCarrouselColecciones()" class="form-control" placeholder="Filtrar colecciones" />
-				            </div>
-				            <br>
-		        			<div id="carouselFlashcardClub" align="center" class="carousel slide" style="width:300px;height:350px;">
-						        <div class="container" style="width:300px;height:350px;">
-						            <div class="carousel-inner row w-100 mx-auto" style="width:300px;height:350px;">
-										<div class="carousel-item" ng-repeat="eColeccion in colecciones | filter:filterColecciones">
-								            <div class="flip-card-container" style="width:300px;height:350px;text-align:center;">
-												<div class="flip-card">
-											    	<div class="flip-card-front" style="background:#FFB550;" align="center">
-											        	<br><br><br>
-											        	{{eColeccion.nombreColeccion}}						                    	
-													</div>
-											 		<div class="flip-card-back" style="background:#86D4FF;">
-											 			<br><br>
-								                    	<i class="fa fa-eye" aria-hidden="true" style="color:black"></i>
-			     									 	<br>
-											 			<a ng-href="verColeccion.html?id={{eColeccion.idColeccion}}" style="color:black;">
-											 				Ver Coleccion
-											 			</a>
-												    </div>
-											    </div>
-											</div>					
-						                </div>
-						            </div>
-							        <a class="carousel-control-prev" href="#carouselFlashcardClub" role="button" data-slide="prev">
-								      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-								      <span class="sr-only">Anterior</span>
-								    </a>
-								    <a class="carousel-control-next" href="#carouselFlashcardClub" role="button" data-slide="next">
-								      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-								      <span class="sr-only">Siguiente</span>
-								    </a>
-							    </div>
-							</div>
-							<br><br><br>
-						</div>
-					</div>
-					<div ng-if="${club.isPertenezcoClub()} == false">
-				        <p>
-				        	No puede ver los miembros del club, ya que no forma parte del mismo
-				        </p>
-				    </div>
-        		</div>-->
         		<div class="col-md-1"></div>
-       		</div>        	        	
+       		</div>    
+       		<div class="row">
+       			<div class="col-md-12">
+       				<br><br>
+       			</div>
+       		</div>    	        	
         	<script>
 		   		if("${usuario.getRol()}" === 'Administrador'){
 		   			document.getElementById("adminSidebarDivider").style.display="block";
