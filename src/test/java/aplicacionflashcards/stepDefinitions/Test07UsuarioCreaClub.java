@@ -17,6 +17,7 @@ public class Test07UsuarioCreaClub {
 	ClubDTO club;
 	Fecha fecha;
 	List<String> miembros;
+	List<String> bloqueados;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAOClub dBClub;
 	
@@ -29,9 +30,11 @@ public class Test07UsuarioCreaClub {
 		fecha =new Fecha();
 		miembros = new LinkedList<String>();
 		miembros.add("user1Test");
+		
+		bloqueados  = new LinkedList<String>();
 	    
 		club = new ClubDTO ("idEjemploClub", "Club Pruebas", "Pruebas BDD", 
-				"user1Test", miembros, fecha.fechaHoy());
+				"user1Test", miembros, fecha.fechaHoy(), bloqueados);
 	    
 	    assert(dBUsuario.existUsername("user1Test") && (!dBClub.existeIdClub(club.getIdClub())));	    
 	}

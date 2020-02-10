@@ -33,6 +33,7 @@ public class ClubMongoDB implements InterfaceDAOClub{
     MongoCursor<Document> iterador;
     ClubDTO club;
     List<String> miembros;
+    List<String> bloqueados;
     List<ClubDTO> clubes;
     int indice;
     boolean encontrado;
@@ -47,6 +48,7 @@ public class ClubMongoDB implements InterfaceDAOClub{
   	static final String CONST_ADMIN = "administrador";
   	static final String CONST_FECHA = "fecha";
   	static final String CONST_MIEMBROS = "miembros";
+  	static final String CONST_BLOQUEADOS = "bloqueados";
 	
 	public ClubMongoDB() {
 		connection();
@@ -73,7 +75,8 @@ public class ClubMongoDB implements InterfaceDAOClub{
 									.append("tema", club.getTemaClub())
 									.append(CONST_ADMIN, club.getAdministrador())
 									.append(CONST_FECHA, club.getFechaCreacion())
-									.append(CONST_MIEMBROS, club.getMiembros());
+									.append(CONST_MIEMBROS, club.getMiembros())
+									.append(CONST_BLOQUEADOS, club.getBloqueados());
 				coleccionClubes.insertOne(doc);
 				return true;
 			}else {
@@ -96,7 +99,8 @@ public class ClubMongoDB implements InterfaceDAOClub{
 		if(iterador.hasNext()) {
 			doc = iterador.next();
 			club = new ClubDTO(doc.getString(CONST_ID_CLUB), doc.getString(CONST_NOMBRE), doc.getString("tema"), 
-					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA));
+					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA),
+					(List<String>)doc.get(CONST_BLOQUEADOS));
 			
 			club.setSoyAdministradorClub(username.equals(club.getAdministrador()));
 			
@@ -176,13 +180,27 @@ public class ClubMongoDB implements InterfaceDAOClub{
 		while(iterador.hasNext()) {
 			doc = iterador.next();
 			club = new ClubDTO(doc.getString(CONST_ID_CLUB), doc.getString(CONST_NOMBRE), doc.getString("tema"), 
-					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA));
+					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA),
+					(List<String>)doc.get(CONST_BLOQUEADOS));
 			
 			club.setSoyAdministradorClub(username.equals(club.getAdministrador()));
 			
 			club.setPertenezcoClub(checkPertenezcoClub(club.getMiembros(), username));
-					
-			clubes.add(club);
+			
+			bloqueados = club.getBloqueados();
+			
+			encontrado = false;
+			
+			for(indice = 0; indice<bloqueados.size(); indice++) {
+				if(username.equals(bloqueados.get(indice))) {
+					encontrado = true;
+				}
+			}
+			
+			if(!encontrado) {
+				clubes.add(club);
+			}
+			
 		}
 		return clubes;
 	}
@@ -195,7 +213,8 @@ public class ClubMongoDB implements InterfaceDAOClub{
 			doc = iterador.next();
 			
 			club = new ClubDTO(doc.getString(CONST_ID_CLUB), doc.getString(CONST_NOMBRE), doc.getString("tema"), 
-					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA));
+					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA),
+					(List<String>)doc.get(CONST_BLOQUEADOS));
 			
 			club.setSoyAdministradorClub(true);
 			
@@ -215,7 +234,8 @@ public class ClubMongoDB implements InterfaceDAOClub{
 			if(checkPertenezcoClub(miembros, username)) {
 				
 				club = new ClubDTO(doc.getString(CONST_ID_CLUB), doc.getString(CONST_NOMBRE), doc.getString("tema"), 
-						doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA));
+						doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA),
+						(List<String>)doc.get(CONST_BLOQUEADOS));
 				
 				club.setSoyAdministradorClub(username.equals(club.getAdministrador()));
 				
@@ -245,7 +265,8 @@ public class ClubMongoDB implements InterfaceDAOClub{
 			doc = iterador.next();
 			miembros = (List<String>)doc.get(CONST_MIEMBROS);
 			club = new ClubDTO(doc.getString(CONST_ID_CLUB), doc.getString(CONST_NOMBRE), doc.getString("tema"), 
-					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA));
+					doc.getString(CONST_ADMIN), (List<String>)doc.get(CONST_MIEMBROS), doc.getString(CONST_FECHA),
+					(List<String>)doc.get(CONST_BLOQUEADOS));
 			clubes.add(club);
 		}
 		return clubes;

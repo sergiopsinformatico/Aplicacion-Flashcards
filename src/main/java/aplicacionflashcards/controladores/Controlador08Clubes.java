@@ -39,6 +39,7 @@ public class Controlador08Clubes {
 	String idClub;
 	Fecha fecha;
 	List<String> miembros;
+	List<String> bloqueados;
 	List<UsuarioDTO> usuariosMiembros;
 	int indice;
 	
@@ -104,9 +105,11 @@ public class Controlador08Clubes {
 			miembros = new LinkedList<>();
 			miembros.add(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
 			
+			bloqueados = new LinkedList<>();
+			
 			club = new ClubDTO(idClub, request.getParameter("nombre"), request.getParameter("tema"),
 					((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), 
-					miembros, fecha.fechaHoy());
+					miembros, fecha.fechaHoy(), bloqueados);
 			
 			vista = new ModelAndView("vistaClubes");
 			
@@ -239,6 +242,27 @@ public class Controlador08Clubes {
 			}
 		}
 		club.setMiembros(miembros);
+		dBClub.actualizaClub(club);
+		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+	}
+	
+	@GetMapping(value = "/adminBloqueaUserClub", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ModelAndView adminBloqueaUserClub(@RequestParam("usuario") String usuario, @RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		
+		miembros = club.getMiembros();
+		for(indice=0; indice<miembros.size(); indice++) {
+			if(miembros.get(indice).equals(usuario)) {
+				miembros.remove(indice);
+				indice = miembros.size();
+			}
+		}
+		club.setMiembros(miembros);
+		
+		bloqueados = club.getBloqueados();
+		bloqueados.add(usuario);
+		club.setBloqueados(bloqueados);
+		
 		dBClub.actualizaClub(club);
 		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
 	}

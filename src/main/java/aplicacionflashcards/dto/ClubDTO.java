@@ -12,9 +12,10 @@ public class ClubDTO {
 	String fechaCreacion;
 	boolean pertenezcoClub;
 	boolean soyAdministradorClub;
+	List<String> bloqueados;
 	
 	public ClubDTO (String idClub, String nombreClub, String temaClub, 
-			String administrador, List<String> miembros, String fechaCreacion) {
+			String administrador, List<String> miembros, String fechaCreacion, List<String> bloqueados) {
 		
 		setIdClub(idClub);
 		setNombreClub(nombreClub);
@@ -22,6 +23,7 @@ public class ClubDTO {
 		setAdministrador(administrador);
 		setMiembros(miembros);
 		setFechaCreacion(fechaCreacion);
+		setBloqueados(bloqueados);
 		
 	}
 	
@@ -72,6 +74,12 @@ public class ClubDTO {
 	}
 	public void setSoyAdministradorClub(boolean soyAdministradorClub) {
 		this.soyAdministradorClub = soyAdministradorClub;
+	}
+	public List<String> getBloqueados() {
+		return bloqueados;
+	}
+	public void setBloqueados(List<String> bloqueados) {
+		this.bloqueados = bloqueados;
 	}
 	
 }
