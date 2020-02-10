@@ -194,7 +194,7 @@ public class Controlador08Clubes {
 		return vista;
 	}
 	
-	@GetMapping(value = "/eliminarUsuarioClub")
+	/*@GetMapping(value = "/eliminarUsuarioClub")
 	public ModelAndView eliminarUsuarioClub(@RequestParam("idClub") String idClub, @RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response) {
 		vista = new ModelAndView("vistaClub");
 		dBClub = Broker.getInstanciaClub();
@@ -214,7 +214,7 @@ public class Controlador08Clubes {
 		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
 		vista.addObject("club", club);
 		return vista;
-	}
+	}*/
 	
 	@GetMapping(value = "/getColeccionesClub", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
