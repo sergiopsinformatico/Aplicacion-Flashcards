@@ -219,4 +219,28 @@ public class Controlador08Clubes {
 	public List<FlashcardsDTO> getColeccionesClub(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		return Broker.getInstanciaFlashcards().coleccionesClub(id);
 	}
+	
+	@GetMapping(value = "/adminAsignaAdminClub", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ModelAndView adminAsignaAdminClub(@RequestParam("usuario") String usuario, @RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club.setAdministrador(usuario);
+		dBClub.actualizaClub(club);
+		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+	}
+	
+	@GetMapping(value = "/adminEliminaUserClub", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ModelAndView adminEliminaUserClub(@RequestParam("usuario") String usuario, @RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		miembros = club.getMiembros();
+		for(indice=0; indice<miembros.size(); indice++) {
+			if(miembros.get(indice).equals(usuario)) {
+				miembros.remove(indice);
+				indice = miembros.size();
+			}
+		}
+		club.setMiembros(miembros);
+		dBClub.actualizaClub(club);
+		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+	}
+	
 }

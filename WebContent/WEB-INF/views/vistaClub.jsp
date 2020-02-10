@@ -363,9 +363,9 @@
 							      		<br>
 							      		<p><strong><a ng-href="verPerfil.html?usuarioPerfil={{eMiembro.username}}" style="color:#244B36;">{{eMiembro.username}}</a></strong></p>
 							      		<br>
-							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-lock" aria-hidden="true"></i><a ng-href="adminAsignaAdminClub.html?usuario={{eMiembro.username}}" style="margin-left:2px;color:white;">Asignar Administrador del Club</a></p>
-							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-user-times" aria-hidden="true"></i><a ng-href="adminEliminaUserClub.html?usuario={{eMiembro.username}}" style="margin-left:2px;color:white;">Eliminar usuario del Club</a></p>
-							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-ban" aria-hidden="true"></i><a ng-href="adminBloqueaUserClub.html?usuario={{eMiembro.username}}" style="margin-left:2px;color:white;">Bloquear usuario del Club</a></p>
+							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-lock" aria-hidden="true"></i><a ng-href="adminAsignaAdminClub.html?usuario={{eMiembro.username}}&idClub=${club.getIdClub()}" style="margin-left:2px;color:white;">Asignar Administrador del Club</a></p>
+							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-user-times" aria-hidden="true"></i><a ng-href="adminEliminaUserClub.html?usuario={{eMiembro.username}}&idClub=${club.getIdClub()}" style="margin-left:2px;color:white;">Eliminar usuario del Club</a></p>
+							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-ban" aria-hidden="true"></i><a ng-href="adminBloqueaUserClub.html?usuario={{eMiembro.username}}&idClub=${club.getIdClub()}" style="margin-left:2px;color:white;">Bloquear usuario del Club</a></p>
 							      		<br>
 							      		<br>
 							      		<br>
