@@ -1,5 +1,6 @@
 package main.java.aplicacionflashcards.controladores;
 
+import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,8 +16,10 @@ import org.springframework.web.servlet.ModelAndView;
 import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.auxiliares.Email;
 import main.java.aplicacionflashcards.broker.Broker;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAONotificaciones;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.EliminarCuentaDTO;
+import main.java.aplicacionflashcards.dto.NotificacionesDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 @Controller
@@ -33,6 +36,8 @@ public class Controlador03ControlSesion {
 	UsuarioDTO user;
 	EliminarCuentaDTO eliminado;
 	Email email;
+	InterfaceDAONotificaciones dBNotificaciones;
+	NotificacionesDTO notificaciones;
 	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador03ControlSesion");
@@ -126,6 +131,15 @@ public class Controlador03ControlSesion {
 					
 				}
 				vista.addObject("usuario", user);
+				
+				dBNotificaciones = Broker.getInstanciaNotificaciones();
+				notificaciones = dBNotificaciones.getNotificaciones(user.getUsername());
+				
+				if(notificaciones == null) {
+					notificaciones = new NotificacionesDTO(user.getUsername(), new LinkedList<String>());
+					dBNotificaciones.createObjectNotificaciones(notificaciones);
+				}
+				
 			}else {
 				vista = new ModelAndView("vistaIniciarSesion");
 				vista.addObject("mensaje", "Su cuenta aun no ha sido activada. Por favor, revise su email para activar la cuenta.");

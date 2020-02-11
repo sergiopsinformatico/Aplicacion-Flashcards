@@ -181,6 +181,23 @@
 	        	$scope.puedoVerColeccion = false;
 	        	$scope.colecciones = [];
 	        	
+	        	$scope.listaAmigos = [];
+	        	$scope.cargadosAmigos = false;
+	        	
+	        	$http({
+	    	        method: 'GET',
+	    	        url: 'getAmigosClubes.html',
+	                headers : {
+	                	'Accept': 'application/json'
+	                }
+	    	    }).then(function mySuccess(response) {
+	    	    	$scope.listaAmigos = response.data;
+	    	    	$scope.cargadosAmigos = true;
+	    	    }, function myError(response) {
+	    	    	$scope.listaAmigos = [];
+	    	    	$scope.cargadosAmigos = true;
+	    	    });
+	        	
 	        	$scope.getClubesPertenezco = function (){
 	        		$http.get("getUsuariosClub.do?idClub=${club.getIdClub()}")
 		       			.then(function(response) {
@@ -340,6 +357,36 @@
 	                        	Eliminar Club
 	                        </button>
         				</p>
+        				<div ng-if="cargadosAmigos && listaActual.size()==0 && ((${club.isPertenezcoClub()} == true) || (${club.isSoyAdministradorClub()} == true))" style="display: none;height:100px;">
+							<br>
+							<p>No puedes enviar invitaciones, ya que todavia no tienes amigos</p>
+						</div>
+       					<div ng-if="cargadosAmigos && listaActual.size()>0 && ((${club.isPertenezcoClub()} == true) || (${club.isSoyAdministradorClub()} == true))" style="display: none;height:100px;">
+							<br>
+							<div class="input-group" style="width:75%;">
+				            	<input type="text" ng-model="filterAmigos" class="form-control" placeholder="Filtrar por Amigos" />
+				            </div>
+				            <br>
+							<div style="height:100px;">
+					            <table width="75%" border="1">  
+								   <tr>  
+								      <th align="center" style="text-align:center;">Enviar Invitación a un Amigo</th>   
+								   </tr>
+								   <tr>
+								   		<td colspan=1>
+								   		<div style="overflow-y:scroll;height:100px;">
+								   			<table width=100% border="1">
+								   				<tr ng-repeat = "eUsuario in listaActual | filter:filterAmigos">  
+											      <td>
+											      	<button ng-click="invitar({{eUsuario}})" class="btn btn-success">Invitar a {{eUsuario}}</button>
+											      </td>    
+											   </tr>
+								   			</table>
+								   		</div>
+								   </tr>
+								 </table>
+							</div>
+						</div>
 	        			<br><br><br>
 	        		</div> 
         		</div>
@@ -347,8 +394,7 @@
         	</div>
         	
         	<div class="row">
-        		<div class="col-md-1"></div>
-        		<div class="col-md-10" align="center">
+        		<div class="col-md-6" align="center">
         			<br>
         			<h6>Miembros del Club</h6>
         			<br>
@@ -388,7 +434,8 @@
 				        </p>
 				    </div>
 				</div>
-        		<div class="col-md-1"></div>
+        		<div class="col-md-6">
+        		</div>
        		</div>    
        		<div class="row">
        			<div class="col-md-12">

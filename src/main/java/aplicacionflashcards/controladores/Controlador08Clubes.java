@@ -22,6 +22,7 @@ import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
@@ -41,6 +42,7 @@ public class Controlador08Clubes {
 	List<String> miembros;
 	List<String> bloqueados;
 	List<UsuarioDTO> usuariosMiembros;
+	InterfaceDAORelacionesUsuarios dBRelaciones;
 	int indice;
 	
 	/* * * * * *  * 
@@ -194,28 +196,6 @@ public class Controlador08Clubes {
 		return vista;
 	}
 	
-	/*@GetMapping(value = "/eliminarUsuarioClub")
-	public ModelAndView eliminarUsuarioClub(@RequestParam("idClub") String idClub, @RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("vistaClub");
-		dBClub = Broker.getInstanciaClub();
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
-		miembros = club.getMiembros();
-		
-		for(indice=0; indice<miembros.size(); indice++) {
-			if(miembros.get(indice).equals(username)) {
-				miembros.remove(indice);
-				indice = miembros.size();
-			}
-		}
-		
-		club.setMiembros(miembros);
-		dBClub.actualizaClub(club);
-		
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
-		vista.addObject("club", club);
-		return vista;
-	}*/
-	
 	@GetMapping(value = "/getColeccionesClub", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
@@ -266,5 +246,14 @@ public class Controlador08Clubes {
 		dBClub.actualizaClub(club);
 		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
 	}
+	
+	//Metodo auxiliar get usernames en vista registro
+		@GetMapping(value = "/getAmigosClubes", produces = MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		@ResponseStatus(HttpStatus.OK)
+		public List<String> getAmigosClubes(HttpServletRequest request, HttpServletResponse response){
+			dBRelaciones = Broker.getInstanciaRelaciones();
+			return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		}
 	
 }

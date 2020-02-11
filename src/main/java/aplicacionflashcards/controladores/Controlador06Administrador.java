@@ -218,6 +218,7 @@ public class Controlador06Administrador {
 				dBUsuario.deleteUsuario(userAntiguo);
 				Broker.getInstanciaRelaciones().eliminaRelaciones(userAntiguo.getUsername());
 				Broker.getInstanciaPuntos().eliminarPuntos(userAntiguo.getUsername());
+				Broker.getInstanciaNotificaciones().deleteObjectNotificaciones(userAntiguo.getUsername());
 			}
 			
 		}
