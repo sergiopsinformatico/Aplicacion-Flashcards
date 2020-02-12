@@ -18,7 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import main.java.aplicacionflashcards.auxiliares.CheckUsers;
 import main.java.aplicacionflashcards.broker.Broker;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOPuntos;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
+import main.java.aplicacionflashcards.dto.PuntosDTO;
 import main.java.aplicacionflashcards.dto.TarjetaDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
@@ -32,6 +34,8 @@ public class Controlador10Moderador {
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;
 	FlashcardsDTO flashcard;
+	InterfaceDAOPuntos dBPuntos;
+	PuntosDTO puntos;
 	
 	/*Constantes
 	static final String CONST_USUARIO = "usuario";
@@ -93,6 +97,10 @@ public class Controlador10Moderador {
 		vista = new ModelAndView("vistaFlashcardsEvaluar");
 		Broker.getInstanciaFlashcards().valoraPositivamente(id, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
 		vista.addObject("mensajes", "La coleccion se ha evaluado positivamente");
+		dBPuntos = Broker.getInstanciaPuntos();
+		puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		puntos.setPuntos(puntos.getPuntos() + 5);
+		dBPuntos.actualizaPuntos(puntos);
 		return vista;
 	}
 	

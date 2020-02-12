@@ -23,11 +23,13 @@ import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAONotificaciones;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOPuntos;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
 import main.java.aplicacionflashcards.dto.NotificacionesDTO;
+import main.java.aplicacionflashcards.dto.PuntosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 @Controller
@@ -39,6 +41,8 @@ public class Controlador08Clubes {
 	ClubDTO club;
 	InterfaceDAOClub dBClub;
 	InterfaceDAOUsuario dBUsuario;
+	InterfaceDAOPuntos dBPuntos;
+	PuntosDTO puntos;
 	String idClub;
 	Fecha fecha;
 	List<String> miembros;
@@ -120,6 +124,12 @@ public class Controlador08Clubes {
 			vista = new ModelAndView("vistaClubes");
 			
 			if(dBClub.insertaClub(club)) {
+				
+				dBPuntos = Broker.getInstanciaPuntos();
+				puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+				puntos.setPuntos(puntos.getPuntos() + 2);
+				dBPuntos.actualizaPuntos(puntos);
+				
 				vista.addObject("mensaje", "Se ha creado el club "+club.getNombreClub()+" correctamente");
 			}else {
 				vista.addObject("mensaje", "Error al crear el club");

@@ -52,7 +52,7 @@ public class Test24UsuarioBuscaColeccionesFlashcards {
 	    		encontrado = true;
 	    	}
 	    }
-		assert(encontrado);
+		assert(!encontrado);
 	}
 	
 }

@@ -23,9 +23,11 @@ import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOFlashcards;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAOPuntos;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
+import main.java.aplicacionflashcards.dto.PuntosDTO;
 import main.java.aplicacionflashcards.dto.TarjetaDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
@@ -39,6 +41,8 @@ public class Controlador09Flashcards {
 	InterfaceDAOClub dBClub;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
 	InterfaceDAOFlashcards dBFlashcards;
+	InterfaceDAOPuntos dBPuntos;
+	PuntosDTO puntos;
 	List<TarjetaDTO> tarjetas;
 	FlashcardsDTO flashcard;
 	int indice;
@@ -161,6 +165,12 @@ public class Controlador09Flashcards {
 		vista = new ModelAndView("vistaFlashcards");
 		
 		if(dBFlashcards.crearFlashcards(flashcard)) {
+			
+			dBPuntos = Broker.getInstanciaPuntos();
+			puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+			puntos.setPuntos(puntos.getPuntos() + 1);
+			dBPuntos.actualizaPuntos(puntos);
+			
 			vista.addObject("mensaje", "Se ha creado correctamente la coleccion "+flashcard.getNombreColeccion()+". Pendiente de evaluar por un moderador.");
 		}else {
 			vista.addObject("mensaje", "Ups! Hubo un error al crear la coleccion "+flashcard.getNombreColeccion());
