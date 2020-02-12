@@ -3,28 +3,27 @@
 
 <head>
 
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Flashcards - Gestion Flashcards</title>
+  <title>Flashcards - Panel Mensajes</title>
 
   <!-- Custom fonts for this template-->
-  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="resources/css/sb-admin-2.min.css" rel="stylesheet">
   <link href="resources/css/view_All.css" rel="stylesheet">
-  <link href="resources/css/cardFlip.css" rel="stylesheet">
   
   <!-- Bootstrap core CSS -->
   <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Font-Awesome -->
-  <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+  <link href="resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   
   <!-- Angular JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -60,13 +59,13 @@
         <a class="nav-link" href="inicio.html">
           <i class="fa fa-home" aria-hidden="true"></i>
           <span>Pagina Principal</span></a>
-      </li>      
+      </li> 
       
       <li class="nav-item">
         <a class="nav-link" href="desarrolloProyecto.html">
           <i class="fa fa-sitemap" aria-hidden="true"></i>
           <span>Wiki del Proyecto</span></a>
-      </li>
+      </li>  
       
       <hr class="sidebar-divider" id="adminSidebarDivider" style="display: none;">
       <div class="sidebar-heading" id="adminSidebarTitle" style="display: none;">
@@ -82,7 +81,7 @@
       <div class="sidebar-heading">
         Flashcards
       </div>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="flashcards.html">
           <i class="fa fa-clone" aria-hidden="true"></i>
           <span>Panel Flashcards</span></a>
@@ -108,6 +107,7 @@
       </li>
 
     </ul>
+    
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -145,7 +145,6 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" data-toggle="modal" onclick="dialogCS()">
                   <i class="fa fa-power-off" aria-hidden="true"></i>
-                  <!-- <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>-->
                   Cerrar Sesión
                 </a>
               </div>
@@ -170,114 +169,159 @@
         </script>
         
         <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
+        
         <script>        	
-	        var app = angular.module('AppGestionFlashcards', []);
-	        app.controller('GestionFlashcardsCtrl', function($scope, $http) {
+	        var app = angular.module('AppPanelMensajes', []);
+	        app.controller('PanelMensajesCtrl', function($scope, $http) {
 	        	
-	        	$scope.listaColecciones = [];
-	        	$scope.listaCargada = false;
+	        	$scope.checkMensajesRecibidos = false;
+	        	$scope.listaMensajesRecibidos = [];
 	        	
-	        	$scope.getColecciones = function(){
-	        		$http.get("getColeccionesModerador.do")
-		       			.then(function(response) {
-		       				$scope.listaColecciones = response.data;
-		       				$scope.listaCargada = true;
-		       		  	}, function myError(response) {
-		       		  		$scope.listaColecciones = [];
-			       		 	$scope.listaCargada = true;
-			       	    }
-		       		);
+	        	$scope.checkMensajesEnviados = false;
+	        	$scope.listaMensajesEnviados = [];
+	        	
+	        	$scope.listaAmigos = [];
+    	    	$scope.checkAmigos = false;
+	        	
+	        	$http({
+	    	        method: 'GET',
+	    	        url: 'getMensajesRecibidos.do?usuario='+ "${usuario.getUsername()}",
+	                headers : {
+	                	'Accept': 'application/json'
+	                }
+	    	    }).then(function mySuccess(response) {
+	    	    	$scope.listaMensajesRecibidos = response.data;
+	    	    	$scope.checkMensajesRecibidos = true;
+	    	    }, function myError(response) {
+	    	    	$scope.listaMensajesRecibidos = [];
+	    	    	$scope.checkMensajesRecibidos = true;
+	    	    });
+	        	
+	        	$http({
+	    	        method: 'GET',
+	    	        url: 'getMensajesEnviados.do?usuario='+ "${usuario.getUsername()}",
+	                headers : {
+	                	'Accept': 'application/json'
+	                }
+	    	    }).then(function mySuccess(response) {
+	    	    	$scope.listaMensajesEnviados = response.data;
+	    	    	$scope.checkMensajesEnviados = true;
+	    	    }, function myError(response) {
+	    	    	$scope.listaMensajesEnviados = [];
+	    	    	$scope.checkMensajesEnviados = true;
+	    	    });	  
+	        	
+	        	$http({
+	    	        method: 'GET',
+	    	        url: 'getAmigosMensajes.do',
+	                headers : {
+	                	'Accept': 'application/json'
+	                }
+	    	    }).then(function mySuccess(response) {
+	    	    	$scope.listaAmigos = response.data;
+	    	    	$scope.checkAmigos = true;
+	    	    }, function myError(response) {
+	    	    	$scope.listaAmigos = [];
+	    	    	$scope.checkAmigos = true;
+	    	    });
+	        	
+	        	$scope.eliminaMensaje = function(idMensaje){
+	        		window.location.href = "eliminarMensaje.do?idMensaje="+idMensaje;
 	        	}
 	        	
-	        	$scope.eliminaColeccion = function (flashcard){
-	        		
-	        		bootbox.confirm({
-					    message: "¿Quiere eliminar la coleccion "+ flashcard.nombreColeccion +"?",
-					    buttons: {
-					        cancel: {
-					            label: '<i class="fa fa-times"></i> No'
-					        },
-					        confirm: {
-					            label: '<i class="fa fa-check"></i> Si'
-					        }
-					    },
-					    callback: function (result) {
-					    	if(result == true){
-						    	window.location.href = "eliminaColeccionModerador.do?id="+flashcard.idColeccion;
-					    	}
-					    }
-					});
-	        		
-	        	}
-	        	
-	        	$scope.getColecciones();
-				
 	        });
         </script>
-        <div class="container-fluid" ng-app="AppGestionFlashcards" ng-controller="GestionFlashcardsCtrl">
-			<div class="row">
-				<br><br>
-			</div>
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid" ng-app="AppPanelMensajes" ng-controller="PanelMensajesCtrl">
         	<div class="row">
-        		<div class="col-md-1"></div>
-        		<div class="col-md-10">
+        		<div class="col-md-6">
         			<div class="row">
-        				<div class="col-md-1"></div>
-        				<div class="col-md-10">
-        					<div class="row" ng-if="listaCargada == false">
-		        				<div class="col-md-12">
-		        					<h6 align="center" style="color:black;">Cargando colecciones....</h6>
-		        				</div>
-		        			</div>
-		        			<div class="row" ng-if="(listaCargada == true) && (listaColecciones.length > 0)">
-		        				<div class="col-md-12" align="center">
-		        					<div class="input-group">
-						            	<input type="text" ng-model="filterColecciones" class="form-control" placeholder="Filtrar colecciones" />
-						            </div>
-						            <br>
-						            <table width="100%" border="1">  
-									   <tr>  
-									      <th align="center" style="text-align:center;">Colección de Flashcards</th>  
-									      <th align="center" style="width:168px; text-align:center;">Eliminar Coleccion</th>   
-									   </tr>  
-									   <tr>
-									   		<td colspan=2>
-									   		<div style="overflow-y:scroll;height:500px;">
-									   			<table width=100% border="1">
-									   				<tr ng-repeat = "eColeccion in listaColecciones | filter:filterColecciones">  
-												      <td align="center">
-												      	<strong>Nombre de la Coleccion: </strong><a href="verColeccion.html?id={{eColeccion.idColeccion}}">{{ eColeccion.nombreColeccion }}</a>
-												      	<br><strong>Id de la Coleccion: </strong> {{eColeccion.idColeccion}}
-												      	<br><strong>Creador: </strong> {{ eColeccion.autorColeccion }}
-												      </td>  
-												      <td style="width:150px;">
-													      <form ng-submit="eliminaColeccion(eColeccion)">
-														     <button type="submit" class="btn btn-danger" style="display:block;margin:auto;"><i class="fa fa-trash" aria-hidden="true"></i></button>
-														  </form>
-												      </td>    
-												   </tr>
-									   			</table>
-									   		</div>
-									   </tr>
-									</table>
-		        				</div>
-		        			</div>
-		        			<div class="row" ng-if="(listaCargada == true) && (listaColecciones.length == 0)">
-		        				<div class="col-md-12">
-		        					<h6 align="center" style="color:black;">No hay colecciones para mostrar</h6>
-		        				</div>
-		        			</div>
+        				<div class="col-md-12">        				
+        					<span style="font-weight:bold;">Mensajes Recibidos</span>
+        					<br>
+        					<div style="overflow-y:scroll;height:200px;">
+					   			<table ng-if="listaMensajesRecibidos.length > 0 && checkMensajesRecibidos == true" width=100% border="1">
+					   				<tr ng-repeat = "eMensaje in listaMensajesRecibidos">  
+								      <td align="left">
+								        <span ng-click="eliminaMensaje(eMensaje.idMensaje)">
+		        							<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>
+		        						</span>
+								        <br>
+								      	De: {{eMensaje.remitente}}
+								      	<br>
+								      	Mensaje: {{eMensaje.mensaje}}
+								      </td>      
+								   </tr>
+					   			</table>
+					   			<div ng-if="listaMensajesRecibidos.length == 0 && checkMensajesRecibidos == true">
+					   				<p>No ha recibido mensajes</p>
+					   			</div>
+					   		</div>
+					   		<br>
+					   		<span style="font-weight:bold;">Mensajes Enviados</span>
+        					<br>
+        					<div style="overflow-y:scroll;height:200px;">
+					   			<table ng-if="listaMensajesEnviados.length > 0 && checkMensajesEnviados == true" width=100% border="1">
+					   				<tr ng-repeat = "eMensaje in listaMensajesEnviados">  
+								      <td align="left">
+								        <span ng-click="eliminaMensaje(eMensaje.idMensaje)">
+		        							<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>
+		        						</span>
+								        <br>
+								      	Para: {{eMensaje.destinatario}}
+								      	<br>
+								      	Mensaje: {{eMensaje.mensaje}}
+								      </td>   
+								  </tr>
+					   			</table>
+					   			<div ng-if="listaMensajesEnviados.length == 0 && checkMensajesEnviados == true">
+					   				<p>No ha enviado mensajes</p>
+					   			</div>
+					   		</div>
+        				
         				</div>
-        				<div class="col-md-1"></div>
         			</div>
         		</div>
-        		<div class="col-md-1"></div>
+        		<div class="col-md-6">
+        			<div class="row">
+        				<div class="col-md-12">
+        					<form action="enviarMensaje.html" method="post">
+        						<input type="hidden" id="remitente" name="remitente" value="${usuario.getUsername()}">
+					            <table width=100% border="1">
+					   				<tr ng-repeat = "eUsuario in listaAmigos">  
+								      <td>
+								      	<input type="radio" id="destinatario" name="destinatario" ng-model="valueCompartirCon" ng-change="changeSelectCC(valueCompartirCon)"
+								      	value="{{eUsuario}}">{{eUsuario}}
+								      </td>    
+								   </tr>
+					   			</table>
+        						<br>
+	        					<input type="text" style="width:100%;" id="asunto" name="asunto" placeholder="Asunto del Mensaje" required>
+	        					<br><br>
+	        					<textarea name="mensaje" id="mensaje" style="width:100%;height:300px;">Tu mensaje...</textarea>
+	        					<br><br><br>
+	        					<button type="submit" class="btn btn-success middle">
+	        						Enviar Mensaje
+	        					</button>
+	        					<br><br>
+	        				</form>
+        				</div>
+        			</div>
+        		</div>
         	</div>
+        	
+		    <div class="row">
+        		<div class="col-md-12">
+		        	<div class="row">
+		        		<br>
+		        	</div>
+		        </div>
+		    </div>
         	
         	<script>
         		if("${usuario.getRol()}" === 'Administrador'){
+        			document.getElementById("divPanelAdministrador").style.display="block";
         			document.getElementById("adminSidebarDivider").style.display="block";
         			document.getElementById("adminSidebarTitle").style.display="block";
         			document.getElementById("adminSidebar").style.display="block";

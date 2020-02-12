@@ -180,7 +180,7 @@
 		        		<div class="col-md-5 middle">
 		        			<form action="evaluarColecciones.html" class="btnPaginaPrincipal" method="get">
 			        			<button type="submit" class="btn btn-primary btnPaginaPrincipal" style="color:white">
-			        				<i class="fa fa-check-square-o fa-5x" aria-hidden="true"></i>
+			        				<i class="fa fa-check-square fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Evaluar Coleccion
 			       				</button>
@@ -189,7 +189,7 @@
 		        		<div class="col-md-5 middle">
 		        			<form action="gestionarFlashcards.html" class="btnPaginaPrincipal" method="get">
 			        			<button type="submit" class="btnPaginaPrincipal btn btn-success" style="color:white">
-			        				<i class="fa fa-pencil-square fa-5x" aria-hidden="true"></i>
+			        				<i class="fa fa-pencil-alt fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Gestión de Flashcards
 			       				</button>

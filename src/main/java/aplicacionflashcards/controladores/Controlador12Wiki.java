@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @SessionAttributes("usuario")
-public class Controlador11Wiki {
+public class Controlador12Wiki {
 	
 	@GetMapping(value = "/desarrolloProyecto")
 	public ModelAndView verWikiProyecto(HttpServletRequest request, HttpServletResponse response) {

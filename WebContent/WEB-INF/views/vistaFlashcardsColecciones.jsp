@@ -348,11 +348,17 @@
 															</div>
 													 		<div class="flip-card-back" style="background:#86D4FF;">
 													 			<br><br><br><br><br><br>
-													 			<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:black"></i>
-			       									 			<br><br>
-													 			<a ng-href="verColeccion.html?id={{eColeccion.idColeccion}}" style="color:black;">
-													 				Ver Coleccion
-													 			</a>
+													 			<div ng-if="eColeccion.evaluada == true">
+									                    			<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:black"></i>
+				       									 			<br><br>
+														 			<a ng-href="verColeccion.html?id={{eColeccion.idColeccion}}" style="color:black;">
+														 				Ver Coleccion
+														 			</a>
+									                    		</div>
+									                    		<div ng-if="eColeccion.evaluada == false">
+									                    			Pendiente de Evaluar
+									                    		</div>
+													 			
 														    </div>
 													    </div>
 													</div>					

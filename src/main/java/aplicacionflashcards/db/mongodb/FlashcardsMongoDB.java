@@ -227,7 +227,8 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     		listaFlashcards = new LinkedList<>();
     		idsFlashcards = new LinkedList<>();
     		
-    		criteriosBusqueda = new BsonDocument().append(CONST_AUTOR, new BsonString(username));
+    		criteriosBusqueda = new BsonDocument().append(CONST_AUTOR, new BsonString(username))
+    										      .append(CONST_EVALUADA, new BsonBoolean(true));
         	iterador = coleccionFlashcards.find(criteriosBusqueda).iterator();
         	
         	while(iterador.hasNext()) {

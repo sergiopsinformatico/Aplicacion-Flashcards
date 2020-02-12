@@ -174,8 +174,8 @@
         <!-- Begin Page Content -->
         
         <script>        	
-	        var app = angular.module('AppVerColeccion', []);
-	        app.controller('VerColeccionCtrl', function($scope, $http) {
+	        var app = angular.module('AppAnalizarColeccion', []);
+	        app.controller('AnalizarColeccionCtrl', function($scope, $http) {
 				
 	        	$scope.colTarjetas = [];
 	        	
@@ -229,7 +229,7 @@
 	        });
         </script>
         
-        <div class="container-fluid" ng-app="AppVerColeccion" ng-controller="VerColeccionCtrl">
+        <div class="container-fluid" ng-app="AppAnalizarColeccion" ng-controller="AnalizarColeccionCtrl">
         	
         	<div class="row">
         		<div class="col-md-12">
@@ -307,13 +307,13 @@
         		<div class="col-md-3"></div>
         		<div class="col-md-3">
         			<button class="btn btn-success" ng-click="evaluacionPositiva()">
-        				<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+        				<i class="fa fa-thumbs-up" aria-hidden="true"></i>
         				Evaluación Positiva
         			</button>
         		</div>
         		<div class="col-md-3">
         			<button class="btn" style="background:#FF0000;color:white;" ng-click="evaluacionNegativa()">
-        				<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+        				<i class="fa fa-thumbs-down" aria-hidden="true"></i>
         				Evaluación Negativa
         			</button>
         		</div>

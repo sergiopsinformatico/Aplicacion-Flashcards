@@ -180,10 +180,7 @@
 	        	$scope.colTarjetas = [];
 	        	$scope.estadoFlashcard = '';
 	        	
-	        	$scope.colTarjetas = [{
-	        		anverso:'Hola',
-	        		reverso:'Adios'
-	        	}];
+	        	$scope.colTarjetas = [];
    				
    				$('#carouselColeccionFlashcard').carousel({});
 				$(document).ready(function(){
@@ -192,13 +189,10 @@
 					  });
 					});
 				
-	        	/*$http.get("getTarjetasColeccion.do?id="+"${flashcard.getIdColeccion()}")
+	        	$http.get("getTarjetasColeccion.do?id="+"${flashcard.getIdColeccion()}")
        			.then(function(response) {
        				$scope.colTarjetas = response.data;
-       				
-       				
-       				
-       		  	});*/
+       			});
 	        		        	
 	        	$scope.checkTipoCompartir = function(value){
 	        		return "${flashcard.getTipoCompartir()}" === value;
@@ -258,7 +252,7 @@
 			                    	</div>
         							<br><br><br>
         						</div>
-        						<!-- <div class="col-md-8" align="center">
+        						<div class="col-md-8" align="center">
         							<div id="carouselColeccionFlashcard" class="carousel slide" style="width:400px;height:500px;">
 								        <div class="container" style="width:400px;height:550px;">
 								            <div class="carousel-inner row w-100 mx-auto" style="width:400px;height:500px;">
@@ -288,8 +282,8 @@
 									    </div>
 									</div>
         						
-        						</div>-->
-        						<div class="col-md-8" align="center">
+        						</div>
+        						<!-- <div class="col-md-8" align="center">
 	        						<div class="flip-card-container" style="width:200px;height:300px;text-align:center;">
 										<div class="flip-card">
 									    	<div class="flip-card-front" style="color:black;background:#FFFFAE;">
@@ -300,7 +294,7 @@
 										    </div>
 									    </div>
 									</div>
-								</div>
+								</div>-->
         					</div>
         				</div>
         				<div class="col-md-1"></div>

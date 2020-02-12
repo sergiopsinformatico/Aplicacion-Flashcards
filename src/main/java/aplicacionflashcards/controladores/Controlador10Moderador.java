@@ -44,8 +44,8 @@ public class Controlador10Moderador {
 	@GetMapping(value = "/evaluarColecciones")
 	public ModelAndView evaluarColecciones(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) &&
-		   CheckUsers.isModerador(request) &&
-		   CheckUsers.isAdministrador(request)) {
+		   (CheckUsers.isModerador(request) ||
+		   CheckUsers.isAdministrador(request))) {
 			
 			vista = new ModelAndView("vistaFlashcardsEvaluar");
 		
@@ -71,8 +71,8 @@ public class Controlador10Moderador {
 	@GetMapping(value = "/evaluarColeccion")
 	public ModelAndView evaluarColeccion(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) && 
-		   CheckUsers.isAdministrador(request) && 
-		   CheckUsers.isModerador(request)) {
+		   (CheckUsers.isAdministrador(request) || 
+		   CheckUsers.isModerador(request))) {
 			
 			vista = new ModelAndView("vistaFlashcardsAnalizarColeccion");
 			flashcard = Broker.getInstanciaFlashcards().leerFlashcard(id);
@@ -118,8 +118,8 @@ public class Controlador10Moderador {
 	@GetMapping(value = "/gestionarFlashcards")
 	public ModelAndView gestionarFlashcards(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) &&
-		   CheckUsers.isModerador(request) &&
-		   CheckUsers.isAdministrador(request)) {
+		   (CheckUsers.isModerador(request) ||
+		   CheckUsers.isAdministrador(request))) {
 			
 			vista = new ModelAndView("vistaGestionFlashcards");
 			

@@ -74,7 +74,19 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 
 	@Override
 	public List<MensajeDTO> mensajesEnviados(String username) {
-		return null;
+		listaMensajes = new LinkedList<MensajeDTO>();
+		
+		criteriosBusqueda = new BsonDocument().append("remitente", new BsonString(username));
+		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
+		while(iterador.hasNext()) {
+			doc = iterador.next();
+			listaMensajes.add(new MensajeDTO(doc.getString("idMensaje"), 
+											 doc.getString("remitente"), 
+											 doc.getString("destinatario"),
+											 doc.getString("mensaje")));
+		}
+		
+		return listaMensajes;
 	}
 
 	@Override
@@ -113,6 +125,11 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 		}else {
 			return new MensajeDTO("","","","");
 		}
+	}
+	
+	public boolean existeIdMensaje(String idMensaje) {
+		criteriosBusqueda = new BsonDocument().append("idMensaje", new BsonString(idMensaje));
+		return coleccionMensajes.find(criteriosBusqueda).iterator().hasNext();
 	}
 
 }

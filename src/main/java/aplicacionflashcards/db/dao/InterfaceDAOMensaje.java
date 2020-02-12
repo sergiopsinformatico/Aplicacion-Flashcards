@@ -8,5 +8,6 @@ public interface InterfaceDAOMensaje {
 	public List<MensajeDTO> mensajesEnviados(String username);
 	public List<MensajeDTO> mensajesRecibidos(String username);
 	public boolean eliminarMensaje(String idMensaje);
+	public boolean existeIdMensaje(String idMensaje);
 	public MensajeDTO verMensaje(String idMensaje);
 }
