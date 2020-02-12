@@ -27,6 +27,7 @@ import main.java.aplicacionflashcards.auxiliares.MD5Photo;
 import main.java.aplicacionflashcards.auxiliares.PropertiesConfig;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
+import main.java.aplicacionflashcards.dto.NotificacionesDTO;
 import main.java.aplicacionflashcards.dto.PuntosDTO;
 import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
@@ -157,7 +158,8 @@ public class Controlador01RegistroUsuarios {
 		
 		if(Broker.getInstanciaUsuario().insertUsuario(user) &&
 		   Broker.getInstanciaActivaCuenta().insertaAC(new ActivaCuentaDTO(user.getUsername(), codigoActivacion, fecha.fechaActivarCuenta())) &&
-		   Broker.getInstanciaRelaciones().creaRelaciones(relacion) && Broker.getInstanciaPuntos().actualizaPuntos(new PuntosDTO(user.getUsername(), 0))) {
+		   Broker.getInstanciaRelaciones().creaRelaciones(relacion) && Broker.getInstanciaPuntos().actualizaPuntos(new PuntosDTO(user.getUsername(), 0)) &&
+		   Broker.getInstanciaNotificaciones().createObjectNotificaciones(new NotificacionesDTO(user.getUsername(), new LinkedList<String>()))) {
 			
 			try {
 				

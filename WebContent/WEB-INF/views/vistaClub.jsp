@@ -310,6 +310,19 @@
 	        		return "${club.getAdministrador()}".localeCompare("${usuario.getUsername()}")==0 && usuarioClub.localeCompare("${club.getAdministrador()}")!=0;
 	        	}
 	        	
+	        	$scope.invitar = function(usuario){
+	        		
+	        		bootbox.confirm({ 
+	  	    		  size: "small",
+	  	    		  message: "¿Quiere invitar a "+usuario+" a que se una al club?", 
+	  	    		  callback: function(result){ 
+	  	    			if(result){
+	  	    				window.location.href = "invitarClub.do?usuario="+ usuario + "&invita=${usuario.getUsername()}&idClub=${club.getIdClub()}&nClub=${club.getNombreClub()}";
+	  	    			}  
+	  	    		  }
+	  	    		})
+	        	}
+	        	
 	        	$scope.verColecciones();
 	        });
         </script>
@@ -357,15 +370,12 @@
 	                        	Eliminar Club
 	                        </button>
         				</p>
-        				<div ng-if="cargadosAmigos && listaActual.size()==0 && ((${club.isPertenezcoClub()} == true) || (${club.isSoyAdministradorClub()} == true))" style="display: none;height:100px;">
+        				<br>
+        				<div ng-if="cargadosAmigos == true && listaAmigos.length == 0 && ${club.isPertenezcoClub()} == true" style="height:100px;">
 							<br>
 							<p>No puedes enviar invitaciones, ya que todavia no tienes amigos</p>
 						</div>
-       					<div ng-if="cargadosAmigos && listaActual.size()>0 && ((${club.isPertenezcoClub()} == true) || (${club.isSoyAdministradorClub()} == true))" style="display: none;height:100px;">
-							<br>
-							<div class="input-group" style="width:75%;">
-				            	<input type="text" ng-model="filterAmigos" class="form-control" placeholder="Filtrar por Amigos" />
-				            </div>
+       					<div ng-if="cargadosAmigos == true && listaAmigos.length > 0 && ${club.isPertenezcoClub()} == true" style="height:100px;">
 				            <br>
 							<div style="height:100px;">
 					            <table width="75%" border="1">  
@@ -376,9 +386,9 @@
 								   		<td colspan=1>
 								   		<div style="overflow-y:scroll;height:100px;">
 								   			<table width=100% border="1">
-								   				<tr ng-repeat = "eUsuario in listaActual | filter:filterAmigos">  
+								   				<tr ng-repeat = "eUsuario in listaAmigos" style="text-align:center">  
 											      <td>
-											      	<button ng-click="invitar({{eUsuario}})" class="btn btn-success">Invitar a {{eUsuario}}</button>
+											      	<button ng-click="invitar(eUsuario)" class="btn btn-success">Invitar a {{eUsuario}}</button>
 											      </td>    
 											   </tr>
 								   			</table>

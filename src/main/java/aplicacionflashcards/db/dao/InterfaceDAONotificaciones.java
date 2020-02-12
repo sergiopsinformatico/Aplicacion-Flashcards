@@ -6,6 +6,6 @@ public interface InterfaceDAONotificaciones {
 	public boolean createObjectNotificaciones(NotificacionesDTO notificacion);
 	public boolean deleteObjectNotificaciones(String usuario);
 	public boolean insertarNotificacion(String usuario, String notificacion);
-	public boolean eliminarNotificacion(String usuario, String notificacion);
+	public boolean eliminarNotificacion(String usuario, int indiceNotificacion);
 	public NotificacionesDTO getNotificaciones(String usuario);
 }

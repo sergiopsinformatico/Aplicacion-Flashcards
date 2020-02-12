@@ -100,19 +100,12 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 		}
 	}
 
-	public boolean eliminarNotificacion(String usuario, String notificacion) {
+	public boolean eliminarNotificacion(String usuario, int indiceNotificacion) {
 		try {
 			
 			eNotificaciones = getNotificacionUsuario(usuario);
 			notificaciones = eNotificaciones.getListaNotificaciones();
-						
-			for(indice=0; indice<notificaciones.size(); indice++) {
-				if(notificaciones.get(indice).equals(notificacion)) {
-					notificaciones.remove(indice);
-					indice = notificaciones.size();
-				}
-			}
-			
+			notificaciones.remove(indiceNotificacion);			
 			eNotificaciones.setListaNotificaciones(notificaciones);
 			updateNotificacionUsuario(eNotificaciones);
 			return true;
@@ -134,7 +127,7 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 			if(resultadosBusqueda.iterator().hasNext()) {
 				doc = resultadosBusqueda.iterator().next();
 				return new NotificacionesDTO(doc.getString("usuario"), 
-						                     (LinkedList<String>)doc.get("listaNotificaciones"));
+						                     (List<String>)doc.get("listaNotificaciones"));
 			}else {
 				return null;
 			}

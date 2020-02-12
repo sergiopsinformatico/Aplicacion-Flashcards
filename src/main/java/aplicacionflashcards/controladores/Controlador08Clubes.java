@@ -22,10 +22,12 @@ import main.java.aplicacionflashcards.auxiliares.Fecha;
 import main.java.aplicacionflashcards.auxiliares.GeneratorStrings;
 import main.java.aplicacionflashcards.broker.Broker;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOClub;
+import main.java.aplicacionflashcards.db.dao.InterfaceDAONotificaciones;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAORelacionesUsuarios;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.ClubDTO;
 import main.java.aplicacionflashcards.dto.FlashcardsDTO;
+import main.java.aplicacionflashcards.dto.NotificacionesDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 @Controller
@@ -43,6 +45,8 @@ public class Controlador08Clubes {
 	List<String> bloqueados;
 	List<UsuarioDTO> usuariosMiembros;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
+	InterfaceDAONotificaciones dBNotificaciones;
+	NotificacionesDTO notificaciones;
 	int indice;
 	
 	/* * * * * *  * 
@@ -248,12 +252,19 @@ public class Controlador08Clubes {
 	}
 	
 	//Metodo auxiliar get usernames en vista registro
-		@GetMapping(value = "/getAmigosClubes", produces = MediaType.APPLICATION_JSON_VALUE)
-		@ResponseBody
-		@ResponseStatus(HttpStatus.OK)
-		public List<String> getAmigosClubes(HttpServletRequest request, HttpServletResponse response){
-			dBRelaciones = Broker.getInstanciaRelaciones();
-			return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
-		}
+	@GetMapping(value = "/getAmigosClubes", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	@ResponseStatus(HttpStatus.OK)
+	public List<String> getAmigosClubes(HttpServletRequest request, HttpServletResponse response){
+		dBRelaciones = Broker.getInstanciaRelaciones();
+		return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+	}
+	
+	@GetMapping(value = "/invitarClub", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ModelAndView invitarClub(@RequestParam("usuario") String usuario, @RequestParam("invita") String invita, @RequestParam("idClub") String idClub, @RequestParam("nClub") String nClub, HttpServletRequest request, HttpServletResponse response){
+		dBNotificaciones = Broker.getInstanciaNotificaciones();
+		dBNotificaciones.insertarNotificacion(usuario, "Invitación de " + invita + " para que se una al club "+nClub);
+		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+	}
 	
 }

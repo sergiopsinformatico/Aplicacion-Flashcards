@@ -169,9 +169,38 @@
         </script>
         
         <!-- End of Topbar -->
+        
+        <script>        	
+	        var app = angular.module('AppPrincipal', []);
+	        app.controller('PrincipalCtrl', function($scope, $http) {
+	        	
+	        	$scope.checkNotificaciones = false;
+	        	$scope.listaNotificaciones = [];
+	        	
+	        	$http({
+	    	        method: 'GET',
+	    	        url: 'getNotificacionesUsuario.do?usuario='+ "${usuario.getUsername()}",
+	                headers : {
+	                	'Accept': 'application/json'
+	                }
+	    	    }).then(function mySuccess(response) {
+	    	    	$scope.listaNotificaciones = response.data;
+	    	    	$scope.checkNotificaciones = true;
+	    	    }, function myError(response) {
+	    	    	$scope.listaNotificaciones = [];
+	    	    	$scope.checkNotificaciones = true;
+	    	    });
+	        	
+	        	$scope.eliminaNotificacion = function(indiceNotificacion){
+	        		window.location.href = "eliminaNotificacionUsuario.do?usuario=${usuario.getUsername()}&idNotificacion="+indiceNotificacion;
+	        	}
+	        	
+	        	
+	        });
+        </script>
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid" ng-app="AppPrincipal" ng-controller="PrincipalCtrl">
         	<div class="row">
         		<div class="col-md-12">
         			<div class="row">
@@ -190,24 +219,19 @@
 			        			<span style="color:white;font-weight:bold;" align="center">Notificaciones</span>
 			        		</div>
 			        		<div style="height:100px;overflow-y: auto;border: 1px solid #65E9FF;">
-			        			<table>
-			        				<tr>
-			        					<td>
-			        						<span>
+			        			<table ng-if="checkNotificaciones == true && listaNotificaciones.length>0">
+			        				<tr ng-repeat = "eNotificacion in listaNotificaciones">  
+								        <td>
+			        						<span ng-click="eliminaNotificacion($index)">
 			        							<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>
 			        						</span>
-			        						<span style="margin-left:5px;">Tiene mensajes nuevos</span>
-			        					</td>
-			        				</tr>
-			        				<tr>
-			        					<td>
-			        						<span>
-			        							<i class="fa fa-times" style="color:red;" aria-hidden="true"></i>
-			        						</span>
-			        						<span style="margin-left:5px;">Tiene nuevas peticiones de amistad</span>
-			        					</td>
-			        				</tr>
+			        						<span style="margin-left:5px;">{{eNotificacion}}</span>
+			        					</td>  
+								    </tr>
 			        			</table>
+			        			<div ng-if="checkNotificaciones == true && listaNotificaciones.length==0">
+			        				<p> No tiene notificaciones</p>
+			        			</div>
 			        		</div>
         				</div>
         				<div class="col-md-1"></div>

@@ -1,15 +1,21 @@
 package main.java.aplicacionflashcards.controladores;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -149,6 +155,22 @@ public class Controlador03ControlSesion {
 			vista.addObject("mensaje", "El usuario y/o la clave son incorrectos.");
 		}
 		return vista;
+	}
+	
+	@GetMapping(value = "/getNotificacionesUsuario", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	@ResponseStatus(HttpStatus.OK)
+	public List<String> getNotificacionesUsuario(@RequestParam("usuario") String usuario, HttpServletRequest request, HttpServletResponse response){
+		dBNotificaciones = Broker.getInstanciaNotificaciones();
+		notificaciones = dBNotificaciones.getNotificaciones(usuario);
+		return notificaciones.getListaNotificaciones();
+	}
+	
+	@GetMapping(value = "/eliminaNotificacionUsuario", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ModelAndView eliminaNotificacionUsuario(@RequestParam("usuario") String usuario, @RequestParam("idNotificacion") String indiceNotificacion, HttpServletRequest request, HttpServletResponse response){
+		dBNotificaciones = Broker.getInstanciaNotificaciones();
+		dBNotificaciones.eliminarNotificacion(usuario, Integer.parseInt(indiceNotificacion));
+		return new ModelAndView("redirect:/inicio.html");
 	}
 	
 	/* * * * * * * * * * * * *  * * * * *
