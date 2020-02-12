@@ -190,6 +190,8 @@ public class Controlador07Gente {
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		dBRelaciones.aceptarInvitacion(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
 		
+		Broker.getInstanciaNotificaciones().insertarNotificacion(username, "Eres amigo de "+((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		
 		vista.addObject("mensaje", username+" y tu sois amigos");
 			
 		return vista;
@@ -215,6 +217,8 @@ public class Controlador07Gente {
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		dBRelaciones.enviarPeticionAmistad(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		
+		Broker.getInstanciaNotificaciones().insertarNotificacion(username, "Has recibido una peticion de amistad de "+((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
 		
 		vista.addObject("mensaje", "Ha enviado una solicitud de amistad a "+username);
 		

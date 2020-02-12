@@ -445,51 +445,51 @@
 											                    	<br><br>
 														 			<div ng-if="eUsuario.tipoRelacion == 'ninguna'">
 											                        	<button class="btn btn-info" ng-click="enviarPeticion(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-paper-plane" aria-hidden="true"></i>
 											                        		Enviar Solicitud de Amistad
 											                        	</button>
 											                        	<br><br><br><br>
 											                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-lock" aria-hidden="true"></i>
 											                        		Bloquear Usuario
 											                        	</button>
 											                        </div>
 											                        <div ng-if="eUsuario.tipoRelacion == 'amigo'">
-											                        	<button class="btn btn-danger" ng-click="eliminar(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        	<button class="btn btn-danger" ng-click="eliminarAmigo(eUsuario.username)">
+											                        		<i class="fa fa-user-times" aria-hidden="true"></i>
 											                        		Eliminar Amistad
 											                        	</button>
 											                        	<br><br><br><br>
 											                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-lock" aria-hidden="true"></i>
 											                        		Bloquear Usuario
 											                        	</button>
 											                        </div>
 											                        <div ng-if="eUsuario.tipoRelacion == 'solEnviada'">
 											                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-lock" aria-hidden="true"></i>
 											                        		Bloquear Usuario
 											                        	</button>
 											                        </div>
 											                        <div ng-if="eUsuario.tipoRelacion == 'solRecibida'">
 											                        	<button class="btn btn-success" ng-click="aceptarAmistad(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-check" aria-hidden="true"></i>
 											                        		Aceptar Peticion de Amistad
 											                        	</button>
 											                        	<br><br><br><br>
 											                        	<button class="btn btn-danger" ng-click="rechazarAmistad(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-times" aria-hidden="true"></i>
 											                        		Rechazar Peticion de Amistad
 											                        	</button>
 											                        	<br><br><br><br>
 											                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-lock" aria-hidden="true"></i>
 											                        		Bloquear Usuario
 											                        	</button>
 											                        </div>
 											                        <div ng-if="eUsuario.tipoRelacion == 'bloqueado'">
 											                        	<button class="btn btn-warning" ng-click="desbloquearUsuario(eUsuario.username)">
-											                        		<i class="fa fa-user-o" aria-hidden="true"></i>
+											                        		<i class="fa fa-lock-open" aria-hidden="true"></i>
 											                        		Desloquear Usuario
 											                        	</button>
 											                        </div>

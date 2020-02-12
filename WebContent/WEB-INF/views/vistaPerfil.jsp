@@ -297,9 +297,52 @@
 									<span>${perfil.getRol()}</span>
 								</div>
 							</div>
-							<div ng-if="tipoRelacion.localeCompare('') != 0" class="profile-userbuttons">
-								<button type="button" class="btn btn-success btn-sm">Follow</button>
-								<button type="button" class="btn btn-danger btn-sm">Message</button>
+							
+							<div ng-if="tipoRelacion.localeCompare('') != 0 && tipoRelacion.localeCompare('ninguna') == 0" class="profile-userbuttons">
+								<br>
+								<button class="btn btn-info btn-sm" ng-click="enviarPeticion(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-paper-plane" aria-hidden="true"></i>Enviar Solicitud de Amistad
+								</button>
+								<br><br>
+								<button class="btn btn-secondary btn-sm" ng-click="bloquearUsuario(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-lock" aria-hidden="true"></i>Bloquear Usuario
+								</button>
+							</div>
+							<div ng-if="tipoRelacion.localeCompare('') != 0 && tipoRelacion.localeCompare('amigo') == 0" class="profile-userbuttons">
+								<br>
+								<button class="btn btn-danger btn-sm" ng-click="eliminarAmigo(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-user-times" aria-hidden="true"></i>Eliminar Amistad
+								</button>
+								<br><br>
+								<button class="btn btn-secondary btn-sm" ng-click="bloquearUsuario(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-lock" aria-hidden="true"></i>Bloquear Usuario
+								</button>
+							</div>
+							<div ng-if="tipoRelacion.localeCompare('') != 0 && tipoRelacion.localeCompare('solEnviada') == 0" class="profile-userbuttons">
+								<br>
+								<button class="btn btn-secondary btn-sm" ng-click="bloquearUsuario(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-lock" aria-hidden="true"></i>Bloquear Usuario
+								</button>
+							</div>
+							<div ng-if="tipoRelacion.localeCompare('') != 0 && tipoRelacion.localeCompare('solRecibida') == 0" class="profile-userbuttons">
+								<br>
+								<button class="btn btn-success btn-sm" ng-click="aceptarAmistad(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-check" aria-hidden="true"></i>Aceptar Peticion de Amistad
+								</button>
+								<br><br>
+								<button class="btn btn-danger btn-sm" ng-click="rechazarAmistad(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-times" aria-hidden="true"></i>Rechazar Peticion de Amistad
+								</button>
+								<br><br>
+								<button class="btn btn-secondary btn-sm" ng-click="bloquearUsuario(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-lock" aria-hidden="true"></i>Bloquear Usuario
+								</button>
+							</div>
+							<div ng-if="tipoRelacion.localeCompare('') != 0 && tipoRelacion.localeCompare('bloqueado') == 0" class="profile-userbuttons">
+								<br>
+								<button class="btn btn-warning btn-sm" ng-click="desbloquearUsuario(${perfil.getUsername()})">
+									<i style="color:white;margin-right:5px;" class="fa fa-lock-open" aria-hidden="true"></i>Desloquear Usuario
+								</button>
 							</div>
 							<br><br>
 						</div>
