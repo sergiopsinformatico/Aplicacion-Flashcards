@@ -107,6 +107,12 @@
           <span>Clubes</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="panelMensajes.html">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>Panel Mensajes</span>
+        </a>
+      </li>
     </ul>
     <!-- End of Sidebar -->
 

@@ -26,6 +26,7 @@ import main.java.aplicacionflashcards.db.dao.InterfaceDAONotificaciones;
 import main.java.aplicacionflashcards.db.dao.InterfaceDAOUsuario;
 import main.java.aplicacionflashcards.dto.EliminarCuentaDTO;
 import main.java.aplicacionflashcards.dto.NotificacionesDTO;
+import main.java.aplicacionflashcards.dto.PuntosDTO;
 import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 @Controller
@@ -164,6 +165,13 @@ public class Controlador03ControlSesion {
 		dBNotificaciones = Broker.getInstanciaNotificaciones();
 		notificaciones = dBNotificaciones.getNotificaciones(usuario);
 		return notificaciones.getListaNotificaciones();
+	}
+	
+	@GetMapping(value = "/getRanking", produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	@ResponseStatus(HttpStatus.OK)
+	public List<PuntosDTO> getRanking(HttpServletRequest request, HttpServletResponse response){
+		return Broker.getInstanciaPuntos().rankingPrimeros();
 	}
 	
 	@GetMapping(value = "/eliminaNotificacionUsuario", produces = MediaType.APPLICATION_JSON_VALUE)

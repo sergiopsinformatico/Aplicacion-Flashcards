@@ -34,7 +34,11 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
     FindIterable<Document> resultadosBusqueda;
     MongoCursor<Document> iterador;
     PuntosDTO usuario;
+    PuntosDTO aux;
     CifradoCaesar caesar;
+    LinkedList<PuntosDTO> listaOriginal;
+    LinkedList<PuntosDTO> listaAuxiliar;
+    boolean isPuesto;
 	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.PuntosMongoDB");
@@ -80,7 +84,35 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 
 	@Override
 	public List<PuntosDTO> rankingPrimeros() {
-		return new LinkedList<>();
+		listaOriginal = new LinkedList<>();
+		iterador = coleccionPuntos.find().iterator();
+		while(iterador.hasNext()) {
+			doc = iterador.next();
+			usuario = new PuntosDTO(doc.getString("usuario"), doc.getInteger("puntos"));
+			if(listaOriginal.size()==0) {
+				listaOriginal.add(usuario);
+			}else {
+				aux = listaOriginal.get(listaOriginal.size()-1);
+				if(aux.getPuntos()>=usuario.getPuntos()) {
+					listaOriginal.add(usuario);
+				}else {
+					listaAuxiliar = new LinkedList<>();
+					isPuesto = false;
+					while(!listaOriginal.isEmpty()) {
+						aux = listaOriginal.removeFirst();
+						if((!isPuesto) && (usuario.getPuntos() >= aux.getPuntos())) {
+							listaAuxiliar.add(usuario);
+							listaAuxiliar.add(aux);
+							isPuesto = true;
+						}else {
+							listaAuxiliar.add(aux);
+						}
+					}
+					listaOriginal = listaAuxiliar;
+				}
+			}
+		}
+		return listaOriginal;
 	}
 	
 	public boolean eliminarPuntos(String usuario) {

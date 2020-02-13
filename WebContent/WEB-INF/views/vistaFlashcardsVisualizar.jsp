@@ -106,6 +106,12 @@
           <span>Clubes</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="panelMensajes.html">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>Panel Mensajes</span>
+        </a>
+      </li>
 
     </ul>
     <!-- End of Sidebar -->
@@ -182,16 +188,19 @@
 	        	
 	        	$scope.colTarjetas = [];
    				
-   				$('#carouselColeccionFlashcard').carousel({});
-				$(document).ready(function(){
-					  $('.carousel').each(function(){
-					    $(this).find('.carousel-item').eq(0).addClass('active');
-					  });
-					});
+   				
 				
 	        	$http.get("getTarjetasColeccion.do?id="+"${flashcard.getIdColeccion()}")
        			.then(function(response) {
        				$scope.colTarjetas = response.data;
+       				
+       				$('#carouselColeccionFlashcard').carousel({});
+    				$(document).ready(function(){
+    					  $('.carousel').each(function(){
+    					    $(this).find('.carousel-item').eq(0).addClass('active');
+    					  });
+    					});
+    				
        			});
 	        		        	
 	        	$scope.checkTipoCompartir = function(value){
@@ -259,7 +268,7 @@
 												<div class="carousel-item" ng-repeat="eTarjeta in colTarjetas">
 										            <div class="flip-card-container" style="width:400px;height:500px;text-align:center;">
 														<div class="flip-card">
-													    	<div class="flip-card-front" style="background:#FFB550;">
+													    	<div class="flip-card-front" style="background:#f8cc89;">
 													        	<br><br><br><br><br>
 										                    	{{eTarjeta.anverso}}
 															</div>

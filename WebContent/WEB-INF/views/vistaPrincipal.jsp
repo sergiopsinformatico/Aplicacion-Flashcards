@@ -105,6 +105,12 @@
           <span>Clubes</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="panelMensajes.html">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>Panel Mensajes</span>
+        </a>
+      </li>
 
     </ul>
     
@@ -177,6 +183,9 @@
 	        	$scope.checkNotificaciones = false;
 	        	$scope.listaNotificaciones = [];
 	        	
+	        	$scope.rankingLoaded = false;
+	        	$scope.ranking = [];
+	        	
 	        	$http({
 	    	        method: 'GET',
 	    	        url: 'getNotificacionesUsuario.do?usuario='+ "${usuario.getUsername()}",
@@ -189,6 +198,20 @@
 	    	    }, function myError(response) {
 	    	    	$scope.listaNotificaciones = [];
 	    	    	$scope.checkNotificaciones = true;
+	    	    });
+	        	
+	        	$http({
+	    	        method: 'GET',
+	    	        url: 'getRanking.do',
+	                headers : {
+	                	'Accept': 'application/json'
+	                }
+	    	    }).then(function mySuccess(response) {
+	    	    	$scope.ranking = response.data;
+	    	    	$scope.rankingLoaded = true;
+	    	    }, function myError(response) {
+	    	    	$scope.ranking = [];
+	    	    	$scope.rankingLoaded = true;
 	    	    });
 	        	
 	        	$scope.eliminaNotificacion = function(indiceNotificacion){
@@ -314,6 +337,34 @@
 		        		<div class="col-md-1"></div>
 		        	</div>
 		        </div>
+		    </div>
+		    <div class="row">
+        		<div class="col-md-12">
+		        	<div class="row">
+		        		<br>
+		        	</div>
+		        </div>
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4"></div>
+		    	<div class="col-md-4">
+	     			<div style="height:50px;line-height:50px;background-color:#F3C272;text-align:center;">
+	        			<span style="color:white;font-weight:bold;" align="center">Ranking</span>
+	        		</div>
+	        		<div style="height:100px;overflow-y: auto;border: 1px solid #65E9FF;">
+	        			<table ng-if="rankingLoaded == true && ranking.length>0">
+	        				<tr ng-repeat = "ePuesto in ranking">  
+						        <td>
+	        						<span style="margin-left:5px;">{{$index+1}}. {{ePuesto.usuario}} - {{ePuesto.puntos}} puntos</span>
+	        					</td>  
+						    </tr>
+	        			</table>
+	        			<div ng-if="rankingLoaded == true && rankingLoaded.length==0">
+	        				<p>Actualmente no disponemos de ranking</p>
+	        			</div>
+	        		</div>
+	     		</div>
+	     		<div class="col-md-4"></div>
 		    </div>
 		    <div class="row">
         		<div class="col-md-12">

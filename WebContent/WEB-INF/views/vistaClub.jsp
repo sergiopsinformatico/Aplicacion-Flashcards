@@ -107,6 +107,12 @@
           <span>Clubes</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="panelMensajes.html">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>Panel Mensajes</span>
+        </a>
+      </li>
 
     </ul>
     <!-- End of Sidebar -->
@@ -444,8 +450,44 @@
 				        </p>
 				    </div>
 				</div>
-        		<div class="col-md-6">
-        		</div>
+        		<div class="col-md-6" align="center">
+        			<br>
+        			<h6>Colecciones Flashcards compartidas con el Club</h6>
+        			<br>
+        			<div ng-if="${club.isPertenezcoClub()} == true" id="carouselFlashcardClub" class="carousel slide" style="width:300px;height:350px;">
+				        <div class="container" style="width:300px;height:350px;">
+				            <div class="carousel-inner row w-100 mx-auto" style="width:300px;height:350px;">
+								<div class="carousel-item" ng-repeat="eColeccion in colecciones">
+									<div align="center" style="background:#DCDC75;">
+							      		<br>
+							      		<p style="font-weight:bold;">{{eColeccion.nombreColeccion}}</p>
+							      		<br>
+							    		<br>
+							      		<a ng-href="verColeccion.html?id={{eColeccion.idColeccion}}" style="color:black;">
+							 				Ver Coleccion
+							 			</a>
+										<br><br><br>
+							      		<p><span style="font-weight:bold;margin-right:5px;">Creador:</span> {{eColeccion.autorColeccion}}</p>
+							      		<br><br><br>
+							      	</div>
+					      		</div>
+					      	</div>
+			            </div>
+				        <a class="carousel-control-prev" href="#carouselFlashcardClub" role="button" data-slide="prev">
+					      <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:black;"></i>
+					      <span class="sr-only">Anterior</span>
+					    </a>
+					    <a class="carousel-control-next" href="#carouselFlashcardClub" role="button" data-slide="next">
+					      <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color:black;"></i>
+					      <span class="sr-only">Siguiente</span>
+					    </a>
+				    </div>
+				    <div ng-if="${club.isPertenezcoClub()} == false">
+				        <p>
+				        	No puede ver las colecciones de Flashcards del club, ya que no forma parte del mismo
+				        </p>
+				    </div>
+				</div>
        		</div>    
        		<div class="row">
        			<div class="col-md-12">

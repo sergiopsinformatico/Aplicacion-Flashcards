@@ -106,6 +106,12 @@
           <span>Clubes</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="panelMensajes.html">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>Panel Mensajes</span>
+        </a>
+      </li>
 
     </ul>
     <!-- End of Sidebar -->
@@ -251,7 +257,7 @@
 			                    		<strong>Para todos los usuarios</strong>
 			                    	</div>
 			                    	<div ng-if="checkTipoCompartir('privado')==true">
-			                    		<strong>Solo para ti</strong>
+			                    		<strong>Solo el usuario creador (Privado)</strong>
 			                    	</div>
 			                    	<div ng-if="checkTipoCompartir('usuario')==true">
 			                    		<strong>Para el Usuario</strong>

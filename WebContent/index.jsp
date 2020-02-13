@@ -68,20 +68,37 @@
 	      </div>
 	    </nav>
 	</header>
-	<!-- <article style="background-color:white">
-		<br><br><br><br><br><br><br><br>
-    	<img style="display:block;margin-left:auto;margin-right:auto;width:500px;height:auto;" src="resources/imagenes/pageBuilding.jpg" alt="Imagen no Disponible">
-    	<br><br>
-	</article>-->
-    <article style="background-color:#BFEA8B">
+	<article style="background-color:#BFEA8B">
     	<br><br><br><br><br><br><br><br>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<br><br>
+    			<h6 style="color:black" align="center">¡Bienvenido a la Aplicación Flashcards!</h6>
+    			<br>
+    			<img src="resources/imagenes/indexPhoto1.JPG" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
+    		</div>
+     	</div>
+    	<br>
+	</article>
+	<article style="background-color:#CCCCC3">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<br><br>
+    			<h6 style="color:black" align="center">Aquí podrás crear y compartir colecciones de Flashcards con otros usuarios de la aplicación</h6>
+    			<br>
+    			<img src="resources/imagenes/indexPhoto2.JPG" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
+    		</div>
+     	</div>
+    	<br>
+	</article>
+    <article style="background-color:#BFEA8B">
     	<div class="row">
     		<div class="col-md-12">
     			<br><br>
     			<h6 style="color:black" align="center">¿Quieres saber cómo se ha desarrollado el proyecto? Echa un vistazo a la Wiki</h6>
     			<br>
     			<a href="desarrolloProyecto.html">
-    				<img src="resources/imagenes/wikiDesarrollo.jpg" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
+    				<img src="resources/imagenes/wikiDesarrollo.jpg" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
     			</a>
     		</div>
      	</div>
