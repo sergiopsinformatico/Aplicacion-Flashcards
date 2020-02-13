@@ -148,32 +148,102 @@
 	       						</span>
 	       					</div>
         					<br>
-        					<br>
-       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Este Sprint dura del 25 de noviembre al 8 de diciembre de 2019. En este último sprint, se analizan con la herramienta SonarCloud la calidad del código de nuestra aplicación, además de mejorar algunos aspectos que la propia herramienta nos indique. Finalmente, se pasa a acabar de realizar la memoria del proyecto y se cierra el proyecto con la entrega al cliente. En la Wiki , se detalla la evolución del desarrollo del proyecto en este Sprint.
+        						
+        						</span>
+        					</div>
+        					<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog.
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s6-productBacklog.JPG" style="height:100px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tras analizar dichas tareas, el equipo formó el Sprint Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. Estas tareas son:
+        						</span>
+        					</div>
+       						<br>
+       							<img src="resources/imagenes/s6-sprintBacklog.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tras finalizar el desarrollo de la aplicación, se va a volver a analizar la calidad del código aunque durante los Sprints se ha ido analizando también. Algunas de las mejoras propuestas por la herramienta SonarCloud, son las que se exponen a continuación:
+        							</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s6-cap-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s6-cap-2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Por último, podemos ver los tests que la propia herramienta ha ejecutado para analizar que la aplicación funcione de acuerdo a la especificación del usuario. Como vemos en la siguiente figura, SonarCloud detecta 176 pruebas unitarias que hemos creado para comprobar la funcionalidad.
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s6-cap-3.JPG" style="height:150px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							De esos tests, obtenemos que se han ejecutado correctamente según la especificación de la aplicación (como se aprecia en la siguiente figura). No obstante, nos encontramos que SonarCloud no analiza la cobertura de la aplicación con los tests definidos. Esto suele ocurrir, ya que los tests BDD están desarrollados en Cucumber y no en JUnit (estos últimos sí que suelen analizar la cobertura de la aplicación).
+        							</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s6-cap-4.JPG" style="height:150px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tras haber acabado de analizar la aplicación, se le entrega al cliente la aplicación y la documentación (esta memoria) de esta. Además, se le entrega una memoria con indicaciones sobre cómo manejar la herramienta (véase Anexo V: Manual de Usuario).
+
+									Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se realizaba una reunión (Daily Scrum) para analizar lo que se había realizado el día anterior, lo que se realiza ese día y si había algún inconveniente o problema en el desarrollo del proyecto:
+								
+								</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s6-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						Finalizado el desarrollo del Sprint, se le entrega al Product Owner la aplicación y la memoria de la misma. Queda satisfecho sobre el trabajo desarrollado.
+
+								En la reunión de retrospectiva, se ha analizado que se ha trabajado correctamente cumpliendo con la planificación inicial. En el gráfico Burndown, se comprueba que la estimación inicial coincide con la evolución real del desarrollo del Sprint (hay que tener en cuenta, que durante los fines de semana se han ido completando tareas, a pesar que el gráfico proporcionado por la herramienta Zenhub, no cuenta que en esos días se trabaje). Se ha usado un tablero Scrum para llevar un seguimiento diario de esas tareas.
+
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s6-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<br>
+       						    <img src="resources/imagenes/s6-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
         				</div>
         				<div class="col-md-1"></div>
         			</div>
@@ -205,6 +275,9 @@
         			</div>
         		</div>
         		
+        	</div>
+        	<div class="row">
+        		<br><br>
         	</div>
         </div>
 

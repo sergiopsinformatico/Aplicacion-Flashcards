@@ -165,15 +165,13 @@
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
+        							Un usuario puede registrarse en el sistema. Se le facilitará (vía email) los datos obtenidos durante el proceso de creación.
         						
         						</span>
         					</div>
+        					
+        					<img src="resources/imagenes/man-cap-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
         					
         					<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Iniciar Sesión
@@ -183,16 +181,13 @@
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
+        							Para iniciar sesión en la aplicación, es necesario de disponer de una cuenta previamente creada.
         						
         						</span>
         					</div>
         					
+        					<img src="resources/imagenes/man-cap-2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
         					<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Recuperar Cuenta
        						</span>
@@ -200,86 +195,117 @@
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
+        							En caso de no recordar la clave, se habilitará un proceso para poder crearse una nueva:
         						
         						</span>
         					</div>
-        					<span style="text-align:left;font-weight:bold;font-size:17px;">
-       							4. Ver Perfil de Usuario
-       						</span>
-       						<br><br>
-       						<div style="text-align:justify;">
-        						<span style="font-size:14px;">
-        						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
-        						
-        						</span>
-        					</div>
-        					<span style="text-align:left;font-weight:bold;font-size:17px;">
-       							5. Modificar y Eliminar Cuenta (Recuperación de Cuenta Eliminada)
-       						</span>
-       						<br><br>
-       						<div style="text-align:justify;">
-        						<span style="font-size:14px;">
-        						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
-        						
-        						</span>
-        					</div>
-        					<span style="text-align:left;font-weight:bold;font-size:17px;">
-       							6. Cerrar Cuenta
-       						</span>
-       						<br><br>
-       						<div style="text-align:justify;">
-        						<span style="font-size:14px;">
-        						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
-        						
-        						</span>
-        					</div>
-        					<!-- Prueba:
+        					
+        					<img src="resources/imagenes/man-cap-3.JPG" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
         					
         					<span style="text-align:left;font-weight:bold;font-size:17px;">
-       							1. Planificación del Sprint
+       							4. Crear Colecciones
        						</span>
        						<br><br>
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
-        							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
-									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
-									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
-									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
+        							Un usuario puede crear una coleccion de tarjetas, para posteriormente compartirlas con otros miembros (con todos, clubes o amigos) o bien de uso privado:
         						
         						</span>
         					</div>
-       						<br>
-       							<img src="resources/imagenes/s0-sprintBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
-       						<br>
         					
-        					 -->
+        					<img src="resources/imagenes/man-cap-4.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+        					<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							5. Evaluar Colecciones
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Un moderador se encargará de evaluar las colecciones que se vayan creando:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-5.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<img src="resources/imagenes/man-cap-6.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+        					<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							6. Ver Colecciones
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Una vez la colección haya sido evaluada favorablemente, el usuario podrá visualizarla:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-7.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							7. Panel del Administrador
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Un administrador, puede crear nuevas claves, el rol, modificar el perfil o eliminar las cuentas de los usuarios. Además, puede eliminar clubes:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-8.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<img src="resources/imagenes/man-cap-9.JPG" style="height:150px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							8. Clubes
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Existen clubes, formados por varias personas donde pueden compartir colecciones sobre un mismo tema:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-10.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							9. Notificaciones
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Cada usuario, dispone de un panel donde se le notificarán eventos que hayan ido sucediendo:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-11.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							10. Ver Perfil
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Cada usuario, puede ver en el perfil los puntos que tiene, asi como número de colecciones creadas o número de amigos:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-12.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						
+        					
         				</div>
         				<div class="col-md-1"></div>
         			</div>

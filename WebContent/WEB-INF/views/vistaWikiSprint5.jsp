@@ -148,32 +148,113 @@
 	       						</span>
 	       					</div>
         					<br>
-        					<br>
-       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Este Sprint dura del 11 al 24 de noviembre de 2019. Se desarrollan las funcionalidades
+        							de gestión de mensajes del usuario (enviar, recibir, visualizar y eliminar mensajes), 
+        							panel de notificaciones, formas de ganar puntos (al crear un determinado número de 
+        							colecciones, pertenecer a varios clubes o visualizar muchas colecciones) y 
+        							visualizar el ranking con los usuarios que tienen mayor puntuación. En la Wiki , se 
+        							detalla la evolución del desarrollo del proyecto en este Sprint.
+        						
+        						</span>
+        					</div>
+        					<br><span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog.
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s5-productBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tras analizar dichas tareas, el equipo formó el Sprint Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. Estas tareas son:
+        						</span>
+        					</div>
+       						<br>
+       							<img src="resources/imagenes/s5-sprintBacklog-1.JPG" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s5-sprintBacklog-2.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s5-sprintBacklog-3.JPG" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Primero, se crearon las pruebas BDD, respecto a las funcionalidades que se van a desarrollar. Al finalizar el Sprint, todas las pruebas pasaron exitosamente.
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s5-bdd.JPG" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para poder desarrollar la aplicación, se diseñó el siguiente diagrama, identificando las funcionalidades:
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s5-cdu.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Finalmente, se presentan algunos bocetos y capturas de la aplicación:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s5-cap-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s5-cap-2.JPG" style="height:150px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s5-cap-3.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se realizaba una reunión (Daily Scrum) para analizar lo que se había realizado el día anterior, lo que se realiza ese día y si había algún inconveniente o problema en el desarrollo del proyecto:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s5-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						Finalizado el desarrollo del Sprint, se muestra al Producto Owner las funcionalidades que se han desarrollado durante este sprint: gestión de mensajes (envío, visualización y eliminación de mensajes), visualización del panel de notificaciones, los puntos que el usuario puede ganar (por ejemplo cuando crea un determinado número de colecciones, pertenece a varios clubes o ha visualizado muchas colecciones) y visualizar el ranking con los 10 primeros usuarios que tienen más puntos en la aplicación. El Product Owner queda satisfecho con los avances obtenidos en este Sprint.
+
+								En la reunión de retrospectiva, se analizó que a pesar de haber desviaciones en el Sprint, se ha trabajado correctamente manteniendo la planificación inicial. Así se puede percibir en el gráfico Burndown generado por la herramienta Zenhub donde se puede comprobar que la estimación inicial, coincide aproximadamente con la evolución real del desarrollo del Sprint. Además, se ha usado un tablero Scrum para llevar un seguimiento diario de esas tareas.
+
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s5-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<br>
+       						    <img src="resources/imagenes/s5-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
         				</div>
         				<div class="col-md-1"></div>
         			</div>
@@ -217,6 +298,9 @@
         			</div>
         		</div>
         		
+        	</div>
+        	<div class="row">
+        		<br><br>
         	</div>
         </div>
 

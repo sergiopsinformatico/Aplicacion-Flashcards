@@ -167,12 +167,13 @@
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
-        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog:
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el 
+        							Product Backlog:
         						
         						</span>
         					</div>
        						<br>
-       							<img src="resources/imagenes/s4-productBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-productBacklog.JPG" style="height:260px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
@@ -182,7 +183,7 @@
         						</span>
         					</div>
        						<br>
-       							<img src="resources/imagenes/s4-sprintBacklog-1.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-sprintBacklog-1.JPG" style="height:450px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<br>
        							<img src="resources/imagenes/s4-sprintBacklog-2.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
@@ -205,7 +206,7 @@
         						</span>
         					</div>
         					<br><br>
-       							<img src="resources/imagenes/s4-bdd.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-bdd.JPG" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<br><br>
        						<div style="text-align:justify;">
@@ -317,6 +318,9 @@
         			</div>
         		</div>
         		
+        	</div>
+        	<div class="row">
+        		<br><br>
         	</div>
         </div>
 
