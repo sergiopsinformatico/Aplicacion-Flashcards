@@ -170,14 +170,28 @@
         						<span style="font-size:14px;">
         						
         							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product
-									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo
-									preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
+									Backlog con las tareas priorizadas que son deseables tener al finalizar este Sprint, que se muestran
+									ordenadas de mayor a menor prioridad.
+        						
+        						</span>
+        					</div>
+        					
+        					<br>
+       							<img src="resources/imagenes/s0-productBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
+       						<br>
+       						        					
+        					<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El equipo preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint
 									Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará
 									en hacerlas. El Product Owner dio su aprobación para abordarlas. Estas tareas se organizaron
 									en Historias de Usuario y son las que se aparecen en la siguiente tabla:
         						
         						</span>
         					</div>
+        					
+        					
        						<br>
        							<img src="resources/imagenes/s0-sprintBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 0)">
        						<br>
@@ -204,7 +218,7 @@
         							Por un lado, se proporcionó un cuestionario para conocer el alcance del proyecto. Por otro 
         							lado, se realizó la técnica conocida como Brainstorming (o Tormenta de Ideas), para tener una 
         							visión de las funcionalidades que tendrá dicho proyecto. Toda esta información extraída a través 
-        							de la aplicación de estas técnicas de elicitación, se incluye en el Anexo I: Técnicas de Elicitación.
+        							de la aplicación de estas técnicas de elicitación, se incluye en el Anexo I: Técnicas de Elicitación de la memoria del trabajo.
         						
         						</span>
         					</div>
@@ -219,7 +233,7 @@
         							cumplir con el Reglamento General de Protección de Datos (RGPD) y por último, un análisis de riesgos que pueden 
         							producirse durante el desarrollo del proyecto, y cómo tratarlos. Todas estas actividades (excepto los objetivos 
         							que están definidos en el Capítulo 2: Objetivos del Trabajo), se encuentran definidas en el Anexo II: Alcance y 
-        							Viabilidad del Proyecto.
+        							Viabilidad del Proyecto, de la memoria del trabajo.
         						
         						</span>
         					</div>

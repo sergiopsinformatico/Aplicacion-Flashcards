@@ -168,8 +168,17 @@
         						<span style="font-size:14px;">
         						
         							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product Backlog 
-        							con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo preguntó 
-        							dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint Backlog
+        							con las tareas priorizadas que son deseables tener al finalizar este Sprint y son las siguientes:
+        						
+        						</span>
+        					</div>
+       						<br>
+       							<img src="resources/imagenes/s1-productBacklog.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El equipo preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint Backlog
         							 con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. 
         							 El Product Owner dio su aprobación para abordarlas. Estas tareas que forman el Sprint Backlog 
         							 (ordenadas por prioridad de mayor a menor) se organizaron en Historias de Usuario y son:
@@ -187,13 +196,13 @@
         						<span style="font-size:14px;">
         						
         							Se procedió a montar el entorno y a poner en funcionamiento la aplicación que estará alojada en 
-        							el entorno de Heroku (como se muestra en la figura 4.3). Todos los pasos seguidos para montar la 
+        							el entorno de Heroku. Todos los pasos seguidos para montar la 
         							base tecnológica, se explican detalladamente en el Anexo III: Base Tecnológica del Proyecto.
         						
         						</span>
         					</div>
         					<br><br>
-       							<img src="resources/imagenes/s1-appBT.JPG" style="height:100px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s1-appBT.JPG" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
         					<br><br>
        						<div style="text-align:justify;">
@@ -201,7 +210,7 @@
         						
         							Se va a desarrollar una Wiki sobre el desarrollo del proyecto, que va a formar parte de la 
         							aplicación. Se ha estudiado que para esta versión, sólo se encriptarán los datos personales de los
-        							usuarios con el Cifrado Cesar o Caesar [11], mediante la sustitución de caracteres por otros al desplazar
+        							usuarios con el Cifrado Cesar o Caesar, mediante la sustitución de caracteres por otros al desplazar
         							 su posición. Se ha generado el logo de la aplicación con Hatchful (https://hatchful.shopify.com) como se
         							 ve en la siguiente figura. Por último, el equipo se ha formado para el uso de las tecnologías en el 
         							 desarrollo de la aplicación.
@@ -243,11 +252,11 @@
         						
         							En la reunión de retrospectiva, se analizó que aunque ha habido desviaciones en el 
         							Sprint, se ha trabajado correctamente manteniendo la planificación inicial. Como se 
-        							indica en el gráfico Burndown (figura 4.5), se puede comprobar que la estimación inicial, 
+        							indica en el gráfico Burndown, se puede comprobar que la estimación inicial, 
         							coincide aproximadamente con la evolución real del desarrollo del Sprint (hay que tener en 
         							cuenta, que durante los fines de semana se han ido completando tareas, a pesar que el gráfico 
         							proporcionado por la herramienta Zenhub, no cuenta que en esos días se trabaje). Además, se ha 
-        							usado un tablero Scrum para llevar un seguimiento diario de esas tareas (véase la figura 4.6).
+        							usado un tablero Scrum para llevar un seguimiento diario de esas tareas.
         						
         						</span>
         					</div>

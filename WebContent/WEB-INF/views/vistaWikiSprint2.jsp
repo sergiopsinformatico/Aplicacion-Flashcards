@@ -168,8 +168,18 @@
         						<span style="font-size:14px;">
         						
         							En la primera parte de la reunión, el Product Owner proporcionó al equipo el Product Backlog 
-        							con las tareas priorizadas que son deseables tener al finalizar este Sprint. El equipo preguntó 
-        							dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint Backlog 
+        							con las tareas priorizadas que son deseables tener al finalizar este Sprint ordenadas por prioridad,
+        							como se muestra a continuación:
+        						
+        						</span>
+        					</div>
+       						<br>
+       							<img src="resources/imagenes/s2-productBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El equipo preguntó dudas sobre las tareas. En la segunda parte de la reunión, el equipo forma el Sprint Backlog 
         							con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. 
         							El Product Owner dio su aprobación para abordarlas. Estas tareas que forman el Sprint Backlog se 
         							organizaron en Historias de Usuario y son:
@@ -269,10 +279,10 @@
         						<span style="font-size:14px;">
         						
         							En la reunión de retrospectiva, se comprobó que se había trabajado correctamente, aunque haya 
-        							habido algunas desviaciones en el Sprint. En el gráfico Burndown (como se ve en la figura 4.14) 
-        							se puede analizar que la estimación inicial, coincide aproximadamente con la evolución real 
+        							habido algunas desviaciones en el Sprint. En el gráfico Burndown se puede analizar que la estimación 
+        							inicial, coincide aproximadamente con la evolución real 
         							del desarrollo del Sprint. Por otro lado, se ha usado un tablero Scrum para llevar un 
-        							seguimiento diario de esas tareas (véase la figura 4.15).
+        							seguimiento diario de esas tareas.
         						
         						</span>
         					</div>

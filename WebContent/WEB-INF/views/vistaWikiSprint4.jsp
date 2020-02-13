@@ -163,28 +163,117 @@
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							1. Planificación del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog:
+        						
+        						</span>
+        					</div>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Planficacion
-       						</span>
+       							<img src="resources/imagenes/s4-productBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Tras analizar dichas tareas, el equipo formó el Sprint Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. Estas tareas son:
+        							
+        						</span>
+        					</div>
+       						<br>
+       							<img src="resources/imagenes/s4-sprintBacklog-1.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s4-sprintBacklog-2.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s4-sprintBacklog-3.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br>
+       							<img src="resources/imagenes/s4-sprintBacklog-4.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
        						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Primero, se crearon las pruebas BDD, respecto a las funcionalidades que se van a desarrollar. Al finalizar el Sprint, todas las pruebas pasaron exitosamente.
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s4-bdd.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Desarrollo
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para poder desarrollar la aplicación, se diseñó el siguiente diagrama, identificando las funcionalidades:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s4-cdu.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
-        					<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Finalmente, se presentan algunas capturas de la aplicación:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s4-cap-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-cap-2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-cap-3.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-cap-4.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s4-cap-5.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Para hacer un seguimiento de la situación del proyecto de este Sprint, cada día se 
+        							realizaba una reunión (Daily Scrum) para analizar lo que se había realizado el día 
+        							anterior, lo que se realiza ese día y si había algún inconveniente o problema en 
+        							el desarrollo del proyecto:
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s4-dailyScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							3. Cierre del Sprint
        						</span>
        						<br>
-       						<span style="text-align:left;font-weight:bold;font-size:12px;">
-       							Texto Cierre
-       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						Se le muestra al Product Owner una demo con las funcionalidades que se han desarrollado 
+        						durante el Sprint: creación de colecciones, compartirlas con otros usuarios, evaluación 
+        						de colecciones y visualización de tarjetas. El Product Owner quedó satisfecho con los 
+        						avances conseguidos durante este Sprint.
+        						Durante la reunión de retrospectiva, se vio que se trabajó correctamente aunque hubo 
+        						ciertas desviaciones durante el Sprint con respecto a la planificación inicial. En el 
+        						gráfico Burndown se contempla que la estimación inicial 
+        						coincide aproximadamente con la evolución real del desarrollo del Sprint (teniendo en 
+        						cuenta, que durante los fines de semana se han ido completando tareas, a pesar que el 
+        						gráfico proporcionado por la herramienta Zenhub, no cuenta que en esos días se trabaje). 
+        						Además, se ha usado un tablero Scrum para llevar un seguimiento diario de esas tareas.
+
+        						
+        						</span>
+        					</div>
+        					<br><br>
+       							<img src="resources/imagenes/s4-burndown.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<br>
+       						    <img src="resources/imagenes/s4-tableroScrum.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
         				</div>
         				<div class="col-md-1"></div>
         			</div>

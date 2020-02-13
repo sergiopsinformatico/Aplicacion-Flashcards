@@ -167,22 +167,32 @@
        						<div style="text-align:justify;">
         						<span style="font-size:14px;">
         						
-        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog. Tras analizar dichas tareas, el equipo formó 
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog:
+        						
+        						</span>
+        					</div>
+       						<br>
+       							<img src="resources/imagenes/s3-productBacklog.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       						<br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							El Product Owner proporciona al equipo las tareas priorizadas que forman el Product Backlog y que son:. Tras analizar dichas tareas, el equipo formó 
         							el Sprint Backlog con las tareas que se van a abordar, dando una estimación sobre lo que se tardará en hacerlas. Estas tareas son:
         						
         						</span>
         					</div>
        						<br>
-       							<img src="resources/imagenes/s3-sprintBacklog-1.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s3-sprintBacklog-1.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<br>
-       							<img src="resources/imagenes/s3-sprintBacklog-2.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s3-sprintBacklog-2.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<br>
-       							<img src="resources/imagenes/s3-sprintBacklog-3.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s3-sprintBacklog-3.JPG" style="height:500px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<br>
-       							<img src="resources/imagenes/s3-sprintBacklog-4.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+       							<img src="resources/imagenes/s3-sprintBacklog-4.JPG" style="height:200px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						<br>
        						<span style="text-align:left;font-weight:bold;font-size:17px;">
        							2. Desarrollo del Sprint
@@ -262,11 +272,10 @@
         						<span style="font-size:14px;">
         						
         							A pesar de haber tenido alguna desviación, en la reunión de retrospectiva se concluye que se ha trabajado 
-        							bien durante el Sprint, siguiendo la planificación inicial. En el gráfico Burndown (figura 4.22), se aprecia 
+        							bien durante el Sprint, siguiendo la planificación inicial. En el gráfico Burndown, se aprecia 
         							que la estimación inicial y la evolución real del proyecto en el Sprint, coinciden aproximadamente, teniendo 
         							en cuenta que Zenhub cuenta que en los fines de semana no se trabaja, cuando realmente si se ha trabajado. 
-        							En el tablero Scrum, se ha realizad un seguimiento diario de las tareas que se han abordado (véase la 
-        							figura 4.23).
+        							En el tablero Scrum, se ha realizad un seguimiento diario de las tareas que se han abordado.
         						
         						</span>
         					</div>
