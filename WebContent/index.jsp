@@ -20,6 +20,7 @@
     <!-- Plugin CSS -->
     <link href="resources/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="resources/css/view_All.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/view_Index.css"/>
 
     <!-- Custom styles for this template -->
     <link href="resources/css/freelancer.min.css" rel="stylesheet">
@@ -68,39 +69,126 @@
 	      </div>
 	    </nav>
 	</header>
-	<article style="background-color:#BFEA8B">
-    	<br><br><br><br><br><br><br><br>
+	<article style="background-color:#A4EC9F">
+    	<br><br><br><br><br><br>
     	<div class="row">
     		<div class="col-md-12">
     			<br><br>
     			<h6 style="color:black" align="center">¡Bienvenido a la Aplicación Flashcards!</h6>
+    			<br><br>
+    			<div class="row">
+    				<div class="col-md-2"></div>
+    				<div class="col-md-2" style="text-align:center;">
+    					<i class="fas fa-clone fa-5x"></i>
+    					<br><br>
+    					<span>Crea colecciones de Flashcards, para repasar tus conocimientos</span>
+    				</div>
+    				<div class="col-md-1"></div>
+    				<div class="col-md-2" style="text-align:center;">
+    					<i class="fas fa-users fa-5x"></i>
+    					<br><br>
+    					<span>Comparte tus colecciones con otros usuarios</span>
+    				</div>
+    				<div class="col-md-1"></div>
+    				<div class="col-md-2" style="text-align:center;">
+    					<i class="fas fa-star fa-5x"></i>
+    					<br><br>
+						<span>Crea y únete a los clubes, donde podreis compartir vuestras colecciones</span>
+    				</div>
+    				<div class="col-md-2"></div>
+    			</div>
     			<br>
-    			<img src="resources/imagenes/indexPhoto1.JPG" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
     		</div>
      	</div>
     	<br>
 	</article>
-	<article style="background-color:#CCCCC3">
+	<article style="background-color:#AAECE5">
     	<div class="row">
     		<div class="col-md-12">
     			<br><br>
-    			<h6 style="color:black" align="center">Aquí podrás crear y compartir colecciones de Flashcards con otros usuarios de la aplicación</h6>
+    			<h6 style="color:black" align="center">¿A qué esperas?</h6>
+    			<br><br>
+    			<div class="row">
+    				<div class="col-md-2"></div>
+    				<div class="col-md-2 button-acceso logIn">
+    					<br>
+    					<i class="fas fa-sign-in-alt fa-5x"></i>
+    					<br><br>
+    					<span>Entrar en la Aplicación</span>
+    					<br>
+    				</div>
+    				<div class="col-md-1"></div>
+    				<div class="col-md-2 button-acceso registerIn">
+    					<br>
+    					<i class="fas fa-user-plus fa-5x"></i>
+    					<br><br>
+    					<span>¿No tienes cuenta?</span>
+    					<br><span>¡Regístrate!</span>
+    				</div>
+    				<div class="col-md-1"></div>
+    				<div class="col-md-2 button-acceso recoverIn">
+    					<br>
+    					<i class="fas fa-key fa-5x"></i>
+    					<br><br>
+    					<span>¿No recuerdas la clave?</span>
+    					<br><span>¡Recupérala!</span>
+    				</div>
+    				<div class="col-md-2"></div>
+    			</div>
+    			<script>
+    			
+	    			document.getElementsByClassName('logIn')[0]
+	    	        .addEventListener('click', function (event) {
+	    	            window.location.href = 'iniciarSesion.html';
+	    	        });
+	    			
+	    			document.getElementsByClassName('registerIn')[0]
+	    	        .addEventListener('click', function (event) {
+	    	        	window.location.href = 'registro.html';
+	    	        });
+	    			
+	    			document.getElementsByClassName('recoverIn')[0]
+	    	        .addEventListener('click', function (event) {
+	    	        	window.location.href = 'recuperaCuenta.html';
+	    	        });
+    			
+    			</script>
     			<br>
-    			<img src="resources/imagenes/indexPhoto2.JPG" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
     		</div>
      	</div>
     	<br>
 	</article>
-    <article style="background-color:#BFEA8B">
+    <article style="background-color:#A4EC9F">
     	<div class="row">
     		<div class="col-md-12">
     			<br><br>
-    			<h6 style="color:black" align="center">¿Quieres saber cómo se ha desarrollado el proyecto? Echa un vistazo a la Wiki</h6>
+    			<h6 style="color:black" align="center">¿Quieres saber cómo se ha desarrollado el proyecto?</h6>
     			<br>
-    			<a href="desarrolloProyecto.html">
-    				<img src="resources/imagenes/wikiDesarrollo.jpg" style="height:400px;width:auto;display:block; margin-left:auto;margin-right:auto;" class="center-img" alt="Wiki del Proyecto">
-    			</a>
     		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-5"></div>
+    		<div class="col-md-2">
+    			<div class="row">
+    				<div class="col-md-12 button-acceso wiki">
+    					<br>
+    					<i class="fas fa-sitemap fa-5x"></i>
+    					<br><br>
+    					<span>Wiki del Proyecto</span>
+    					<br>
+    				</div>
+    			</div> 
+    			<br>
+    			<script>
+    			
+	    			document.getElementsByClassName('wiki')[0]
+	    	        .addEventListener('click', function (event) {
+	    	        	window.location.href = 'desarrolloProyecto.html';
+	    	        });
+    			
+    			</script>   				
+    		</div>
+    		<div class="col-md-5"></div>
      	</div>
     	<br>
 	</article>

@@ -1,0 +1,7 @@
+.button-acceso{
+	text-align:center;
+}
+
+.button-acceso:hover{
+	border: 1px solid black;
+}
