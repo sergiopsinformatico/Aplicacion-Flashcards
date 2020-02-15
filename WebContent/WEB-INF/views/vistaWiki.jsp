@@ -129,89 +129,99 @@
       <!-- Main Content -->
       <div id="content">
       
-      	<div style="margin-left:12px;" class="row">
-      		<div class="col-md-12">
+      	 <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto"></ul>
+        </nav>
       
-		      	<div class="row">
-		        	<br><br>
-		        </div>
-		        
-		        <div class="row">
-		        	<span style="font-weight:bold;">Metodología de Desarrollo:</span>
-		        	<span style="margin-left:5px;">BDD</span>
-		        </div>
-		        
-		        <div class="row">
-		        	<span style="font-weight:bold;">Framework de Gestión:</span>
-		        	<span style="margin-left:5px;">SCRUM</span>
-		        </div>
-		        
-		        <div class="row">
-		        	<span style="font-weight:bold;">Metodo de Estimación:</span>
-		        	<span style="margin-left:5px;">Tamaño de Camisetas (Estimación por Analogía, a partir de los proyectos realizados durante la carrera)</span>
-		        </div>
-		        
-		        <div class="row">
-		        	<br><br>
-		        </div>
-		        
-		        <div class="row">
-		        	<p><b>Sprints del Proyecto:</b></p>
-		        </div>
-		        
-		        <div class="row">
-		        	<br><br>
-		        </div>
-		
-		        <div class="row">
-		        	<div class="col-md-12" style="text-align:center;">
-		        		<a href="desarrolloProyecto-s0.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S0.JPG" alt="Sprint 0" height="300" width="auto"></a>
-		        		<a href="desarrolloProyecto-s1.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S1.JPG" alt="Sprint 1" height="300" width="auto"></a>
-		        		<a href="desarrolloProyecto-s2.html"><img src="resources/imagenes/wiki_S2.JPG" alt="Sprint 2" height="300" width="auto"></a>
-		       		</div>
-		        </div>
-		        
-		        <div class="row">
-		        	<div class="col-md-12" style="text-align:center;">
-		        		<br>
-		        		<a href="desarrolloProyecto-s3.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S3.JPG" alt="Sprint 3" height="300" width="auto"></a>
-		        		<a href="desarrolloProyecto-s4.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S4.JPG" alt="Sprint 4" height="300" width="auto"></a>
-		        		<a href="desarrolloProyecto-s5.html"><img src="resources/imagenes/wiki_S5.JPG" alt="Sprint 5" height="300" width="auto"></a>
-		       		</div>
-		        </div>
-		        
-		        <div class="row">
-		        	<div class="col-md-12" style="text-align:center;">
-		        		<br>
-		        		<a href="desarrolloProyecto-s6.html"><img src="resources/imagenes/wiki_S6.JPG" alt="Sprint 6" height="300" width="auto"></a>
-		       		</div>
-		        </div>
-		        
-		        <div class="row">
-	        		<br><br>
-	        	</div>
-	        	<div class="row">
-	        		<div class="col-md-12">
-	        			<div class="row">
-	        				<div class="col-md-4"></div>
-	        				<div class="col-md-4">
-	        					<form action="inicio.html">
-				        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
-				        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-				        				Volver a la Aplicación
-				        			</button>
-				        		</form>
-	        				</div>
-	        				<div class="col-md-4"></div>
-	        			</div>
-	        		</div>
-	        	</div>
-	        	<div class="row">
-	        		<br><br>
-	        	</div>
-		        
-			</div>
-		 </div>
+      	<div class="container-fluid">
+	      	<div class="row">
+	      		<div class="col-md-1"></div>
+	      		<div class="col-md-10">
+	      
+			      	<div class="row">
+			        	<br><br>
+			        </div>
+			        
+			        <div class="row">
+			        	<span style="font-weight:bold;">Metodología de Desarrollo:</span>
+			        	<span style="margin-left:5px;">BDD</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<span style="font-weight:bold;">Framework de Gestión:</span>
+			        	<span style="margin-left:5px;">SCRUM</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<span style="font-weight:bold;">Metodo de Estimación:</span>
+			        	<span style="margin-left:5px;">Tamaño de Camisetas (Estimación por Analogía, a partir de los proyectos realizados durante la carrera)</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<br><br>
+			        </div>
+			        
+			        <div class="row">
+			        	<p><b>Sprints del Proyecto:</b></p>
+			        </div>
+			        
+			        <div class="row">
+			        	<br><br>
+			        </div>
+			
+			        <div class="row">
+			        	<div class="col-md-12" style="text-align:center;">
+			        		<a href="desarrolloProyecto-s0.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S0.JPG" alt="Sprint 0" height="300" width="auto"></a>
+			        		<a href="desarrolloProyecto-s1.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S1.JPG" alt="Sprint 1" height="300" width="auto"></a>
+			        		<a href="desarrolloProyecto-s2.html"><img src="resources/imagenes/wiki_S2.JPG" alt="Sprint 2" height="300" width="auto"></a>
+			       		</div>
+			        </div>
+			        
+			        <div class="row">
+			        	<div class="col-md-12" style="text-align:center;">
+			        		<br>
+			        		<a href="desarrolloProyecto-s3.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S3.JPG" alt="Sprint 3" height="300" width="auto"></a>
+			        		<a href="desarrolloProyecto-s4.html"><img style="margin-right:10px;" src="resources/imagenes/wiki_S4.JPG" alt="Sprint 4" height="300" width="auto"></a>
+			        		<a href="desarrolloProyecto-s5.html"><img src="resources/imagenes/wiki_S5.JPG" alt="Sprint 5" height="300" width="auto"></a>
+			       		</div>
+			        </div>
+			        
+			        <div class="row">
+			        	<div class="col-md-12" style="text-align:center;">
+			        		<br>
+			        		<a href="desarrolloProyecto-s6.html"><img src="resources/imagenes/wiki_S6.JPG" alt="Sprint 6" height="300" width="auto"></a>
+			       		</div>
+			        </div>
+			        
+			        <div class="row">
+		        		<br><br>
+		        	</div>
+		        	<div class="row">
+		        		<div class="col-md-12">
+		        			<div class="row">
+		        				<div class="col-md-4"></div>
+		        				<div class="col-md-4">
+		        					<form action="inicio.html">
+					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+					        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+					        				Volver a la Aplicación
+					        			</button>
+					        		</form>
+		        				</div>
+		        				<div class="col-md-4"></div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="row">
+		        		<br><br>
+		        	</div>
+			        
+				</div>
+				<div class="col-md-1"></div>
+			 </div>
+	     </div>
       </div>
       <!-- End of Main Content -->
 
