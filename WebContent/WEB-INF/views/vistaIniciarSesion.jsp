@@ -109,61 +109,6 @@
 					<div class="col-md-1"></div>
 				</div>
 			</div>
-			<!-- <form action="/reset/password/" class="form-reset">
-                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
-                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
-            </form>
-            
-            <form action="/signup/" class="form-signup">
-                <div class="social-login">
-                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-                </div>
-                <div class="social-login">
-                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
-                </div>
-                
-                <p style="text-align:center">OR</p>
-
-                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
-                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
-                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-                <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
-
-                <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-                <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-            </form>
-            <br>-->
-			<!--<div class="col-md-4 formAccess textCenter container">
-				<br>
-				<h4 class="title">Iniciar Sesión</h4>
-				<br>
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-8">
-						<form action="acceder.do" method="post" id="Login" name="Login" class="form-signin">
-			                <span id="reauth-email" class="reauth-email"></span>
-			                <input type="text" class="form-control" id="inputUsernameEmail" name="inputUsernameEmail" placeholder="Username o Email" required autofocus>
-			                <br>
-			                <input type="password" class="form-control" id="inputClave" name="inputClave" placeholder="Clave" required>
-			                <br><br>
-			                
-			                <br><br>
-			                <button class="btn btn-lg btn-block btn-signin btnBlock" id="buttonIS" name="buttonIS" type="submit">Acceder</button>
-			                <br>
-			                <p><a class="btnRecupera" href="recuperaCuenta.html">Ups.... ¿Olvidasta tu clave?</a></p>
-			                <script>
-			                	document.getElementById("buttonIS").disabled = true;
-					        	function enableBtn(){
-					        		document.getElementById("buttonIS").style.background = "#457D8E";
-					        		document.getElementById("buttonIS").disabled = false;
-					        	}
-					        </script>
-					     </form>
-					</div>
-					<div class="col-md-2"></div>
-				</div>
-			</div>-->
 			<div class="col-md-2"></div>
 		</div>
 	</section>

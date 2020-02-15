@@ -493,7 +493,30 @@
        			<div class="col-md-12">
        				<br><br>
        			</div>
-       		</div>    	        	
+       		</div>
+       		<div class="row">
+        		<div class="col-md-12">
+		        	<div class="row">
+		        		<div class="col-md-4"></div>
+		        		<div class="col-md-4">
+		        			<form action="verClubes.html">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#93A67B;color:white;">
+			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+			        				Volver a la Página de Clubes
+			        			</button>
+			        		</form>
+		        		</div>
+		        		<div class="col-md-4"></div>
+		        	</div>
+		        </div>
+		    </div>
+		    <div class="row">
+        		<div class="col-md-12">
+		        	<div class="row">
+		        		<br>
+		        	</div>
+		        </div>
+		    </div>  	        	
         	<script>
 		   		if("${usuario.getRol()}" === 'Administrador'){
 		   			document.getElementById("adminSidebarDivider").style.display="block";

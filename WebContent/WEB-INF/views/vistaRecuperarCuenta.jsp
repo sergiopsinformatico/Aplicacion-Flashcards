@@ -58,10 +58,10 @@
 	<section>
 		<br><br><br><br>
 		<div class="row">
-			<div class="col-md-4"></div>
+			<div class="col-md-2"></div>
 			<div class="col-md-4 formAccess textCenter container">
 				<br>
-   				<h4 align="center" class="title">Recuperar Cuenta</h4>
+   				<h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Recuperar Cuenta</h1>
    				<br>
 				<div class="row">
 					<div class="col-md-2"></div>
@@ -88,7 +88,25 @@
 					<div class="col-md-2"></div>
 				</div>
 			</div>
-			<div class="col-md-4"></div>
+			<div class="col-md-4" style="border-left: 0.5px solid black;">
+				<br><br><br>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<form action="iniciarSesion.html" method="get" class="form-signin">
+				    		<p style="text-align:center;"><strong>Si ya tienes cuenta, puedes loguearte</strong></p>
+			            	<button class="btn btn-primary btn-block" style="background-color:green;border:1px solid green;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
+			            </form>
+			            <br>
+						<form action="registro.html" method="get" class="form-signin">
+				    		<p style="text-align:center;"><strong>Si aún no tienes cuenta, puedes crearte una</strong></p>
+			            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
+			            </form>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
 		</div>
 	</section>
 

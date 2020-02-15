@@ -294,10 +294,10 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-10 middle">
 		        			<form action="flashcards.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-warning btnPaginaPrincipal" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="background-color:#FFFFA1;color:#36467E">
 			        				<i class="fa fa-clone fa-5x" aria-hidden="true"></i>
 			        				<br><br>
-			       					Flashcards
+			       					<span style="font-weight:bold;">Flashcards</span>
 			       				</button>
 			       			</form>
 		        		</div>
