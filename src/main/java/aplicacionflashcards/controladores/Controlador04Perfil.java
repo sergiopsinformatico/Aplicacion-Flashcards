@@ -37,9 +37,7 @@ public class Controlador04Perfil {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	/*Constantes
-	static final String CONST_USUARIO = "usuario";
-	static final String CONST_MENSAJE = "mensaje";*/
+	static final String CONST_MENSAJE = "mensaje";
 	
 	/*Ver Perfil*/
 	@GetMapping(value = "/verPerfil")
@@ -71,8 +69,8 @@ public class Controlador04Perfil {
 				dBFlashcards = Broker.getInstanciaFlashcards();
 				vista.addObject("userColecciones", dBFlashcards.coleccionesCreadasVisibles(user.getUsername()).size());
 				
-				if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
-					vista.addObject("mensaje", request.getParameter("mensaje"));
+				if(request.getParameter(CONST_MENSAJE)!= null && (!request.getParameter(CONST_MENSAJE).equals(""))) {
+					vista.addObject(CONST_MENSAJE, request.getParameter(CONST_MENSAJE));
 				}
 			}else {
 				vista = new ModelAndView("redirect:/inicio.html");

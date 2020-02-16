@@ -230,7 +230,7 @@
         				<div class="col-md-1"></div>
         				<div class="col-md-5">
         					<form action="panelMensajes.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-secondary btnPaginaPrincipal" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="color:#FFFFA1;background-color:#FFB864;">
 			        				<i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Panel Mensajes
@@ -238,8 +238,8 @@
 			       			</form>
         				</div>
         				<div class="col-md-5">
-        					<div style="height:50px;line-height:50px;background-color:#65E9FF;text-align:center;">
-			        			<span style="color:white;font-weight:bold;" align="center">Notificaciones</span>
+        					<div style="height:50px;line-height:50px;background-color:#6FDD79;text-align:center;">
+			        			<span style="color:#FFFFA1;font-weight:bold;" align="center">Notificaciones</span>
 			        		</div>
 			        		<div style="height:100px;overflow-y: auto;border: 1px solid #65E9FF;">
 			        			<table ng-if="checkNotificaciones == true && listaNotificaciones.length>0">
@@ -270,7 +270,7 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-10 middle">
 		        			<form action="panelAdministrador.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-primary btnPaginaPrincipal" style="color:white">
+			        			<button type="submit" class="btn btn-primary btnPaginaPrincipal" style="color:#FFFFA1">
 			        				<i class="fa fa-universal-access fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Panel Administrador
@@ -294,7 +294,7 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-10 middle">
 		        			<form action="flashcards.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btnPaginaPrincipal" style="background-color:#FFFFA1;color:#36467E">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="background-color:#80E2EC;color:#FFFFA1">
 			        				<i class="fa fa-clone fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					<span style="font-weight:bold;">Flashcards</span>
@@ -318,7 +318,7 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-5">
 		        			<form action="verGente.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-success btnPaginaPrincipal" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="color:#FFFFA1;background-color:#4BD469;">
 			       					<i class="fa fa-users fa-5x" aria-hidden="true"></i>
 			       					<br><br>
 			       					Gente
@@ -327,7 +327,7 @@
 		        		</div>
 		        		<div class="col-md-5">
 		        			<form action="verClubes.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-danger btnPaginaPrincipal" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="color:#FFFFA1;background-color:#FFB864;">
 			       					<i class="fa fa-star fa-5x" aria-hidden="true"></i>
 			       					<br><br>
 			       					Clubes
@@ -348,8 +348,8 @@
 		    <div class="row">
 		    	<div class="col-md-4"></div>
 		    	<div class="col-md-4">
-	     			<div style="height:50px;line-height:50px;background-color:#F3C272;text-align:center;">
-	        			<span style="color:white;font-weight:bold;" align="center">Ranking</span>
+	     			<div style="height:50px;line-height:50px;background-color:#0ED5FF;text-align:center;">
+	        			<span style="color:#FFFFA1;font-weight:bold;" align="center">Ranking</span>
 	        		</div>
 	        		<div style="height:100px;overflow-y: auto;border: 1px solid #65E9FF;">
 	        			<table ng-if="rankingLoaded == true && ranking.length>0">
