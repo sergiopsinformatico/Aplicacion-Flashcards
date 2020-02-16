@@ -51,6 +51,7 @@ public class Controlador02RecuperarCuenta {
 	static final String VISTARECUPERARCUENTA = "vistaRecuperarCuenta";
 	static final String MENSAJE = "mensaje";
 	static final String USERNAME = "username";
+	static final String REDIRECTINICIO = "redirect:/inicio.html";
 	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador02RecuperarCuenta");
@@ -76,7 +77,7 @@ public class Controlador02RecuperarCuenta {
 			
 		}else {
 			
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(REDIRECTINICIO);
 			
 		}
 		
@@ -129,7 +130,7 @@ public class Controlador02RecuperarCuenta {
 	
 	@PostMapping(value = "/cambioClave")
 	public ModelAndView cambioClave(HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("redirect:/inicio.html");
+		vista = new ModelAndView(REDIRECTINICIO);
 		userAntiguo = Broker.getInstanciaUsuario().getUsuarioDTO(request.getParameter(USERNAME));
 		userNuevo = userAntiguo;
 		userNuevo.setClave(request.getParameter("inputNuevaClave"));
@@ -144,6 +145,6 @@ public class Controlador02RecuperarCuenta {
 	
 	@GetMapping(value = "/cambioClave")
 	public ModelAndView cambioClaveGet(HttpServletRequest request, HttpServletResponse response) {
-		return new ModelAndView("redirect:/inicio.html");
+		return new ModelAndView(REDIRECTINICIO);
 	}
 }

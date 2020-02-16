@@ -2,18 +2,24 @@ package main.java.aplicacionflashcards.auxiliares;
 
 public class CifradoCaesar {
 	
+	/* * * * * * * 
+     * VARIABLES *
+	 * * * * * * */
+	
 	int key=5;
 	char ch;
+	StringBuilder sB;
 	
-	String encryptedMessage;
-	String decryptedMessage;
+	/* * * * * * 
+     * METODOS *
+	 * * * * * */
 	
 	/*
 	 * Extraido de: https://www.thejavaprogrammer.com/caesar-cipher-java-encryption-decryption/
 	 */
 	
 	public String encryptText(String message) {
-		encryptedMessage = "";
+		sB = new StringBuilder();
 		
 		for(int i = 0; i < message.length(); ++i){
 			ch = message.charAt(i);
@@ -25,7 +31,7 @@ public class CifradoCaesar {
 	                ch = (char)(ch - 'z' + 'a' - 1);
 	            }
 	            
-	            encryptedMessage += ch;
+	            sB.append(ch);
 	        }
 	        else if(ch >= 'A' && ch <= 'Z'){
 	            ch = (char)(ch + key);
@@ -34,19 +40,19 @@ public class CifradoCaesar {
 	                ch = (char)(ch - 'Z' + 'A' - 1);
 	            }
 	            
-	            encryptedMessage += ch;
+	            sB.append(ch);
 	        }
 	        else {
-	        	encryptedMessage += ch;
+	        	sB.append(ch);
 	        }
 		}
-		
-		return encryptedMessage;
+				
+		return sB.toString();
 		
 	}
 	
 	public String decryptText(String message) {
-		decryptedMessage = "";
+		sB = new StringBuilder();
  
 		for(int i = 0; i < message.length(); ++i){
 			ch = message.charAt(i);
@@ -58,7 +64,7 @@ public class CifradoCaesar {
 	                ch = (char)(ch + 'z' - 'a' + 1);
 	            }
 	            
-	            decryptedMessage += ch;
+	            sB.append(ch);
 	        }
 	        else if(ch >= 'A' && ch <= 'Z'){
 	            ch = (char)(ch - key);
@@ -67,14 +73,14 @@ public class CifradoCaesar {
 	                ch = (char)(ch + 'Z' - 'A' + 1);
 	            }
 	            
-	            decryptedMessage += ch;
+	            sB.append(ch);
 	        }
 	        else {
-	        	decryptedMessage += ch;
+	        	sB.append(ch);
 	        }
 		}
 		
-		return decryptedMessage;
+		return sB.toString();
 	}
 		
 }

@@ -53,7 +53,10 @@ public class Controlador03ControlSesion {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	
+    static final String MENSAJE = "mensaje";
+    static final String VISTAINICIARSESION = "vistaIniciarSesion";
+    static final String REDIRECTINICIO = "redirect:/inicio.html";
+    static final String USUARIO = "usuario";
 	
 	/* * * * * * * * * 
      * CONTROLADORES *
@@ -68,13 +71,13 @@ public class Controlador03ControlSesion {
 	public ModelAndView inicio(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioNoLogueado(request)) {
 			vista = new ModelAndView("index");
-			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
-				vista.addObject("mensaje", request.getParameter("mensaje"));
+			if(request.getParameter(MENSAJE)!= null && (!request.getParameter(MENSAJE).equals(""))) {
+				vista.addObject(MENSAJE, request.getParameter(MENSAJE));
 			}
 		}else {
 			vista =  new ModelAndView("vistaPrincipal");
-			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
-				vista.addObject("mensaje", request.getParameter("mensaje"));
+			if(request.getParameter(MENSAJE)!= null && (!request.getParameter(MENSAJE).equals(""))) {
+				vista.addObject(MENSAJE, request.getParameter(MENSAJE));
 			}
 		}
 		return vista;
@@ -99,14 +102,14 @@ public class Controlador03ControlSesion {
 				
 		if(CheckUsers.isUsuarioNoLogueado(request)) {
 			
-			vista =  new ModelAndView("vistaIniciarSesion");
+			vista =  new ModelAndView(VISTAINICIARSESION);
 			
-			if(request.getParameter("mensaje")!= null && (!request.getParameter("mensaje").equals(""))) {
-				vista.addObject("mensaje", request.getParameter("mensaje"));
+			if(request.getParameter(MENSAJE)!= null && (!request.getParameter(MENSAJE).equals(""))) {
+				vista.addObject(MENSAJE, request.getParameter(MENSAJE));
 			}
 			
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(REDIRECTINICIO);
 			
 		}
 		
@@ -124,10 +127,10 @@ public class Controlador03ControlSesion {
 			
 			if(user.isActivadaCuenta()) {
 				eliminado = new EliminarCuentaDTO(user.getUsername());
-				vista = new ModelAndView("redirect:/inicio.html");
+				vista = new ModelAndView(REDIRECTINICIO);
 				if(Broker.getInstanciaEliminarCuenta().leerEliminado(eliminado)) {
 					Broker.getInstanciaEliminarCuenta().eliminarEliminado(eliminado);
-					vista.addObject("mensaje", "Su cuenta ha sido reactivada");
+					vista.addObject(MENSAJE, "Su cuenta ha sido reactivada");
 					
 					try {
 						email = new Email();
@@ -137,7 +140,7 @@ public class Controlador03ControlSesion {
 					}
 					
 				}
-				vista.addObject("usuario", user);
+				vista.addObject(USUARIO, user);
 				
 				dBNotificaciones = Broker.getInstanciaNotificaciones();
 				notificaciones = dBNotificaciones.getNotificaciones(user.getUsername());
@@ -148,12 +151,12 @@ public class Controlador03ControlSesion {
 				}
 				
 			}else {
-				vista = new ModelAndView("vistaIniciarSesion");
-				vista.addObject("mensaje", "Su cuenta aun no ha sido activada. Por favor, revise su email para activar la cuenta.");
+				vista = new ModelAndView(VISTAINICIARSESION);
+				vista.addObject(MENSAJE, "Su cuenta aun no ha sido activada. Por favor, revise su email para activar la cuenta.");
 			}
 		}else {
-			vista = new ModelAndView("vistaIniciarSesion");
-			vista.addObject("mensaje", "El usuario y/o la clave son incorrectos.");
+			vista = new ModelAndView(VISTAINICIARSESION);
+			vista.addObject(MENSAJE, "El usuario y/o la clave son incorrectos.");
 		}
 		return vista;
 	}
@@ -178,7 +181,7 @@ public class Controlador03ControlSesion {
 	public ModelAndView eliminaNotificacionUsuario(@RequestParam("usuario") String usuario, @RequestParam("idNotificacion") String indiceNotificacion, HttpServletRequest request, HttpServletResponse response){
 		dBNotificaciones = Broker.getInstanciaNotificaciones();
 		dBNotificaciones.eliminarNotificacion(usuario, Integer.parseInt(indiceNotificacion));
-		return new ModelAndView("redirect:/inicio.html");
+		return new ModelAndView(REDIRECTINICIO);
 	}
 	
 	/* * * * * * * * * * * * *  * * * * *
@@ -187,9 +190,9 @@ public class Controlador03ControlSesion {
 	
 	@GetMapping(value = "/cerrarSesion")
 	public ModelAndView cerrarSesion(HttpServletRequest request, HttpServletResponse response) {	
-		vista = new ModelAndView("redirect:/inicio.html");
-		request.getSession().setAttribute("usuario", null);
-		vista.addObject("usuario",null);
+		vista = new ModelAndView(REDIRECTINICIO);
+		request.getSession().setAttribute(USUARIO, null);
+		vista.addObject(USUARIO,null);
 		return vista;
 	}
 	

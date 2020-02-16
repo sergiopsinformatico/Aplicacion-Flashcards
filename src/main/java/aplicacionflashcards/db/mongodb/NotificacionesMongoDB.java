@@ -1,6 +1,5 @@
 package main.java.aplicacionflashcards.db.mongodb;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -77,24 +76,29 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 	public boolean insertarNotificacion(String usuario, String notificacion) {
 		try {
 			eNotificaciones = getNotificacionUsuario(usuario);
-			notificaciones = eNotificaciones.getListaNotificaciones();
-			
-			foundNotificacion = false;
-			
-			for(indice=0; indice<notificaciones.size(); indice++) {
-				if(notificaciones.get(indice).equals(notificacion)) {
-					foundNotificacion = true;
+			if(eNotificaciones!=null) {
+				notificaciones = eNotificaciones.getListaNotificaciones();
+				
+				foundNotificacion = false;
+				
+				for(indice=0; indice<notificaciones.size(); indice++) {
+					if(notificaciones.get(indice).equals(notificacion)) {
+						foundNotificacion = true;
+					}
 				}
-			}
-			
-			if(!foundNotificacion) {
-				notificaciones.add(notificacion);
-				eNotificaciones.setListaNotificaciones(notificaciones);
-				updateNotificacionUsuario(eNotificaciones);
-				return true;
+				
+				if(!foundNotificacion) {
+					notificaciones.add(notificacion);
+					eNotificaciones.setListaNotificaciones(notificaciones);
+					updateNotificacionUsuario(eNotificaciones);
+					return true;
+				}else {
+					return false;
+				}
 			}else {
 				return false;
 			}
+				
 		}catch(Exception ex) {
 			return false;
 		}
@@ -104,11 +108,15 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 		try {
 			
 			eNotificaciones = getNotificacionUsuario(usuario);
-			notificaciones = eNotificaciones.getListaNotificaciones();
-			notificaciones.remove(indiceNotificacion);			
-			eNotificaciones.setListaNotificaciones(notificaciones);
-			updateNotificacionUsuario(eNotificaciones);
-			return true;
+			if(eNotificaciones!=null) {
+				notificaciones = eNotificaciones.getListaNotificaciones();
+				notificaciones.remove(indiceNotificacion);			
+				eNotificaciones.setListaNotificaciones(notificaciones);
+				updateNotificacionUsuario(eNotificaciones);
+				return true;
+			}else {
+				return false;
+			}
 			
 		}catch(Exception ex) {
 			return false;

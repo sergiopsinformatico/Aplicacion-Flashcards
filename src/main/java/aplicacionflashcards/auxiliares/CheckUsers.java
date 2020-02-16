@@ -13,26 +13,36 @@ public class CheckUsers {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	//static final String USUARIO = "usuario";
+	static final String USUARIO = "usuario";
+	
+	/* * * * * * * * 
+     * CONSTRUCTOR *
+	 * * * * * * * */
+	
+	private CheckUsers() {}
+	
+	/* * * * * * 
+     * METODOS *
+	 * * * * * */
 	
 	public static boolean isUsuarioNoLogueado(HttpServletRequest request) {
-		return (request.getSession().getAttribute("usuario")==null || 
-			   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()==null||
-			   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals(""));
+		return (request.getSession().getAttribute(USUARIO)==null || 
+			   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername()==null||
+			   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername().equals(""));
 	}
 	
 	public static boolean isUsuarioLogueado(HttpServletRequest request) {
-		return (request.getSession().getAttribute("usuario")!=null && 
-			   ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()!=null && 
-			   (!((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername().equals("")));
+		return (request.getSession().getAttribute(USUARIO)!=null && 
+			   ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername()!=null && 
+			   (!((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getUsername().equals("")));
 	}
 	
 	public static boolean isAdministrador(HttpServletRequest request) {
-		return ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Administrador");
+		return ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getRol().equals("Administrador");
 	}
 	
 	public static boolean isModerador(HttpServletRequest request) {
-		return ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getRol().equals("Moderador");
+		return ((UsuarioDTO)(request.getSession().getAttribute(USUARIO))).getRol().equals("Moderador");
 	}
 	
 	
