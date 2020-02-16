@@ -57,11 +57,9 @@ public class Controlador09Flashcards {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_TIPO_COMPARTIR = "tipoCompartir";
-	*/
 	
 	@GetMapping(value = "/flashcards")
 	public ModelAndView flashcards(HttpServletRequest request, HttpServletResponse response) {
@@ -70,7 +68,7 @@ public class Controlador09Flashcards {
 			vista = new ModelAndView("vistaFlashcards");
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}
@@ -83,7 +81,7 @@ public class Controlador09Flashcards {
 			tarjetas = new LinkedList<>();
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}
@@ -94,7 +92,7 @@ public class Controlador09Flashcards {
 	@ResponseStatus(HttpStatus.OK)
 	public List<ClubDTO> getClubesFlashcards(HttpServletRequest request, HttpServletResponse response){
 		dBClub = Broker.getInstanciaClub();
-		return dBClub.getClubesPertenezco(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		return dBClub.getClubesPertenezco(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 	}
 	
 	//Metodo auxiliar get usernames en vista registro
@@ -103,7 +101,7 @@ public class Controlador09Flashcards {
 	@ResponseStatus(HttpStatus.OK)
 	public List<String> getAmigosFlashcards(HttpServletRequest request, HttpServletResponse response){
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 	}
 	
 	//Metodo auxiliar get usernames en vista registro
@@ -150,12 +148,12 @@ public class Controlador09Flashcards {
 		
 		hoy = new Fecha();
 		
-		if(request.getParameter("tipoCompartir").equals("publico") || request.getParameter("tipoCompartir").equals("privado")) {
+		if(request.getParameter(CONST_TIPO_COMPARTIR).equals("publico") || request.getParameter(CONST_TIPO_COMPARTIR).equals("privado")) {
 			flashcard = new FlashcardsDTO(idFlashcards, request.getParameter("nombreColeccion"), request.getParameter("temaColeccion"), 
-					((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), tarjetas, request.getParameter("tipoCompartir"), "");
+					((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), tarjetas, request.getParameter(CONST_TIPO_COMPARTIR), "");
 		}else {
 			flashcard = new FlashcardsDTO(idFlashcards, request.getParameter("nombreColeccion"), request.getParameter("temaColeccion"),
-					((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), tarjetas, request.getParameter("tipoCompartir"), request.getParameter("compartirCon"));
+					((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), tarjetas, request.getParameter(CONST_TIPO_COMPARTIR), request.getParameter("compartirCon"));
 		}
 		
 		flashcard.setFechaCreacion(hoy.fechaHoy());
@@ -167,7 +165,7 @@ public class Controlador09Flashcards {
 		if(dBFlashcards.crearFlashcards(flashcard)) {
 			
 			dBPuntos = Broker.getInstanciaPuntos();
-			puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+			puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 			puntos.setPuntos(puntos.getPuntos() + 1);
 			dBPuntos.actualizaPuntos(puntos);
 			
@@ -188,7 +186,7 @@ public class Controlador09Flashcards {
 			vista = new ModelAndView("vistaFlashcardsColecciones");
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}	
@@ -200,7 +198,7 @@ public class Controlador09Flashcards {
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> coleccionesVisiblesParaMi(HttpServletRequest request, HttpServletResponse response){
 		try {
-			listaColecciones = Broker.getInstanciaFlashcards().listarColeccionesVisibles(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+			listaColecciones = Broker.getInstanciaFlashcards().listarColeccionesVisibles(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		}catch(Exception ex) {
 			listaColecciones = new LinkedList<>();
 		}
@@ -213,7 +211,7 @@ public class Controlador09Flashcards {
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> coleccionesCreadasEvaluadas(HttpServletRequest request, HttpServletResponse response){
 		try {
-			listaColecciones = Broker.getInstanciaFlashcards().coleccionesCreadasVisibles(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+			listaColecciones = Broker.getInstanciaFlashcards().coleccionesCreadasVisibles(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		}catch(Exception ex) {
 			listaColecciones = new LinkedList<>();
 		}
@@ -226,7 +224,7 @@ public class Controlador09Flashcards {
 	@ResponseStatus(HttpStatus.OK)
 	public List<FlashcardsDTO> coleccionesCreadasPendienteEvaluar(HttpServletRequest request, HttpServletResponse response){
 		try {
-			listaColecciones = Broker.getInstanciaFlashcards().coleccionesCreadasSinEvaluar(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+			listaColecciones = Broker.getInstanciaFlashcards().coleccionesCreadasSinEvaluar(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		}catch(Exception ex) {
 			listaColecciones = new LinkedList<>();
 		}
@@ -255,12 +253,12 @@ public class Controlador09Flashcards {
 			flashcard = Broker.getInstanciaFlashcards().leerFlashcard(id);
 			
 			if(flashcard.getTipoCompartir().equals("club")) {
-				flashcard.setCompartirCon(Broker.getInstanciaClub().leerClub(flashcard.getCompartirCon(), ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername()).getNombreClub());
+				flashcard.setCompartirCon(Broker.getInstanciaClub().leerClub(flashcard.getCompartirCon(), ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername()).getNombreClub());
 			}
 			vista.addObject("flashcard", flashcard);
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}

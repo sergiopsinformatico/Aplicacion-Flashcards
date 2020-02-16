@@ -37,11 +37,9 @@ public class Controlador05Configuracion {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	/*Constantes
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_MENSAJE = "mensaje";
-	*/
 	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador05Configuracion");
@@ -53,14 +51,14 @@ public class Controlador05Configuracion {
 			vista = new ModelAndView("vistaConfiguracion");
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}
 	
 	@PostMapping(value = "/modificaUsuario")
 	public ModelAndView modificaUsuario(HttpServletRequest request, HttpServletResponse response) {
-		userAntiguo = (UsuarioDTO)request.getSession().getAttribute("usuario");
+		userAntiguo = (UsuarioDTO)request.getSession().getAttribute(CONST_USUARIO);
 		
 		userNuevo = new UsuarioDTO(request.getParameter("inputUsername"), 
 								   request.getParameter("inputEmail"), 
@@ -82,11 +80,11 @@ public class Controlador05Configuracion {
 		
 		if(Broker.getInstanciaUsuario().updateUsuario(userAntiguo, userNuevo)) {
 			vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+userNuevo.getUsername());
-			vista.addObject("mensaje", "Perfil Actualizado");
-			vista.addObject("usuario", userNuevo);
+			vista.addObject(CONST_MENSAJE, "Perfil Actualizado");
+			vista.addObject(CONST_USUARIO, userNuevo);
 		}else {
 			vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+userNuevo.getUsername());
-			vista.addObject("mensaje", "Hubo un fallo y no se pudo modificar el perfil");
+			vista.addObject(CONST_MENSAJE, "Hubo un fallo y no se pudo modificar el perfil");
 		}
 		return vista;
 	}
@@ -103,26 +101,26 @@ public class Controlador05Configuracion {
 		if(CheckUsers.isUsuarioLogueado(request)) {
 			
 			fecha = new Fecha();
-			elimina = new EliminarCuentaDTO(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), fecha.fechaEliminarCuenta());
+			elimina = new EliminarCuentaDTO(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), fecha.fechaEliminarCuenta());
 			
 			Broker.getInstanciaEliminarCuenta().insertaEliminado(elimina);
 			
 			try {
 				
 				email = new Email();
-				email.eliminarCuenta(elimina, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getEmail());
+				email.eliminarCuenta(elimina, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getEmail());
 				
 			}catch(Exception ex) {
 				LOGGER.log(Level.INFO, ex.getMessage());
 			}
 			
-			vista = new ModelAndView("redirect:/inicio.html");
-			vista.addObject("mensaje","Su cuenta se eliminara de forma definitiva en 14 dias.");
-			vista.addObject("usuario", null);
-			request.getSession().setAttribute("usuario", null);
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
+			vista.addObject(CONST_MENSAJE,"Su cuenta se eliminara de forma definitiva en 14 dias.");
+			vista.addObject(CONST_USUARIO, null);
+			request.getSession().setAttribute(CONST_USUARIO, null);
 			
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}

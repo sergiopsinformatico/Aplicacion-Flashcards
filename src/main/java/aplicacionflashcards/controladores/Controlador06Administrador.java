@@ -51,11 +51,8 @@ public class Controlador06Administrador {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	/*Constantes
-	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
-	static final String CONST_ADMIN = "Administrador";
-	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";*/
+	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";
 	
 	
 	@GetMapping(value = "/panelAdministrador")
@@ -65,7 +62,7 @@ public class Controlador06Administrador {
 			vista = new ModelAndView("vistaPanelAdministrador");
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}
@@ -74,10 +71,10 @@ public class Controlador06Administrador {
 	public ModelAndView getGestionUsuariosAdmin(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
 			
-			vista = new ModelAndView("vistaGestionUsuarios");
+			vista = new ModelAndView(CONST_GEST_USUARIO);
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}
@@ -104,11 +101,11 @@ public class Controlador06Administrador {
 	public ModelAndView administradorCambiaRol(@RequestParam("username") String username, @RequestParam("rol") String rol,
 			HttpServletRequest request){
 		
-		vista = new ModelAndView("redirect:/inicio.html");
+		vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
 			
-			vista = new ModelAndView("vistaGestionUsuarios");
+			vista = new ModelAndView(CONST_GEST_USUARIO);
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			userAntiguo = dBUsuario.getUsuarioDTO(username);
@@ -126,11 +123,11 @@ public class Controlador06Administrador {
 	@GetMapping(value = "/administradorGeneraNuevaClave")
 	public ModelAndView administradorGeneraNuevaClave(@RequestParam("username") String username, HttpServletRequest request){
 		
-		vista = new ModelAndView("redirect:/inicio.html");
+		vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
 			
-			vista = new ModelAndView("vistaGestionUsuarios");
+			vista = new ModelAndView(CONST_GEST_USUARIO);
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			userAntiguo = dBUsuario.getUsuarioDTO(username);
@@ -155,7 +152,7 @@ public class Controlador06Administrador {
 	@GetMapping(value = "/administradorModificaPerfil")
 	public ModelAndView administradorModificaPerfil(@RequestParam("username") String username, HttpServletRequest request){
 		
-		vista = new ModelAndView("redirect:/inicio.html");
+		vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
 			
@@ -205,11 +202,11 @@ public class Controlador06Administrador {
 	@GetMapping(value = "/administradorEliminaUsuario")
 	public ModelAndView administradorEliminaUsuario(@RequestParam("username") String username, HttpServletRequest request){
 		
-		vista = new ModelAndView("redirect:/inicio.html");
+		vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
 			
-			vista = new ModelAndView("vistaGestionUsuarios");
+			vista = new ModelAndView(CONST_GEST_USUARIO);
 			
 			dBUsuario = Broker.getInstanciaUsuario();
 			userAntiguo = dBUsuario.getUsuarioDTO(username);
@@ -234,7 +231,7 @@ public class Controlador06Administrador {
 			vista = new ModelAndView("vistaGestionClubes");
 		
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		return vista;
 	}
@@ -267,7 +264,7 @@ public class Controlador06Administrador {
 			vista = new ModelAndView("vistaGestionClubes");
 			
 		}else {
-			vista = new ModelAndView("redirect:/inicio.html");
+			vista = new ModelAndView(CONST_REDIRECT_INICIO);
 		}
 		
 		return vista;

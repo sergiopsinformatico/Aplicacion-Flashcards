@@ -57,10 +57,9 @@ public class Controlador08Clubes {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	/*Constantes
 	static final String CONST_USUARIO = "usuario";
-	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
-	static final String CONST_REDIRECT_VER_CLUBES = "redirect:/verClubes.html";*/
+	static final String CONST_REDIRECT_VER_CLUBES = "redirect:/verClubes.html";
+	static final String CONST_REDIRECT_VER_CLUB = "redirect:/verClub.html?idClub=";
 	
 	@GetMapping(value = "/verClubes")
 	public ModelAndView getClubes(HttpServletRequest request, HttpServletResponse response) {
@@ -80,7 +79,7 @@ public class Controlador08Clubes {
 	@ResponseStatus(HttpStatus.OK)
 	public List<ClubDTO> getTodosClubes(HttpServletRequest request, HttpServletResponse response){
 		dBClub = Broker.getInstanciaClub();
-		return dBClub.getTodosClubes(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		return dBClub.getTodosClubes(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 	}
 	
 	@GetMapping(value = "/getClubesCreados", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -88,7 +87,7 @@ public class Controlador08Clubes {
 	@ResponseStatus(HttpStatus.OK)
 	public List<ClubDTO> getClubesCreados(HttpServletRequest request, HttpServletResponse response){
 		dBClub = Broker.getInstanciaClub();
-		return dBClub.getMisClubes(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		return dBClub.getMisClubes(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 	}
 	
 	@GetMapping(value = "/getClubesPertenezco", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -96,7 +95,7 @@ public class Controlador08Clubes {
 	@ResponseStatus(HttpStatus.OK)
 	public List<ClubDTO> getClubesPertenezco(HttpServletRequest request, HttpServletResponse response){
 		dBClub = Broker.getInstanciaClub();
-		return dBClub.getClubesPertenezco(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		return dBClub.getClubesPertenezco(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 	}
 	
 	@PostMapping(value = "/crearClub")
@@ -113,12 +112,12 @@ public class Controlador08Clubes {
 			}while(dBClub.existeIdClub(idClub));
 			
 			miembros = new LinkedList<>();
-			miembros.add(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+			miembros.add(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 			
 			bloqueados = new LinkedList<>();
 			
 			club = new ClubDTO(idClub, request.getParameter("nombre"), request.getParameter("tema"),
-					((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), 
+					((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), 
 					miembros, fecha.fechaHoy(), bloqueados);
 			
 			vista = new ModelAndView("vistaClubes");
@@ -126,7 +125,7 @@ public class Controlador08Clubes {
 			if(dBClub.insertaClub(club)) {
 				
 				dBPuntos = Broker.getInstanciaPuntos();
-				puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+				puntos = dBPuntos.getPuntos(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 				puntos.setPuntos(puntos.getPuntos() + 2);
 				dBPuntos.actualizaPuntos(puntos);
 				
@@ -143,7 +142,7 @@ public class Controlador08Clubes {
 	
 	@GetMapping(value = "/crearClub")
 	public ModelAndView crearClubesGet(HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("redirect:/verClubes.html");
+		vista = new ModelAndView(CONST_REDIRECT_VER_CLUBES);
 		return vista;
 	}
 	
@@ -151,7 +150,7 @@ public class Controlador08Clubes {
 	public ModelAndView verClubGet(@RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
 		vista = new ModelAndView("vistaClub");
 		dBClub = Broker.getInstanciaClub();
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		vista.addObject("club", club);
 		return vista;
 	}
@@ -162,7 +161,7 @@ public class Controlador08Clubes {
 	public List<UsuarioDTO> getUsuariosClub(@RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
 		dBClub = Broker.getInstanciaClub();
 		dBUsuario = Broker.getInstanciaUsuario();
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		miembros = club.getMiembros();
 		usuariosMiembros = new LinkedList<>();
 		for(indice=0; indice<miembros.size(); indice++) {
@@ -173,9 +172,9 @@ public class Controlador08Clubes {
 	
 	@GetMapping(value = "/unirmeClub")
 	public ModelAndView unirmeClub(@RequestParam("idClub") String idClub, @RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("redirect:/verClubes.html");
+		vista = new ModelAndView(CONST_REDIRECT_VER_CLUBES);
 		dBClub = Broker.getInstanciaClub();
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		miembros = club.getMiembros();
 		miembros.add(username);
 		club.setMiembros(miembros);
@@ -185,9 +184,9 @@ public class Controlador08Clubes {
 	
 	@GetMapping(value = "/dejarClub")
 	public ModelAndView dejarClub(@RequestParam("idClub") String idClub, @RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("redirect:/verClubes.html");
+		vista = new ModelAndView(CONST_REDIRECT_VER_CLUBES);
 		dBClub = Broker.getInstanciaClub();
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		miembros = club.getMiembros();
 		
 		for(indice=0; indice<miembros.size(); indice++) {
@@ -204,7 +203,7 @@ public class Controlador08Clubes {
 	
 	@GetMapping(value = "/borrarClub")
 	public ModelAndView borrarClub(@RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
-		vista = new ModelAndView("redirect:/verClubes.html");
+		vista = new ModelAndView(CONST_REDIRECT_VER_CLUBES);
 		dBClub = Broker.getInstanciaClub();
 		dBClub.eliminaClub(idClub);
 		return vista;
@@ -219,15 +218,15 @@ public class Controlador08Clubes {
 	
 	@GetMapping(value = "/adminAsignaAdminClub", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ModelAndView adminAsignaAdminClub(@RequestParam("usuario") String usuario, @RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		club.setAdministrador(usuario);
 		dBClub.actualizaClub(club);
-		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+		return new ModelAndView(CONST_REDIRECT_VER_CLUB+idClub);
 	}
 	
 	@GetMapping(value = "/adminEliminaUserClub", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ModelAndView adminEliminaUserClub(@RequestParam("usuario") String usuario, @RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		miembros = club.getMiembros();
 		for(indice=0; indice<miembros.size(); indice++) {
 			if(miembros.get(indice).equals(usuario)) {
@@ -237,12 +236,12 @@ public class Controlador08Clubes {
 		}
 		club.setMiembros(miembros);
 		dBClub.actualizaClub(club);
-		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+		return new ModelAndView(CONST_REDIRECT_VER_CLUB+idClub);
 	}
 	
 	@GetMapping(value = "/adminBloqueaUserClub", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ModelAndView adminBloqueaUserClub(@RequestParam("usuario") String usuario, @RequestParam("idClub") String idClub, HttpServletRequest request, HttpServletResponse response) {
-		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		club = dBClub.leerClub(idClub, ((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
 		miembros = club.getMiembros();
 		for(indice=0; indice<miembros.size(); indice++) {
@@ -258,7 +257,7 @@ public class Controlador08Clubes {
 		club.setBloqueados(bloqueados);
 		
 		dBClub.actualizaClub(club);
-		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+		return new ModelAndView(CONST_REDIRECT_VER_CLUB+idClub);
 	}
 	
 	//Metodo auxiliar get usernames en vista registro
@@ -267,14 +266,14 @@ public class Controlador08Clubes {
 	@ResponseStatus(HttpStatus.OK)
 	public List<String> getAmigosClubes(HttpServletRequest request, HttpServletResponse response){
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 	}
 	
 	@GetMapping(value = "/invitarClub", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ModelAndView invitarClub(@RequestParam("usuario") String usuario, @RequestParam("invita") String invita, @RequestParam("idClub") String idClub, @RequestParam("nClub") String nClub, HttpServletRequest request, HttpServletResponse response){
 		dBNotificaciones = Broker.getInstanciaNotificaciones();
 		dBNotificaciones.insertarNotificacion(usuario, "Invitación de " + invita + " para que se una al club "+nClub);
-		return new ModelAndView("redirect:/verClub.html?idClub="+idClub);
+		return new ModelAndView(CONST_REDIRECT_VER_CLUB+idClub);
 	}
 	
 }

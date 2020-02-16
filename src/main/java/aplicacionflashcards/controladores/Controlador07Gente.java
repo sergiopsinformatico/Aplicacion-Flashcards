@@ -49,12 +49,9 @@ public class Controlador07Gente {
      * CONSTANTES *
 	 * * * * * *  */
 	
-	/*Constantes
 	static final String CONST_USUARIO = "usuario";
-	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_REDIRECT_PERFIL = "redirect:/verPerfil.html?usuarioPerfil=";
 	static final String CONST_MENSAJE = "mensaje";
-	*/
 	
 	@GetMapping(value = "/verGente")
 	public ModelAndView gente(HttpServletRequest request, HttpServletResponse response) {
@@ -73,12 +70,12 @@ public class Controlador07Gente {
 	@ResponseStatus(HttpStatus.OK)
 	public List<UsuarioDTO> getTodosUsuarios(HttpServletRequest request, HttpServletResponse response){
 		dBUsuario = Broker.getInstanciaUsuario();
-		listaTodos = dBUsuario.getAllUsuarios(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		listaTodos = dBUsuario.getAllUsuarios(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		lista = new LinkedList<>();
 		
 		for(indice=0; indice<listaTodos.size(); indice++) {
-			tipoRelacion = dBRelaciones.tipoRelacion(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), listaTodos.get(indice).getUsername());
+			tipoRelacion = dBRelaciones.tipoRelacion(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), listaTodos.get(indice).getUsername());
 			if(!(tipoRelacion.equals(""))) {
 				eUsuario = listaTodos.get(indice);
 				eUsuario.setTipoRelacion(tipoRelacion);
@@ -96,7 +93,7 @@ public class Controlador07Gente {
 		dBUsuario = Broker.getInstanciaUsuario();
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		
-		amigos = dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		amigos = dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
 		lista = new LinkedList<>();
 		
@@ -116,7 +113,7 @@ public class Controlador07Gente {
 		dBUsuario = Broker.getInstanciaUsuario();
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		
-		pdaRec = dBRelaciones.getPeticionesRecibidas(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		pdaRec = dBRelaciones.getPeticionesRecibidas(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
 		lista = new LinkedList<>();
 		
@@ -136,7 +133,7 @@ public class Controlador07Gente {
 		dBUsuario = Broker.getInstanciaUsuario();
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		
-		pdaEnv = dBRelaciones.getPeticionesAmistadEnviadas(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		pdaEnv = dBRelaciones.getPeticionesAmistadEnviadas(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
 		lista = new LinkedList<>();
 		
@@ -156,7 +153,7 @@ public class Controlador07Gente {
 		dBUsuario = Broker.getInstanciaUsuario();
 		dBRelaciones = Broker.getInstanciaRelaciones();
 		
-		bloqueados = dBRelaciones.getBloqueados(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		bloqueados = dBRelaciones.getBloqueados(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
 		lista = new LinkedList<>();
 		
@@ -172,12 +169,12 @@ public class Controlador07Gente {
 	@GetMapping(value = "/eliminarAmigo")
 	public ModelAndView eliminarAmigo(@RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response){
 		
-		vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+username);
+		vista = new ModelAndView(CONST_REDIRECT_PERFIL+username);
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		dBRelaciones.eliminarAmigo(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		dBRelaciones.eliminarAmigo(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), username);
 		
-		vista.addObject("mensaje", username+" ya no es su amigo");
+		vista.addObject(CONST_MENSAJE, username+" ya no es su amigo");
 			
 		return vista;
 	}
@@ -185,14 +182,14 @@ public class Controlador07Gente {
 	@GetMapping(value = "/aceptarAmistad")
 	public ModelAndView aceptarAmistad(@RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response){
 		
-		vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+username);
+		vista = new ModelAndView(CONST_REDIRECT_PERFIL+username);
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		dBRelaciones.aceptarInvitacion(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		dBRelaciones.aceptarInvitacion(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), username);
 		
-		Broker.getInstanciaNotificaciones().insertarNotificacion(username, "Eres amigo de "+((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		Broker.getInstanciaNotificaciones().insertarNotificacion(username, "Eres amigo de "+((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
-		vista.addObject("mensaje", username+" y tu sois amigos");
+		vista.addObject(CONST_MENSAJE, username+" y tu sois amigos");
 			
 		return vista;
 	}
@@ -200,12 +197,12 @@ public class Controlador07Gente {
 	@GetMapping(value = "/rechazarAmistad")
 	public ModelAndView rechazarAmistad(@RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response){
 		
-		vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+username);
+		vista = new ModelAndView(CONST_REDIRECT_PERFIL+username);
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		dBRelaciones.rechazarInvitacion(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		dBRelaciones.rechazarInvitacion(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), username);
 		
-		vista.addObject("mensaje", "Rechazada la solicitud de amistad de "+username);
+		vista.addObject(CONST_MENSAJE, "Rechazada la solicitud de amistad de "+username);
 		
 		return vista;
 	}
@@ -213,14 +210,14 @@ public class Controlador07Gente {
 	@GetMapping(value = "/enviarPeticion")
 	public ModelAndView enviarPeticion(@RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response){
 		
-		vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+username);
+		vista = new ModelAndView(CONST_REDIRECT_PERFIL+username);
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		dBRelaciones.enviarPeticionAmistad(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		dBRelaciones.enviarPeticionAmistad(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), username);
 		
-		Broker.getInstanciaNotificaciones().insertarNotificacion(username, "Has recibido una peticion de amistad de "+((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
+		Broker.getInstanciaNotificaciones().insertarNotificacion(username, "Has recibido una peticion de amistad de "+((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername());
 		
-		vista.addObject("mensaje", "Ha enviado una solicitud de amistad a "+username);
+		vista.addObject(CONST_MENSAJE, "Ha enviado una solicitud de amistad a "+username);
 		
 		return vista;
 	}
@@ -228,12 +225,12 @@ public class Controlador07Gente {
 	@GetMapping(value = "/bloquearUsuario")
 	public ModelAndView bloquearUsuario(@RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response){
 		
-		vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+username);
+		vista = new ModelAndView(CONST_REDIRECT_PERFIL+username);
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		dBRelaciones.bloquearUsuario(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		dBRelaciones.bloquearUsuario(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), username);
 		
-		vista.addObject("mensaje", "Ha bloqueado a " + username);
+		vista.addObject(CONST_MENSAJE, "Ha bloqueado a " + username);
 		
 		return vista;
 	}
@@ -241,12 +238,12 @@ public class Controlador07Gente {
 	@GetMapping(value = "/desbloquearUsuario")
 	public ModelAndView desbloquearUsuario(@RequestParam("username") String username, HttpServletRequest request, HttpServletResponse response){
 		
-		vista = new ModelAndView("redirect:/verPerfil.html?usuarioPerfil="+username);
+		vista = new ModelAndView(CONST_REDIRECT_PERFIL+username);
 		
 		dBRelaciones = Broker.getInstanciaRelaciones();
-		dBRelaciones.desbloquearUsuario(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername(), username);
+		dBRelaciones.desbloquearUsuario(((UsuarioDTO)(request.getSession().getAttribute(CONST_USUARIO))).getUsername(), username);
 		
-		vista.addObject("mensaje", "Ha desbloqueado a " + username);
+		vista.addObject(CONST_MENSAJE, "Ha desbloqueado a " + username);
 		
 		return vista;
 	}
