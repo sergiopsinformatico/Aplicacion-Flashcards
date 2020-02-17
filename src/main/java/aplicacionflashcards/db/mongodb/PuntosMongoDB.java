@@ -39,6 +39,13 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
     LinkedList<PuntosDTO> listaOriginal;
     LinkedList<PuntosDTO> listaAuxiliar;
     boolean isPuesto;
+    
+    /* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
+	static final String CONST_USUARIO = "usuario";
+	static final String CONST_PUNTOS = "puntos";
 	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.PuntosMongoDB");
@@ -62,11 +69,11 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
     
     @Override
     public PuntosDTO getPuntos(String usuario) {
-    	criteriosBusqueda = new BsonDocument().append("usuario", new BsonString(usuario));
+    	criteriosBusqueda = new BsonDocument().append(CONST_USUARIO, new BsonString(usuario));
     	iterador = coleccionPuntos.find(criteriosBusqueda).iterator();
     	if(iterador.hasNext()) {
     		doc = iterador.next();
-    		return new PuntosDTO(doc.getString("usuario"), doc.getInteger("puntos"));
+    		return new PuntosDTO(doc.getString(CONST_USUARIO), doc.getInteger(CONST_PUNTOS));
     	}else {
     		return new PuntosDTO("",0);
     	}
@@ -88,8 +95,8 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 		iterador = coleccionPuntos.find().iterator();
 		while(iterador.hasNext()) {
 			doc = iterador.next();
-			usuario = new PuntosDTO(doc.getString("usuario"), doc.getInteger("puntos"));
-			if(listaOriginal.size()==0) {
+			usuario = new PuntosDTO(doc.getString(CONST_USUARIO), doc.getInteger(CONST_PUNTOS));
+			if(listaOriginal.isEmpty()) {
 				listaOriginal.add(usuario);
 			}else {
 				aux = listaOriginal.get(listaOriginal.size()-1);
@@ -120,15 +127,15 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 	}
 	
 	private boolean deletePuntos(String usuario) {
-		criteriosBusqueda = new BsonDocument().append("usuario", new BsonString(usuario));
+		criteriosBusqueda = new BsonDocument().append(CONST_USUARIO, new BsonString(usuario));
 		return coleccionPuntos.deleteOne(criteriosBusqueda).getDeletedCount()==1;
 	}
 	
 	private boolean createPuntos(PuntosDTO ptosUsuario) {
 		try {
 			doc = new Document().
-				  append("usuario", ptosUsuario.getUsuario()).
-				  append("puntos", ptosUsuario.getPuntos());
+				  append(CONST_USUARIO, ptosUsuario.getUsuario()).
+				  append(CONST_PUNTOS, ptosUsuario.getPuntos());
 			coleccionPuntos.insertOne(doc);
 			return true;
 		}catch(Exception ex) {

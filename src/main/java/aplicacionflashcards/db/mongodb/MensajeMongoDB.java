@@ -38,6 +38,15 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
     List<MensajeDTO> listaMensajes;
     CifradoCaesar caesar;
     
+    /* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
+	static final String CONST_ID_MENSAJE = "idMensaje";
+	static final String CONST_REMITENTE = "remitente";
+	static final String CONST_DESTINATARIO = "destinatario";
+	static final String CONST_MENSAJE = "mensaje";
+    
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.MensajeMongoDB");
 	
@@ -61,10 +70,10 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 	@Override
 	public boolean enviaMensaje(MensajeDTO mensaje) {
 		try {
-			doc = new Document().append("idMensaje", mensaje.getIdMensaje()).
-					append("remitente", mensaje.getRemitente()).
-					append("destinatario", mensaje.getDestinatario()).
-					append("mensaje",mensaje.getMensaje());
+			doc = new Document().append(CONST_ID_MENSAJE, mensaje.getIdMensaje()).
+					append(CONST_REMITENTE, mensaje.getRemitente()).
+					append(CONST_DESTINATARIO, mensaje.getDestinatario()).
+					append(CONST_MENSAJE,mensaje.getMensaje());
 			coleccionMensajes.insertOne(doc);
 			return true;
 		}catch(Exception ex){
@@ -74,16 +83,16 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 
 	@Override
 	public List<MensajeDTO> mensajesEnviados(String username) {
-		listaMensajes = new LinkedList<MensajeDTO>();
+		listaMensajes = new LinkedList<>();
 		
-		criteriosBusqueda = new BsonDocument().append("remitente", new BsonString(username));
+		criteriosBusqueda = new BsonDocument().append(CONST_REMITENTE, new BsonString(username));
 		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
 		while(iterador.hasNext()) {
 			doc = iterador.next();
-			listaMensajes.add(new MensajeDTO(doc.getString("idMensaje"), 
-											 doc.getString("remitente"), 
-											 doc.getString("destinatario"),
-											 doc.getString("mensaje")));
+			listaMensajes.add(new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
+											 doc.getString(CONST_REMITENTE), 
+											 doc.getString(CONST_DESTINATARIO),
+											 doc.getString(CONST_MENSAJE)));
 		}
 		
 		return listaMensajes;
@@ -91,16 +100,16 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 
 	@Override
 	public List<MensajeDTO> mensajesRecibidos(String username) {
-		listaMensajes = new LinkedList<MensajeDTO>();
+		listaMensajes = new LinkedList<>();
 		
-		criteriosBusqueda = new BsonDocument().append("destinatario", new BsonString(username));
+		criteriosBusqueda = new BsonDocument().append(CONST_DESTINATARIO, new BsonString(username));
 		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
 		while(iterador.hasNext()) {
 			doc = iterador.next();
-			listaMensajes.add(new MensajeDTO(doc.getString("idMensaje"), 
-											 doc.getString("remitente"), 
-											 doc.getString("destinatario"),
-											 doc.getString("mensaje")));
+			listaMensajes.add(new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
+											 doc.getString(CONST_REMITENTE), 
+											 doc.getString(CONST_DESTINATARIO),
+											 doc.getString(CONST_MENSAJE)));
 		}
 		
 		return listaMensajes;
@@ -108,27 +117,27 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 
 	@Override
 	public boolean eliminarMensaje(String idMensaje) {
-		criteriosBusqueda = new BsonDocument().append("idMensaje", new BsonString(idMensaje));
+		criteriosBusqueda = new BsonDocument().append(CONST_ID_MENSAJE, new BsonString(idMensaje));
 		return coleccionMensajes.deleteOne(criteriosBusqueda).getDeletedCount()==1;
 	}
 	
 	@Override
 	public MensajeDTO verMensaje(String idMensaje) {
-		criteriosBusqueda = new BsonDocument().append("idMensaje", new BsonString(idMensaje));
+		criteriosBusqueda = new BsonDocument().append(CONST_ID_MENSAJE, new BsonString(idMensaje));
 		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
 		if(iterador.hasNext()) {
 			doc = iterador.next();
-			return new MensajeDTO(doc.getString("idMensaje"), 
-								  doc.getString("remitente"), 
-								  doc.getString("destinatario"),
-								  doc.getString("mensaje"));
+			return new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
+								  doc.getString(CONST_REMITENTE), 
+								  doc.getString(CONST_DESTINATARIO),
+								  doc.getString(CONST_MENSAJE));
 		}else {
 			return new MensajeDTO("","","","");
 		}
 	}
 	
 	public boolean existeIdMensaje(String idMensaje) {
-		criteriosBusqueda = new BsonDocument().append("idMensaje", new BsonString(idMensaje));
+		criteriosBusqueda = new BsonDocument().append(CONST_ID_MENSAJE, new BsonString(idMensaje));
 		return coleccionMensajes.find(criteriosBusqueda).iterator().hasNext();
 	}
 

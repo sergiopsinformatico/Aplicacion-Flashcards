@@ -36,6 +36,12 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
     boolean foundNotificacion;
 	CifradoCaesar caesar;
 	
+	/* * * * * *  * 
+     * CONSTANTES *
+	 * * * * * *  */
+	
+	static final String CONST_USUARIO = "usuario";
+	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.NotificacionesMongoDB");
 	
@@ -59,7 +65,7 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 	public boolean createObjectNotificaciones(NotificacionesDTO notificacion) {
 		try {
 			
-			doc = new Document().append("usuario", notificacion.getUsuario()).
+			doc = new Document().append(CONST_USUARIO, notificacion.getUsuario()).
 						append("listaNotificaciones", notificacion.getListaNotificaciones());
 			coleccionNotificaciones.insertOne(doc);
 			return true;
@@ -130,11 +136,11 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 	private NotificacionesDTO getNotificacionUsuario(String usuario) {
 		try {
 			
-			criteriosBusqueda = new BsonDocument().append("usuario", new BsonString(usuario));
+			criteriosBusqueda = new BsonDocument().append(CONST_USUARIO, new BsonString(usuario));
 			resultadosBusqueda = coleccionNotificaciones.find(criteriosBusqueda);
 			if(resultadosBusqueda.iterator().hasNext()) {
 				doc = resultadosBusqueda.iterator().next();
-				return new NotificacionesDTO(doc.getString("usuario"), 
+				return new NotificacionesDTO(doc.getString(CONST_USUARIO), 
 						                     (List<String>)doc.get("listaNotificaciones"));
 			}else {
 				return null;
@@ -148,7 +154,7 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 	private boolean deleteObjectNotificacionUsuario(String usuario) {
 		try {
 			
-			criteriosBusqueda = new BsonDocument().append("usuario", new BsonString(usuario));
+			criteriosBusqueda = new BsonDocument().append(CONST_USUARIO, new BsonString(usuario));
 			coleccionNotificaciones.deleteOne(criteriosBusqueda);
 			return true;
 			

@@ -46,7 +46,7 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	static final String CONST_USERNAME = "username";
 	static final String CONST_EMAIL = "email";
 	static final String CONST_CLAVE = "clave";
-	static final String CONST_NyA = "nombreApellidos";
+	static final String CONST_NYA = "nombreApellidos";
 	static final String CONST_CIUDAD = "ciudad";
 	static final String CONST_EMAIL_FOTO = "emailFoto";
 	
@@ -95,10 +95,10 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		
 		try {
 			if(user.getNombreApellidos()!=null || !user.getNombreApellidos().equalsIgnoreCase("")) {
-				doc = doc.append(CONST_NyA, caesar.encryptText(user.getNombreApellidos()));
+				doc = doc.append(CONST_NYA, caesar.encryptText(user.getNombreApellidos()));
 			}
 		}catch(Exception ex) {
-			doc = doc.append(CONST_NyA, "");
+			doc = doc.append(CONST_NYA, "");
 		}
 		
 		try {
@@ -140,8 +140,8 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 		usuarioDB.setRol(caesar.decryptText(doc.getString("rol")));
 		usuarioDB.setActivadaCuenta(doc.getBoolean("cuentaActivada"));
 		try {
-			if(doc.getString(CONST_NyA)!=null || (!doc.getString(CONST_NyA).equalsIgnoreCase(""))) {
-				usuarioDB.setNombreApellidos(caesar.decryptText(doc.getString(CONST_NyA)));
+			if(doc.getString(CONST_NYA)!=null || (!doc.getString(CONST_NYA).equalsIgnoreCase(""))) {
+				usuarioDB.setNombreApellidos(caesar.decryptText(doc.getString(CONST_NYA)));
 			}
 		}catch(Exception ex) {
 			usuarioDB.setNombreApellidos("");
