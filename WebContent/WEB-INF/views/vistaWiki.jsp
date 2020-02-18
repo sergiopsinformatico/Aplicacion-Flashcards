@@ -164,6 +164,29 @@
 			        </div>
 			        
 			        <div class="row">
+			        	<span style="font-weight:bold;">Usuarios de Prueba (nombre de usuario/clave):</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<span style="font-weight:bold;">* Rol Usuario:</span>
+			        	<span style="margin-left:5px;">usuarioTD / usuarioTD</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<span style="font-weight:bold;">* Rol Moderador:</span>
+			        	<span style="margin-left:5px;">moderadorTD / moderadorTD</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<span style="font-weight:bold;">* Rol Administrador:</span>
+			        	<span style="margin-left:5px;">adminTD / adminTD</span>
+			        </div>
+			        
+			        <div class="row">
+			        	<br><br>
+			        </div>
+			        
+			        <div class="row">
 			        	<p><b>Sprints del Proyecto:</b></p>
 			        </div>
 			        
