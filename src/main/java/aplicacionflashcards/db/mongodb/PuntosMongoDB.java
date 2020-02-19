@@ -47,9 +47,11 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_PUNTOS = "puntos";
 	
+	
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.PuntosMongoDB");
 	
+    
 	public PuntosMongoDB() {
 		connection();
 	}

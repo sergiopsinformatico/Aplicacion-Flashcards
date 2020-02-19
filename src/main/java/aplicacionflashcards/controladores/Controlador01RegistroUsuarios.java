@@ -207,6 +207,7 @@ public class Controlador01RegistroUsuarios {
 			vista = new ModelAndView("vistaActivarCuenta");
 			vista.addObject("activa", user2);
 			
+			
 			try {
 				
 				correo = new Email();
