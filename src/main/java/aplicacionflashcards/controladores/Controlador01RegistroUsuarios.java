@@ -202,6 +202,8 @@ public class Controlador01RegistroUsuarios {
 			user = Broker.getInstanciaUsuario().getUsuarioDTO(username);
 			user2 = Broker.getInstanciaUsuario().getUsuarioDTO(username);
 			user2.setActivadaCuenta(true);
+			
+			
 			Broker.getInstanciaUsuario().updateUsuario(user, user2);
 			Broker.getInstanciaActivaCuenta().eliminaAC(new ActivaCuentaDTO(username, codigo));
 			vista = new ModelAndView("vistaActivarCuenta");
