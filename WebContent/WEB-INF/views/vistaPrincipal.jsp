@@ -270,7 +270,7 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-10 middle">
 		        			<form action="panelAdministrador.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-primary btnPaginaPrincipal" style="color:#FFFFA1">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="color:#FFFFA1;background-color:#007bff;">
 			        				<i class="fa fa-universal-access fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Panel Administrador

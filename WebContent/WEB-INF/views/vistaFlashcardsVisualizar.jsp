@@ -209,7 +209,7 @@
 	        	
 	        	$scope.verEstado = function(){
 	        		if(("${usuario.getRol()}" === "Moderador") || ("${usuario.getRol()}" === "Administrador")){
-	        			if(${flashcard.isEvaluada()} == true){
+	        			if("${flashcard.isEvaluada()}" == true){
 	        				$scope.estadoFlashcard = 'Evaluada';
 	        			}else{
 	        				$scope.estadoFlashcard = 'Pendiente de ser evaluada';
@@ -292,18 +292,6 @@
 									</div>
         						
         						</div>
-        						<!-- <div class="col-md-8" align="center">
-	        						<div class="flip-card-container" style="width:200px;height:300px;text-align:center;">
-										<div class="flip-card">
-									    	<div class="flip-card-front" style="color:black;background:#FFFFAE;">
-									        	<br><br><br><span>Hola Mundo</span>
-											</div>
-									 		<div class="flip-card-back" style="color:black;background:#D3D3D3;">
-									 			<br><br><br><span>System.out.println("Hello World!")</span>
-										    </div>
-									    </div>
-									</div>
-								</div>-->
         					</div>
         				</div>
         				<div class="col-md-1"></div>
@@ -325,7 +313,7 @@
 		        		<div class="col-md-4"></div>
 		        		<div class="col-md-4">
 		        			<form action="verColecciones.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#93A67B;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
 			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Volver a la Página de Colecciones de Flashcards
 			        			</button>

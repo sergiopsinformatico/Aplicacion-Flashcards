@@ -351,37 +351,6 @@
 					   					</div>  
 								   </div>
 						   		</div>
-					            <!-- <table width="100%" border="1">  
-								   <tr>  
-								      <th align="center" style="text-align:center;">Usuarios</th>  
-								      <th align="center" style="width:150px; text-align:center;">Cambiar Rol</th>
-								      <th align="center" style="width:168px; text-align:center;">Eliminar Usuario</th>   
-								   </tr>  
-								   <tr>
-								   		<td colspan=3>
-								   		<div style="overflow-y:scroll;height:500px;">
-								   			<table width=100% border="1">
-								   				<tr ng-repeat = "eUsuario in listaUsuarios | filter:filterUser:strict">  
-											      <td align="center">
-											      	<strong>Username: </strong><a href="verPerfil.html?usuarioPerfil={{ eUsuario.username }}">{{ eUsuario.username }}</a>
-											      	<br><strong>Email: </strong> {{ eUsuario.email }}
-											      	<br><strong>Rol: </strong> {{ eUsuario.rol }}
-											      </td>  
-											      <td style="width:150px;">
-											      	<form ng-submit="cambioRol(eUsuario.username)">
-													     <button type="submit" style="display:block;margin:auto;"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-													</form>
-											      </td>
-											      <td style="width:150px;">
-												      <form ng-submit="eliminaUsuario(eUsuario.username)">
-													     <button type="submit" style="display:block;margin:auto;"><i class="fa fa-trash" aria-hidden="true"></i></button>
-													  </form>
-											      </td>    
-											   </tr>
-								   			</table>
-								   		</div>
-								   </tr>
-								</table> -->
 							</div>
 		        		</div>
 		        		<div class="col-md-1"></div>
@@ -403,7 +372,7 @@
 		        		<div class="col-md-4"></div>
 		        		<div class="col-md-4">
 		        			<form action="panelAdministrador.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#93A67B;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
 			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Volver a la Página del Panel del Administrador
 			        			</button>

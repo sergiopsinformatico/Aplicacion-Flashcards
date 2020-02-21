@@ -340,7 +340,7 @@
 		        		<div class="col-md-3"></div>
 		        		<div class="col-md-6">
 		        			<form action="evaluarColecciones.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#93A67B;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
 			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Volver a la Página de Evaluar Colecciones de Flashcards
 			        			</button>
