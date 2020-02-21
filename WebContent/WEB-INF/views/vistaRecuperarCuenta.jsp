@@ -78,7 +78,8 @@
 					        <script>
 					        	document.getElementById("buttonRec").disabled = true;
 					        	function enableBtnRec(){
-					        		document.getElementById("buttonRec").style.background = "#457D8E";
+					        		document.getElementById("buttonRec").style.background = "#80E2EC";
+					        		document.getElementById("buttonRec").style.color = "#FFFFA1";
 					        		document.getElementById("buttonRec").disabled = false;
 					        	}
 					        </script>
@@ -95,12 +96,12 @@
 					<div class="col-md-10">
 						<form action="iniciarSesion.html" method="get" class="form-signin">
 				    		<p style="text-align:center;"><strong>Si ya tienes cuenta, puedes loguearte</strong></p>
-			            	<button class="btn btn-primary btn-block" style="background-color:green;border:1px solid green;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
+			            	<button class="btn btn-block" style="background-color:#42CA83;border:1px solid #42CA83;color:#FFFFA1;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
 			            </form>
 			            <br>
 						<form action="registro.html" method="get" class="form-signin">
 				    		<p style="text-align:center;"><strong>Si aún no tienes cuenta, puedes crearte una</strong></p>
-			            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
+			            	<button class="btn btn-block" style="background-color:#FF4E4E;border:1px solid #FF4E4E;color:#FFFFA1;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
 			            </form>
 					</div>
 					<div class="col-md-1"></div>

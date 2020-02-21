@@ -138,14 +138,14 @@
 						<div class="col-md-10">
 							<form action="iniciarSesion.html" method="get" class="form-signin">
 					    		<p style="text-align:center;"><strong>Si ya tienes cuenta, puedes loguearte</strong></p>
-				            	<button class="btn btn-primary btn-block" style="background-color:green;border:1px solid green;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
+				            	<button class="btn btn-block" style="background-color:#42CA83;border:1px solid #42CA83;color:#FFFFA1;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-sign-in-alt" style="padding-right:10px;"></i>Iniciar Sesión</button>
 				            </form>
 				            
 				            <br>
 				            
 				            <form action="recuperaCuenta.html" method="get" class="form-signin">
 				            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
-				            	<button class="btn btn-primary btn-block" style="background-color:#2BB18F;border:1px solid #2BB18F;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
+				            	<button class="btn btn-block" style="background-color:#80E2EC;border:1px solid #80E2EC;color:#FFFFA1;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
 				            </form>
 						</div>
 						<div class="col-md-1"></div>
@@ -232,8 +232,8 @@
 	        			}else{
 	        				$scope.messageError="";
 	        				$scope.btnDisabled = false;
-	        				document.getElementById("buttonRegistro").style.background="red";
-	        				document.getElementById("buttonRegistro").style.color="white";
+	        				document.getElementById("buttonRegistro").style.background="#FF4E4E";
+	        				document.getElementById("buttonRegistro").style.color="#FFFFA1";
 	        			}
 	        		}else{
 	        			$scope.btnDisabled = true;

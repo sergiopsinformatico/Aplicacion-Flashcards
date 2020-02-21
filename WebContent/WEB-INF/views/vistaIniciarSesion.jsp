@@ -62,8 +62,8 @@
 	        document.getElementById("btnSignIn").disabled = true;
 			
         	function enableBtnSignIn(){
-        		document.getElementById("btnSignIn").style.background = "green";
-        		document.getElementById("btnSignIn").style.color = "white";
+        		document.getElementById("btnSignIn").style.background = "#42CA83";
+        		document.getElementById("btnSignIn").style.color = "#FFFFA1";
         		document.getElementById("btnSignIn").disabled = false;
         	}
 		</script>
@@ -98,12 +98,12 @@
 					<div class="col-md-10">
 						<form action="registro.html" method="get" class="form-signin">
 				    		<p style="text-align:center;"><strong>Si aún no tienes cuenta, puedes crearte una</strong></p>
-			            	<button class="btn btn-primary btn-block" style="background-color:red;border:red;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
+			            	<button class="btn btn-block" style="background-color:#FF4E4E;border:#FF4E4E;color:#FFFFA1;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-user-plus" style="padding-right:10px;"></i>Crear una cuenta nueva</button>
 			            </form>
 			            <br>
 			            <form action="recuperaCuenta.html" method="get" class="form-signin">
 			            	<p style="text-align:center;"><strong>Si has olvidado tu clave, puedes recuperarla</strong></p>
-			            	<button class="btn btn-primary btn-block" style="background-color:orange;border:orange;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
+			            	<button class="btn btn-block" style="background-color:#80E2EC;border:1px solid #FCFF99;color:#FFFFA1;padding-top:15px;padding-bottom:15px;" type="submit"><i class="fas fa-key" style="padding-right:10px;"></i>Recupera tu clave</button>
 			            </form>
 					</div>
 					<div class="col-md-1"></div>
