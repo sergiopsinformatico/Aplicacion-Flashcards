@@ -288,12 +288,12 @@
 													</div>					
 								                </div>
 								            </div>
-									        <a class="carousel-control-prev" href="#carouselColeccionFlashcard" role="button" data-slide="prev">
-										      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+									        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselColeccionFlashcard" role="button" data-slide="prev">
+										      <i class="fa fa-angle-left" aria-hidden="true"></i>
 										      <span class="sr-only">Anterior</span>
 										    </a>
-										    <a class="carousel-control-next" href="#carouselColeccionFlashcard" role="button" data-slide="next">
-										      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+										    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselColeccionFlashcard" role="button" data-slide="next">
+										      <i class="fa fa-angle-right" aria-hidden="true"></i>
 										      <span class="sr-only">Siguiente</span>
 										    </a>
 									    </div>

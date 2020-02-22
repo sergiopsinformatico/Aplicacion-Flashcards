@@ -184,7 +184,7 @@
         	<div class="row">
         		<div class="col-md-6">
 		        	<form action="gestionUsuariosAdmin.html" method="get" class="btnPaginaPrincipal">
-			        	<button class="btn btn-warning btnPaginaPrincipal">
+			        	<button class="btn btnPaginaPrincipal" style="background-color:#4BD469;color:#FFFFA1;">
 			        		<i class="fa fa-users fa-5x" aria-hidden="true"></i>
 			        		<br><br>
 			        		Gestión de Usuarios
@@ -193,7 +193,7 @@
 		        </div>
 		        <div class="col-md-6">
 		        	<form action="gestionClubesAdmin.html" method="get" class="btnPaginaPrincipal">
-			        	<button class="btn btn-success btnPaginaPrincipal">
+			        	<button class="btn btnPaginaPrincipal" style="background-color:#FFB864;color:#FFFFA1;">
 			        		<i class="fa fa-star fa-5x" aria-hidden="true"></i>
 			        		<br><br>
 			        		Gestión de Clubes

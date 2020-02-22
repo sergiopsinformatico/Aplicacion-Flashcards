@@ -206,6 +206,10 @@
 						});
 				};
 				
+				$scope.openEvaluacion = function(idColeccion){
+					window.location.href = "evaluarColeccion.html?id="+idColeccion;
+				}
+				
 	        });
         </script>
         
@@ -231,29 +235,27 @@
 								            <div class="flip-card-container" style="width:400px;height:550px;text-align:center;">
 												<div class="flip-card">
 											    	<div class="flip-card-front" style="background:#6EC34D;">
-											        	<br><br><br><br>
-								                    	{{eColeccion.nombreColeccion}}
+											    		<br><br><br><br><br><br><br><br>
+											        	{{eColeccion.nombreColeccion}}
 								                    	<br><br>
 								                    	Autor: {{eColeccion.autorColeccion}}
 													</div>
-											 		<div class="flip-card-back" style="background:#86D4FF;">
-											 			<br><br><br>
-											 			<i class="fa fa-check-square-o fa-5x" aria-hidden="true"></i>
+													<div class="flip-card-back" style="background-color:#FFB864;" ng-click="openEvaluacion(eColeccion.idColeccion)">
+														<br><br><br><br><br><br><br><br>
+											 			<i class="fa fa-check-square fa-5x" aria-hidden="true"></i>
 											 			<br><br>
-											 			<a ng-href="evaluarColeccion.html?id={{eColeccion.idColeccion}}" style="color:yellow;">
-											 				Evaluar Coleccion
-											 			</a>
+											 			<span style="text-align:center">Evaluar Coleccion</span>
 												    </div>
 											    </div>
 											</div>					
 						                </div>
 						            </div>
-							        <a class="carousel-control-prev" href="#carouselFlashcardsEvaluar" role="button" data-slide="prev">
-								      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+							        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselFlashcardsEvaluar" role="button" data-slide="prev">
+								      <i class="fa fa-angle-left" aria-hidden="true"></i>
 								      <span class="sr-only">Anterior</span>
 								    </a>
-								    <a class="carousel-control-next" href="#carouselFlashcardsEvaluar" role="button" data-slide="next">
-								      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+								    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselFlashcardsEvaluar" role="button" data-slide="next">
+								      <i class="fa fa-angle-right" aria-hidden="true"></i>
 								      <span class="sr-only">Siguiente</span>
 								    </a>
 							    </div>

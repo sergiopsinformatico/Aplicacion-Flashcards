@@ -260,7 +260,7 @@
 												      </td>  
 												      <td style="width:150px;">
 													      <form ng-submit="eliminaColeccion(eColeccion)">
-														     <button type="submit" class="btn btn-danger" style="display:block;margin:auto;"><i class="fa fa-trash" aria-hidden="true"></i></button>
+														     <button type="submit" class="btn" style="background-color:#FF4E4E;color:#FFFFA1;display:block;margin:auto;"><i class="fa fa-trash" aria-hidden="true"></i></button>
 														  </form>
 												      </td>    
 												   </tr>

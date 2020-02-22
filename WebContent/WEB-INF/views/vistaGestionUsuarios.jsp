@@ -317,28 +317,28 @@
 					   								</div>
 					   								<div class="col-md-8">
 					   									<span>
-						   									<button class="btn btn-primary" style="color:white" ng-click="cambioRol(eUsuario.username)">
+						   									<button class="btn" style="color:#FFFFA1;background-color:#007bff;" ng-click="cambioRol(eUsuario.username)">
 										        				<i class="fa fa-user" aria-hidden="true"></i>
 										        				<br>
 										       					Cambiar Rol
 										       				</button>
 						   								</span>
 						   								<span>
-						   									<button class="btn btn-success" style="color:white" ng-click="generaNuevaClave(eUsuario.username)">
+						   									<button class="btn" style="color:#FFFFA1;background-color:#4BD469;" ng-click="generaNuevaClave(eUsuario.username)">
 										        				<i class="fa fa-key" aria-hidden="true"></i>
 										        				<br>
 										       					Generar Clave
 										       				</button>
 						   								</span>
 						   								<span>
-						   									<button class="btn btn-warning" style="color:white" ng-click="adminModificaPerfil(eUsuario.username)">
+						   									<button class="btn" style="color:#FFFFA1;background-color:#FFB864;" ng-click="adminModificaPerfil(eUsuario.username)">
 										        				<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 										        				<br>
 										       					Modificar Perfil
 										       				</button>
 						   								</span>
 						   								<span>
-						   									<button class="btn btn-danger" style="color:white" ng-click="eliminaUsuario(eUsuario.username)">
+						   									<button class="btn" style="color:#FFFFA1;background-color:#FF4E4E;" ng-click="eliminaUsuario(eUsuario.username)">
 										        				<i class="fa fa-trash" aria-hidden="true"></i>
 										        				<br>
 										       					Eliminar Usuario

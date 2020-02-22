@@ -307,7 +307,7 @@
 	        					<br><br>
 	        					<textarea name="mensaje" id="mensaje" style="width:100%;height:300px;">Tu mensaje...</textarea>
 	        					<br><br><br>
-	        					<button type="submit" class="btn btn-success middle">
+	        					<button type="submit" class="btn middle" style="background-color:#4BD469;color:#FFFFA1;">
 	        						Enviar Mensaje
 	        					</button>
 	        					<br><br>

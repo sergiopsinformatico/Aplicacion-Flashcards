@@ -258,14 +258,14 @@
         				<div class="col-md-4"></div>
         				<div class="col-md-4">
       						<form action="desarrolloProyecto-s5.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FF2828;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#4BD469;color:#FFFFA1;">
 			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Sprint 5 
 			        			</button>
 			        		</form>
 			        		<br>
 			        		<form action="desarrolloProyecto.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
 			        				<i class="fa fa-sitemap" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Wiki del Proyecto
 			        			</button>

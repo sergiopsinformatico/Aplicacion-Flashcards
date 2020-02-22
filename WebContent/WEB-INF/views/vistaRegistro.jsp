@@ -239,7 +239,6 @@
 	        			$scope.btnDisabled = true;
 	        			document.getElementById("msgError").style.color="red"
 	        			document.getElementById("buttonRegistro").style.background="#457D8E";
-	        			/*document.getElementById("buttonRegistro").style.color="#DDDDDC";*/
 	        			$scope.messageError="Existen campos vacíos o erróneos. Por favor, revísalos para continuar con el registro.";
 	        		}
 	        	}

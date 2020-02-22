@@ -284,6 +284,12 @@
 					}
 				};
 				
+				$scope.clickDiv = function(isColeccionEvaluada, idColeccion){
+					if(isColeccionEvaluada){
+						window.location.href = "verColeccion.html?id="+idColeccion;
+					}
+				}
+				
 	        });
         </script>
         <div class="container-fluid" ng-app="AppMostrarColecciones" ng-controller="MostrarColeccionesCtrl">
@@ -352,14 +358,12 @@
 										                    		</div>
 										                    	</div>
 															</div>
-													 		<div class="flip-card-back" style="background:#86D4FF;">
+													 		<div class="flip-card-back" style="background:#86D4FF;" ng-click="clickDiv(eColeccion.evaluada, eColeccion.idColeccion)">
 													 			<br><br><br><br><br><br>
 													 			<div ng-if="eColeccion.evaluada == true">
-									                    			<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:black"></i>
+									                    			<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:#FFFFA1"></i>
 				       									 			<br><br>
-														 			<a ng-href="verColeccion.html?id={{eColeccion.idColeccion}}" style="color:black;">
-														 				Ver Coleccion
-														 			</a>
+														 			<span style="color:#FFFFA1;">Ver Coleccion</span>
 									                    		</div>
 									                    		<div ng-if="eColeccion.evaluada == false">
 									                    			Pendiente de Evaluar
@@ -370,12 +374,12 @@
 													</div>					
 								                </div>
 								            </div>
-									        <a class="carousel-control-prev" href="#carouselFlashcardsVer" role="button" data-slide="prev">
-										      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+									        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselFlashcardsVer" role="button" data-slide="prev">
+										      <i class="fa fa-angle-left" aria-hidden="true"></i>
 										      <span class="sr-only">Anterior</span>
 										    </a>
-										    <a class="carousel-control-next" href="#carouselFlashcardsVer" role="button" data-slide="next">
-										      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+										    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselFlashcardsVer" role="button" data-slide="next">
+										      <i class="fa fa-angle-right" aria-hidden="true"></i>
 										      <span class="sr-only">Siguiente</span>
 										    </a>
 									    </div>

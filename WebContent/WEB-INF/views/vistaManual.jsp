@@ -320,7 +320,7 @@
         				<div class="col-md-4"></div>
         				<div class="col-md-4">
         					<form action="inicio.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
 			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Volver a la Aplicación
 			        			</button>

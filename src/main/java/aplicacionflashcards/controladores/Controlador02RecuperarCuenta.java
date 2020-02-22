@@ -114,7 +114,7 @@ public class Controlador02RecuperarCuenta {
 	}
 	
 	@GetMapping(value = "/restableceClave")
-	public ModelAndView restableceClave(@RequestParam(USERNAME) String username, @RequestParam("keySecurity") String keySecurity) {
+	public ModelAndView restableceClave(@RequestParam("username") String username, @RequestParam("keySecurity") String keySecurity) {
 		if(Broker.getInstanciaRecuperarCuenta().leerRC(username, keySecurity)) {
 			vista = new ModelAndView("vistaRestablecimientoClave");
 			vista.addObject(USERNAME, username);

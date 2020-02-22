@@ -301,7 +301,7 @@
         					<div class="row">
         						<div class="col-md-6">
         							<form action="desarrolloProyecto-s2.html">
-					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FF2828;color:white;">
+					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#4BD469;color:#FFFFA1;">
 					        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
 					        				Sprint 2 
 					        			</button>
@@ -309,7 +309,7 @@
         						</div>
         						<div class="col-md-6">
         							<form action="desarrolloProyecto-s4.html">
-					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FFB742;color:white;">
+					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#FFB864;color:#FFFFA1;">
 					        				Sprint 4 
 					        				<i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:5px;"></i>
 					        			</button>
@@ -318,7 +318,7 @@
         					</div>
 			        		<br>
 			        		<form action="desarrolloProyecto.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:green;color:white;">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
 			        				<i class="fa fa-sitemap" aria-hidden="true" style="margin-right:5px;"></i>
 			        				Wiki del Proyecto
 			        			</button>

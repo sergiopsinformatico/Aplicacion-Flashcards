@@ -185,7 +185,7 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-5 middle">
 		        			<form action="evaluarColecciones.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btn-primary btnPaginaPrincipal" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="background-color:#007bff;color:#FFFFA1;">
 			        				<i class="fa fa-check-square fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Evaluar Coleccion
@@ -194,7 +194,7 @@
 		        		</div>
 		        		<div class="col-md-5 middle">
 		        			<form action="gestionarFlashcards.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btnPaginaPrincipal btn btn-success" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal" style="color:#FFFFA1;background-color:#4BD469;">
 			        				<i class="fa fa-pencil-alt fa-5x" aria-hidden="true"></i>
 			        				<br><br>
 			       					Gestión de Flashcards
@@ -218,7 +218,7 @@
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-5">
 		        			<form action="verColecciones.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btnPaginaPrincipal btn-warning" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal btn-warning" style="color:#FFFFA1;background-color:#FFB864;">
 			       					<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:white"></i>
 			       					<br><br>
 			       					Ver Colecciones
@@ -227,7 +227,7 @@
 		        		</div>
 		        		<div class="col-md-5">
 		        			<form action="crearColeccion.html" class="btnPaginaPrincipal" method="get">
-			        			<button type="submit" class="btn btnPaginaPrincipal btn-danger" style="color:white">
+			        			<button type="submit" class="btn btnPaginaPrincipal btn-danger" style="color:#FFFFA1;background-color:#FF4E4E;">
 			       					<i class="fa fa-plus fa-5x" aria-hidden="true"></i>
 			       					<br><br>
 			       					Crear una Coleccion
