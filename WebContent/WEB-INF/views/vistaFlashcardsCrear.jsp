@@ -179,102 +179,40 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid" ng-app="AppCreaFlashcards" ng-controller="CreaFlashcardsCtrl">
+        
         	<div class="row">
         		<div class="col-md-1"></div>
-        		<div class="col-md-10">
-        			<div class="row">
-        				<div class="col-md-6">
-        					<div class="row">
-        						<div class="col-md-6">
-        							<h6 align="left" style="color:black;font-weight: bold;">Crea una tarjeta</h6>
-        							<br><br>
-        							<input type="text" style="width:100%" ng-model="anverso" id="anversoInput" name="anversoInput" placeholder="Anverso de la Tarjeta"/>
-        							<br>
-        							<br>
-        							<input type="text" style="width:100%" ng-model="reverso" id="reversoInput" name="reversoInput" placeholder="Reverso de la Tarjeta"/>
-        							<br>
-        							<br>
-        							<br>
-        							<br>
-        							<button class="btn" style="color:black;background:#81FF88;" ng-click="insertarTarjeta()">
-        								<i class="fa fa-plus-circle" aria-hidden="true"></i> Insertar Tarjeta
-        							</button>
-        						</div>
-        						<div class="col-md-1"></div>
-        						<div class="col-md-5">
-        							<div class="flip-card-container" style="width:200px;height:300px;text-align:center;">
-										<div class="flip-card">
-									    	<div class="flip-card-front" style="color:black;background:#FFFFAE;">
-									        	<br><br><br>{{anverso}}
-											</div>
-									 		<div class="flip-card-back" style="color:black;background:#D3D3D3;">
-									 			<br><br><br>{{reverso}}
-										    </div>
-									    </div>
-									</div>
-        						</div>
-	        				</div>
-        				</div>
-        				<div class="col-md-6" align="center">
-        					<h6 align="center" style="color:black;font-weight: bold;">Colección de Tarjetas</h6>
-        					<br><br>
-        					<div ng-if="listaFlashcards.length == 0">
-        						Todavía no se han insertado ninguna tarjeta a la colección
-        					</div>
-        					<div ng-if="listaFlashcards.length > 0">
-        						<div id="carouselCrearFlashcards" class="carousel slide" style="width:300px;height:375px;">
-							        <div class="container" style="width:300px;height:375px;">
-							            <div class="carousel-inner row w-100 mx-auto" style="width:300px;height:375px;">
-											<div class="carousel-item" ng-repeat="eTarjeta in listaFlashcards">
-									            <div class="flip-card-container" style="width:300px;height:375px;text-align:center;">
-													<div class="flip-card">
-												    	<div class="flip-card-front" style="background:#BCCAFF;">
-												        	<br><br><br>
-												        	{{eTarjeta.anverso}}
-														</div>
-												 		<div class="flip-card-back" style="background:#FF3939;">
-												 			<br><br><br>
-												 			{{eTarjeta.reverso}}
-												 			<br><br>
-											        		<button class="btn" ng-click="eliminarTarjeta(eTarjeta, $index)" style="background:#D8D8D8;">
-									                        	<i class="fa fa-times" aria-hidden="true"></i>
-									                        	Eliminar Tarjeta
-									                        </button>
-													    </div>
-												    </div>
-												</div>					
-							                </div>
-							            </div>
-								        <a class="carousel-control-prev" href="#carouselCrearFlashcards" role="button" data-slide="prev">
-									      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-									      <span class="sr-only">Anterior</span>
-									    </a>
-									    <a class="carousel-control-next" href="#carouselCrearFlashcards" role="button" data-slide="next">
-									      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
-									      <span class="sr-only">Siguiente</span>
-									    </a>
-								    </div>
-								</div>
-        					</div>
-        				</div>
-        			</div>
+        		<div class="col-md-3">
+        			<br>
+        			<form action="flashcards.html">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver a la Página de Flashcards
+	        			</button>
+	        		</form>
+	        		<br><br>
         		</div>
-        		<div class="col-md-1"></div>
+        		<div class="col-md-8"></div>
         	</div>
-        	<div class="row">
-        		<br><br>
-        	</div>
-	        <form action="guardarColeccionFlashcards.html" method="post">
-	        	<div class="row">
+        
+        	<form action="guardarColeccionFlashcards.html" method="post">
+        		<div class="row">
 	        		<div class="col-md-1"></div>
-	        		<div class="col-md-11">
-	        			<h6 align="left" style="color:black;font-weight: bold;">Datos de la Colección</h6>
-	        			<br>
+	        		<div class="col-md-10" align="right">
+	        			<button type="submit" class="btn" style="color:#FFFFA1;background-color:#4BD469;" ng-disabled="activarBoton == false">
+	        				<i class="fa fa-save" aria-hidden="true"></i>
+	        				Guardar Colección
+	        			</button>
+	        			<br><br><br>
 	        		</div>
+	        		<div class="col-md-1"></div>
 	        	</div>
+        		
 	        	<div class="row">
 	        		<div class="col-md-1"></div>
 	        		<div class="col-md-10">
+	        			<h6 align="left" style="color:black;font-weight: bold;">Datos de la Colección</h6>
+	        			<br>
 	        			<div class="row">
 	        				<div class="col-md-6" style="width:100%">
 	        					<input type="text" style="width:100%" id="nombreColeccion" name="nombreColeccion" placeholder="Nombre de la Coleccion de Flashcards" style="width:100%" required />
@@ -367,55 +305,150 @@
 	        		</div>
 	        		<div class="col-md-1"></div>
 	        	</div>
-	        	<div class="row">
-	        		<br><br><br><br><br><br>
-	        	</div>
-	        	<div class="row">
-	        		<div class="col-md-1"></div>
-	        		<div class="col-md-10" align="center">
-	        			<br><br><br>
-	        			<button type="submit" class="btn btn-success" ng-disabled="activarBoton == false">
-	        				<i class="fa fa-floppy-o" aria-hidden="true"></i>
-	        				Guardar Colección
-	        			</button>
-	        			<br><br><br>
-	        		</div>
-	        		<div class="col-md-1"></div>
-	        	</div>
         	</form>
+        	
+        	<div class="row">
+        		<br><br><br><br><br><br><br><br>
+        	</div>
+        	
+        	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-10">
+        			<div class="row">
+        				<div class="col-md-6">
+        					<div class="row">
+        						<div class="col-md-6">
+        							<h6 align="left" style="color:black;font-weight: bold;">Crea una tarjeta</h6>
+        							<br><br>
+        							<input type="text" style="width:100%" ng-model="anverso" id="anversoInput" name="anversoInput" placeholder="Anverso de la Tarjeta"/>
+        							<br>
+        							<br>
+        							<input type="text" style="width:100%" ng-model="reverso" id="reversoInput" name="reversoInput" placeholder="Reverso de la Tarjeta"/>
+        							<br>
+        							<br>
+        							<br>
+        							<br>
+        							<button class="btn" style="color:#FFFFA1;background-color:#FFB864;" ng-click="insertarTarjeta()">
+        								<i class="fa fa-plus-circle" aria-hidden="true"></i> Insertar Tarjeta
+        							</button>
+        						</div>
+        						<div class="col-md-1"></div>
+        						<div class="col-md-5">
+        							<div class="flip-card-container" style="width:200px;height:300px;text-align:center;">
+										<div class="flip-card">
+									    	<div class="flip-card-front" style="color:#FFFFA1;background-color:#007bff;">
+									        	<br><br><br>{{anverso}}
+											</div>
+									 		<div class="flip-card-back" style="background-color:#FF4E4E;color:#FFFFA1">
+									 			<br><br><br>{{reverso}}
+										    </div>
+									    </div>
+									</div>
+        						</div>
+	        				</div>
+        				</div>
+        				<div class="col-md-6" align="center">
+        					<h6 align="center" style="color:black;font-weight: bold;">Colección de Tarjetas</h6>
+        					<br><br>
+        					<div ng-if="listaFlashcards.length == 0">
+        						Todavía no se han insertado ninguna tarjeta a la colección
+        					</div>
+        					
+        					
+        				<div ng-if="listaFlashcards.length > 0">
+        					
+        					<div id="carouselCrearFlashcards" class="carousel slide" style="width:350px;height:450px;">
+						        <div class="container" style="width:350px;height:450px;">
+						            <div class="carousel-inner row w-100 mx-auto" style="width:350px;height:450px;">
+										<div class="carousel-item" ng-repeat="eTarjeta in listaFlashcards">
+								            <div class="flip-card-container" style="width:350px;height:450px;text-align:center;">
+												<div class="flip-card">
+											    	<div class="flip-card-front" style="color:#FFFFA1;background-color:#4BD469;text-align:center;">
+											        	<br><br><br><br><br>
+								                    	{{eTarjeta.anverso}}
+													</div>
+											 		<div class="flip-card-back" style="color:#FFFFA1;background-color:#FFB864;text-align:center;">
+											 			<br><br><br><br><br>
+								                    	{{eTarjeta.reverso}}
+								                    	<br><br>
+								                    	<button class="btn" ng-click="eliminarTarjeta(eTarjeta, $index)" style="background-color:#80E2EC;color:#FFFFA1">
+								                        	<i class="fa fa-times" aria-hidden="true"></i>
+								                        	Eliminar Tarjeta
+								                        </button>
+												    </div>
+											    </div>
+											</div>					
+						                </div>
+						            </div>
+							        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselCrearFlashcards" role="button" data-slide="prev">
+								      <i class="fa fa-angle-left" aria-hidden="true"></i>
+								      <span class="sr-only">Anterior</span>
+								    </a>
+								    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselCrearFlashcards" role="button" data-slide="next">
+								      <i class="fa fa-angle-right" aria-hidden="true"></i>
+								      <span class="sr-only">Siguiente</span>
+								    </a>
+							    </div>
+							</div>
+						</div>
+        					
+        					
+        					
+        					
+        					
+        					
+        					
+        					
+        					
+        					<!-- <div ng-if="listaFlashcards.length > 0">
+        						<div id="carouselCrearFlashcards" class="carousel slide" style="width:300px;height:375px;">
+							        <div class="container" style="width:300px;height:375px;">
+							            <div class="carousel-inner row w-100 mx-auto" style="width:300px;height:375px;">
+											<div class="carousel-item" ng-repeat="eTarjeta in listaFlashcards">
+									            <div class="flip-card-container" style="width:300px;height:375px;text-align:center;">
+													<div class="flip-card">
+												    	<div class="flip-card-front" style="background:#BCCAFF;">
+												        	<br><br><br>
+												        	{{eTarjeta.anverso}}
+														</div>
+												 		<div class="flip-card-back" style="background:#FF3939;">
+												 			<br><br><br>
+												 			{{eTarjeta.reverso}}
+												 			<br><br>
+											        		<button class="btn" ng-click="eliminarTarjeta(eTarjeta, $index)" style="background:#D8D8D8;">
+									                        	<i class="fa fa-times" aria-hidden="true"></i>
+									                        	Eliminar Tarjeta
+									                        </button>
+													    </div>
+												    </div>
+												</div>					
+							                </div>
+							            </div>
+								        <a class="carousel-control-prev" href="#carouselCrearFlashcards" role="button" data-slide="prev">
+									      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+									      <span class="sr-only">Anterior</span>
+									    </a>
+									    <a class="carousel-control-next" href="#carouselCrearFlashcards" role="button" data-slide="next">
+									      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+									      <span class="sr-only">Siguiente</span>
+									    </a>
+								    </div>
+								</div>
+        					</div>-->
+        				</div>
+        			</div>
+        		</div>
+        		<div class="col-md-1"></div>
+        	</div>
         	
         	<div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
-		        		<br>
+		        		<br><br>
 		        	</div>
 		        </div>
 		    </div>
 		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="flashcards.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Flashcards
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
         	<script>
         		if("${usuario.getRol()}" === 'Administrador'){
         			document.getElementById("adminSidebarDivider").style.display="block";

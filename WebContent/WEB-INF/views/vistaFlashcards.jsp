@@ -219,7 +219,7 @@
 		        		<div class="col-md-5">
 		        			<form action="verColecciones.html" class="btnPaginaPrincipal" method="get">
 			        			<button type="submit" class="btn btnPaginaPrincipal btn-warning" style="color:#FFFFA1;background-color:#FFB864;">
-			       					<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:white"></i>
+			       					<i class="fa fa-eye fa-5x" aria-hidden="true"></i>
 			       					<br><br>
 			       					Ver Colecciones
 			       				</button>

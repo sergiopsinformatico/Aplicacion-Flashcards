@@ -215,10 +215,22 @@
         
         
         <div class="container-fluid" ng-app="AppEvaluaFlashcards" ng-controller="EvaluaFlashcardsCtrl">
-        	
+        	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-3">
+        			<form action="flashcards.html">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver a la Página de Flashcards
+	        			</button>
+	        		</form>
+        		</div>
+        		<div class="col-md-8"></div>
+        	</div>
         	<div class="row">
         		<div class="col-md-1"></div>
         		<div class="col-md-10">
+        			<br><br>
         			<h4 align="center" style="color:black;font-weight:bold;">Colecciones Sin Evaluar</h4>
         			<br><br>
         			<div class="row" ng-if="listaCargada == false">
@@ -270,34 +282,10 @@
         		</div>
         		<div class="col-md-1"></div>
         	</div>
-        	<div class="row">
-        		<br>
-        	</div>
         	
         	<div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="flashcards.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Flashcards
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
+        		<br><br>
+        	</div>
         	
         	<script>
         		if("${usuario.getRol()}" === 'Administrador'){

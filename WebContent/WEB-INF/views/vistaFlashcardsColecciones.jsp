@@ -308,6 +308,13 @@
         					<input type="radio" ng-model="colecciones" ng-change="cambioVer(colecciones)" value="todas"> Colecciones Visibles para Mi<br>
         					<input type="radio" ng-model="colecciones" ng-change="cambioVer(colecciones)" value="creadasEvaluadas"> Colecciones Creadas por Mi (Evaluadas)<br>
         					<input type="radio" ng-model="colecciones" ng-change="cambioVer(colecciones)" value="creadasSinEvaluar"> Colecciones Creadas por Mi (Sin Evaluar)<br>
+        					<br><br><br>
+		        			<form action="flashcards.html">
+			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+			        				Volver a la Página de Flashcards
+			        			</button>
+			        		</form>
         				</div>
         				<div class="col-md-8">
         					<div class="row" ng-if="listaCargada == false">
@@ -327,7 +334,7 @@
 												<div class="carousel-item" ng-repeat="eColeccion in listaColecciones | filter:filterColecciones">
 										            <div class="flip-card-container" style="width:400px;height:500px;text-align:center;">
 														<div class="flip-card">
-													    	<div class="flip-card-front" style="background:#FFB550;">
+													    	<div class="flip-card-front" style="color:#FFFFA1;background-color:#4BD469;">
 													        	<br><br><br><br><br>
 										                    	<strong>{{eColeccion.nombreColeccion}}</strong>
 										                    	<br><br><br><br>
@@ -358,7 +365,7 @@
 										                    		</div>
 										                    	</div>
 															</div>
-													 		<div class="flip-card-back" style="background:#86D4FF;" ng-click="clickDiv(eColeccion.evaluada, eColeccion.idColeccion)">
+													 		<div class="flip-card-back" style="color:#FFFFA1;background-color:#FFB864;" ng-click="clickDiv(eColeccion.evaluada, eColeccion.idColeccion)">
 													 			<br><br><br><br><br><br>
 													 			<div ng-if="eColeccion.evaluada == true">
 									                    			<i class="fa fa-eye fa-5x" aria-hidden="true" style="color:#FFFFA1"></i>
@@ -396,39 +403,6 @@
         		</div>
         		<div class="col-md-1"></div>
         	</div>
-        	
-        	<div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="flashcards.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Flashcards
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
         	
         	<script>
         		if("${usuario.getRol()}" === 'Administrador'){

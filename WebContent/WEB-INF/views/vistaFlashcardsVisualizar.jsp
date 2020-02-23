@@ -209,7 +209,7 @@
 	        	
 	        	$scope.verEstado = function(){
 	        		if(("${usuario.getRol()}" === "Moderador") || ("${usuario.getRol()}" === "Administrador")){
-	        			if("${flashcard.isEvaluada()}" == true){
+	        			if("${flashcard.isEvaluada()}" == "true"){
 	        				$scope.estadoFlashcard = 'Evaluada';
 	        			}else{
 	        				$scope.estadoFlashcard = 'Pendiente de ser evaluada';
@@ -231,48 +231,63 @@
         				<div class="col-md-1"></div>
         				<div class="col-md-10">
         					<div class="row">
-        						<div class="col-md-4 container" style="border-style:solid;border-width:5px;border-color:#EE0E0E;background:#53FFDC;">
-        							<br><br><br>
-        							<strong>Nombre de la Colección: </strong>${flashcard.getNombreColeccion()}
-        							<br><br>
-        							<strong>Autor: </strong>${flashcard.getAutorColeccion()}
-        							<br>
-        							<strong>Tema: </strong>${flashcard.getTemaColeccion()}
-        							<br>
-        							<strong>Fecha de Creación: </strong>${flashcard.getFechaCreacion()}
-        							<br><br>
-        							<div ng-if="checkTipoCompartir('publico')==true">
-			                    		<strong>Para todos los usuarios</strong>
-			                    	</div>
-			                    	<div ng-if="checkTipoCompartir('privado')==true">
-			                    		<strong>Solo para ti</strong>
-			                    	</div>
-			                    	<div ng-if="checkTipoCompartir('usuario')==true">
-			                    		<strong>Para el Usuario</strong>
-			                    		<br>${flashcard.getCompartirCon()}
-			                    	</div>
-			                    	<div ng-if="checkTipoCompartir('club')==true">
-			                    		<strong>Para los Miembros del Club</strong>
-			                    		<br>${flashcard.getCompartirCon()}
-			                    	</div>
-			                    	<div ng-if="verEstado()">
-			                    		<br>
-			                    		<strong>Estado de la Coleccion: </strong>{{estadoFlashcard}}
-			                    	</div>
-        							<br><br><br>
+        						<div class="col-md-4 container">
+        							<div class="row">
+	        							<div class="col-md-12" style="border-style:solid;border-width:5px;border-color:#EE0E0E;background:#53FFDC;">
+		        							<br><br><br>
+		        							<strong>Nombre de la Colección: </strong>${flashcard.getNombreColeccion()}
+		        							<br><br>
+		        							<strong>Autor: </strong>${flashcard.getAutorColeccion()}
+		        							<br>
+		        							<strong>Tema: </strong>${flashcard.getTemaColeccion()}
+		        							<br>
+		        							<strong>Fecha de Creación: </strong>${flashcard.getFechaCreacion()}
+		        							<br><br>
+		        							<div ng-if="checkTipoCompartir('publico')==true">
+					                    		<strong>Para todos los usuarios</strong>
+					                    	</div>
+					                    	<div ng-if="checkTipoCompartir('privado')==true">
+					                    		<strong>Solo para ti</strong>
+					                    	</div>
+					                    	<div ng-if="checkTipoCompartir('usuario')==true">
+					                    		<strong>Para el Usuario</strong>
+					                    		<br>${flashcard.getCompartirCon()}
+					                    	</div>
+					                    	<div ng-if="checkTipoCompartir('club')==true">
+					                    		<strong>Para los Miembros del Club</strong>
+					                    		<br>${flashcard.getCompartirCon()}
+					                    	</div>
+					                    	<div ng-if="verEstado()">
+					                    		<br>
+					                    		<strong>Estado de la Coleccion: </strong>{{estadoFlashcard}}
+					                    	</div>
+		        							<br><br><br>
+		        						</div>
+		        					</div>
+	        						<br><br>
+        							<div class="row">
+						        		<div class="col-md-12">
+								        	<form action="verColecciones.html">
+							        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+							        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+							        				Volver a la Página de Colecciones
+							        			</button>
+							        		</form>
+								        </div>
+								    </div>
         						</div>
         						<div class="col-md-8" align="center">
-        							<div id="carouselColeccionFlashcard" class="carousel slide" style="width:400px;height:500px;">
-								        <div class="container" style="width:400px;height:550px;">
-								            <div class="carousel-inner row w-100 mx-auto" style="width:400px;height:500px;">
+        							<div id="carouselColeccionFlashcard" class="carousel slide" style="width:500px;height:600px;">
+								        <div class="container" style="width:500px;height:600px;">
+								            <div class="carousel-inner row w-100 mx-auto" style="width:500px;height:600px;">
 												<div class="carousel-item" ng-repeat="eTarjeta in colTarjetas">
-										            <div class="flip-card-container" style="width:400px;height:500px;text-align:center;">
+										            <div class="flip-card-container" style="width:500px;height:600px;text-align:center;">
 														<div class="flip-card">
-													    	<div class="flip-card-front" style="background:#f8cc89;">
+													    	<div class="flip-card-front" style="color:#FFFFA1;background-color:#FFB864;">
 													        	<br><br><br><br><br>
 										                    	{{eTarjeta.anverso}}
 															</div>
-													 		<div class="flip-card-back" style="background:#86D4FF;">
+													 		<div class="flip-card-back" style="color:#FFFFA1;background-color:#4BD469;">
 													 			<br><br><br><br><br>
 										                    	{{eTarjeta.reverso}}
 														    </div>
@@ -280,12 +295,12 @@
 													</div>					
 								                </div>
 								            </div>
-									        <a class="carousel-control-prev" href="#carouselColeccionFlashcard" role="button" data-slide="prev">
-										      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+									        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselColeccionFlashcard" role="button" data-slide="prev">
+										      <i class="fa fa-angle-left" aria-hidden="true"></i>
 										      <span class="sr-only">Anterior</span>
 										    </a>
-										    <a class="carousel-control-next" href="#carouselColeccionFlashcard" role="button" data-slide="next">
-										      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+										    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselColeccionFlashcard" role="button" data-slide="next">
+										      <i class="fa fa-angle-right" aria-hidden="true"></i>
 										      <span class="sr-only">Siguiente</span>
 										    </a>
 									    </div>
@@ -303,23 +318,6 @@
         		<div class="col-md-12">
 		        	<div class="row">
 		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="verColecciones.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Colecciones de Flashcards
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
 		        	</div>
 		        </div>
 		    </div>
