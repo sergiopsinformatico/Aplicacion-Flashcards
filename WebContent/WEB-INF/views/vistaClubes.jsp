@@ -329,6 +329,14 @@
 				            		<input type="radio" id="estoyRadio" name="selectClubes" ng-model="value" ng-change="cambioButton(value)" value="estoy">
 				            		<label for="estoyRadio">Clubes a los que pertenezco</label>
 				            		<br>
+				            		<br>
+				            		<br>
+				            		<form action="inicio.html">
+					        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+					        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+					        				Volver a la Página de Inicio
+					        			</button>
+					        		</form>
 				            	</div>
 				            	
 				            	<div class="col-md-7">
@@ -342,7 +350,53 @@
 							            	<input type="text" ng-model="filterClubes" ng-change="refreshCarrousel()" class="form-control" placeholder="Filtrar por nombre del club" />
 							            </div>
 							            <br>
-					            		<div id="carouselClubes" class="carousel slide" style="width:400px;height:500px;">
+							            <div style="width:100%;overflow-y:scroll;height:400px;">
+								            <table border="1" style="width:100%;">
+								            	<tr ng-repeat="eClub in listaClubesActual | filter:filterClubes">
+								            		<td>
+								            			<div class="row">
+								            				<div class="col-md-3" style="text-align:center;">
+								            					<br><br>
+								            					<i class="fa fa-star" aria-hidden="true" style="font-size:50px;"></i>
+								            				</div>
+								            				<div class="col-md-9">
+								            					<br>
+								            					<a ng-href="verClub.html?idClub={{eClub.idClub}}">{{eClub.nombreClub}}</a>
+								            					<br><br>
+								            					<p>Tema: {{eClub.temaClub}}</p>	
+								            					<p ng-if="eClub.pertenezcoClub == false">
+										                        	No perteneces a este club
+										                        </p>
+										                        <p ng-if="eClub.pertenezcoClub == true">
+										                        	Perteneces a este club
+										                        </p>
+										                        <p ng-if="eClub.soyAdministradorClub == true">
+										                        	Creaste este club
+										                        </p>	
+										                        <br>
+												        		<button class="btn btn-success" ng-click="unirmeClub(eClub.idClub, eClub.nombreClub)" ng-if="eClub.pertenezcoClub == false">
+													        		<i class="fa fa-sign-in" aria-hidden="true"></i>
+										                        	Unirte al Club
+										                        </button>
+												        		<button class="btn btn-danger" ng-click="dejarClub(eClub.idClub, eClub.nombreClub)" ng-if="eClub.pertenezcoClub == true && eClub.soyAdministradorClub == false">
+													        		<i class="fa fa-sign-out" aria-hidden="true"></i>
+										                        	Dejar Club
+										                        </button>
+												        		<button class="btn btn-danger" ng-click="borrarClub(eClub.idClub, eClub.nombreClub)" ng-if="eClub.soyAdministradorClub == true">
+										                        	<i class="fa fa-times" aria-hidden="true"></i>
+										                        	Eliminar Club
+										                        </button>
+										                        <br><br>
+								            				</div>
+								            			</div>
+								            		</td>
+								            	</tr>
+								            </table>
+								        </div>
+							            
+							            
+							            
+					            		<!--<div id="carouselClubes" class="carousel slide" style="width:400px;height:500px;">
 									        <div class="container" style="width:400px;height:500px;">
 									            <div class="carousel-inner row w-100 mx-auto" style="width:400px;height:500px;">
 													<div class="carousel-item" ng-repeat="eClub in listaClubesActual | filter:filterClubes">
@@ -397,7 +451,7 @@
 											      <span class="sr-only">Siguiente</span>
 											    </a>
 										    </div>
-										</div>
+										</div>-->
 									</div>
 				            	</div>
 			            	
@@ -439,30 +493,7 @@
 		    <div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="inicio.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Inicio
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
+		        		<br><br>
 		        	</div>
 		        </div>
 		    </div>
