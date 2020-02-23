@@ -376,6 +376,24 @@
         
         <div class="container-fluid" ng-app="AppGente" ng-controller="GenteCtrl">
         	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-4">
+        			<form action="inicio.html">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver a la Página de Inicio
+	        			</button>
+	        		</form>
+        		</div>
+        		<div class="col-md-7"></div>
+        		
+        	</div>
+        	<div class="row">
+        		<div class="col-md-12">
+        			<br><br>
+        		</div>        		
+        	</div>
+        	<div class="row">
         		<div class="col-md-1" style="width:100%"></div>
         		<div class="col-md-10" style="width:100%">
 		        	<div class="row" style="width:100%">
@@ -418,7 +436,92 @@
 							            	<input type="text" ng-model="filterUsuarios" ng-change="refreshCarrousel()" class="form-control" placeholder="Filtrar por nombre de usuario" />
 							            </div>
 							            <br>
-					            		<div id="carouselUsuarios" class="carousel slide" style="width:400px;height:500px;">
+							            <div style="width:100%;overflow-y:scroll;height:400px;">
+								            <table border="1" style="width:100%;">
+								            	<tr ng-repeat="eUsuario in listaUsuariosActual | filter:filterUsuarios">
+								            		<td>
+								            			<div class="row">
+								            				<div class="col-md-3">
+								            					<img src="{{eUsuario.foto}}" style="width:70px;height:auto;">
+								            				</div>
+								            				<div class="col-md-9">
+								            					<br>
+								            					<a ng-href="verPerfil.html?usuarioPerfil={{eUsuario.username}}" style="color:#244B36;">{{eUsuario.username}}</a>
+								            					<br><br>
+								            					<span ng-if="eUsuario.tipoRelacion == 'amigo'" style="color:black;">
+										                        	Sois amigos
+										                        	<br><br>
+										                        </span>
+										                        <span ng-if="eUsuario.tipoRelacion == 'solEnviada'" style="color:black;">
+										                        	Solicitud de amistad enviada
+										                        	<br><br>
+										                        </span>
+										                        <span ng-if="eUsuario.tipoRelacion == 'solRecibida'" style="color:black;">
+										                        	Pendiente de contestar la solicitud
+										                        	<br><br>
+										                        </span>
+										                        <span ng-if="eUsuario.tipoRelacion == 'bloqueado'" style="color:black;">
+										                        	Usuario Bloqueado
+										                        	<br><br>
+										                        </span>
+										                        <div ng-if="eUsuario.tipoRelacion == 'ninguna'">
+										                        	<button class="btn btn-info" ng-click="enviarPeticion(eUsuario.username)">
+										                        		<i class="fa fa-paper-plane" aria-hidden="true"></i>
+										                        		Enviar Solicitud de Amistad
+										                        	</button>
+										                        	<br><br>
+										                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
+										                        		<i class="fa fa-lock" aria-hidden="true"></i>
+										                        		Bloquear Usuario
+										                        	</button>
+										                        </div>
+										                        <div ng-if="eUsuario.tipoRelacion == 'amigo'">
+										                        	<button class="btn btn-danger" ng-click="eliminarAmigo(eUsuario.username)">
+										                        		<i class="fa fa-user-times" aria-hidden="true"></i>
+										                        		Eliminar Amistad
+										                        	</button>
+										                        	<br><br>
+										                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
+										                        		<i class="fa fa-lock" aria-hidden="true"></i>
+										                        		Bloquear Usuario
+										                        	</button>
+										                        </div>
+										                        <div ng-if="eUsuario.tipoRelacion == 'solEnviada'">
+										                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
+										                        		<i class="fa fa-lock" aria-hidden="true"></i>
+										                        		Bloquear Usuario
+										                        	</button>
+										                        </div>
+										                        <div ng-if="eUsuario.tipoRelacion == 'solRecibida'">
+										                        	<button class="btn btn-success" ng-click="aceptarAmistad(eUsuario.username)">
+										                        		<i class="fa fa-check" aria-hidden="true"></i>
+										                        		Aceptar Peticion de Amistad
+										                        	</button>
+										                        	<br><br>
+										                        	<button class="btn btn-danger" ng-click="rechazarAmistad(eUsuario.username)">
+										                        		<i class="fa fa-times" aria-hidden="true"></i>
+										                        		Rechazar Peticion de Amistad
+										                        	</button>
+										                        	<br><br>
+										                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)">
+										                        		<i class="fa fa-lock" aria-hidden="true"></i>
+										                        		Bloquear Usuario
+										                        	</button>
+										                        </div>
+										                        <div ng-if="eUsuario.tipoRelacion == 'bloqueado'">
+										                        	<button class="btn btn-warning" ng-click="desbloquearUsuario(eUsuario.username)">
+										                        		<i class="fa fa-lock-open" aria-hidden="true"></i>
+										                        		Desloquear Usuario
+										                        	</button>
+										                        </div>
+										                        <br><br>
+								            				</div>
+								            			</div>
+								            		</td>
+								            	</tr>
+								            </table>
+								        </div>
+					            		<!-- <div id="carouselUsuarios" class="carousel slide" style="width:400px;height:500px;">
 									        <div class="container" style="width:400px;height:500px;">
 									            <div class="carousel-inner row w-100 mx-auto" style="width:400px;height:500px;">
 													<div class="carousel-item" ng-repeat="eUsuario in listaUsuariosActual | filter:filterUsuarios">
@@ -513,7 +616,7 @@
 											      <span class="sr-only">Siguiente</span>
 											    </a>
 										    </div>
-										</div>
+										</div>-->
 									</div>
 				            	</div>
 			            	
@@ -528,32 +631,7 @@
 		    <div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="inicio.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Inicio
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
+		        		<br><br>
 		        	</div>
 		        </div>
 		    </div>

@@ -283,6 +283,26 @@
         </script>
         
         <div class="container-fluid" ng-app="AppPerfil" ng-controller="PerfilCtrl">
+        	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-3">
+        			<br>
+	        		<form action="verGente.html" ng-if="tipoRelacion.localeCompare('') != 0">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver a la Página de Gente
+	        			</button>
+	        		</form>
+	        		<form action="inicio.html" ng-if="tipoRelacion.localeCompare('') == 0">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver a la Página de Inicio
+	        			</button>
+	        		</form>
+	        		<br>
+        		</div>
+        		<div class="col-md-8"></div>
+        	</div>
         	<div class="container">
 			    <div class="row profile">
 					<div class="col-md-3">
@@ -409,35 +429,8 @@
 				<div class="row">
 	        		<div class="col-md-12">
 			        	<div class="row">
-			        		<br>
+			        		<br><br>
 			        	</div>
-			        </div>
-			    </div>
-			    <div class="row">
-	        		<div class="col-md-12">
-			        	<div class="row">
-			        		<div class="col-md-4"></div>
-			        		<div class="col-md-4">
-			        			<form action="verGente.html" ng-if="tipoRelacion.localeCompare('') != 0">
-				        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-				        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-				        				Volver a la Página de Gente
-				        			</button>
-				        		</form>
-				        		<form action="inicio.html" ng-if="tipoRelacion.localeCompare('') == 0">
-				        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-				        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-				        				Volver a la Página de Inicio
-				        			</button>
-				        		</form>
-			        		</div>
-			        		<div class="col-md-4"></div>
-			        	</div>
-			        </div>
-			    </div>
-			    <div class="row">
-	        		<div class="col-md-12">
-			        	<br>
 			        </div>
 			    </div>
 			</div>

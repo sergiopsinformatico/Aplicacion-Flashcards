@@ -181,6 +181,21 @@
         		<br>
         	</div>
         	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-4">
+        			<form action="gestionUsuariosAdmin.html">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver a la Página de Gestión de Usuarios
+	        			</button>
+	        		</form>
+        		</div>
+        		<div class="col-md-7"></div>
+        	</div>
+        	<div class="row">
+        		<br>
+        	</div>
+        	<div class="row">
         		<div class="col-md-2"></div>
         		<div class="col-md-8">
         			<div class="row" style="background-color:white;">
@@ -241,7 +256,7 @@
 						        <div class="row">
 						        	<div class="col-md-12" align="center" style="text-align:center;">
 						        		<br>
-						        		<button type="submit" class="btn btn-success" id="btnGuardaCambios" name="btnGuardaCambios">
+						        		<button type="submit" class="btn" style="color:#FFFFA1;background-color:#4BD469;" id="btnGuardaCambios" name="btnGuardaCambios">
 						        			<i class="fa fa-pencil-alt" aria-hidden="true"></i>
 						        			Guardar Cambios
 						        		</button>
@@ -261,32 +276,7 @@
         	<div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="gestionUsuariosAdmin.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página de Gestión de Usuarios
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
+		        		<br><br>
 		        	</div>
 		        </div>
 		    </div>

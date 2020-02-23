@@ -229,10 +229,23 @@
         
         <div class="container-fluid" ng-app="AppClubesAdministrador" ng-controller="ClubesAdministradorCtrl">
         	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-3">
+        			<form action="panelAdministrador.html">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver al Panel del Administrador
+	        			</button>
+	        		</form>
+        		</div>
+        		<div class="col-md-8"></div>
+        	</div>
+        	<div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-10">
+		        			<br><br>
 				            <div ng-if="!checkGet">
 				            	<h6 align="center">Cargando clubes...</h6>
 				            </div>
@@ -270,32 +283,7 @@
 					   					</div>  
 								   </div>
 						   		</div>
-					            <!-- <table width="100%" border="1">  
-								   <tr>  
-								      <th align="center" style="text-align:center;">Club</th>  
-								      <th align="center" style="width:168px; text-align:center;">Eliminar Club</th>   
-								   </tr>  
-								   <tr>
-								   		<td colspan=2>
-								   		<div style="overflow-y:scroll;height:500px;">
-								   			<table width=100% border="1">
-								   				<tr ng-repeat = "eClub in listaClubes | filter:filterClubes:strict">  
-											      <td align="center">
-											      	<strong>Nombre del Club: </strong><a href="verClub.html?idClub={{ eClub.idClub }}">{{ eClub.nombreClub }}</a>
-											      	<br><strong>Id del Club: </strong> {{ eClub.idClub }}
-											      	<br><strong>Creador: </strong> {{ eClub.administrador }}
-											      </td>  
-											      <td style="width:150px;">
-												      <form ng-submit="eliminaClub(eClub)">
-													     <button type="submit" style="display:block;margin:auto;"><i class="fa fa-trash" aria-hidden="true"></i></button>
-													  </form>
-											      </td>    
-											   </tr>
-								   			</table>
-								   		</div>
-								   </tr>
-								</table>--> 
-							</div>
+					        </div>
 		        		</div>
 		        		<div class="col-md-1"></div>
 		        	</div>
@@ -305,32 +293,7 @@
 		    <div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="panelAdministrador.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página del Panel del Administrador
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
+		        		<br><br>
 		        	</div>
 		        </div>
 		    </div>

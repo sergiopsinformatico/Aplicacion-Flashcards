@@ -285,10 +285,23 @@
         
         <div class="container-fluid" ng-app="AppAdministradorUsuarios" ng-controller="AdministradorUsuariosCtrl">
         	<div class="row">
+        		<div class="col-md-1"></div>
+        		<div class="col-md-3">
+        			<form action="panelAdministrador.html">
+	        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
+	        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
+	        				Volver al Panel del Administrador
+	        			</button>
+	        		</form>
+        		</div>
+        		<div class="col-md-8"></div>
+        	</div>
+        	<div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
 		        		<div class="col-md-1"></div>
 		        		<div class="col-md-10">
+		        			<br><br>
 				            <div ng-if="!checkGet">
 				            	<h6 align="center">Cargando usuarios...</h6>
 				            </div>
@@ -361,32 +374,7 @@
 		    <div class="row">
         		<div class="col-md-12">
 		        	<div class="row">
-		        		<br>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<div class="col-md-4"></div>
-		        		<div class="col-md-4">
-		        			<form action="panelAdministrador.html">
-			        			<button type="submit" class="btn" style="width:100%;height:50px;background-color:#0ED5FF;color:#FFFFA1;">
-			        				<i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:5px;"></i>
-			        				Volver a la Página del Panel del Administrador
-			        			</button>
-			        		</form>
-		        		</div>
-		        		<div class="col-md-4"></div>
-		        	</div>
-		        </div>
-		    </div>
-		    
-		    <div class="row">
-        		<div class="col-md-12">
-		        	<div class="row">
-		        		<br>
+		        		<br><br>
 		        	</div>
 		        </div>
 		    </div>
