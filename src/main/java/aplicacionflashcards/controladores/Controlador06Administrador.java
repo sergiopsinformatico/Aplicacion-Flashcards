@@ -33,7 +33,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador06Administrador {
 	
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	ModelAndView vista;
 	List<UsuarioDTO> listaUsuarios;
 	List<ClubDTO> listaClubes;
@@ -54,7 +57,7 @@ public class Controlador06Administrador {
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_GEST_USUARIO = "vistaGestionUsuarios";
 	
-	
+	//Panel Administrador
 	@GetMapping(value = "/panelAdministrador")
 	public ModelAndView getPanelAdministrador(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
@@ -67,6 +70,7 @@ public class Controlador06Administrador {
 		return vista;
 	}
 	
+	//Listar Usuarios
 	@GetMapping(value = "/gestionUsuariosAdmin")
 	public ModelAndView getGestionUsuariosAdmin(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {
@@ -224,6 +228,7 @@ public class Controlador06Administrador {
 		
 	}
 	
+	//Listar Clubes
 	@GetMapping(value = "/gestionClubesAdmin")
 	public ModelAndView gestionClubesAdmin(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request) && CheckUsers.isAdministrador(request)) {

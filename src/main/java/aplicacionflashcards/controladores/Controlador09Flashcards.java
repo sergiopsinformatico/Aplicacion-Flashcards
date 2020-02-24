@@ -36,7 +36,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Controlador09Flashcards {
 	
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	ModelAndView vista;
 	InterfaceDAOClub dBClub;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
@@ -60,6 +63,10 @@ public class Controlador09Flashcards {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_INICIO = "redirect:/inicio.html";
 	static final String CONST_TIPO_COMPARTIR = "tipoCompartir";
+	
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *  FUNCIONALIDAD: GESTION DE FLASHCARDS, CREACION Y VISUALIZACION *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	
 	@GetMapping(value = "/flashcards")
 	public ModelAndView flashcards(HttpServletRequest request, HttpServletResponse response) {

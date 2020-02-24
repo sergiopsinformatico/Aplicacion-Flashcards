@@ -23,6 +23,10 @@ import main.java.aplicacionflashcards.db.mongodb.UsuariosMongoDB;
 
 public class Broker {
 	
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  *
+	 *  Broker: Genera Instancias de las colecciones de la Base de Datos  *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  */
+	
 	private Broker() {
 		throw new IllegalStateException("Broker no se instancia");
 	}

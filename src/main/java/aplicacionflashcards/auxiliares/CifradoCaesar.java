@@ -2,6 +2,10 @@ package main.java.aplicacionflashcards.auxiliares;
 
 public class CifradoCaesar {
 	
+	/* * * * * * * * *
+	 *  Encriptacion *
+	 * * * * * * * * */
+	
 	/* * * * * * * 
      * VARIABLES *
 	 * * * * * * */
@@ -17,6 +21,10 @@ public class CifradoCaesar {
 	/*
 	 * Extraido de: https://www.thejavaprogrammer.com/caesar-cipher-java-encryption-decryption/
 	 */
+	
+	/* * * * * * * * *  *
+	 *  Encriptar Texto *
+	 * * * * * * * * *  */
 	
 	public String encryptText(String message) {
 		sB = new StringBuilder();
@@ -50,6 +58,10 @@ public class CifradoCaesar {
 		return sB.toString();
 		
 	}
+	
+	/* * * * * * * * * * * *
+	 *  Desencriptar Texto *
+	 * * * * * * * * * * * */
 	
 	public String decryptText(String message) {
 		sB = new StringBuilder();

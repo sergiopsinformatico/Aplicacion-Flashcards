@@ -4,6 +4,10 @@ import java.security.MessageDigest;
 
 public class MD5Photo {
 	
+	/* * * * * * *  *
+	 *  Foto Perfil *
+	 * * * * * * *  */
+	
 	public String getMD5Photo(String photoFile){
 		try {
 			MessageDigest md = MessageDigest.getInstance("MD5");

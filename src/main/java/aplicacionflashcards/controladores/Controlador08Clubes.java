@@ -36,7 +36,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador08Clubes {
 	
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	ModelAndView vista;
 	ClubDTO club;
 	InterfaceDAOClub dBClub;
@@ -60,6 +63,10 @@ public class Controlador08Clubes {
 	static final String CONST_USUARIO = "usuario";
 	static final String CONST_REDIRECT_VER_CLUBES = "redirect:/verClubes.html";
 	static final String CONST_REDIRECT_VER_CLUB = "redirect:/verClub.html?idClub=";
+	
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *  FUNCIONALIDAD: CREAR, VER Y FORMAR PARTE DE LOS CLUBES *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 	
 	@GetMapping(value = "/verClubes")
 	public ModelAndView getClubes(HttpServletRequest request, HttpServletResponse response) {

@@ -14,11 +14,23 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Email {
 	
+	/* * * * * * * * * * *
+	 *  Envío de Emails  *
+	 * * * * * * * * * * */
+	
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	private String recibe;
 	private String asunto;
 	private String mensaje;
 	boolean enviado;
 	CifradoCaesar caesar;
+	
+	/* * * * * * * *
+	 *  Constantes *
+	 * * * * * * * */
 	
 	static final String CONST_SALUDO = "Hola ";
 	static final String CONST_CIERRE = "\nAtentamente, Equipo de Flashcards.";
@@ -29,6 +41,10 @@ public class Email {
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.auxiliares.Email");
 	
+    /* * * * * * * * * *
+	 *  Activar Cuenta *
+	 * * * * * * * * * */
+    
 	public boolean activarCuenta(UsuarioDTO user, String url) {
 		setAsunto("[Flashcards] Activacion Cuenta: "+user.getUsername());
 		setMensaje("Bienvenido a la Aplicacion Flashcards!!"+
@@ -41,6 +57,10 @@ public class Email {
 		return enviarMensaje();
 	}
 	
+	/* * * * * * * * * * * * *  *
+	 *  Confirmar Cuenta Creada *
+	 * * * * * * * * * * * * *  */
+	
 	public boolean confirmaCuentaCreada(UsuarioDTO user) {
 		setAsunto("[Flashcards] Nueva Cuenta Creada "+user.getUsername());
 		setMensaje("Su cuenta ha sido creada satisfactoriamente. Sus datos de registro son los siguientes:"+
@@ -52,6 +72,10 @@ public class Email {
 		return enviarMensaje();
 	}
 	
+	/* * * * * * * * * * *
+	 *  Eliminar Cuenta  *
+	 * * * * * * * * * * */
+	
 	public boolean eliminarCuenta(EliminarCuentaDTO elimina, String email) {
 		setAsunto("[Flashcards] Cuenta Eliminada ("+elimina.getUsername()+") - 14 dias");
 		setMensaje(CONST_SALUDO+elimina.getUsername()+","+
@@ -62,6 +86,10 @@ public class Email {
 		return enviarMensaje();
 	}
 	
+	/* * * * * * * * *  *
+	 *  Recuperar Clave *
+	 * * * * * * * * *  */
+	
 	public boolean recuperarClave(UsuarioDTO user, String key) {
 		setAsunto("[Flashcards] Recuperacion de la clave de "+user.getEmail());
 		setMensaje(CONST_SALUDO+user.getUsername()+"!!"+
@@ -70,6 +98,10 @@ public class Email {
 		setRecibe(user.getEmail());
 		return enviarMensaje();
 	}
+	
+	/* * * * * * * * * * *
+	 *  Reactivar Cuenta *
+	 * * * * * * * * * * */
 	
 	public boolean reactivacionCuenta(UsuarioDTO user) {
 		setAsunto("[Flashcards] Reactivacion de la cuenta de "+user.getUsername());
@@ -82,6 +114,10 @@ public class Email {
 		return enviarMensaje();
 	}
 	
+	/* * * * * * * * * * *  *
+	 *  Generar Nueva Clave *
+	 * * * * * * * * * * *  */
+	
 	public boolean adminGeneraClave(UsuarioDTO user) {
 		setAsunto("[Flashcards] Generada clave nueva para "+user.getUsername());
 		setMensaje(CONST_SALUDO+user.getUsername()+"!!"+
@@ -92,6 +128,10 @@ public class Email {
 		setRecibe(user.getEmail());
 		return enviarMensaje();
 	}
+	
+	/* * * * * * * * * *
+	 *  Envío de Email *
+	 * * * * * * * * * */
 	
 	private boolean enviarMensaje() {
 		enviado = false;

@@ -15,6 +15,10 @@ public class Fecha {
 	Date date2;
 	private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.auxiliares.Fecha");
 	
+	/* * * * * *
+	 *  Fechas *
+	 * * * * * */
+	
 	public String compararFechas(String fecha1, String fecha2) {
 		
 		/* Devuelve 0 si fecha1 == fecha2

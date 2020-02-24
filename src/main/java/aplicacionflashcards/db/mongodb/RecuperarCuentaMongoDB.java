@@ -23,7 +23,10 @@ import main.java.aplicacionflashcards.dto.RecuperarCuentaDTO;
 
 public class RecuperarCuentaMongoDB implements InterfaceDAORecuperarCuenta {
 	
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -36,12 +39,19 @@ public class RecuperarCuentaMongoDB implements InterfaceDAORecuperarCuenta {
     String comparaFecha;
     CifradoCaesar caesar;
     
-    //Constantes
+    /* * * * * *  *
+	 * CONSTANTES *
+	 * * * * * *  */
+    
     static final String CONST_USERNAME = "username";
   	
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.RecuperarCuentaMongoDB");
 	
+    /* * * * * * * * * * * * * * * *
+	 * COLECCION: RECUPERAR CUENTA *
+	 * * * * * * * * * * * * * * * */
+    
 	public RecuperarCuentaMongoDB() {
 		connection();
 	}

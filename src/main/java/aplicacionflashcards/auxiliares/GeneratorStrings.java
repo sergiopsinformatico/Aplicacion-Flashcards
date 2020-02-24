@@ -4,7 +4,11 @@ import java.security.SecureRandom;
 
 public class GeneratorStrings {
 	
-private GeneratorStrings() {}
+	/* * * * * * * * * * * * *
+	 *  Generador de Cadenas *
+	 * * * * * * * * * * * * */
+	
+	private GeneratorStrings() {}
 	
 	public static String randomString(int size) {
 		

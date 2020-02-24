@@ -22,7 +22,10 @@ import main.java.aplicacionflashcards.dto.NotificacionesDTO;
 
 public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 	
-	//Variables
+	/* * * * * *  *
+	 * VARIABLES *
+	 * * * * * *  */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -45,6 +48,10 @@ public class NotificacionesMongoDB implements InterfaceDAONotificaciones {
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.NotificacionesMongoDB");
 	
+    /* * * * * * * * * * * * * * *
+	 * COLECCION: NOTIFICACIONES *
+	 * * * * * * * * * * * * * * */
+    
 	public NotificacionesMongoDB() {
 		connection();
 	}

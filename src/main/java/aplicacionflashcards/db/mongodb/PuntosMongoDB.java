@@ -24,7 +24,10 @@ import main.java.aplicacionflashcards.dto.PuntosDTO;
 
 public class PuntosMongoDB implements InterfaceDAOPuntos {
 	
-	//Variables	
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -51,6 +54,9 @@ public class PuntosMongoDB implements InterfaceDAOPuntos {
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.PuntosMongoDB");
 	
+    /* * * * * * * * * * *
+	 * COLECCION: PUNTOS *
+	 * * * * * * * * * * */
     
 	public PuntosMongoDB() {
 		connection();

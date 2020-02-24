@@ -27,7 +27,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador07Gente {
 	
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	ModelAndView vista;
 	InterfaceDAOUsuario dBUsuario;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
@@ -53,6 +56,11 @@ public class Controlador07Gente {
 	static final String CONST_REDIRECT_PERFIL = "redirect:/verPerfil.html?usuarioPerfil=";
 	static final String CONST_MENSAJE = "mensaje";
 	
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *  FUNCIONALIDAD: LISTAR Y VISUALIZAR USUARIOS Y AMIGOS *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	
+	//Ver Gente
 	@GetMapping(value = "/verGente")
 	public ModelAndView gente(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request)) {
@@ -86,6 +94,7 @@ public class Controlador07Gente {
 		return lista;
 	}
 	
+	//Listar Amigos
 	@GetMapping(value = "/getAmigos", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)

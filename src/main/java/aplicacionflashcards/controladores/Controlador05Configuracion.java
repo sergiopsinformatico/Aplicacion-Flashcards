@@ -24,7 +24,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador05Configuracion {
 	
-	//Variables
+	/* * * * * * * *  *
+	 *  CONFIGURACION *
+	 * * * * * * * *  */
+	
 	ModelAndView vista;
 	UsuarioDTO userAntiguo;
 	UsuarioDTO userNuevo;
@@ -44,6 +47,7 @@ public class Controlador05Configuracion {
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador05Configuracion");
 	
+    //Obtener Configuracion
 	@GetMapping(value = "/configuracion")
 	public ModelAndView modificarPerfil(HttpServletRequest request, HttpServletResponse response) {
 		if(CheckUsers.isUsuarioLogueado(request)) {
@@ -56,6 +60,7 @@ public class Controlador05Configuracion {
 		return vista;
 	}
 	
+	//Modificar Usuarios
 	@PostMapping(value = "/modificaUsuario")
 	public ModelAndView modificaUsuario(HttpServletRequest request, HttpServletResponse response) {
 		userAntiguo = (UsuarioDTO)request.getSession().getAttribute(CONST_USUARIO);

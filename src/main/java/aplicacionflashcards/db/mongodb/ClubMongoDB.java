@@ -23,7 +23,10 @@ import main.java.aplicacionflashcards.dto.ClubDTO;
 
 public class ClubMongoDB implements InterfaceDAOClub{
 	
-	//Variables
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -42,7 +45,10 @@ public class ClubMongoDB implements InterfaceDAOClub{
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.ClubMongoDB");
     
-    //Constantes
+    /* * * * * *  *
+	 * CONSTANTES *
+	 * * * * * *  */
+    
   	static final String CONST_ID_CLUB = "idClub";
   	static final String CONST_NOMBRE = "nombre";
   	static final String CONST_ADMIN = "administrador";
@@ -53,6 +59,10 @@ public class ClubMongoDB implements InterfaceDAOClub{
 	public ClubMongoDB() {
 		connection();
 	}
+	
+	/* * * * * * * * * * *
+	 * COLECCION: CLUBES *
+	 * * * * * * * * * * */
 	
 	//Conexion con la BD
     private void connection() {

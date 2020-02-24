@@ -27,6 +27,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class Controlador11Mensajes {
 	
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	List<MensajeDTO> listaMensajes;
 	List<String> listaAmigos;
 	InterfaceDAORelacionesUsuarios dBRelaciones;
@@ -40,11 +44,17 @@ public class Controlador11Mensajes {
 	static final String CONST_VISTA_PANEL_MENSAJES = "vistaPanelMensajes";
 	static final String CONST_REMITENTE = "remitente";
 	
+	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	 *  FUNCIONALIDAD: ENVIO Y RECEPCION DE CORREOS ELECTRONICOS *
+	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+	
+	//Vista del Panel de Mensajes
 	@GetMapping(value = "/panelMensajes")
 	public ModelAndView panelMensajes(HttpServletRequest request, HttpServletResponse response) {
 		return new ModelAndView(CONST_VISTA_PANEL_MENSAJES);
 	}
 	
+	//Mensajes Recibidos
 	@GetMapping(value = "/getMensajesRecibidos", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
@@ -58,6 +68,7 @@ public class Controlador11Mensajes {
 		return listaMensajes;
 	}
 	
+	//Mensajes Enviados
 	@GetMapping(value = "/getMensajesEnviados", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
@@ -71,6 +82,7 @@ public class Controlador11Mensajes {
 		return listaMensajes;
 	}
 	
+	//Amigos para enviar mensajes
 	@GetMapping(value = "/getAmigosMensajes", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	@ResponseStatus(HttpStatus.OK)
@@ -79,6 +91,7 @@ public class Controlador11Mensajes {
 		return dBRelaciones.getAmigos(((UsuarioDTO)(request.getSession().getAttribute("usuario"))).getUsername());
 	}
 	
+	//Enviar Mensaje
 	@PostMapping(value = "/enviarMensaje")
 	public ModelAndView enviarMensaje(HttpServletRequest request, HttpServletResponse response){
 		
@@ -104,6 +117,7 @@ public class Controlador11Mensajes {
 		return new ModelAndView(CONST_VISTA_PANEL_MENSAJES);
 	}
 	
+	//Eliminar Mensaje
 	@GetMapping(value = "/eliminarMensaje")
 	public ModelAndView eliminarMensaje(@RequestParam("idMensaje") String idMensaje, HttpServletRequest request, HttpServletResponse response) {
 		Broker.getInstanciaMensaje().eliminarMensaje(idMensaje);

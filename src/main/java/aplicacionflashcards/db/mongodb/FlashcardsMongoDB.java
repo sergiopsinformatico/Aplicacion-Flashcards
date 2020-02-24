@@ -29,7 +29,10 @@ import main.java.aplicacionflashcards.dto.TarjetaDTO;
 
 public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
 	
-	//Variables
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -55,12 +58,19 @@ public class FlashcardsMongoDB implements InterfaceDAOFlashcards {
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.FlashcardsMongoDB");
     
-    //Constantes
+    /* * * * * *  *
+	 * CONSTANTES *
+	 * * * * * *  */
+    
   	static final String CONST_AUTOR = "autor";
   	static final String CONST_TIPO_COMPARTIR = "tipoCompartir";
   	static final String CONST_COMPARTIR_CON = "compartirCon";
   	static final String CONST_EVALUADA = "evaluada";
 	
+  	/* * * * * * * * * * * * *
+	 * COLECCION: FLASHCARDS *
+	 * * * * * * * * * * * * */
+  	
 	public FlashcardsMongoDB() {
 		connection();
 	}

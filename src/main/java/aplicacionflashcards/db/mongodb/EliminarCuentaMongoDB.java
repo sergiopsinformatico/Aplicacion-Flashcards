@@ -29,7 +29,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
 	
-	//Variables
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -46,7 +49,10 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
     RelacionesUsuariosDTO relacion;
     CifradoCaesar caesar;
     
-    //Constante
+    /* * * * * *  *
+	 * CONSTANTES *
+	 * * * * * *  */
+    
     static final String CONST_USERNAME = "username";
     static final String CONST_FECHA = "fecha";
     
@@ -56,6 +62,10 @@ public class EliminarCuentaMongoDB implements InterfaceDAOEliminarCuenta {
 	public EliminarCuentaMongoDB() {
 		connection();
 	}
+	
+	/* * * * * * * * * * * * * *  *
+	 * COLECCION: ELIMINAR CUENTA *
+	 * * * * * * * * * * * * * *  */
 	
 	//Conexion con la BD
     private void connection() {

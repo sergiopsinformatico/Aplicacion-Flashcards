@@ -25,7 +25,10 @@ import main.java.aplicacionflashcards.dto.ActivaCuentaDTO;
 
 public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
 	
-	//Variables
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -37,7 +40,10 @@ public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
     MongoCursor<Document> iterador;
     CifradoCaesar caesar;
     
-    //Constante
+    /* * * * * * *
+	 * CONSTANTES *
+	 * * * * * * */
+    
     static final String CONST_USERNAME ="username";
     static final String CONST_CODIGO ="codigo";
     static final String CONST_FECHA ="fecha";
@@ -45,6 +51,10 @@ public class ActivarCuentaMongoDB implements InterfaceDAOActivaCuenta {
     //Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.ActivarCuentaMongoDB");
 	
+    /* * * * * * * * * * * * * * *
+	 * COLECCION: ACTIVAR CUENTA *
+	 * * * * * * * * * * * * * * */
+    
 	public ActivarCuentaMongoDB() {
 		connection();
 	}

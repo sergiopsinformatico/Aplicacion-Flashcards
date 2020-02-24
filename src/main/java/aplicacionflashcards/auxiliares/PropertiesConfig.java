@@ -5,6 +5,10 @@ import java.util.Properties;
 
 public class PropertiesConfig {
 	
+	/* * * * * * * * * * * *
+	 *  Fichero Properties *
+	 * * * * * * * * * * * */
+	
 	private PropertiesConfig() {}
 	
 	

@@ -23,7 +23,10 @@ import main.java.aplicacionflashcards.dto.RelacionesUsuariosDTO;
 
 public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios {
 
-	//Variables
+	/* * * * * * *
+	 * VARIABLES *
+	 * * * * * * */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -47,13 +50,20 @@ public class RelacionesUsuariosMongoDB implements InterfaceDAORelacionesUsuarios
     //Logger
   	private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.RelacionesUsuariosMongoDB");
   	
-  	//Constantes
+  	/* * * * * * * *
+	 *  CONSTANTES *
+	 * * * * * * * */
+  	
   	static final String CONST_USUARIO = "usuario";
   	static final String CONST_PDA_ENV = "pdaEnviadas";
   	static final String CONST_PDA_REC = "pdaRecibidas";
   	static final String CONST_AMIGOS = "amigos";
   	static final String CONST_BLOQUEADOS = "bloqueados";
   	static final String CONST_BLOQUEADORES = "bloqueadores";
+  	
+  	/* * * * * * * * * * * * * * * * * *  *
+	 *  COLECCION: RELACIONES DE USUARIOS *
+	 * * * * * * * * * * * * * * * * * *  */
 	
 	public RelacionesUsuariosMongoDB() {
 		connection();

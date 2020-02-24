@@ -29,7 +29,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class Controlador10Moderador {
 	
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	ModelAndView vista;
 	List<FlashcardsDTO> listaColecciones;
 	String nombreColeccion;
@@ -46,7 +49,9 @@ public class Controlador10Moderador {
 	static final String CONST_FLASHCARD_EVALUA = "vistaFlashcardsEvaluar";
 	static final String CONST_MENSAJES = "mensajes";
 	
-	/*Moderador Evalua Coleccion*/
+	/* * * * * * * * * * * * * * * * * * * * * *  *
+	 *  FUNCIONALIDAD: MODERADOR EVALUA COLECCION *
+	 * * * * * * * * * * * * * * * * * * * * * *  */
 	
 	@GetMapping(value = "/evaluarColecciones")
 	public ModelAndView evaluarColecciones(HttpServletRequest request, HttpServletResponse response) {
@@ -95,6 +100,7 @@ public class Controlador10Moderador {
 		return vista;
 	}
 	
+	//Evaluacion Positiva
 	@GetMapping(value = "/evaluacionPositiva")
 	public ModelAndView evaluacionPositiva(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		vista = new ModelAndView(CONST_FLASHCARD_EVALUA);
@@ -107,6 +113,7 @@ public class Controlador10Moderador {
 		return vista;
 	}
 	
+	//Evaluacion Negativa
 	@GetMapping(value = "/evaluacionNegativa")
 	public ModelAndView evaluacionNegativa(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) {
 		vista = new ModelAndView(CONST_FLASHCARD_EVALUA);

@@ -9,6 +9,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 @SessionAttributes("usuario")
 public class CheckUsers {
 	
+	/* * * * * * * * * * * *  *
+	 *  Comprobacion de Roles *
+	 * * * * * * * * * * * *  */
+	
 	/* * * * * *  * 
      * CONSTANTES *
 	 * * * * * *  */

@@ -24,7 +24,10 @@ import main.java.aplicacionflashcards.dto.UsuarioDTO;
 
 public class UsuariosMongoDB implements InterfaceDAOUsuario{
 
-	//Variables
+	/* * * * * *  *
+	 *  VARIABLES *
+	 * * * * * *  */
+	
 	MongoClientURI uri; 
     MongoClient client;
     MongoDatabase db;
@@ -42,7 +45,10 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	CifradoCaesar caesar;
 	boolean actualiza;
 	
-	//Constantes
+	/* * * * * * * *
+	 *  CONSTANTES *
+	 * * * * * * * */
+	
 	static final String CONST_USERNAME = "username";
 	static final String CONST_EMAIL = "email";
 	static final String CONST_CLAVE = "clave";
@@ -53,6 +59,9 @@ public class UsuariosMongoDB implements InterfaceDAOUsuario{
 	//Logger
 	private static final Logger LOGGER = Logger.getLogger("main.java.flashcards.db.mongodb.UsuariosMongoDB");
 	
+	/* * * * * * * * * * * *
+	 *  COLECCION USUARIOS *
+	 * * * * * * * * * * * */
     
     //Constructor
     public UsuariosMongoDB() {

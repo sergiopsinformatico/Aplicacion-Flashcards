@@ -56,6 +56,10 @@ public class Controlador02RecuperarCuenta {
 	//Logger
     private static final Logger LOGGER = Logger.getLogger("main.java.aplicacionflashcards.controladores.Controlador02RecuperarCuenta");
 	
+    /* * * * * * * * * * * * * * * * *  *
+	 *  FUNCIONALIDAD: RECUPERAR CUENTA *
+	 * * * * * * * * * * * * * * * * *  */
+    
 	@GetMapping(value = "/recuperaCuenta")
 	public ModelAndView recuperaCuenta(HttpServletRequest request, HttpServletResponse response) {
 		
