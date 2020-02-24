@@ -43,6 +43,7 @@ public class Controlador11Mensajes {
 	
 	static final String CONST_VISTA_PANEL_MENSAJES = "vistaPanelMensajes";
 	static final String CONST_REMITENTE = "remitente";
+	static final String CONST_DESTINATARIO = "destinatario";
 	
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	 *  FUNCIONALIDAD: ENVIO Y RECEPCION DE CORREOS ELECTRONICOS *
@@ -100,19 +101,19 @@ public class Controlador11Mensajes {
 			idMensaje = request.getParameter(CONST_REMITENTE) + "-" + GeneratorStrings.randomString(5);
 		}while(Broker.getInstanciaMensaje().existeIdMensaje(idMensaje));
 		
-		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter("destinatario"), request.getParameter("asunto"), request.getParameter("mensaje"));
+		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter(CONST_DESTINATARIO), request.getParameter("asunto"), request.getParameter("mensaje"));
 		Broker.getInstanciaMensaje().enviaMensaje(mensaje);
 		
 		//Copia destinatario
 		do {
-			idMensaje = request.getParameter("destinatario") + "-" + GeneratorStrings.randomString(5);
+			idMensaje = request.getParameter(CONST_DESTINATARIO) + "-" + GeneratorStrings.randomString(5);
 		}while(Broker.getInstanciaMensaje().existeIdMensaje(idMensaje));
 		
-		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter("destinatario"), request.getParameter("asunto"), request.getParameter("mensaje"));
+		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter(CONST_DESTINATARIO), request.getParameter("asunto"), request.getParameter("mensaje"));
 		Broker.getInstanciaMensaje().enviaMensaje(mensaje);
 		
 		
-		Broker.getInstanciaNotificaciones().insertarNotificacion(request.getParameter("destinatario"), "Tiene un mensaje nuevo de "+request.getParameter(CONST_REMITENTE));
+		Broker.getInstanciaNotificaciones().insertarNotificacion(request.getParameter(CONST_DESTINATARIO), "Tiene un mensaje nuevo de "+request.getParameter(CONST_REMITENTE));
 		
 		return new ModelAndView(CONST_VISTA_PANEL_MENSAJES);
 	}
