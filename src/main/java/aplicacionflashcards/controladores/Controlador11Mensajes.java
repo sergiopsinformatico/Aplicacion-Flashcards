@@ -82,12 +82,23 @@ public class Controlador11Mensajes {
 	@PostMapping(value = "/enviarMensaje")
 	public ModelAndView enviarMensaje(HttpServletRequest request, HttpServletResponse response){
 		
+		//Copia Remitente
 		do {
 			idMensaje = request.getParameter(CONST_REMITENTE) + "-" + GeneratorStrings.randomString(5);
 		}while(Broker.getInstanciaMensaje().existeIdMensaje(idMensaje));
 		
-		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter("destinatario"), request.getParameter("mensaje"));
+		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter("destinatario"), request.getParameter("asunto"), request.getParameter("mensaje"));
 		Broker.getInstanciaMensaje().enviaMensaje(mensaje);
+		
+		//Copia destinatario
+		do {
+			idMensaje = request.getParameter("destinatario") + "-" + GeneratorStrings.randomString(5);
+		}while(Broker.getInstanciaMensaje().existeIdMensaje(idMensaje));
+		
+		mensaje = new MensajeDTO(idMensaje, request.getParameter(CONST_REMITENTE), request.getParameter("destinatario"), request.getParameter("asunto"), request.getParameter("mensaje"));
+		Broker.getInstanciaMensaje().enviaMensaje(mensaje);
+		
+		
 		Broker.getInstanciaNotificaciones().insertarNotificacion(request.getParameter("destinatario"), "Tiene un mensaje nuevo de "+request.getParameter(CONST_REMITENTE));
 		
 		return new ModelAndView(CONST_VISTA_PANEL_MENSAJES);

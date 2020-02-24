@@ -357,7 +357,7 @@
 								            			<div class="row">
 								            				<div class="col-md-3" style="text-align:center;">
 								            					<br><br>
-								            					<i class="fa fa-star" aria-hidden="true" style="font-size:50px;"></i>
+								            					<i class="fa fa-star" aria-hidden="true" style="font-size:50px;color:#FFE193;"></i>
 								            				</div>
 								            				<div class="col-md-9">
 								            					<br>

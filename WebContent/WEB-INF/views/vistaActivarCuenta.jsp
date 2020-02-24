@@ -82,7 +82,7 @@
 								<input type="hidden" id="username" name="username" value="${activa.getUsername()}">
 						        <br>
 						        <div class="row middle">
-						        	<button type="submit" class="btn btn-success">Siguiente</button>
+						        	<button type="submit" class="btn" style="background-color:#42CA83;color:#FFFFA1;">Siguiente</button>
 						        </div>
 						        <div class="row">
 						        	<br><br>

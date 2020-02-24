@@ -5,12 +5,14 @@ public class MensajeDTO {
 	String idMensaje;
 	String remitente;
 	String destinatario;
+	String asunto;
 	String mensaje;
 	
-	public MensajeDTO(String idMensaje, String remitente, String destinatario, String mensaje) {
+	public MensajeDTO(String idMensaje, String remitente, String destinatario, String asunto, String mensaje) {
 		setIdMensaje(idMensaje);
 		setRemitente(remitente);
 		setDestinatario(destinatario);
+		setAsunto(asunto);
 		setMensaje(mensaje);
 	}
 	
@@ -33,6 +35,12 @@ public class MensajeDTO {
 	}
 	public void setDestinatario(String destinatario) {
 		this.destinatario = destinatario;
+	}
+	public String getAsunto() {
+		return asunto;
+	}
+	public void setAsunto(String asunto) {
+		this.asunto = asunto;
 	}
 	public String getMensaje() {
 		return mensaje;

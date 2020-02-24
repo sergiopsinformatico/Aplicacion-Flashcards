@@ -329,6 +329,14 @@
 	  	    		})
 	        	}
 	        	
+	        	$scope.openProfile = function(usernameUser){
+	        		window.location.href = "verPerfil.html?usuarioPerfil="+usernameUser;
+	        	}
+	        	
+	        	$scope.openFlashcards = function(idFlashcards){
+	        		window.location.href = "verColeccion.html?id="+idFlashcards;
+	        	}
+	        	
 	        	$scope.verColecciones();
 	        });
         </script>
@@ -357,7 +365,7 @@
         		<div class="col-md-5">
         			<div class="cuadroInfo" align="center" style="width:100%">
         				<br>
-        				<i class="fa fa-star fa-5x" style="color:#F2F232;" aria-hidden="true"></i>
+        				<i class="fa fa-star fa-5x" style="color:#FFE193;" aria-hidden="true"></i>
         				<br><br><strong>Nombre del Club:</strong> ${club.getNombreClub()}
 	        			<br><strong>Tema del Club:</strong> ${club.getTemaClub()}
 	        			<br><strong>Fecha de Creacion:</strong> ${club.getFechaCreacion()}
@@ -433,13 +441,13 @@
         			<div ng-if="${club.isPertenezcoClub()} == true" id="carouselMiembrosClub" class="carousel slide" style="width:300px;height:350px;">
 				        <div class="container" style="width:300px;height:350px;">
 				            <div class="carousel-inner row w-100 mx-auto" style="width:300px;height:350px;">
-								<div class="carousel-item" ng-repeat="eMiembro in listaMiembros">
+								<div class="carousel-item" ng-repeat="eMiembro in listaMiembros" ng-click="openProfile(eMiembro.username)">
 									<div align="center" style="background:#8EC868;">
 							      		<br><br>
 							      		<img src="{{eMiembro.foto}}" style="width:100px;height:auto;">
 							      		<br>
 							      		<br>
-							      		<p><strong><a ng-href="verPerfil.html?usuarioPerfil={{eMiembro.username}}" style="color:#244B36;">{{eMiembro.username}}</a></strong></p>
+							      		<p style="font-weight:bold;">{{eMiembro.username}}</p>
 							      		<br>
 							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-lock" aria-hidden="true"></i><a ng-href="adminAsignaAdminClub.html?usuario={{eMiembro.username}}&idClub=${club.getIdClub()}" style="margin-left:2px;color:white;">Asignar Administrador del Club</a></p>
 							      		<p ng-if="showOpcionesUsuario(eMiembro.username)" style="font-size:10px;color:white;font-weight:bold;"><i class="fa fa-user-times" aria-hidden="true"></i><a ng-href="adminEliminaUserClub.html?usuario={{eMiembro.username}}&idClub=${club.getIdClub()}" style="margin-left:2px;color:white;">Eliminar usuario del Club</a></p>
@@ -451,12 +459,12 @@
 					      		</div>
 					      	</div>
 			            </div>
-				        <a class="carousel-control-prev" href="#carouselMiembrosClub" role="button" data-slide="prev">
-					      <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:black;"></i>
+				        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselMiembrosClub" role="button" data-slide="prev">
+					      <i class="fa fa-angle-left" aria-hidden="true" style="color:black;"></i>
 					      <span class="sr-only">Anterior</span>
 					    </a>
-					    <a class="carousel-control-next" href="#carouselMiembrosClub" role="button" data-slide="next">
-					      <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color:black;"></i>
+					    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselMiembrosClub" role="button" data-slide="next">
+					      <i class="fa fa-angle-right" aria-hidden="true" style="color:black;"></i>
 					      <span class="sr-only">Siguiente</span>
 					    </a>
 				    </div>
@@ -473,15 +481,13 @@
         			<div ng-if="${club.isPertenezcoClub()} == true" id="carouselFlashcardClub" class="carousel slide" style="width:300px;height:350px;">
 				        <div class="container" style="width:300px;height:350px;">
 				            <div class="carousel-inner row w-100 mx-auto" style="width:300px;height:350px;">
-								<div class="carousel-item" ng-repeat="eColeccion in colecciones">
+								<div class="carousel-item" ng-repeat="eColeccion in colecciones" ng-click="openFlashcards(eColeccion.idColeccion)">
 									<div align="center" style="background:#DCDC75;">
 							      		<br>
 							      		<p style="font-weight:bold;">{{eColeccion.nombreColeccion}}</p>
 							      		<br>
 							    		<br>
-							      		<a ng-href="verColeccion.html?id={{eColeccion.idColeccion}}" style="color:black;">
-							 				Ver Coleccion
-							 			</a>
+							      		<p>Ver Coleccion</p>
 										<br><br><br>
 							      		<p><span style="font-weight:bold;margin-right:5px;">Creador:</span> {{eColeccion.autorColeccion}}</p>
 							      		<br><br><br>
@@ -489,12 +495,12 @@
 					      		</div>
 					      	</div>
 			            </div>
-				        <a class="carousel-control-prev" href="#carouselFlashcardClub" role="button" data-slide="prev">
-					      <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:black;"></i>
+				        <a class="carousel-control-prev" style="color:black;font-weight:bold;font-size:30px;padding-right:110px" href="#carouselFlashcardClub" role="button" data-slide="prev">
+					      <i class="fa fa-angle-left" aria-hidden="true" style="color:black;"></i>
 					      <span class="sr-only">Anterior</span>
 					    </a>
-					    <a class="carousel-control-next" href="#carouselFlashcardClub" role="button" data-slide="next">
-					      <i class="fa fa-arrow-circle-right" aria-hidden="true" style="color:black;"></i>
+					    <a class="carousel-control-next" style="color:black;font-weight:bold;font-size:30px;padding-left:110px" href="#carouselFlashcardClub" role="button" data-slide="next">
+					      <i class="fa fa-angle-right" aria-hidden="true" style="color:black;"></i>
 					      <span class="sr-only">Siguiente</span>
 					    </a>
 				    </div>

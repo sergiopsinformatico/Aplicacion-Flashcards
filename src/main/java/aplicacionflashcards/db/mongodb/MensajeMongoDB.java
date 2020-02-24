@@ -45,6 +45,7 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 	static final String CONST_ID_MENSAJE = "idMensaje";
 	static final String CONST_REMITENTE = "remitente";
 	static final String CONST_DESTINATARIO = "destinatario";
+	static final String CONST_ASUNTO = "asunto";
 	static final String CONST_MENSAJE = "mensaje";
     
 	//Logger
@@ -73,6 +74,7 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 			doc = new Document().append(CONST_ID_MENSAJE, mensaje.getIdMensaje()).
 					append(CONST_REMITENTE, mensaje.getRemitente()).
 					append(CONST_DESTINATARIO, mensaje.getDestinatario()).
+					append(CONST_ASUNTO, mensaje.getAsunto()).
 					append(CONST_MENSAJE,mensaje.getMensaje());
 			coleccionMensajes.insertOne(doc);
 			return true;
@@ -89,10 +91,14 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
 		while(iterador.hasNext()) {
 			doc = iterador.next();
-			listaMensajes.add(new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
-											 doc.getString(CONST_REMITENTE), 
-											 doc.getString(CONST_DESTINATARIO),
-											 doc.getString(CONST_MENSAJE)));
+			if(doc.getString(CONST_ID_MENSAJE).startsWith(username+"-")) {
+				listaMensajes.add(new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
+												 doc.getString(CONST_REMITENTE), 
+												 doc.getString(CONST_DESTINATARIO),
+												 doc.getString(CONST_ASUNTO),
+												 doc.getString(CONST_MENSAJE)));
+			}
+			
 		}
 		
 		return listaMensajes;
@@ -106,10 +112,14 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 		iterador = coleccionMensajes.find(criteriosBusqueda).iterator();
 		while(iterador.hasNext()) {
 			doc = iterador.next();
-			listaMensajes.add(new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
-											 doc.getString(CONST_REMITENTE), 
-											 doc.getString(CONST_DESTINATARIO),
-											 doc.getString(CONST_MENSAJE)));
+			if(doc.getString(CONST_ID_MENSAJE).startsWith(username+"-")) {
+				listaMensajes.add(new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
+												 doc.getString(CONST_REMITENTE), 
+												 doc.getString(CONST_DESTINATARIO),
+												 doc.getString(CONST_ASUNTO),
+												 doc.getString(CONST_MENSAJE)));
+			}
+			
 		}
 		
 		return listaMensajes;
@@ -130,9 +140,10 @@ public class MensajeMongoDB implements InterfaceDAOMensaje {
 			return new MensajeDTO(doc.getString(CONST_ID_MENSAJE), 
 								  doc.getString(CONST_REMITENTE), 
 								  doc.getString(CONST_DESTINATARIO),
+								  doc.getString(CONST_ASUNTO),
 								  doc.getString(CONST_MENSAJE));
 		}else {
-			return new MensajeDTO("","","","");
+			return new MensajeDTO("","","","","");
 		}
 	}
 	

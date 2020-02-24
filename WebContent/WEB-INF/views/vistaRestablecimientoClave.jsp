@@ -138,7 +138,8 @@
 	    		
 	    		if(checkClave == true && checkRepClave == true){
 	    			$scope.buttonDisabled = false;
-	    			document.getElementById("buttonRec").style.background = "#457D8E";
+	    			document.getElementById("buttonRec").style.background = "#007bff";
+	    			document.getElementById("buttonRec").style.color = "#FFFFA1";
 	    		}else{
 	    			$scope.buttonDisabled = true;
 	    		}

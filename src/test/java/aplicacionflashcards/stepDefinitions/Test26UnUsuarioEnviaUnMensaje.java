@@ -14,7 +14,7 @@ public class Test26UnUsuarioEnviaUnMensaje {
 	
 	@Given("^Un usuario crea un mensaje$")
 	public void un_usuario_crea_un_mensaje() throws Throwable {
-	    mensaje = new MensajeDTO("mensaje-idMensaje", null, null, null);
+	    mensaje = new MensajeDTO("mensaje-idMensaje", null, null, null, null);
 	    mensajeDB = Broker.getInstanciaMensaje();
 	    assert(true);
 	}
@@ -23,6 +23,7 @@ public class Test26UnUsuarioEnviaUnMensaje {
 	public void escribe_ese_mensaje() throws Throwable {
 	    mensaje.setRemitente("user3Test");
 	    mensaje.setDestinatario("user1Test");
+	    mensaje.setAsunto("Hola");
 	    mensaje.setMensaje("Hola");
 	    assert(true);
 	}

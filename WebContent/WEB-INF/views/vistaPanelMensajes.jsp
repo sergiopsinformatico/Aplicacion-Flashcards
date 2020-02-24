@@ -256,6 +256,8 @@
 								        <br>
 								      	De: {{eMensaje.remitente}}
 								      	<br>
+								      	Asunto: {{eMensaje.asunto}}
+								      	<br>
 								      	Mensaje: {{eMensaje.mensaje}}
 								      </td>      
 								   </tr>
@@ -276,6 +278,8 @@
 		        						</span>
 								        <br>
 								      	Para: {{eMensaje.destinatario}}
+								      	<br>
+								      	Asunto: {{eMensaje.asunto}}
 								      	<br>
 								      	Mensaje: {{eMensaje.mensaje}}
 								      </td>   

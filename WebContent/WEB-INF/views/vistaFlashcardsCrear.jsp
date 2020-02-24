@@ -318,19 +318,21 @@
         				<div class="col-md-6">
         					<div class="row">
         						<div class="col-md-6">
-        							<h6 align="left" style="color:black;font-weight: bold;">Crea una tarjeta</h6>
-        							<br><br>
-        							<input type="text" style="width:100%" ng-model="anverso" id="anversoInput" name="anversoInput" placeholder="Anverso de la Tarjeta"/>
-        							<br>
-        							<br>
-        							<input type="text" style="width:100%" ng-model="reverso" id="reversoInput" name="reversoInput" placeholder="Reverso de la Tarjeta"/>
-        							<br>
-        							<br>
-        							<br>
-        							<br>
-        							<button class="btn" style="color:#FFFFA1;background-color:#FFB864;" ng-click="insertarTarjeta()">
-        								<i class="fa fa-plus-circle" aria-hidden="true"></i> Insertar Tarjeta
-        							</button>
+        							<form ng-submit="insertarTarjeta()">
+	        							<h6 align="left" style="color:black;font-weight: bold;">Crea una tarjeta</h6>
+	        							<br><br>
+	        							<input type="text" style="width:100%" ng-model="anverso" id="anversoInput" name="anversoInput" placeholder="Anverso de la Tarjeta"/>
+	        							<br>
+	        							<br>
+	        							<input type="text" style="width:100%" ng-model="reverso" id="reversoInput" name="reversoInput" placeholder="Reverso de la Tarjeta"/>
+	        							<br>
+	        							<br>
+	        							<br>
+	        							<br>
+	        							<button type="submit" class="btn" style="color:#FFFFA1;background-color:#FFB864;">
+	        								<i class="fa fa-plus-circle" aria-hidden="true"></i> Insertar Tarjeta
+	        							</button>
+	        						</form>
         						</div>
         						<div class="col-md-1"></div>
         						<div class="col-md-5">
