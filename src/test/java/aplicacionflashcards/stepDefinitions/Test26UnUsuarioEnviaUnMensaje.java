@@ -14,7 +14,7 @@ public class Test26UnUsuarioEnviaUnMensaje {
 	
 	@Given("^Un usuario crea un mensaje$")
 	public void un_usuario_crea_un_mensaje() throws Throwable {
-	    mensaje = new MensajeDTO("mensaje-idMensaje", null, null, null, null);
+	    mensaje = new MensajeDTO("user1Test-idMensaje", null, null, null, null);
 	    mensajeDB = Broker.getInstanciaMensaje();
 	    assert(true);
 	}

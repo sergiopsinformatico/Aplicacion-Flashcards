@@ -17,12 +17,12 @@ public class Test29UnUsuarioEliminaUnMensaje {
 
 	@When("^Borra el mensaje$")
 	public void borra_el_mensaje() throws Throwable {
-		 assert(Broker.getInstanciaMensaje().eliminarMensaje("mensaje-idMensaje"));
+		 assert(Broker.getInstanciaMensaje().eliminarMensaje("user1Test-idMensaje"));
 	}
 
 	@Then("^Mensaje borrado$")
 	public void mensaje_borrado() throws Throwable {
-		mensaje=Broker.getInstanciaMensaje().verMensaje("mensaje-idMensaje");
+		mensaje=Broker.getInstanciaMensaje().verMensaje("user1Test-idMensaje");
 		assert(mensaje.getDestinatario().equals("") &&
 			   mensaje.getIdMensaje().equals("") &&
 			   mensaje.getMensaje().equals("") &&
