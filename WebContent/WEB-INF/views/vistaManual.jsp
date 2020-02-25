@@ -305,6 +305,61 @@
         					
         					<img src="resources/imagenes/man-cap-12.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
        						
+       						<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							11. Listar Usuarios, Amigos y Peticiones de Amistad
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Cada usuario, puede listar los amigos, usuarios y peticiones de amistad enviadas o recibidas:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-13.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+        					
+        					<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							12. Listar Clubes
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Cada usuario, puede listar clubes existentes, nuevos o a los que pertenezca el usuario:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-14.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+        					
+        					<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							13. Panel Mensajes
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Cada usuario, puede enviar y recibir mensajes de sus amigos:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-15.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
+        					
+        					<span style="text-align:left;font-weight:bold;font-size:17px;">
+       							14. Ver Club
+       						</span>
+       						<br><br>
+       						<div style="text-align:justify;">
+        						<span style="font-size:14px;">
+        						
+        							Cada usuario, puede ver los clubes:
+        						
+        						</span>
+        					</div>
+        					
+        					<img src="resources/imagenes/man-cap-16.JPG" style="height:300px;width:auto;display:block; margin-left:auto;margin-right:auto;" alt="Sprint Backlog (Sprint 1)">
         					
         				</div>
         				<div class="col-md-1"></div>
