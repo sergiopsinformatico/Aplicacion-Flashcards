@@ -350,7 +350,44 @@
 							            	<input type="text" ng-model="filterClubes" ng-change="refreshCarrousel()" class="form-control" placeholder="Filtrar por nombre del club" />
 							            </div>
 							            <br>
-							            <div style="width:100%;overflow-y:scroll;height:400px;">
+							            <div class="row">
+							            	<div class="col-md-12">
+							            		<div class="row">
+							            			<div ng-repeat="eClub in listaClubesActual | filter:filterClubes" class="col-md-5" style="border:1px solid #00B85D;margin:10px;background-color:#98FFCC;">
+							            				<br>
+							            				<i class="fa fa-star" aria-hidden="true" style="font-size:50px;color:#FFE193;"></i>
+							            				<br>
+							            				<p><a ng-href="verClub.html?idClub={{eClub.idClub}}">{{eClub.nombreClub}}</a></p>
+							            				<br>
+						            					<p>Tema: {{eClub.temaClub}}</p>	
+						            					<p ng-if="eClub.pertenezcoClub == false">
+								                        	No perteneces a este club
+								                        </p>
+								                        <p ng-if="eClub.pertenezcoClub == true">
+								                        	Perteneces a este club
+								                        </p>
+								                        <p ng-if="eClub.soyAdministradorClub == true">
+								                        	Creaste este club
+								                        </p>
+								                        <br>
+										        		<button class="btn btn-success" ng-click="unirmeClub(eClub.idClub, eClub.nombreClub)" ng-if="eClub.pertenezcoClub == false" style="font-size:10px;">
+											        		<i class="fa fa-sign-in" aria-hidden="true"></i>
+								                        	Unirte al Club
+								                        </button>
+										        		<button class="btn btn-danger" ng-click="dejarClub(eClub.idClub, eClub.nombreClub)" ng-if="eClub.pertenezcoClub == true && eClub.soyAdministradorClub == false" style="font-size:10px;">
+											        		<i class="fa fa-sign-out" aria-hidden="true"></i>
+								                        	Dejar Club
+								                        </button>
+										        		<button class="btn btn-danger" ng-click="borrarClub(eClub.idClub, eClub.nombreClub)" ng-if="eClub.soyAdministradorClub == true" style="font-size:10px;">
+								                        	<i class="fa fa-times" aria-hidden="true"></i>
+								                        	Eliminar Club
+								                        </button>
+								                        <br><br>
+							            			</div>
+							            		</div>
+							            	</div>
+							            </div>
+							            <!-- <div style="width:100%;overflow-y:scroll;height:400px;">
 								            <table border="1" style="width:100%;">
 								            	<tr ng-repeat="eClub in listaClubesActual | filter:filterClubes">
 								            		<td>
@@ -392,7 +429,7 @@
 								            		</td>
 								            	</tr>
 								            </table>
-								        </div>
+								        </div>-->
 							            
 							            
 							            

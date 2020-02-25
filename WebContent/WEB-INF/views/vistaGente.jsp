@@ -436,8 +436,88 @@
 							            	<input type="text" ng-model="filterUsuarios" ng-change="refreshCarrousel()" class="form-control" placeholder="Filtrar por nombre de usuario" />
 							            </div>
 							            <br>
-							            <div style="width:100%;overflow-y:scroll;height:400px;">
-								            <table border="1" style="width:100%;">
+							            <div class="row">
+							            	<div class="col-md-12">
+							            		<div class="row">
+							            			<div ng-repeat="eUsuario in listaUsuariosActual | filter:filterUsuarios" class="col-md-5" ng-click="openProfile(eUsuario.username)" 
+							            			    style="border:1px solid #00B85D;margin:10px;background-color:#98FFCC;">
+							            				<br>
+							            				<img src="{{eUsuario.foto}}" style="width:70px;height:auto;">
+							            				<br><br>
+							            				<a ng-href="verPerfil.html?usuarioPerfil={{eUsuario.username}}" style="color:#244B36;">{{eUsuario.username}}</a>
+						            					<br><br>
+						            					<span ng-if="eUsuario.tipoRelacion == 'amigo'" style="color:black;font-size:10px;">
+								                        	Sois amigos
+								                        	<br><br>
+								                        </span>
+								                        <span ng-if="eUsuario.tipoRelacion == 'solEnviada'" style="color:black;font-size:10px;">
+								                        	Solicitud de amistad enviada
+								                        	<br><br>
+								                        </span>
+								                        <span ng-if="eUsuario.tipoRelacion == 'solRecibida'" style="color:black;font-size:10px;">
+								                        	Pendiente de contestar la solicitud
+								                        	<br><br>
+								                        </span>
+								                        <span ng-if="eUsuario.tipoRelacion == 'bloqueado'" style="color:black;font-size:10px;">
+								                        	Usuario Bloqueado
+								                        	<br><br>
+								                        </span>
+								                        <div ng-if="eUsuario.tipoRelacion == 'ninguna'">
+								                        	<button class="btn btn-info" ng-click="enviarPeticion(eUsuario.username)" style="font-size:10px;">
+								                        		<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								                        		Enviar Solicitud de Amistad
+								                        	</button>
+								                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)" style="font-size:10px;">
+								                        		<i class="fa fa-lock" aria-hidden="true"></i>
+								                        		Bloquear Usuario
+								                        	</button>
+								                        </div>
+								                        <div ng-if="eUsuario.tipoRelacion == 'amigo'">
+								                        	<button class="btn btn-danger" ng-click="eliminarAmigo(eUsuario.username)" style="font-size:10px;">
+								                        		<i class="fa fa-user-times" aria-hidden="true"></i>
+								                        		Eliminar Amistad
+								                        	</button>
+								                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)" style="font-size:10px;">
+								                        		<i class="fa fa-lock" aria-hidden="true"></i>
+								                        		Bloquear Usuario
+								                        	</button>
+								                        </div>
+								                        <div ng-if="eUsuario.tipoRelacion == 'solEnviada'">
+								                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)" style="font-size:10px;">
+								                        		<i class="fa fa-lock" aria-hidden="true"></i>
+								                        		Bloquear Usuario
+								                        	</button>
+								                        </div>
+								                        <div ng-if="eUsuario.tipoRelacion == 'solRecibida'">
+								                        	<button class="btn btn-success" ng-click="aceptarAmistad(eUsuario.username)" style="font-size:10px;">
+								                        		<i class="fa fa-check" aria-hidden="true"></i>
+								                        		Aceptar Peticion de Amistad
+								                        	</button>
+								                        	<button class="btn btn-danger" ng-click="rechazarAmistad(eUsuario.username)"style="font-size:10px;">
+								                        		<i class="fa fa-times" aria-hidden="true"></i>
+								                        		Rechazar Peticion de Amistad
+								                        	</button>
+								                        	<button class="btn btn-secondary" ng-click="bloquearUsuario(eUsuario.username)"style="font-size:10px;">
+								                        		<i class="fa fa-lock" aria-hidden="true"></i>
+								                        		Bloquear Usuario
+								                        	</button>
+								                        </div>
+								                        <div ng-if="eUsuario.tipoRelacion == 'bloqueado'">
+								                        	<button class="btn btn-warning" ng-click="desbloquearUsuario(eUsuario.username)"style="font-size:10px;">
+								                        		<i class="fa fa-lock-open" aria-hidden="true"></i>
+								                        		Desloquear Usuario
+								                        	</button>
+								                        </div>
+								                        <br><br>
+							            			</div>
+							            		</div>
+							            	</div>
+							            </div>
+							            
+							            
+							            
+							            <!-- <div style="width:100%;overflow-y:scroll;height:400px;">
+								             <table border="1" style="width:100%;">
 								            	<tr ng-repeat="eUsuario in listaUsuariosActual | filter:filterUsuarios">
 								            		<td>
 								            			<div class="row">
@@ -520,7 +600,8 @@
 								            		</td>
 								            	</tr>
 								            </table>
-								        </div>
+								        </div>-->
+								        
 					            		<!-- <div id="carouselUsuarios" class="carousel slide" style="width:400px;height:500px;">
 									        <div class="container" style="width:400px;height:500px;">
 									            <div class="carousel-inner row w-100 mx-auto" style="width:400px;height:500px;">
